@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<hosts>
+	<host ID="2" type="e-commerce" port="">www.facebook.com</host>
+	<host ID="2" type="e-commerce" port="443">www.facebook.com</host>
+</hosts>

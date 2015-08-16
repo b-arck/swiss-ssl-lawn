@@ -1,287 +1,309 @@
 #!/usr/bin/perl
 
+=head1 SSL – Swiss SSL Lawn
+
+=head2 DESCRIPTION
+
+This script allows to audit SSL security settings of web servers
+
+
+
+=head2 AUTEUR
+
+Ameti Behar
+
+=cut
+
 use strict;
 use warnings;
 
-# --- Perl Module used in the script
+# --- Import Perl Module used in the script
+
+use HTTP::Tiny;
 use Getopt::Long;
 use XML::LibXML;
+use XML::Dumper;
+use XML::Simple;
 use Data::Dumper;
-use Socket;
-
-use Net::SSLeay qw/XN_FLAG_RFC2253 ASN1_STRFLGS_ESC_MSB/;
-
-use Config::IniFiles;
-
 use IO::Socket::SSL;
-
+use Socket;
+use Net::SSLeay qw/XN_FLAG_RFC2253 ASN1_STRFLGS_ESC_MSB/;
+use Config::IniFiles;
 use Time::gmtime;
-
 use Time::ParseDate;
+use Log::Log4perl;
+use Mozilla::CA;
+
+# --- Import created module used in the script
+
+use File::Basename qw(dirname);
+use Cwd  qw(abs_path);
+use lib dirname(dirname abs_path $0) . '/Script/Libs';
+
+use CheckProtocolCipher qw(check_protocol_cipher);
+use CheckOCSP qw(check_ocsp);
+use GetCertDetails qw(get_cert_details);
+
+# --- Import created classes used in the script
+
+use File::Basename qw(dirname);
+use Cwd  qw(abs_path);
+use lib dirname(dirname abs_path $0) . '/Script/Classes';
+
+use Survey;
+
+# --- Logging info message for debug
 
 
-
-Net::SSLeay::load_error_strings();
-
-Net::SSLeay::SSLeay_add_ssl_algorithms();
-
-Net::SSLeay::randomize();
+# Initialize Logger
+my $log_conf = q(
+   log4perl.rootLogger              = INFO, LOG1
+   log4perl.appender.LOG1           = Log::Log4perl::Appender::File
+   log4perl.appender.LOG1.filename  = ./Log/logfile.log
+   log4perl.appender.LOG1.mode      = append
+   log4perl.appender.LOG1.layout    = Log::Log4perl::Layout::PatternLayout
+   log4perl.appender.LOG1.layout.ConversionPattern = %d %p %m %n
+);
+Log::Log4perl::init(\$log_conf);
+my $logger = Log::Log4perl->get_logger();
 
 # --- Fonctions used in the script
 
-sub check_port {
+sub check_init{
+	my ( $xmlListe, $protoCipherFile, @moduleList ) = @_;
 
+	$logger->info(" - Info: checking Script init.");
+	if(!-d "BDD",){die "Folder BDD don't exist. Can't continue\n";}
+	if(!-d "ini",){die "Folder ini don't exist. Can't contine\n";}
+	if(!-d "Output",){
+		$logger->warn(" - Info: Folder Output don't exist. Creating foler");
+		mkdir "Output";
+	}
+	if (-d "Libs") {
+    		if (is_folder_empty("Libs")) {die "Folder Libs contain no module. Can't continue\n";}
+	}
+	else{
+		die "Folder Libs don't exist. Can't continue\n";
+	}
+	if(!-f $xmlListe, ){ die "Hosts list don't exist. Can't contiue the script\n";}
+	if(!-f $protoCipherFile, ){ die "Protocol and Cipher list don't exist. Can't contiue the script\n";}
+	
+	foreach my $module (@moduleList){		
+		if (!try_load_module($module)) {die "Missing module : " . $module ."\n";}
+	}
+
+	$logger->info(" - Info: checking XML hosts file.");
+	# XML file parsing to retrieve hosts informations
+	my $parser = XML::LibXML->new;
+	my $dom = $parser->parse_file($xmlListe);
+	my @hosts = $dom->getElementsByTagName("host");
+	if(!@hosts){die "file " . $xmlListe . " existe but is empty" ;}
+	
+	return @hosts;
+}
+
+sub is_folder_empty {
+    my $dirname = shift;
+    opendir(my $dh, $dirname) or die "Not a directory";
+    return scalar(grep { $_ ne "." && $_ ne ".." } readdir($dh)) == 0;
+}
+
+sub try_load_module {
+	my $mod = shift;
+
+	eval("use $mod");
+
+	if ($@) {
+		return(0);
+	} else {
+		return(1);
+	}
+}
+
+=head1 NAME
+
+check_port - Check port on server
+
+=head1 SYNOPSIS
+
+	if ( check_port( $host, $port ) ){
+		# code
+	}
+
+=head1 DESCRIPTION
+
+This subroutine check if the port on the server is open.
+
+=head2 Methods
+
+=over 12
+
+=item Arguments
+
+$host		# The host name
+$port		# The host port for connection
+
+=item Return
+
+boolean (0 or 1)
+
+=back
+
+=head1 AUTHOR
+
+Ameti Behar 
+
+=cut
+
+sub check_port {
 	my ( $host, $port ) = @_;
 
+	if ( ($host) ) {
+		$port = "443";
+	}
 
-
-	print "#### connect to host=$host, port=$port - ";
-
-	warn "Info: checking port\n";
-
+	$logger->info(" - Info: checking port $port on host $host.");	
 
 	if ( $port =~ /\D/ ) {
-
 		$port = getservbyname( $port, 'tcp' );
-
+		$logger->warn(" - Warn: No port define for host $host. Try with default port 443");
 	}
 
-	die "No port" unless $port;
-
-
-
-	my $iaddr = inet_aton($host) || die "no host: $host";
-
+	my $iaddr = inet_aton($host) || $logger->fatal(" - Fatal: no host: $host") && die "no host: $host";
 	my $paddr = sockaddr_in( $port, $iaddr );
-
 	my $proto = getprotobyname('tcp');
-
-
-
-	socket( SOCK, PF_INET, SOCK_STREAM, $proto ) || die "socket: $!";
-
+	
+	socket( SOCK, PF_INET, SOCK_STREAM, $proto ) || $logger->fatal(" - Fatal: socket: $!") && die "socket: $!";
 	if ( connect( SOCK, $paddr ) ) {
-
-		print "OK\n";
-
-		close(SOCK) || die "close: $!";
-
+		$logger->info(" - Info: #### connect to host=$host, port=$port - OK");
+		close(SOCK) || $logger->fatal(" - Fatal: close $!") && die "close: $!";
 		return 1;
-
 	} else {
-
-		print "Connection refused\n";
-
+		$logger->fatal(" - Info: Connection refused to host $host on port $port");
 		return 0;
+	}
+}
 
+
+=head1 NAME
+
+check_hostname - Check the host name
+
+=head1 SYNOPSIS
+
+	if ( check_hostname( $host, $port ) ){
+		# code
 	}
 
-}
+=head1 DESCRIPTION
+
+This subroutine check if the host name is the same in certificate.
+
+=head2 Methods
+
+=over 12
+
+=item Arguments
+
+$host		# The host name
+$port		# The host port for connection
+
+=item Return
+
+boolean (0 or 1)
+
+=back
+
+=head1 AUTHOR
+
+Ameti Behar 
+
+=cut
 
 sub check_hostname {
-
-	warn "Info: checking hostname\n";
-
-
 	# Verify hostname / CN Name
-
 	my ( $host, $port ) = @_;
-
+	$logger->info(" - Info: checking hostname $host");
 	my %server_options = (
-
 		PeerAddr => $host,
-
-		PeerPort => $port
-
+		PeerPort => $port,
+		SSL_ca_file => Mozilla::CA::SSL_ca_file()
 	);
 
-
-
 	if ( my $client = IO::Socket::SSL->new(%server_options) ) {
-
 		if ( !$client->verify_hostname( $host, 'http' ) ) {
-
-			print "Hostname verification failed\n";
-
+			#print "Hostname verification failed\n";
 			return 1;
-
 		} else {
-
-			print "Certificate CN: "
-
-			  . $client->peer_certificate('commonName')
-
-			  . " == Hostname: $host\n";
-
-
-
+			$logger->info(" - Info: Certificate CN: " . $client->peer_certificate('commonName') . " == Hostname: $host");
 			return 0;
-
 		}
-
 	}
-
-	return -1;
-
+	return 1;
 }
-
 
 # --- "Module" used in the script
 
+sub getLoggingTime {
 
-sub get_cert_details {
-		my $x509 = shift;
-	 	my $cert = {};
-	 	my $flag_rfc22536_utf8 = (XN_FLAG_RFC2253) & (~ ASN1_STRFLGS_ESC_MSB);
-
-	 	die 'ERROR: $x509 is NULL, gonna quit' unless $x509;
-
-	 	warn "Info: dumping subject\n";
-		 my $subj_name = Net::SSLeay::X509_get_subject_name($x509);
-		 my $subj_count = Net::SSLeay::X509_NAME_entry_count($subj_name);
-		 $cert->{subject}->{count} = $subj_count;
-		 $cert->{subject}->{oneline} = Net::SSLeay::X509_NAME_oneline($subj_name);
-		 $cert->{subject}->{print_rfc2253} = Net::SSLeay::X509_NAME_print_ex($subj_name);
-		 $cert->{subject}->{print_rfc2253_utf8} = Net::SSLeay::X509_NAME_print_ex($subj_name, $flag_rfc22536_utf8);
-		 $cert->{subject}->{print_rfc2253_utf8_decoded} = Net::SSLeay::X509_NAME_print_ex($subj_name, $flag_rfc22536_utf8, 1);
-		 for my $i (0..$subj_count-1) {
-		 	my $entry = Net::SSLeay::X509_NAME_get_entry($subj_name, $i);
-		 	my $asn1_string = Net::SSLeay::X509_NAME_ENTRY_get_data($entry);
-		 	my $asn1_object = Net::SSLeay::X509_NAME_ENTRY_get_object($entry);
-		 	my $nid = Net::SSLeay::OBJ_obj2nid($asn1_object);
-		 	$cert->{subject}->{entries}->[$i] = {
-			oid  => Net::SSLeay::OBJ_obj2txt($asn1_object,1),
-			data => Net::SSLeay::P_ASN1_STRING_get($asn1_string),
-			data_utf8_decoded => Net::SSLeay::P_ASN1_STRING_get($asn1_string, 1),
-			nid  => ($nid>0) ? $nid : undef,
-			ln   => ($nid>0) ? Net::SSLeay::OBJ_nid2ln($nid) : undef,
-			sn   => ($nid>0) ? Net::SSLeay::OBJ_nid2sn($nid) : undef,};
-	  	}
-
-		warn "Info: dumping issuer\n";
-		my $issuer_name = Net::SSLeay::X509_get_issuer_name($x509);
-		my $issuer_count = Net::SSLeay::X509_NAME_entry_count($issuer_name);
-		$cert->{issuer}->{count} = $issuer_count;
-		$cert->{issuer}->{oneline} = Net::SSLeay::X509_NAME_oneline($issuer_name);
-		$cert->{issuer}->{print_rfc2253} = Net::SSLeay::X509_NAME_print_ex($issuer_name);
-		$cert->{issuer}->{print_rfc2253_utf8} = Net::SSLeay::X509_NAME_print_ex($issuer_name, $flag_rfc22536_utf8);
-		$cert->{issuer}->{print_rfc2253_utf8_decoded} = Net::SSLeay::X509_NAME_print_ex($issuer_name, $flag_rfc22536_utf8, 1);
-		for my $i (0..$issuer_count-1) {
-			my $entry = Net::SSLeay::X509_NAME_get_entry($issuer_name, $i);
-			my $asn1_string = Net::SSLeay::X509_NAME_ENTRY_get_data($entry);
-			my $asn1_object = Net::SSLeay::X509_NAME_ENTRY_get_object($entry);
-			my $nid = Net::SSLeay::OBJ_obj2nid($asn1_object);
-			$cert->{issuer}->{entries}->[$i] = {
-			oid  => Net::SSLeay::OBJ_obj2txt($asn1_object,1),
-			data => Net::SSLeay::P_ASN1_STRING_get($asn1_string),
-			data_utf8_decoded => Net::SSLeay::P_ASN1_STRING_get($asn1_string, 1),
-			nid  => ($nid>0) ? $nid : undef,
-			ln   => ($nid>0) ? Net::SSLeay::OBJ_nid2ln($nid) : undef,
-			sn   => ($nid>0) ? Net::SSLeay::OBJ_nid2sn($nid) : undef,};
-		}
-
-		warn "Info: dumping alternative names\n";
-		$cert->{subject}->{altnames} = [ Net::SSLeay::X509_get_subjectAltNames($x509) ];
-
-		warn "Info: dumping hashes/fingerprints\n";
-		$cert->{hash}->{subject} = { dec=>Net::SSLeay::X509_subject_name_hash($x509), hex=>sprintf("%X",Net::SSLeay::X509_subject_name_hash($x509)) };
-		$cert->{hash}->{issuer}  = { dec=>Net::SSLeay::X509_issuer_name_hash($x509),  hex=>sprintf("%X",Net::SSLeay::X509_issuer_name_hash($x509)) };
-		$cert->{hash}->{issuer_and_serial} = { dec=>Net::SSLeay::X509_issuer_and_serial_hash($x509), hex=>sprintf("%X",Net::SSLeay::X509_issuer_and_serial_hash($x509)) };
-		$cert->{fingerprint}->{md5}  = Net::SSLeay::X509_get_fingerprint($x509, "md5");
-		$cert->{fingerprint}->{sha1} = Net::SSLeay::X509_get_fingerprint($x509, "sha1");
-		my $sha1_digest = Net::SSLeay::EVP_get_digestbyname("sha1");
-		$cert->{digest_sha1}->{pubkey} = Net::SSLeay::X509_pubkey_digest($x509, $sha1_digest);
-		$cert->{digest_sha1}->{x509} = Net::SSLeay::X509_digest($x509, $sha1_digest);
-
-		warn "Info: dumping expiration\n";
-		$cert->{not_before} = Net::SSLeay::P_ASN1_TIME_get_isotime(Net::SSLeay::X509_get_notBefore($x509));
-		$cert->{not_after}  = Net::SSLeay::P_ASN1_TIME_get_isotime(Net::SSLeay::X509_get_notAfter($x509));
-
-		warn "Info: dumping serial number\n";
-		my $ai = Net::SSLeay::X509_get_serialNumber($x509);
-		$cert->{serial} = {
-			hex  => Net::SSLeay::P_ASN1_INTEGER_get_hex($ai),
-			dec  => Net::SSLeay::P_ASN1_INTEGER_get_dec($ai),
-			long => Net::SSLeay::ASN1_INTEGER_get($ai),};
-		$cert->{version} = Net::SSLeay::X509_get_version($x509);
-
-		warn "Info: dumping extensions\n";
-		my $ext_count = Net::SSLeay::X509_get_ext_count($x509);
-		$cert->{extensions}->{count} = $ext_count;
-		for my $i (0..$ext_count-1) {
-			my $ext = Net::SSLeay::X509_get_ext($x509,$i);
-			my $asn1_string = Net::SSLeay::X509_EXTENSION_get_data($ext);
-			my $asn1_object = Net::SSLeay::X509_EXTENSION_get_object($ext);
-			my $nid = Net::SSLeay::OBJ_obj2nid($asn1_object);
-			$cert->{extensions}->{entries}->[$i] = {
-				critical => Net::SSLeay::X509_EXTENSION_get_critical($ext),
-				oid      => Net::SSLeay::OBJ_obj2txt($asn1_object,1),
-				nid      => ($nid>0) ? $nid : undef,
-				ln       => ($nid>0) ? Net::SSLeay::OBJ_nid2ln($nid) : undef,
-				sn       => ($nid>0) ? Net::SSLeay::OBJ_nid2sn($nid) : undef,
-				data     => Net::SSLeay::X509V3_EXT_print($ext),};
-		}
-
-		warn "Info: dumping CDP\n";
-		$cert->{cdp} = [ Net::SSLeay::P_X509_get_crl_distribution_points($x509) ];
-		warn "Info: dumping extended key usage\n";
-		$cert->{extkeyusage} = {
-			oid => [ Net::SSLeay::P_X509_get_ext_key_usage($x509,0) ],
-			nid => [ Net::SSLeay::P_X509_get_ext_key_usage($x509,1) ],
-			sn  => [ Net::SSLeay::P_X509_get_ext_key_usage($x509,2) ],
-			ln  => [ Net::SSLeay::P_X509_get_ext_key_usage($x509,3) ],};
-
-		warn "Info: dumping key usage\n";
-		$cert->{keyusage} = [ Net::SSLeay::P_X509_get_key_usage($x509) ];
-		warn "Info: dumping netscape cert type\n";
-		$cert->{ns_cert_type} = [ Net::SSLeay::P_X509_get_netscape_cert_type($x509) ];
-
-		warn "Info: dumping other info\n";
-		$cert->{certificate_type} = Net::SSLeay::X509_certificate_type($x509);
-		$cert->{signature_alg} = Net::SSLeay::OBJ_obj2txt(Net::SSLeay::P_X509_get_signature_alg($x509));
-		$cert->{pubkey_alg} = Net::SSLeay::OBJ_obj2txt(Net::SSLeay::P_X509_get_pubkey_alg($x509));
-		$cert->{pubkey_size} = Net::SSLeay::EVP_PKEY_size(Net::SSLeay::X509_get_pubkey($x509));
-		$cert->{pubkey_bits} = Net::SSLeay::EVP_PKEY_bits(Net::SSLeay::X509_get_pubkey($x509));
-		$cert->{pubkey_id} = Net::SSLeay::EVP_PKEY_id(Net::SSLeay::X509_get_pubkey($x509));
-
-		return $cert;
-	}
+    my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst)=localtime(time);
+    my $nice_timestamp = sprintf ( "%02d.%02d.%04d",$mday,$mon+1,$year+1900);
+    return $nice_timestamp;
+}
 
 # --- Script varaibles
 
-my $xmlListe = "BDD/listSites.xml";
+my $xmlListe = "BDD/hostsList.xml";
+my $protoCipherFile = "ini/ProtoCipher.ini";
+my @moduleList =("HTTP::Tiny","Getopt::Long","XML::LibXML","XML::Dumper","XML::Simple",
+		"Data::Dumper","IO::Socket::SSL","Socket","Net::SSLeay","Config::IniFiles",
+		"Time::gmtime","Time::ParseDate","Log::Log4perl");
 my $host;
 my $port;
 my $element ={};
 my @listeElement;
 
+my @survey = ();
+
+my $start = time;
+$logger->info("######################## - Info: Start Audit.pl - ########################");
+
 # --- Script test init
 
-if(!-e $xmlListe){ die "XML file don't exist or unavailable.\n";}
+my @hosts = check_init($xmlListe, $protoCipherFile, @moduleList);
 
-# --- XML file parsing to retrieve hosts information
-
-my $parser = XML::LibXML->new;
-my $dom = $parser->parse_file($xmlListe);
-
-my @hosts = $dom->getElementsByTagName("host");
-	
 # --- Main script
 foreach my $host (@hosts) {
+	# Get port number
 	$port = $host->getAttribute("port");
+	# Get host name
 	$host = $host->firstChild->data;
 	
+	my $audit = Survey->new();
+	$audit->set_hostName($host);
+	$audit->set_date(getLoggingTime());
+
 	if ( check_port( $host, $port ) ) {
-		my $sock = IO::Socket::INET->new(PeerAddr => $host, PeerPort => $port, Proto => 'tcp') or die "ERROR: cannot create socket";
-		my $ctx = Net::SSLeay::CTX_new() or die "ERROR: CTX_new failed";
-		Net::SSLeay::CTX_set_options($ctx, &Net::SSLeay::OP_ALL);
-		my $ssl = Net::SSLeay::new($ctx) or die "ERROR: new failed";
-		Net::SSLeay::set_fd($ssl, fileno($sock)) or die "ERROR: set_fd failed";
-		Net::SSLeay::connect($ssl) or die "ERROR: connect failed";
-		my $x509 = Net::SSLeay::get_peer_certificate($ssl);
+		if ( !check_hostname( $host, $port ) ) {
 
-		my $cert_details = get_cert_details($x509);
-	}#if check_port
-}#foreach host
-
-# --- Programme principal
+			# Check protocol and cipher
+			$audit->set_ssl(check_protocol_cipher( $host, $port, $protoCipherFile ));
+			# Get cert details			
+			my ( $pem, $cert_details  ) = get_cert_details( $host, $port );
+			$audit->set_pemcert($pem);
+			$audit->set_cert($cert_details);
+			$audit->set_ip(inet_ntoa(inet_aton($host)));
+					
+			#print Dumper($audit);
+			
+		}# if !check_hostname
+		else{
+			# If host name don't match give F result
+			$audit->set_result("F");
+		}
+	}# if check_port
+	push @survey, $audit;
+	#print Dumper(@survey);
+}# foreach host
+my $duration = time - $start;
+$logger->info("############# - Info: End of Audit.pl - Execution time : " . $duration. " s ##############\n\n");
