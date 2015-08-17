@@ -49,13 +49,6 @@ use Socket;
 use Config::IniFiles;
 use Data::Dumper;
 
-# --- Import created classes used in the script
-
-use File::Basename qw(dirname);
-use Cwd  qw(abs_path);
-use lib dirname(dirname abs_path $0) . '/Script/Classes';
-use Survey;
-
 
 # --- Logging info message for debug
 use Log::Log4perl;

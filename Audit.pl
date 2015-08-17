@@ -39,10 +39,10 @@ use Mozilla::CA;
 use File::Basename qw(dirname);
 use Cwd  qw(abs_path);
 use lib dirname(dirname abs_path $0) . '/Script/Libs';
-
 use CheckProtocolCipher qw(check_protocol_cipher);
 use CheckOCSP qw(check_ocsp);
 use GetCertDetails qw(get_cert_details);
+use CheckContent qw(check_content);
 
 # --- Import created classes used in the script
 
@@ -158,16 +158,7 @@ Ameti Behar
 sub check_port {
 	my ( $host, $port ) = @_;
 
-	if ( ($host) ) {
-		$port = "443";
-	}
-
 	$logger->info(" - Info: checking port $port on host $host.");	
-
-	if ( $port =~ /\D/ ) {
-		$port = getservbyname( $port, 'tcp' );
-		$logger->warn(" - Warn: No port define for host $host. Try with default port 443");
-	}
 
 	my $iaddr = inet_aton($host) || $logger->fatal(" - Fatal: no host: $host") && die "no host: $host";
 	my $paddr = sockaddr_in( $port, $iaddr );
@@ -223,7 +214,9 @@ Ameti Behar
 sub check_hostname {
 	# Verify hostname / CN Name
 	my ( $host, $port ) = @_;
+
 	$logger->info(" - Info: checking hostname $host");
+
 	my %server_options = (
 		PeerAddr => $host,
 		PeerPort => $port,
@@ -232,14 +225,16 @@ sub check_hostname {
 
 	if ( my $client = IO::Socket::SSL->new(%server_options) ) {
 		if ( !$client->verify_hostname( $host, 'http' ) ) {
-			#print "Hostname verification failed\n";
+			$logger->info(" - Info: Hostname verification failed");
 			return 1;
 		} else {
 			$logger->info(" - Info: Certificate CN: " . $client->peer_certificate('commonName') . " == Hostname: $host");
 			return 0;
 		}
+	} else {
+		$logger->fatal(" - Info: Connection refused to host $host on port $port");
+		return 1;
 	}
-	return 1;
 }
 
 # --- "Module" used in the script
@@ -257,7 +252,7 @@ my $xmlListe = "BDD/hostsList.xml";
 my $protoCipherFile = "ini/ProtoCipher.ini";
 my @moduleList =("HTTP::Tiny","Getopt::Long","XML::LibXML","XML::Dumper","XML::Simple",
 		"Data::Dumper","IO::Socket::SSL","Socket","Net::SSLeay","Config::IniFiles",
-		"Time::gmtime","Time::ParseDate","Log::Log4perl");
+		"Time::gmtime","Time::ParseDate","Log::Log4perl","LWP::UserAgent","HTTP::Response");
 my $host;
 my $port;
 my $element ={};
@@ -276,6 +271,11 @@ my @hosts = check_init($xmlListe, $protoCipherFile, @moduleList);
 foreach my $host (@hosts) {
 	# Get port number
 	$port = $host->getAttribute("port");
+	# if no or bad information port define, use port 443 by default	
+	if ( !$port or $port =~ /\D/ ) {
+		$logger->warn(" - Warn: No or bad port define for host $host. Try with default port 443");		
+		$port = "443";
+	}
 	# Get host name
 	$host = $host->firstChild->data;
 	
@@ -293,7 +293,8 @@ foreach my $host (@hosts) {
 			$audit->set_pemcert($pem);
 			$audit->set_cert($cert_details);
 			$audit->set_ip(inet_ntoa(inet_aton($host)));
-					
+			
+			check_content($host);
 			#print Dumper($audit);
 			
 		}# if !check_hostname

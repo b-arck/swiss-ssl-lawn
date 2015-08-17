@@ -80,12 +80,6 @@ my $log_conf = q(
 Log::Log4perl::init(\$log_conf);
 my $logger = Log::Log4perl->get_logger();
 
-# --- Import created classes used in the script
-
-use File::Basename qw(dirname);
-use Cwd  qw(abs_path);
-use lib dirname(dirname abs_path $0) . '/Script/Classes';
-use Survey;
 
 sub get_cert_details {
 	my ( $host, $port ) = @_;
@@ -177,8 +171,17 @@ sub get_cert_details {
 	}
 
 	$logger->info(" - Info: dumping CRL distribution points");
-	$cert->{crl} = Net::SSLeay::P_X509_get_crl_distribution_points($x509);
+	$cert->{crl}->{distrib_point} = Net::SSLeay::P_X509_get_crl_distribution_points($x509);
 	
+	$logger->info(" - Info: checking CRL validity");
+	if( &Net::SSLeay::X509_STORE_set_flags
+                (&Net::SSLeay::CTX_get_cert_store($ctx),
+                 &Net::SSLeay::X509_V_FLAG_CRL_CHECK)){
+		$cert->{crl}->{validity} = "CRL check valid";
+	}else{
+		$cert->{crl}->{validity} = "CRL check not valid";
+	}
+
 	$logger->info(" - Info: dumping extended key usage");
 	$cert->{extkeyusage} = {
 		oid => Net::SSLeay::P_X509_get_ext_key_usage($x509,0),
