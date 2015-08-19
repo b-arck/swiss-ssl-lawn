@@ -58,13 +58,14 @@ use LWP::UserAgent;
 use HTTP::Response;
 use HTTP::Status qw(:constants :is status_message);
 use Log::Log4perl;
+use Data::Dumper;
 
 # --- Logging info message for debug
 # Initialize Logger
 my $log_conf = q(
    log4perl.rootLogger              = INFO, LOG1
    log4perl.appender.LOG1           = Log::Log4perl::Appender::File
-   log4perl.appender.LOG1.filename  = ./Log/logfile.log
+   log4perl.appender.LOG1.filename  = /home/beharameti/Desktop/Script/Log/logfile.log
    log4perl.appender.LOG1.mode      = append
    log4perl.appender.LOG1.layout    = Log::Log4perl::Layout::PatternLayout
    log4perl.appender.LOG1.layout.ConversionPattern = %d %p %m %n
@@ -74,71 +75,66 @@ my $logger = Log::Log4perl->get_logger();
 
 sub check_content{
 	my ($host) = @_;
-
+	my $check = {};
 	$logger->info(" - Info: Cheking content");
 	# Create a user agent object
 	my $agent = LWP::UserAgent->new(env_proxy => 1,keep_alive => 1, timeout => 30); 
-	$agent->agent("Mozilla/5.0 (Windows NT 6.1)");
+	$agent->max_redirect(5);
+	$agent->agent("Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:39.0) Gecko/20100101 Firefox/39.0");
 	my $url = "http://$host/"; 
 	
-	check_redirect($agent, $url);
-
-	
-}
-
-=pod
-	my $header = HTTP::Request->new(GET => $url); 
-	my $request = HTTP::Request->new('GET', $url, $header); 
-	my $response = $agent->request($request);
-	print $url;
-	
-	check_redirect($agent, $request);
-	#print $response;
-	#print $response->status_line;
-	# Check the outcome of the response
-	if ($response->is_success) {
-		#print $response->content;
-		
-		print $response->header( "Server" );
-		print $response->header( "Content-Type" );
-		print $response->header( "Status-Code" );
-		print "\n";
-
-	}
-	else {
-		#print $response->status_line, "\n";
-		$logger->warn(" - Warn: HTTP Response not successful");		
-	}
-}
-=cut
-sub check_redirect{
-	my ($agent, $url) = @_;
-	$agent->max_redirect(5);
-	$logger->info(" - Info: Check if HTTPs redirect on HTTP request");
+	$logger->info(" - Info: Cheking HTTP Header for server type and HTTPs redirect on HTTP request");
 	
 	my $response = $agent->get($url);
 	my $request = $response->request();
 	my @redirects = $response->redirects();
-	
+	$count = @redirects;
+	$check->{srv_type}=undef;
 	my $i =0 ;
-	foreach my $res (@redirects) {
-		my $req = $res->request();
-		#print $res->header_field_names;
-		print $res->header("Location") . " $i\n";
-		#print($req->as_string());
-		#print($res->as_string());
-		if($res->header("Strict-Transport-Security")){
-			#print $res->header("Strict-Transport-Security");
-			print "HSTS\n";		
+	#print $count;
+	if ($response->is_success) {
+		foreach my $res (@redirects) {
+			my $req = $res->request();
+			#print $res->header("Server");print "\n";
+			#print $res->status_line();
+			if($res->header("Server")){$check->{srv_type}=$res->header("Server");}
+		
+			if ($i == $count-1 && $res->header("Location") =~ m/https/){
+
+				$logger->info(" - Info: Check if Strict-Transport-Security is implemented");
+				if($res->header("Strict-Transport-Security")){
+				
+					$check->{https_redirect} = "Yes";
+					$check->{hsts} = "Yes";		
+				}else{
+					$check->{https_redirect} = "Yes";
+					$check->{hsts} = "No";		
+				}
+			} elsif($i == $count-1 && $res->header("Location") =~ m/http/){
+				$check->{https_redirect} = "No";
+				$check->{hsts} = "No";
+			}
+			$i++;
 		}
-		else{
-			print "No HSTS\n";		
-		}
-		if ($res->header("Location") =~ m/https/){print "HTTPS redirect OK";}
-		$i++;
+		$check->{ext_content} = check_ext_content($response);
+		#print Dumper($check);
+		return $check;
 	}
-	
-	#print($request->as_string());
-	#print($response->as_string());
+	 else {
+		$logger->fatal(" - Fatal: Http response code " . $response->status_line);
+		return $check = undef;
+	}
 }
 
+sub check_ext_content{
+	my ($response) = @_;
+	
+	my @extCont;
+	if ($response->decoded_content =~ m/facebook.com/){push @extCont, "FB";} # or whatever
+	if ($response->decoded_content =~ m/plus.google.com/){push @extCont, "GP";}
+	if ($response->decoded_content =~ m/twitter.com/){push @extCont, "TW";}
+	if ($response->decoded_content =~ m/linkedin.com/){push @extCont, "Ln";}
+	if ($response->decoded_content =~ m/google-analytics/){push @extCont, "GA";}
+	
+	return \@extCont;
+}

@@ -1,4 +1,9 @@
 <?xml version="1.0"?>
 <hosts>
-	<host ID="2" type="e-commerce" port="443">www.credit-suisse.com</host>
+	<host ID="1" type="e-banking" port="443">www.ubs.com</host>
+	<host ID="2" type="e-banking" port="443">www.ubs.com</host>
+	<host ID="3" type="e-commerce" port="443">www.leshop.ch</host>
+	<host ID="4" type="e-banking" port="443">www.cic.ch</host>
+	<host ID="4" type="e-commerce" port="443">www.zalando.ch</host>
+	<host ID="4" type="e-gov" port="443">www.admin.ch</host>
 </hosts>

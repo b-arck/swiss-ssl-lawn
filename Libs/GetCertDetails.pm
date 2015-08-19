@@ -173,6 +173,7 @@ sub get_cert_details {
 	$logger->info(" - Info: dumping CRL distribution points");
 	$cert->{crl}->{distrib_point} = Net::SSLeay::P_X509_get_crl_distribution_points($x509);
 	
+
 	$logger->info(" - Info: checking CRL validity");
 	if( &Net::SSLeay::X509_STORE_set_flags
                 (&Net::SSLeay::CTX_get_cert_store($ctx),
@@ -209,7 +210,7 @@ sub get_cert_details {
 	
 	$logger->info(" - Info: dumping OCSP info");
 	eval{$cert->{ocsp} = check_ocsp( $ssl, $x509 )};
-	if(!$cert->{ocsp}){$cert->{ocsp}; $cert->{ocsp}="OCSP not valid"; print $cert->{ocsp};}
+	if(!$cert->{ocsp}){$cert->{ocsp}="OCSP request not valid";}
 	
 	$logger->info(" - Info: Closing connection for getting certificate details.");
 	Net::SSLeay::free($ssl);                   

@@ -14,6 +14,7 @@ This class is used to store information about web site survey
 
 =head2 Attributes
 
+	$this->{_ID}		= $ref_arguments->{id};
 	$this->{_HOSTNAME}	= $ref_arguments->{hostName};
 	$this->{_IP}		= $ref_arguments->{ip};
 	$this->{_RESULT}	= $ref_arguments->{result};
@@ -21,10 +22,7 @@ This class is used to store information about web site survey
 	$this->{_SSL}		= $ref_arguments->{ssl};
 	$this->{_CERTIFICATE}	= $ref_arguments->{cert};
 	$this->{_PEMCERT}	= $ref_arguments->{pemcert};
-	$this->{_SRVTYPE}	= $ref_arguments->{srvType};
-	$this->{_FLASH}		= $ref_arguments->{flash};
-	$this->{_REDIRECT}	= $ref_arguments->{redirect};
-	$this->{_EXT}		= $ref_arguments->{ext}; # contenu externe
+	$this->{_CONTENT}	= $ref_arguments->{content};
 	$this->{_DATE}		= $ref_arguments->{date};
 
 =head2 Methods
@@ -62,6 +60,7 @@ sub new {
 
 	bless( $this, $classe );
 
+	$this->{_ID}		= $ref_arguments->{id};
 	$this->{_HOSTNAME}	= $ref_arguments->{hostName};
 	$this->{_IP}		= $ref_arguments->{ip};
 	$this->{_RESULT}	= $ref_arguments->{result};
@@ -69,16 +68,27 @@ sub new {
 	$this->{_SSL}		= $ref_arguments->{ssl};
 	$this->{_CERTIFICATE}	= $ref_arguments->{cert};
 	$this->{_PEMCERT}	= $ref_arguments->{pemcert};
-	$this->{_SRVTYPE}	= $ref_arguments->{srvType};
-	$this->{_FLASH}		= $ref_arguments->{flash};
-	$this->{_REDIRECT}	= $ref_arguments->{redirect};
-	$this->{_EXT}		= $ref_arguments->{ext}; # contenu externe
+	$this->{_CONTENT}	= $ref_arguments->{content};
 	$this->{_DATE}		= $ref_arguments->{date};
 
 	return $this;
 }
 
 
+sub get_id {
+  my $this = shift;
+  return $this->{_ID};
+}
+
+sub set_id {
+  my ( $this, $id ) = @_;
+
+  if ( defined $id ) {
+    $this->{_ID} = $id;
+  }
+
+  return;
+}
 
 sub get_hostName {
   my $this = shift;
@@ -185,16 +195,16 @@ sub set_pemcert {
   return;
 }
 
-sub get_srvType {
+sub get_content {
   my $this = shift;
-  return $this->{_SRVTYPE};
+  return $this->{_CONTENT};
 }
 
-sub set_srvType {
-  my ( $this, $srvtype ) = @_;
+sub set_content {
+  my ( $this, $content ) = @_;
 
-  if ( defined $srvtype ) {
-    $this->{_SRVTYPE} = $srvtype;
+  if ( defined $content ) {
+    $this->{_CONTENT} = $content;
   }
 
   return;

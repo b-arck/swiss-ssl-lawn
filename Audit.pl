@@ -43,13 +43,11 @@ use CheckProtocolCipher qw(check_protocol_cipher);
 use CheckOCSP qw(check_ocsp);
 use GetCertDetails qw(get_cert_details);
 use CheckContent qw(check_content);
-
+use SaveToXML qw(saveToxml);
 # --- Import created classes used in the script
-
 use File::Basename qw(dirname);
 use Cwd  qw(abs_path);
 use lib dirname(dirname abs_path $0) . '/Script/Classes';
-
 use Survey;
 
 # --- Logging info message for debug
@@ -75,7 +73,7 @@ sub check_init{
 	$logger->info(" - Info: checking Script init.");
 	if(!-d "BDD",){die "Folder BDD don't exist. Can't continue\n";}
 	if(!-d "ini",){die "Folder ini don't exist. Can't contine\n";}
-	if(!-d "Output",){
+	if(!-d "Output"){
 		$logger->warn(" - Info: Folder Output don't exist. Creating foler");
 		mkdir "Output";
 	}
@@ -159,6 +157,11 @@ sub check_port {
 	my ( $host, $port ) = @_;
 
 	$logger->info(" - Info: checking port $port on host $host.");	
+	# if no or bad information port define, use port 443 by default	
+	if ( !$port or $port =~ /\D/ ) {
+		$logger->warn(" - Warn: No or bad port define for host $host. Try with default port 443");		
+		$port = "443";
+	}
 
 	my $iaddr = inet_aton($host) || $logger->fatal(" - Fatal: no host: $host") && die "no host: $host";
 	my $paddr = sockaddr_in( $port, $iaddr );
@@ -167,6 +170,7 @@ sub check_port {
 	socket( SOCK, PF_INET, SOCK_STREAM, $proto ) || $logger->fatal(" - Fatal: socket: $!") && die "socket: $!";
 	if ( connect( SOCK, $paddr ) ) {
 		$logger->info(" - Info: #### connect to host=$host, port=$port - OK");
+		$logger->info(" - Info: Close connection");
 		close(SOCK) || $logger->fatal(" - Fatal: close $!") && die "close: $!";
 		return 1;
 	} else {
@@ -220,29 +224,37 @@ sub check_hostname {
 	my %server_options = (
 		PeerAddr => $host,
 		PeerPort => $port,
-		SSL_ca_file => Mozilla::CA::SSL_ca_file()
+		#SSL_ca_path => '/etc/ssl/certs', # typical CA path on Linux
+		SSL_verifycn_name => $host,
+        SSL_verifycn_scheme => 'http',
+		SSL_hostname => $host
 	);
 
 	if ( my $client = IO::Socket::SSL->new(%server_options) ) {
 		if ( !$client->verify_hostname( $host, 'http' ) ) {
 			$logger->info(" - Info: Hostname verification failed");
-			return 1;
-		} else {
-			$logger->info(" - Info: Certificate CN: " . $client->peer_certificate('commonName') . " == Hostname: $host");
 			return 0;
+		} else {
+			if($client->peer_certificate('commonName')){
+				$logger->info(" - Info: Certificate CN: " 
+						. $client->peer_certificate('commonName') . " == Hostname: $host");
+			} else {
+				$logger->info(" - Info: CommonName is not part of certificat for Hostname: $host");
+			}
+			return 1;
 		}
 	} else {
 		$logger->fatal(" - Info: Connection refused to host $host on port $port");
-		return 1;
+		return 0;
 	}
 }
 
 # --- "Module" used in the script
 
-sub getLoggingTime {
+sub get_time {
 
     my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst)=localtime(time);
-    my $nice_timestamp = sprintf ( "%02d.%02d.%04d",$mday,$mon+1,$year+1900);
+    my $nice_timestamp = sprintf ( "%04d%02d%02d %02d:%02d:%02d", $year+1900,$mon+1,$mday,$hour,$min,$sec);
     return $nice_timestamp;
 }
 
@@ -255,6 +267,8 @@ my @moduleList =("HTTP::Tiny","Getopt::Long","XML::LibXML","XML::Dumper","XML::S
 		"Time::gmtime","Time::ParseDate","Log::Log4perl","LWP::UserAgent","HTTP::Response");
 my $host;
 my $port;
+my $hostType;
+my $hostID;
 my $element ={};
 my @listeElement;
 
@@ -271,30 +285,29 @@ my @hosts = check_init($xmlListe, $protoCipherFile, @moduleList);
 foreach my $host (@hosts) {
 	# Get port number
 	$port = $host->getAttribute("port");
-	# if no or bad information port define, use port 443 by default	
-	if ( !$port or $port =~ /\D/ ) {
-		$logger->warn(" - Warn: No or bad port define for host $host. Try with default port 443");		
-		$port = "443";
-	}
+	$hostType = $host->getAttribute("type");
+	$hostID = $host->getAttribute("ID");
+	
 	# Get host name
 	$host = $host->firstChild->data;
 	
 	my $audit = Survey->new();
 	$audit->set_hostName($host);
-	$audit->set_date(getLoggingTime());
+	$audit->set_date(get_time());
+	$audit->set_id($hostID);
 
 	if ( check_port( $host, $port ) ) {
-		if ( !check_hostname( $host, $port ) ) {
+		if ( check_hostname( $host, $port ) ) {
 
 			# Check protocol and cipher
-			$audit->set_ssl(check_protocol_cipher( $host, $port, $protoCipherFile ));
+			#$audit->set_ssl(check_protocol_cipher( $host, $port, $protoCipherFile ));
 			# Get cert details			
 			my ( $pem, $cert_details  ) = get_cert_details( $host, $port );
 			$audit->set_pemcert($pem);
 			$audit->set_cert($cert_details);
 			$audit->set_ip(inet_ntoa(inet_aton($host)));
 			
-			check_content($host);
+			$audit->set_content(check_content($host));
 			#print Dumper($audit);
 			
 		}# if !check_hostname
@@ -303,8 +316,10 @@ foreach my $host (@hosts) {
 			$audit->set_result("F");
 		}
 	}# if check_port
+	$logger->info("----------------------------------------------------------");
 	push @survey, $audit;
 	#print Dumper(@survey);
 }# foreach host
 my $duration = time - $start;
+saveToxml(@survey);
 $logger->info("############# - Info: End of Audit.pl - Execution time : " . $duration. " s ##############\n\n");
