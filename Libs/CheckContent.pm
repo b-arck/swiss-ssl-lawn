@@ -65,7 +65,7 @@ use Data::Dumper;
 my $log_conf = q(
    log4perl.rootLogger              = INFO, LOG1
    log4perl.appender.LOG1           = Log::Log4perl::Appender::File
-   log4perl.appender.LOG1.filename  = /home/beharameti/Desktop/Script/Log/logfile.log
+   log4perl.appender.LOG1.filename  = ./Log/logfile.log
    log4perl.appender.LOG1.mode      = append
    log4perl.appender.LOG1.layout    = Log::Log4perl::Layout::PatternLayout
    log4perl.appender.LOG1.layout.ConversionPattern = %d %p %m %n
@@ -78,10 +78,14 @@ sub check_content{
 	my $check = {};
 	$logger->info(" - Info: Cheking content");
 	# Create a user agent object
-	my $agent = LWP::UserAgent->new(env_proxy => 1,keep_alive => 1, timeout => 30); 
+	my $agent = LWP::UserAgent->new(env_proxy => 1,keep_alive => 1, timeout => 50, ssl_opts => {
+							verify_hostname => 0,
+							SSL_verify_mode => IO::Socket::SSL::SSL_VERIFY_NONE,
+							},);
+ 
 	$agent->max_redirect(5);
 	$agent->agent("Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:39.0) Gecko/20100101 Firefox/39.0");
-	my $url = "http://$host/"; 
+	my $url = "http://$host"; 
 	
 	$logger->info(" - Info: Cheking HTTP Header for server type and HTTPs redirect on HTTP request");
 	
@@ -91,9 +95,9 @@ sub check_content{
 	$count = @redirects;
 	$check->{srv_type}=undef;
 	my $i =0 ;
-	#print $count;
+	print $response->as_string();
 	if ($response->is_success) {
-		foreach my $res (@redirects) {
+		foreach my $res (@redirects) {	
 			my $req = $res->request();
 			#print $res->header("Server");print "\n";
 			#print $res->status_line();
@@ -117,7 +121,6 @@ sub check_content{
 			$i++;
 		}
 		$check->{ext_content} = check_ext_content($response);
-		#print Dumper($check);
 		return $check;
 	}
 	 else {

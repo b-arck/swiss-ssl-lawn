@@ -65,6 +65,7 @@ use File::Basename qw(dirname);
 use Cwd  qw(abs_path);
 use lib dirname(dirname abs_path $0) . '/Script/Libs';
 use Log::Log4perl;
+use XML::Dumper;
 use Data::Dumper;
 # --- Import created classes used in the script
 use File::Basename qw(dirname);
@@ -84,72 +85,26 @@ my $log_conf = q(
 Log::Log4perl::init(\$log_conf);
 my $logger = Log::Log4perl->get_logger();
 
-my $output = "./Output/";
-my $xmlfile = $output . get_file_name();
+my $xmlfile = get_file_name();
 
-sub saveToxml {
+
+sub saveToxml{
 	my ( @surveyTab ) = @_;
-	
-	# Create DOM XML object
-	my $xmlDoc  = XML::LibXML::Document->new('1.0','UTF-8'); 
-	my $root = $xmlDoc->createElement('SSL_Lawn');
-	$xmlDoc->setDocumentElement($root);
-	
-	foreach my $survey (@surveyTab){
-		bless $survey,"Survey";
 
-		# Create SURVEY node with attribute
-		my $element = $xmlDoc->createElement('SURVEY');
-		$attr = $xmlDoc->createAttribute('ID',$survey->get_id);
-		$element->setAttributeNode($attr);
-		$attr = $xmlDoc->createAttribute('date',$survey->get_date);
-		$element->setAttributeNode($attr);
-		# Affect node element to root element
-		$root->appendChild($element);
+	$dump = new XML::Dumper;
 
-		# Create hostName node and affect to SURVEY element
-		my $hostName = $xmlDoc->createElement('hostName');
-		$hostName->appendChild($xmlDoc->createTextNode($survey->get_hostName));
-		$element->appendChild($hostName);
-
-		# Create ip node and affect to SURVEY element
-		my $ip = $xmlDoc->createElement('ip');
-		$ip->appendChild($xmlDoc->createTextNode($survey->get_ip()));
-		$element->appendChild($ip);
-
-		# Create result node and affect to SURVEY element
-		my $result = $xmlDoc->createElement('result');
-		$result->appendChild($xmlDoc->createTextNode($survey->get_result()));
-		$element->appendChild($result);
-
-		# Create result node and affect to SURVEY element
-		my $grade = $xmlDoc->createElement('grade');
-		$grade->appendChild($xmlDoc->createTextNode($survey->get_result()));
-		$element->appendChild($grade);
-
-
-		# Create result node and affect to SURVEY element
-		my $ssl = $xmlDoc->createElement('ssl');
-		$ssl->appendChild($xmlDoc->createTextNode($survey->get_result()));
-		$element->appendChild($ssl);
-
-		# For each SSL create a note and the cipher list		
-
-	}
-	
-
-	# Affichage du XML sur la console
-	#print $state = $xmlDoc->toString(0);
-	# Sauvegarde de l'Objet XML dans un fichier.xml (dossier courant) le 1 permet la mise en page
-	$state = $xmlDoc->toFile($xmlfile, 1);
-	
+	$xml  = $dump->pl2xml( @surveyTab );
+	$perl = $dump->xml2pl( $xml );
+	$dump->pl2xml( $perl, dirname(dirname abs_path $0) . '/Script/Output/' . $xmlfile );
+    
 }
 
 sub get_file_name{
 	
 	my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst)=localtime(time);
-	my $nice_timestamp = sprintf ( "%04d%02d%02d_%02d%02d%02d", $year+1900,$mon+1,$mday,$hour,$min,$sec);
-	my $filename = "Audite_" . $nice_timestamp ;
+	my $nice_timestamp = sprintf ( "%02d%02d%04d_%02d%02d%02d", $mday,$mon+1,$year+1900,$hour,$min,$sec);
+	my $filename = "Audite_$nice_timestamp.xml" ;
 	return $filename;	
 }
+
 

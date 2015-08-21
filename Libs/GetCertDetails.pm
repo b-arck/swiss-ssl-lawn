@@ -57,6 +57,7 @@ use Time::gmtime;
 
 use Time::ParseDate;
 use Exporter;
+
 @ISA = qw(Exporter);
 @EXPORT = qw(get_cert_details);
 
@@ -66,6 +67,11 @@ use File::Basename qw(dirname);
 use Cwd  qw(abs_path);
 use lib dirname(dirname abs_path $0) . '/Script/Libs';
 use CheckOCSP qw(check_ocsp);
+use Net::SSLeay qw/XN_FLAG_RFC2253 ASN1_STRFLGS_ESC_MSB/;
+	Net::SSLeay::randomize();
+	Net::SSLeay::load_error_strings();
+	Net::SSLeay::ERR_load_crypto_strings();
+	Net::SSLeay::SSLeay_add_ssl_algorithms();
 use Log::Log4perl;
 
 # Initialize Logger
@@ -136,12 +142,12 @@ sub get_cert_details {
 	$cert->{fingerprint}->{md5}  = Net::SSLeay::X509_get_fingerprint($x509, "md5");
 	$cert->{fingerprint}->{sha1} = Net::SSLeay::X509_get_fingerprint($x509, "sha1");
 	my $sha1_digest = Net::SSLeay::EVP_get_digestbyname("sha1");
-	$cert->{digest_sha1}->{pubkey} = Net::SSLeay::X509_pubkey_digest($x509, $sha1_digest);
-	$cert->{digest_sha1}->{x509} = Net::SSLeay::X509_digest($x509, $sha1_digest);
+	$cert->{digest_sha1}->{pubkey} = unpack('H*', Net::SSLeay::X509_pubkey_digest($x509, $sha1_digest))."\n";
+	$cert->{digest_sha1}->{x509} = unpack('H*', Net::SSLeay::X509_digest($x509, $sha1_digest));
 
 	$logger->info(" - Info: dumping expiration");
-	$cert->{not_before} = Net::SSLeay::P_ASN1_TIME_get_isotime(Net::SSLeay::X509_get_notBefore($x509));
-	$cert->{not_after}  = Net::SSLeay::P_ASN1_TIME_get_isotime(Net::SSLeay::X509_get_notAfter($x509));
+	$cert->{expiration}->{not_before} = Net::SSLeay::P_ASN1_TIME_get_isotime(Net::SSLeay::X509_get_notBefore($x509));
+	$cert->{expiration}->{not_after}  = Net::SSLeay::P_ASN1_TIME_get_isotime(Net::SSLeay::X509_get_notAfter($x509));
 	$logger->info(" - Info: Cheking expiration date");
 	$cert->{expiration} =check_dates($cert->{not_before},$cert->{not_after});
 	
@@ -173,7 +179,6 @@ sub get_cert_details {
 	$logger->info(" - Info: dumping CRL distribution points");
 	$cert->{crl}->{distrib_point} = Net::SSLeay::P_X509_get_crl_distribution_points($x509);
 	
-
 	$logger->info(" - Info: checking CRL validity");
 	if( &Net::SSLeay::X509_STORE_set_flags
                 (&Net::SSLeay::CTX_get_cert_store($ctx),
@@ -207,7 +212,7 @@ sub get_cert_details {
 	
 	$logger->info(" - Info: dumping pem");
 	my $pem = Net::SSLeay::PEM_get_string_X509($x509);
-	
+
 	$logger->info(" - Info: dumping OCSP info");
 	eval{$cert->{ocsp} = check_ocsp( $ssl, $x509 )};
 	if(!$cert->{ocsp}){$cert->{ocsp}="OCSP request not valid";}

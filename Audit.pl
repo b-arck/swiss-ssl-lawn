@@ -27,7 +27,6 @@ use XML::Simple;
 use Data::Dumper;
 use IO::Socket::SSL;
 use Socket;
-use Net::SSLeay qw/XN_FLAG_RFC2253 ASN1_STRFLGS_ESC_MSB/;
 use Config::IniFiles;
 use Time::gmtime;
 use Time::ParseDate;
@@ -224,9 +223,10 @@ sub check_hostname {
 	my %server_options = (
 		PeerAddr => $host,
 		PeerPort => $port,
+		SSL_ca_file => Mozilla::CA::SSL_ca_file(),
 		#SSL_ca_path => '/etc/ssl/certs', # typical CA path on Linux
 		SSL_verifycn_name => $host,
-        SSL_verifycn_scheme => 'http',
+        	SSL_verifycn_scheme => 'http',
 		SSL_hostname => $host
 	);
 
@@ -254,7 +254,7 @@ sub check_hostname {
 sub get_time {
 
     my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst)=localtime(time);
-    my $nice_timestamp = sprintf ( "%04d%02d%02d %02d:%02d:%02d", $year+1900,$mon+1,$mday,$hour,$min,$sec);
+    my $nice_timestamp = sprintf ( "%02d.%02d.%04d %02d:%02d:%02d",$mday,$mon+1,$year+1900,$hour,$min,$sec);
     return $nice_timestamp;
 }
 
@@ -267,22 +267,22 @@ my @moduleList =("HTTP::Tiny","Getopt::Long","XML::LibXML","XML::Dumper","XML::S
 		"Time::gmtime","Time::ParseDate","Log::Log4perl","LWP::UserAgent","HTTP::Response");
 my $host;
 my $port;
-my $hostType;
+my $hostType="";
 my $hostID;
-my $element ={};
-my @listeElement;
+my $surveyH = {};
 
 my @survey = ();
 
 my $start = time;
-$logger->info("######################## - Info: Start Audit.pl - ########################");
+$logger->info("############## - Info: Start Audit.pl the " . get_time() . " - ##############");
 
 # --- Script test init
 
 my @hosts = check_init($xmlListe, $protoCipherFile, @moduleList);
-
+my $i = 0;
 # --- Main script
 foreach my $host (@hosts) {
+	
 	# Get port number
 	$port = $host->getAttribute("port");
 	$hostType = $host->getAttribute("type");
@@ -295,20 +295,19 @@ foreach my $host (@hosts) {
 	$audit->set_hostName($host);
 	$audit->set_date(get_time());
 	$audit->set_id($hostID);
+	$audit->set_hostType($hostType);
 
 	if ( check_port( $host, $port ) ) {
 		if ( check_hostname( $host, $port ) ) {
 
 			# Check protocol and cipher
-			#$audit->set_ssl(check_protocol_cipher( $host, $port, $protoCipherFile ));
+			$audit->set_ssl(check_protocol_cipher( $host, $port, $protoCipherFile ));
 			# Get cert details			
 			my ( $pem, $cert_details  ) = get_cert_details( $host, $port );
 			$audit->set_pemcert($pem);
 			$audit->set_cert($cert_details);
 			$audit->set_ip(inet_ntoa(inet_aton($host)));
-			
 			$audit->set_content(check_content($host));
-			#print Dumper($audit);
 			
 		}# if !check_hostname
 		else{
@@ -317,9 +316,15 @@ foreach my $host (@hosts) {
 		}
 	}# if check_port
 	$logger->info("----------------------------------------------------------");
-	push @survey, $audit;
-	#print Dumper(@survey);
+	$surveyH->{$i} = $audit;
+	$i++;
+
 }# foreach host
 my $duration = time - $start;
-saveToxml(@survey);
+
+saveToxml($surveyH);
 $logger->info("############# - Info: End of Audit.pl - Execution time : " . $duration. " s ##############\n\n");
+
+
+
+

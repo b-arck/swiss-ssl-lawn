@@ -87,7 +87,7 @@ sub check_protocol_cipher {
 		foreach $cipher (@ciphers) {
 			my $success = check( $host, $port, $protocol, $cipher );
 			my ( $score );
-
+			
 			if ($success) {
 				$score = $cfg->val( $protocol, $cipher );
 				# Remove comments and whitespace before comments
@@ -114,20 +114,21 @@ sub check_protocol_cipher {
 					$checkProtoCihperList->{protocol}->{$protocol}->{RejectedCipher}->[$j] = {cipher => $cipher,};
 					$j++;
 				}
+				#print "$protocol - $cipher - unsuccessfull \n";
 			}
 		} # foreach $cipher (@ciphers)
 		
 		if ( @cipher_scores > 0 ) {
 			# We got some cipher scores 
-			$checkProtoCihperList->{protocol}->{$protocol}->{cipherScore} = compute_score(@cipher_scores);;
 			@cipher_scores = ();
 		} else {
 			$checkProtoCihperList->{protocol}->{$protocol}->{score} = "0";
-			#print "$protocol not supported by server\n";
+			
 		}
 	}# foreach $protocol (@protocols)
 	$logger->info(" - Info: Compute " . $host . " protocol and cipher result");
-	$checkProtoCihperList->{protocol}->{protocolScore} = compute_score(@protocol_scores);
+	$checkProtoCihperList->{protocolScore} = compute_score(@protocol_scores);
+	$checkProtoCihperList->{cipherScore} = compute_score(@cipher_scores);
 	return $checkProtoCihperList;
 }
 

@@ -62,6 +62,7 @@ sub new {
 
 	$this->{_ID}		= $ref_arguments->{id};
 	$this->{_HOSTNAME}	= $ref_arguments->{hostName};
+	$this->{_HOSTTYPE}	= $ref_arguments->{hostType};
 	$this->{_IP}		= $ref_arguments->{ip};
 	$this->{_RESULT}	= $ref_arguments->{result};
 	$this->{_GRADE}         = $ref_arguments->{grade};
@@ -100,6 +101,21 @@ sub set_hostName {
 
   if ( defined $host ) {
     $this->{_HOSTNAME} = $host;
+  }
+
+  return;
+}
+
+sub get_hostType {
+  my $this = shift;
+  return $this->{_HOSTTYPE};
+}
+
+sub set_hostType {
+  my ( $this, $host ) = @_;
+
+  if ( defined $host ) {
+    $this->{_HOSTTYPE} = $host;
   }
 
   return;
