@@ -16,12 +16,14 @@ This class is used to store information about web site survey
 
 	$this->{_ID}		= $ref_arguments->{id};
 	$this->{_HOSTNAME}	= $ref_arguments->{hostName};
+	$this->{_HOSTTYPE}	= $ref_arguments->{hostType};
 	$this->{_IP}		= $ref_arguments->{ip};
 	$this->{_RESULT}	= $ref_arguments->{result};
 	$this->{_GRADE}         = $ref_arguments->{grade};
 	$this->{_SSL}		= $ref_arguments->{ssl};
 	$this->{_CERTIFICATE}	= $ref_arguments->{cert};
 	$this->{_PEMCERT}	= $ref_arguments->{pemcert};
+	$this->{_TRUSTED}	= $ref_arguments->{trusted};
 	$this->{_CONTENT}	= $ref_arguments->{content};
 	$this->{_DATE}		= $ref_arguments->{date};
 
@@ -69,6 +71,7 @@ sub new {
 	$this->{_SSL}		= $ref_arguments->{ssl};
 	$this->{_CERTIFICATE}	= $ref_arguments->{cert};
 	$this->{_PEMCERT}	= $ref_arguments->{pemcert};
+	$this->{_TRUSTED}	= $ref_arguments->{trusted};
 	$this->{_CONTENT}	= $ref_arguments->{content};
 	$this->{_DATE}		= $ref_arguments->{date};
 
@@ -211,6 +214,21 @@ sub set_pemcert {
   return;
 }
 
+sub get_trusted {
+  my $this = shift;
+  return $this->{_TRUSTED};
+}
+
+sub set_trusted {
+  my ( $this, $trusted ) = @_;
+
+  if ( defined $trusted ) {
+    $this->{_TRUSTED} = $trusted;
+  }
+
+  return;
+}
+
 sub get_content {
   my $this = shift;
   return $this->{_CONTENT};
@@ -226,50 +244,6 @@ sub set_content {
   return;
 }
 
-sub get_flash {
-  my $this = shift;
-  return $this->{_FLASH};
-}
-
-sub set_flash {
-  my ( $this, $flash ) = @_;
-
-  if ( defined $flash ) {
-    $this->{_FLASH} = $flash;
-  }
-
-  return;
-}
-
-sub get_redirect {
-  my $this = shift;
-  return $this->{_REDIRECT};
-}
-
-sub set_redirect {
-  my ( $this, $redirect ) = @_;
-
-  if ( defined $redirect ) {
-    $this->{_REDIRECT} = $redirect;
-  }
-
-  return;
-}
-
-sub get_ext {
-  my $this = shift;
-  return $this->{_EXT};
-}
-
-sub set_ext {
-  my ( $this, $ext ) = @_;
-
-  if ( defined $ext ) {
-    $this->{_EXT} = $ext;
-  }
-
-  return;
-}
 
 sub get_date {
   my $this = shift;

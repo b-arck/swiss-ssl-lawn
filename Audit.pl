@@ -42,6 +42,7 @@ use CheckProtocolCipher qw(check_protocol_cipher);
 use CheckOCSP qw(check_ocsp);
 use GetCertDetails qw(get_cert_details);
 use CheckContent qw(check_content);
+use ComputeScore qw(compute_score compute_final_result);
 use SaveToXML qw(saveToxml);
 # --- Import created classes used in the script
 use File::Basename qw(dirname);
@@ -226,25 +227,28 @@ sub check_hostname {
 		SSL_ca_file => Mozilla::CA::SSL_ca_file(),
 		#SSL_ca_path => '/etc/ssl/certs', # typical CA path on Linux
 		SSL_verifycn_name => $host,
-        	SSL_verifycn_scheme => 'http',
+        SSL_verifycn_scheme => 'http',
 		SSL_hostname => $host
 	);
 
 	if ( my $client = IO::Socket::SSL->new(%server_options) ) {
 		if ( !$client->verify_hostname( $host, 'http' ) ) {
 			$logger->info(" - Info: Hostname verification failed");
+			
 			return 0;
 		} else {
 			if($client->peer_certificate('commonName')){
 				$logger->info(" - Info: Certificate CN: " 
 						. $client->peer_certificate('commonName') . " == Hostname: $host");
+				
 			} else {
 				$logger->info(" - Info: CommonName is not part of certificat for Hostname: $host");
 			}
 			return 1;
 		}
 	} else {
-		$logger->fatal(" - Info: Connection refused to host $host on port $port");
+		$logger->fatal(" - Fatal: Connection refused to host $host on port $port");
+		
 		return 0;
 	}
 }
@@ -269,7 +273,7 @@ my $host;
 my $port;
 my $hostType="";
 my $hostID;
-my $surveyH = {};
+my $survey = {};
 
 my @survey = ();
 
@@ -299,7 +303,7 @@ foreach my $host (@hosts) {
 
 	if ( check_port( $host, $port ) ) {
 		if ( check_hostname( $host, $port ) ) {
-
+			$audit->set_trusted("Yes");
 			# Check protocol and cipher
 			$audit->set_ssl(check_protocol_cipher( $host, $port, $protoCipherFile ));
 			# Get cert details			
@@ -308,21 +312,36 @@ foreach my $host (@hosts) {
 			$audit->set_cert($cert_details);
 			$audit->set_ip(inet_ntoa(inet_aton($host)));
 			$audit->set_content(check_content($host));
-			
 		}# if !check_hostname
 		else{
 			# If host name don't match give F result
-			$audit->set_result("F");
+			$audit->set_trusted("No");
+			# Check protocol and cipher
+			$audit->set_ssl(check_protocol_cipher( $host, $port, $protoCipherFile ));
+			# Get cert details			
+			my ( $pem, $cert_details  ) = get_cert_details( $host, $port );
+			$audit->set_pemcert($pem);
+			$audit->set_cert($cert_details);
+			$audit->set_ip(inet_ntoa(inet_aton($host)));
+			$audit->set_content(check_content($host));
+			$audit->set_grade("F");
 		}
+		
 	}# if check_port
-	$logger->info("----------------------------------------------------------");
-	$surveyH->{$i} = $audit;
+	else{
+		$audit->set_grade("Z");
+	}
+	
+	$survey->{$i} = $audit;
 	$i++;
-
+	$audit = compute_final_result($audit);
+	print $audit->get_result();
+	print " - " . $audit->get_grade() . "\n";
+	$logger->info("----------------------------------------------------------");
 }# foreach host
 my $duration = time - $start;
-
-saveToxml($surveyH);
+saveToxml($survey);
+undef $survey;
 $logger->info("############# - Info: End of Audit.pl - Execution time : " . $duration. " s ##############\n\n");
 
 

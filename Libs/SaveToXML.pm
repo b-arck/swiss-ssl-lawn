@@ -89,14 +89,14 @@ my $xmlfile = get_file_name();
 
 
 sub saveToxml{
-	my ( @surveyTab ) = @_;
+	my ($surveyH ) = @_;
 
 	$dump = new XML::Dumper;
-
-	$xml  = $dump->pl2xml( @surveyTab );
+	
+	$logger->info(" - Info: Serialize to XML and save in a file");
+	$xml  = $dump->pl2xml( $surveyH );
 	$perl = $dump->xml2pl( $xml );
 	$dump->pl2xml( $perl, dirname(dirname abs_path $0) . '/Script/Output/' . $xmlfile );
-    
 }
 
 sub get_file_name{

@@ -54,7 +54,7 @@ Ameti Behar
 package GetCertDetails;
 
 use Time::gmtime;
-
+use Data::Dumper;
 use Time::ParseDate;
 use Exporter;
 
@@ -90,6 +90,7 @@ my $logger = Log::Log4perl->get_logger();
 sub get_cert_details {
 	my ( $host, $port ) = @_;
  	my $cert = {};
+ 	my $pem;
  	my $flag_rfc22536_utf8 = (XN_FLAG_RFC2253) & (~ ASN1_STRFLGS_ESC_MSB);
 	$logger->info(" - Info: Open connection for getting certificate details.");
 
@@ -99,6 +100,7 @@ sub get_cert_details {
 	Net::SSLeay::CTX_set_options($ctx, &Net::SSLeay::OP_ALL);
 	my $ssl = Net::SSLeay::new($ctx) or die "ERROR: new failed";
 	Net::SSLeay::set_fd($ssl, fileno($sock)) or die "ERROR: set_fd failed";
+	eval{
 	Net::SSLeay::connect($ssl) or die "ERROR: connect failed";
 	my $x509 = Net::SSLeay::get_peer_certificate($ssl);
 
@@ -149,14 +151,18 @@ sub get_cert_details {
 	$cert->{expiration}->{not_before} = Net::SSLeay::P_ASN1_TIME_get_isotime(Net::SSLeay::X509_get_notBefore($x509));
 	$cert->{expiration}->{not_after}  = Net::SSLeay::P_ASN1_TIME_get_isotime(Net::SSLeay::X509_get_notAfter($x509));
 	$logger->info(" - Info: Cheking expiration date");
-	$cert->{expiration} =check_dates($cert->{not_before},$cert->{not_after});
+	$cert->{expiration}->{status} = check_dates(
+		Net::SSLeay::P_ASN1_UTCTIME_put2string(Net::SSLeay::X509_get_notBefore($x509)),
+		Net::SSLeay::P_ASN1_UTCTIME_put2string(Net::SSLeay::X509_get_notAfter($x509)));
 	
 	$logger->info(" - Info: dumping serial number");
 	my $ai = Net::SSLeay::X509_get_serialNumber($x509);
+
 	$cert->{serial} = {
 		hex  => Net::SSLeay::P_ASN1_INTEGER_get_hex($ai),
 		dec  => Net::SSLeay::P_ASN1_INTEGER_get_dec($ai),
-		long => Net::SSLeay::ASN1_INTEGER_get($ai),};
+		long => Net::SSLeay::ASN1_INTEGER_get($ai),
+		string  => unpack('H*',Net::SSLeay::P_ASN1_STRING_get(Net::SSLeay::X509_get_serialNumber($x509))),};
 	$cert->{version} = Net::SSLeay::X509_get_version($x509);
 
 	$logger->info(" - Info: dumping extensions");
@@ -178,15 +184,6 @@ sub get_cert_details {
 
 	$logger->info(" - Info: dumping CRL distribution points");
 	$cert->{crl}->{distrib_point} = Net::SSLeay::P_X509_get_crl_distribution_points($x509);
-	
-	$logger->info(" - Info: checking CRL validity");
-	if( &Net::SSLeay::X509_STORE_set_flags
-                (&Net::SSLeay::CTX_get_cert_store($ctx),
-                 &Net::SSLeay::X509_V_FLAG_CRL_CHECK)){
-		$cert->{crl}->{validity} = "CRL check valid";
-	}else{
-		$cert->{crl}->{validity} = "CRL check not valid";
-	}
 
 	$logger->info(" - Info: dumping extended key usage");
 	$cert->{extkeyusage} = {
@@ -211,17 +208,19 @@ sub get_cert_details {
 	
 	
 	$logger->info(" - Info: dumping pem");
-	my $pem = Net::SSLeay::PEM_get_string_X509($x509);
+	$pem = Net::SSLeay::PEM_get_string_X509($x509);
 
 	$logger->info(" - Info: dumping OCSP info");
 	eval{$cert->{ocsp} = check_ocsp( $ssl, $x509 )};
-	if(!$cert->{ocsp}){$cert->{ocsp}="OCSP request not valid";}
 	
 	$logger->info(" - Info: Closing connection for getting certificate details.");
 	Net::SSLeay::free($ssl);                   
 	Net::SSLeay::CTX_free($ctx);
+	close($ssl);
+	$cert->{score} = cert_score($cert);
 
 	return $pem, $cert ;
+	}
 }
 
 sub check_dates {
@@ -232,13 +231,35 @@ sub check_dates {
 	my $date_now_epoch    = time();
 
 	if ( $date_before_epoch > $date_now_epoch ) {
-		return "Certificate not yet valid\n";
+		return "Certificate not yet valid";
 	} elsif ( $date_after_epoch <= $date_now_epoch ) {
-		return "Certificate expired\n";
+		return "Certificate expired";
 	} elsif ( $date_after_epoch <= ( $date_now_epoch + ( 30 * 24 * 60 * 60 ) ) ){
-		return "Certificate will expire in 30 days or less\n";
+		return "Certificate will expire in 30 days or less";
 	} else {
-		return "Certificate date valid\n";
+		return "Certificate date valid";
 	}
+}
+
+sub cert_score{
+	my ( $cert ) = @_;
+	
+	my $score = 100;
+
+	if(($cert->{expiration}->{status} eq "Certificate expired" or 
+		$cert->{expiration}->{status} eq "Certificate not yet valid") 
+		or ($cert->{signature_alg} =~ m/md5/ or $cert->{signature_alg} =~ m/md2/)
+		or $cert->{ocsp} eq "OCSP certificate status is REVOKED"
+		or $cert->{pubkey_size} < 128 ){
+
+		return 0;
+
+	} elsif ($cert->{ocsp} =~ m/faild/) {
+		$score -= 10;
+	} elsif ($cert->{pubkey_bits} < pubkey_bits){
+		$score -=10;
+	}
+	
+	return $score;
 }
 1;

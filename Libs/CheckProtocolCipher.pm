@@ -48,7 +48,7 @@ use IO::Socket::SSL;
 use Socket;
 use Config::IniFiles;
 use Data::Dumper;
-
+use ComputeScore qw(compute_score compute_final_result );
 
 # --- Logging info message for debug
 use Log::Log4perl;
@@ -94,7 +94,7 @@ sub check_protocol_cipher {
 				$score =~ s/\s*[\#\;].*//g;
 
 				if ( $cipher =~ m/DEFAULT/i ) {
-					# The "DEFAULT" cipher is being tested, i.e. the protocol itself
+					# The "DEFAULT" cipher is being tested. the protocol itself
 					push @protocol_scores, $score;
 					$checkProtoCihperList->{protocol}->{$protocol}->{Score} = $score;
 					$checkProtoCihperList->{protocol}->{$protocol}->{implemented} = "yes";
@@ -120,9 +120,9 @@ sub check_protocol_cipher {
 		
 		if ( @cipher_scores > 0 ) {
 			# We got some cipher scores 
-			@cipher_scores = ();
+			$checkProtoCihperList->{protocol}->{$protocol}->{Score} = compute_score(@cipher_scores);
 		} else {
-			$checkProtoCihperList->{protocol}->{$protocol}->{score} = "0";
+			$checkProtoCihperList->{protocol}->{$protocol}->{Score} = "0";
 			
 		}
 	}# foreach $protocol (@protocols)
@@ -148,36 +148,5 @@ sub check {
 		return 0;    # Connection failed
 	}
 	close($client);
-}
-
-sub letter_grade {
-	my $score = shift(@_);
-	my $grade;
-
-	if ( $score >= 80 ) {
-		$grade = "A";
-	} elsif ( $score >= 60 ) {
-		$grade = "B";
-	} elsif ( $score >= 50 ) {
-		$grade = "C";
-	} elsif ( $score >= 35 ) {
-		$grade = "D";
-	} elsif ( $score >= 20 ) {
-		$grade = "E";
-	} else {
-		$grade = "F";
-	}
-
-	return ($grade);
-}
-
-sub compute_score {
-	my @scores = @_;
-	my $score;
-	my @sorted_scores = sort { $a <=> $b } @scores;
-	
-	$score = ( ( $sorted_scores[0] + $sorted_scores[$#sorted_scores] ) / 2 );
-	
-	return ( $score);
 }
 1;

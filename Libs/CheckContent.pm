@@ -78,12 +78,11 @@ sub check_content{
 	my $check = {};
 	$logger->info(" - Info: Cheking content");
 	# Create a user agent object
-	my $agent = LWP::UserAgent->new(env_proxy => 1,keep_alive => 1, timeout => 50, ssl_opts => {
+	my $agent = LWP::UserAgent->new(env_proxy => 1,keep_alive => 1, timeout => 5, ssl_opts => {
 							verify_hostname => 0,
 							SSL_verify_mode => IO::Socket::SSL::SSL_VERIFY_NONE,
 							},);
- 
-	$agent->max_redirect(5);
+	$agent->max_redirect(10);
 	$agent->agent("Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:39.0) Gecko/20100101 Firefox/39.0");
 	my $url = "http://$host"; 
 	
@@ -92,15 +91,22 @@ sub check_content{
 	my $response = $agent->get($url);
 	my $request = $response->request();
 	my @redirects = $response->redirects();
+	
 	$count = @redirects;
 	$check->{srv_type}=undef;
+	$check->{flash_content}=undef;
+	$scheck->{score}=undef;
+	
 	my $i =0 ;
-	print $response->as_string();
 	if ($response->is_success) {
+		# if there is no redirect check flash and server type in the response		
+		if($count == 0){
+			$check->{srv_type}=$response->header("Server");
+			$check->{flash_content} = check_flash_Content($response);
+		}
 		foreach my $res (@redirects) {	
 			my $req = $res->request();
-			#print $res->header("Server");print "\n";
-			#print $res->status_line();
+						
 			if($res->header("Server")){$check->{srv_type}=$res->header("Server");}
 		
 			if ($i == $count-1 && $res->header("Location") =~ m/https/){
@@ -109,29 +115,42 @@ sub check_content{
 				if($res->header("Strict-Transport-Security")){
 				
 					$check->{https_redirect} = "Yes";
-					$check->{hsts} = "Yes";		
+					$check->{hsts} = "Yes";
+					$check->{score} += 2;
 				}else{
 					$check->{https_redirect} = "Yes";
-					$check->{hsts} = "No";		
+					$check->{hsts} = "No";
+					$check->{score} += 0;
 				}
-			} elsif($i == $count-1 && $res->header("Location") =~ m/http/){
+			} else {
 				$check->{https_redirect} = "No";
 				$check->{hsts} = "No";
+				$check->{score} -= 1;
 			}
 			$i++;
+			$check->{flash_content} = check_flash_Content($res);
 		}
-		$check->{ext_content} = check_ext_content($response);
+		if(!($check->{ext_content} = check_ext_content($response)) ){
+			$check->{score} += 1;
+		} else {
+			$check->{score} -= 1;
+		}
+		if($scheck->{flash_content} == 0){
+			$check->{score} += 1;	
+		} else {
+			$check->{score} -= 1;
+		}
 		return $check;
 	}
 	 else {
-		$logger->fatal(" - Fatal: Http response code " . $response->status_line);
-		return $check = undef;
+		$logger->fatal(" - Fatal: Http response code " . $response->status_line);		
+		return $check;
 	}
 }
 
 sub check_ext_content{
 	my ($response) = @_;
-	
+	$logger->info(" - Info: Check if there are social link");
 	my @extCont;
 	if ($response->decoded_content =~ m/facebook.com/){push @extCont, "FB";} # or whatever
 	if ($response->decoded_content =~ m/plus.google.com/){push @extCont, "GP";}
@@ -141,3 +160,15 @@ sub check_ext_content{
 	
 	return \@extCont;
 }
+
+sub check_flash_Content{
+	my ($response) = @_;
+	$logger->info(" - Info: Check if there are flash content");
+	if($response->header("Content-Type") =~ m/x-shockwave-flash/ or 
+		$response->header("Content-Type") =~ m/video\/x-flv/){
+		return 1;
+	}
+	return 0;
+}
+
+
