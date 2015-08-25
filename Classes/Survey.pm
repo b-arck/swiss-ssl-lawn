@@ -17,12 +17,12 @@ This class is used to store information about web site survey
 	$this->{_ID}		= $ref_arguments->{id};
 	$this->{_HOSTNAME}	= $ref_arguments->{hostName};
 	$this->{_HOSTTYPE}	= $ref_arguments->{hostType};
+	$this->{_PORT}		= $ref_arguments->{port};
 	$this->{_IP}		= $ref_arguments->{ip};
 	$this->{_RESULT}	= $ref_arguments->{result};
 	$this->{_GRADE}         = $ref_arguments->{grade};
 	$this->{_SSL}		= $ref_arguments->{ssl};
 	$this->{_CERTIFICATE}	= $ref_arguments->{cert};
-	$this->{_PEMCERT}	= $ref_arguments->{pemcert};
 	$this->{_TRUSTED}	= $ref_arguments->{trusted};
 	$this->{_CONTENT}	= $ref_arguments->{content};
 	$this->{_DATE}		= $ref_arguments->{date};
@@ -65,15 +65,15 @@ sub new {
 	$this->{_ID}		= $ref_arguments->{id};
 	$this->{_HOSTNAME}	= $ref_arguments->{hostName};
 	$this->{_HOSTTYPE}	= $ref_arguments->{hostType};
+	$this->{_PORT}		= $ref_arguments->{port};
 	$this->{_IP}		= $ref_arguments->{ip};
 	$this->{_RESULT}	= $ref_arguments->{result};
 	$this->{_GRADE}         = $ref_arguments->{grade};
 	$this->{_SSL}		= $ref_arguments->{ssl};
 	$this->{_CERTIFICATE}	= $ref_arguments->{cert};
-	$this->{_PEMCERT}	= $ref_arguments->{pemcert};
 	$this->{_TRUSTED}	= $ref_arguments->{trusted};
 	$this->{_CONTENT}	= $ref_arguments->{content};
-	$this->{_DATE}		= $ref_arguments->{date};
+	$this->{_DATE}		= $ref_arguments->{date};;
 
 	return $this;
 }
@@ -119,6 +119,21 @@ sub set_hostType {
 
   if ( defined $host ) {
     $this->{_HOSTTYPE} = $host;
+  }
+
+  return;
+}
+
+sub get_port {
+  my $this = shift;
+  return $this->{_PORT};
+}
+
+sub set_port {
+  my ( $this, $host ) = @_;
+
+  if ( defined $host ) {
+    $this->{_PORT} = $host;
   }
 
   return;
@@ -194,21 +209,6 @@ sub set_cert {
 
   if ( defined $cert ) {
     $this->{_CERTIFICATE} = $cert;
-  }
-
-  return;
-}
-
-sub get_pemcert {
-  my $this = shift;
-  return $this->{_PEMCERT};
-}
-
-sub set_pemcert {
-  my ( $this, $pemcert ) = @_;
-
-  if ( defined $pemcert ) {
-    $this->{_PEMCERT} = $pemcert;
   }
 
   return;

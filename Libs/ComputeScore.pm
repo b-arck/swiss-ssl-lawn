@@ -52,7 +52,7 @@ package ComputeScore;
 
 use Exporter;
 use Log::Log4perl;
-use Data::Dumper;
+
 @ISA = qw(Exporter);
 @EXPORT = qw(compute_score compute_final_result);
 # --- Import created classes used in the script
@@ -96,8 +96,7 @@ sub compute_final_result {
 	my $cipher = ($audit->get_ssl)->{cipherScore};
 
 	my $content;
-	if(defined($audit->get_content())){$content = ($audit->get_content)->{score};}
-	#print $audit->get_hostName()."\n";	
+	if(defined($audit->get_content())){$content = ($audit->get_content)->{score};}	
 	 
 	if (!defined($audit->get_result())){ 
 		$res =  proto_cipher_score($proto, $cipher);
@@ -108,7 +107,7 @@ sub compute_final_result {
 		}
 
 	}
-	#print "Score : $res and grade : $grade \n";
+
 	$audit->set_result($res);
 	$audit->set_grade($grade);
 	return $audit;

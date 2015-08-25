@@ -2,18 +2,16 @@
 
 =head1 NAME
 
-CheckProtocolCipher - Module to check the SSL version supported and the cipher implemented by the server
+CheckProtocolCipher - Check the SSL version supported and the cipher implemented by the server
 
 =head1 SYNOPSIS
 
-	use CheckProtocolCipher qw(check_protocol_cipher);
-
-	my $success = check_protocol_cipher( $host, $port, $protocol, $cipher );
+	check_protocol_cipher( $host, $port, $iniFile);
 
 =head1 DESCRIPTION
 
 This module check the SSL version supported by the server and
-for each version it check a list of chipher.
+for each protocol, it check a list of chipher (.ini file).
 
 =head2 Methods
 
@@ -22,13 +20,12 @@ for each version it check a list of chipher.
 =item Arguments
 
 $host		# The host name
-$port		# The host port for connection
-$protocol	# Protocol to be checked
-$cipher		# Cipher to be checked
+$port		# The host port
+$iniFile	# File with Protocol and cipher to test
 
 =item Return
 
-Returns a boolean (1 or 0)
+return $checkProtoCihperList	# Hash ref with all tests
 
 =back
 
@@ -40,19 +37,19 @@ Ameti Behar
 
 package CheckProtocolCipher;
 
+use IO::Socket::SSL;
+use Socket;
+use Log::Log4perl;
+use Config::IniFiles;
+use Data::Dumper;
+use threads;
 use Exporter;
+use ComputeScore qw(compute_score compute_final_result );
+
 @ISA = qw(Exporter);
 @EXPORT = qw(check_protocol_cipher);
 
-use IO::Socket::SSL;
-use Socket;
-use Config::IniFiles;
-use Data::Dumper;
-use ComputeScore qw(compute_score compute_final_result );
-
-# --- Logging info message for debug
-use Log::Log4perl;
-# Initialize Logger
+# --- Initialize logging info message for debug
 my $log_conf = q(
    log4perl.rootLogger              = INFO, LOG1
    log4perl.appender.LOG1           = Log::Log4perl::Appender::File
@@ -67,72 +64,46 @@ my $logger = Log::Log4perl->get_logger();
 sub check_protocol_cipher {
 	my ( $host, $port, $file ) = @_;
 
-	my $cfg = new Config::IniFiles( -file => $file ) or $logger->fatal(" - Fatal: Can't read $file") && die( "Can't read $file" . $@ );
+	$logger->info(" - Loading ini file");
+	my $cfg = new Config::IniFiles( -file => $file ) or $logger->fatal(" - Fatal: Can't read $file") 
+							&& die( "Can't read $file" . $@ );
 	my @protocols = $cfg->Sections;
 
 	my $protocol;
 	my $cipher;
-	my $checkProtoCihperList ={};
-	my $i;
-	my $j;
+	my $checkProtoCihperList = {};
 	my @protocol_scores = ();
 	my @cipher_scores   = ();
+	my (@threads);
 
-	$logger->info(" - Info: checking protocol and cipher support");
+	$logger->info(" - Checking protocol and cipher support for host : $host");
+	#print "host : $host\n";
 	foreach $protocol (@protocols) {
 		my @ciphers = $cfg->Parameters($protocol);
-		$checkProtoCihperList->{protocol}->{$protocol};
-		$i = 0;
-		$j = 0;
-		foreach $cipher (@ciphers) {
-			my $success = check( $host, $port, $protocol, $cipher );
-			my ( $score );
-			
-			if ($success) {
-				$score = $cfg->val( $protocol, $cipher );
-				# Remove comments and whitespace before comments
-				$score =~ s/\s*[\#\;].*//g;
-
-				if ( $cipher =~ m/DEFAULT/i ) {
-					# The "DEFAULT" cipher is being tested. the protocol itself
-					push @protocol_scores, $score;
-					$checkProtoCihperList->{protocol}->{$protocol}->{Score} = $score;
-					$checkProtoCihperList->{protocol}->{$protocol}->{implemented} = "yes";
-				} else {
-					# A particular cipher is being tested
-					$checkProtoCihperList->{protocol}->{$protocol}->{AcceptedCipher}->[$i] = {cipher => $cipher,};
-					push @cipher_scores, $score;
-					$i++;
-				}
-				#print "$protocol - $cipher - successfull - $score\n";
-
-			} else {
-				if ( $cipher =~ m/DEFAULT/i ) {
-					$checkProtoCihperList->{protocol}->{$protocol}->{implemented} = "no";
-					
-				} else {
-					$checkProtoCihperList->{protocol}->{$protocol}->{RejectedCipher}->[$j] = {cipher => $cipher,};
-					$j++;
-				}
-				#print "$protocol - $cipher - unsuccessfull \n";
-			}
-		} # foreach $cipher (@ciphers)
-		
-		if ( @cipher_scores > 0 ) {
-			# We got some cipher scores 
-			$checkProtoCihperList->{protocol}->{$protocol}->{Score} = compute_score(@cipher_scores);
-		} else {
-			$checkProtoCihperList->{protocol}->{$protocol}->{Score} = "0";
-			
-		}
+		# Launch check with threads foreach Protocol
+		my $thr = threads->new(\&check, \@ciphers, $protocol, $cfg, $host, $port);
+		push(@threads,$thr);
+	
 	}# foreach $protocol (@protocols)
+	
+	foreach (@threads) {
+		my $thr = $_->join();
+		$key = (keys $thr)[0];
+		$checkProtoCihperList->{protocol}->{$key} = $thr->{$key};
+		
+		if($checkProtoCihperList->{protocol}->{$key}->{implemented} eq "yes"){
+			push @protocol_scores, $checkProtoCihperList->{protocol}->{$key}->{protocolScore};
+			push @cipher_scores, $checkProtoCihperList->{protocol}->{$key}->{cipherScore} . "\n";
+		}
+	}
+	
 	$logger->info(" - Info: Compute " . $host . " protocol and cipher result");
 	$checkProtoCihperList->{protocolScore} = compute_score(@protocol_scores);
 	$checkProtoCihperList->{cipherScore} = compute_score(@cipher_scores);
 	return $checkProtoCihperList;
 }
 
-sub check {
+sub check_connect {
 	my ( $host, $port, $ssl_version, $cipher ) = @_;
 	
 	my %server_options = (
@@ -149,4 +120,63 @@ sub check {
 	}
 	close($client);
 }
+
+sub check{
+	my ( $ciphersR, $protocol, $cfg, $host, $port ) = @_;
+	
+	my $checkProtoCihperList = {};
+	my @ciphers = @$ciphersR;
+	
+	my @protocol_scores;
+	my @cipher_scores;
+
+	# Used for cipher indexing in hashe table
+	my $i = 0;
+	my $j = 0;
+
+	foreach $cipher (@ciphers) {
+		my $success = check_connect( $host, $port, $protocol, $cipher );
+		my $score = $cfg->val( $protocol, $cipher );
+		
+		# Remove comments and whitespace before comments
+		$score =~ s/\s*[\#\;].*//g;
+		# $protocol - $cipher - tested successfull
+		if ($success) {
+			# The "DEFAULT" cipher is being tested. the protocol itself
+			if ( $cipher =~ m/DEFAULT/i ) {
+				
+				$checkProtoCihperList->{protocol}->{$protocol}->{protocolScore} = $score;
+				$checkProtoCihperList->{protocol}->{$protocol}->{implemented} = "yes";
+			} else {
+				# A cipher is being tested
+				$checkProtoCihperList->{protocol}->{$protocol}->{AcceptedCipher}->[$i] = $cipher;
+				push @$cipher_scores, $score;
+				$i++;
+			}
+		} else {
+			# The "DEFAULT" cipher is being tested. the protocol is not implemented
+			if ( $cipher =~ m/DEFAULT/i ) {
+				$checkProtoCihperList->{protocol}->{$protocol}->{protocolScore} = $score;
+				$checkProtoCihperList->{protocol}->{$protocol}->{implemented} = "no";
+				
+			} else {
+				# Cipher is not implemented
+				$checkProtoCihperList->{protocol}->{$protocol}->{RejectedCipher}->[$j] = $cipher;
+				$j++;
+			}
+		}
+		
+	} # foreach $cipher (@ciphers)
+	
+	if ( @$cipher_scores > 0 ) {
+		# Compute cipher liste score 
+		$checkProtoCihperList->{protocol}->{$protocol}->{cipherScore} = compute_score(@$cipher_scores);
+	} else {
+		# Attribute zero if no cipher in list
+		$checkProtoCihperList->{protocol}->{$protocol}->{cipherScore} = "0";
+	}
+	return $checkProtoCihperList->{protocol};
+
+}
+
 1;

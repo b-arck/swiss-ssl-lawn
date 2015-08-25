@@ -1,25 +1,23 @@
 =head1 NAME
 
-CheckOCSP - Module to check the certificate validity via OCSP request 
+CheckContent - Check basic web content and header 
 
 =head1 SYNOPSIS
 
-    use CheckProtocolCipher qw(check_protocol_cipher);
-
-    my $ocsp = check_ocsp( $host, $port );
+    check_content( $host, $port);
 
 =head1 DESCRIPTION
 
-This module check the certificate validity via OCSP request.
-the steps to do this check are : 
+This module check a lot of basic parameters on web content and header
 
 =over 12
 
-=item create OCSP_REQUEST
-=item determine URI of OCSP responder
-=item Send stringified OCSP_REQUEST with POST to
-=item Extract OCSP_RESPONSE
-=item Check status of response
+=item Server Type
+=item Social network link
+=item HSTS support
+=item HTTPs redirect
+=item Flash content in web page
+=item Give an assessment
 
 =back
 
@@ -30,15 +28,11 @@ the steps to do this check are :
 =item Arguments
 
 $host		# The host name
-$port		# The host port for connection
+$port		# The host port 
 
 =item Return
 
-Returns a String with certificat status. There are 3 status to return.
-
-return "OCSP certificate status is GOOD";
-return "OCSP certificate status is REVOKED : " . $revocreason; 
-return "OCSP certificate status is UNKNOWN";
+return $check;	# Hash ref with all check content datas
 
 =back
 
@@ -50,18 +44,16 @@ Ameti Behar
 
 package CheckContent;
 
-use Exporter;
-@ISA = qw(Exporter);
-@EXPORT = qw(check_content);
-
 use LWP::UserAgent;
 use HTTP::Response;
 use HTTP::Status qw(:constants :is status_message);
 use Log::Log4perl;
-use Data::Dumper;
+use Exporter;
 
-# --- Logging info message for debug
-# Initialize Logger
+@ISA = qw(Exporter);
+@EXPORT = qw(check_content);
+
+# --- Initialize logging info message for debug
 my $log_conf = q(
    log4perl.rootLogger              = INFO, LOG1
    log4perl.appender.LOG1           = Log::Log4perl::Appender::File
@@ -86,7 +78,7 @@ sub check_content{
 	$agent->agent("Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:39.0) Gecko/20100101 Firefox/39.0");
 	my $url = "http://$host"; 
 	
-	$logger->info(" - Info: Cheking HTTP Header for server type and HTTPs redirect on HTTP request");
+	$logger->info(" - Cheking HTTP Header for server type and HTTPs redirect on HTTP request");
 	
 	my $response = $agent->get($url);
 	my $request = $response->request();
@@ -101,6 +93,7 @@ sub check_content{
 	if ($response->is_success) {
 		# if there is no redirect check flash and server type in the response		
 		if($count == 0){
+			$logger->info(" - Retrieve Server Type information");
 			$check->{srv_type}=$response->header("Server");
 			$check->{flash_content} = check_flash_Content($response);
 		}
@@ -111,7 +104,7 @@ sub check_content{
 		
 			if ($i == $count-1 && $res->header("Location") =~ m/https/){
 
-				$logger->info(" - Info: Check if Strict-Transport-Security is implemented");
+				$logger->info(" - Check if Strict-Transport-Security is implemented");
 				if($res->header("Strict-Transport-Security")){
 				
 					$check->{https_redirect} = "Yes";
@@ -150,7 +143,7 @@ sub check_content{
 
 sub check_ext_content{
 	my ($response) = @_;
-	$logger->info(" - Info: Check if there are social link");
+	$logger->info(" - Check if there are social link");
 	my @extCont;
 	if ($response->decoded_content =~ m/facebook.com/){push @extCont, "FB";} # or whatever
 	if ($response->decoded_content =~ m/plus.google.com/){push @extCont, "GP";}
@@ -163,7 +156,7 @@ sub check_ext_content{
 
 sub check_flash_Content{
 	my ($response) = @_;
-	$logger->info(" - Info: Check if there are flash content");
+	$logger->info(" - Check if there are flash content");
 	if($response->header("Content-Type") =~ m/x-shockwave-flash/ or 
 		$response->header("Content-Type") =~ m/video\/x-flv/){
 		return 1;

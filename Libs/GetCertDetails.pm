@@ -1,6 +1,6 @@
 =head1 NAME
 
-GetCertDetails - Module to get certificate details 
+GetCertDetails - Get certificate details 
 
 =head1 SYNOPSIS
 
@@ -14,19 +14,20 @@ This module get the host certificate and extract all informations.
 
 =over 12
 
-=item subject
-=item issuer
-=item alternative names
-=item hashes/fingerprints
-=item expiration date
-=item serial number
-=item version
-=item extensions (oid, nid, ln, sn, data)
-=item crl_distribution_points
-=item extended key usage
-=item netscape cert type\n";
-=item certificate, signature and public key info\n";
-=item certificate in .pem format
+=item Subject
+=item Issuer
+=item Alternative names
+=item Ashes/fingerprints
+=item Expiration date
+=item Serial number
+=item Version
+=item Extensions (oid, nid, ln, sn, data)
+=item CRL distribution points
+=item Extended key usage
+=item Netscape cert type
+=item Certificate, signature and public key info
+=item Certificate in .pem format
+=item OCSP info and OCSP validation 
 
 =back
 
@@ -37,11 +38,11 @@ This module get the host certificate and extract all informations.
 =item Arguments
 
 $host		# The host name
-$port		# The host port for connection
+$port		# The host port
 
 =item Return
 
-A COMPLETER
+return $cert;	# Hash ref with all certificate inforation
 
 =back
 
@@ -54,10 +55,12 @@ Ameti Behar
 package GetCertDetails;
 
 use Time::gmtime;
-use Data::Dumper;
 use Time::ParseDate;
+use Log::Log4perl;
 use Exporter;
 
+use Net::SSLeay qw/XN_FLAG_RFC2253 ASN1_STRFLGS_ESC_MSB/;
+	
 @ISA = qw(Exporter);
 @EXPORT = qw(get_cert_details);
 
@@ -67,14 +70,8 @@ use File::Basename qw(dirname);
 use Cwd  qw(abs_path);
 use lib dirname(dirname abs_path $0) . '/Script/Libs';
 use CheckOCSP qw(check_ocsp);
-use Net::SSLeay qw/XN_FLAG_RFC2253 ASN1_STRFLGS_ESC_MSB/;
-	Net::SSLeay::randomize();
-	Net::SSLeay::load_error_strings();
-	Net::SSLeay::ERR_load_crypto_strings();
-	Net::SSLeay::SSLeay_add_ssl_algorithms();
-use Log::Log4perl;
 
-# Initialize Logger
+# --- Initialize logging info message for debug
 my $log_conf = q(
    log4perl.rootLogger              = INFO, LOG1
    log4perl.appender.LOG1           = Log::Log4perl::Appender::File
@@ -86,33 +83,41 @@ my $log_conf = q(
 Log::Log4perl::init(\$log_conf);
 my $logger = Log::Log4perl->get_logger();
 
-
 sub get_cert_details {
 	my ( $host, $port ) = @_;
+
+	
  	my $cert = {};
- 	my $pem;
  	my $flag_rfc22536_utf8 = (XN_FLAG_RFC2253) & (~ ASN1_STRFLGS_ESC_MSB);
 	$logger->info(" - Info: Open connection for getting certificate details.");
 
-	my $sock = IO::Socket::INET->new(PeerAddr => $host, PeerPort => $port, Proto => 'tcp') or $logger->fatal(" - Fatal: cannot create socket on port : \"$port\""),  die "ERROR: cannot create socket";
+	Net::SSLeay::randomize();
+	Net::SSLeay::load_error_strings();
+	Net::SSLeay::ERR_load_crypto_strings();
+	Net::SSLeay::SSLeay_add_ssl_algorithms();
+
+	my $sock = IO::Socket::INET->new(PeerAddr => $host, PeerPort => $port, Proto => 'tcp') 
+		or $logger->fatal(" - Cannot create socket on port : \"$port\" for host : \"$host\""),  
+		die "ERROR: cannot create socket";
  
 	my $ctx = Net::SSLeay::CTX_new() or die "ERROR: CTX_new failed";
 	Net::SSLeay::CTX_set_options($ctx, &Net::SSLeay::OP_ALL);
 	my $ssl = Net::SSLeay::new($ctx) or die "ERROR: new failed";
 	Net::SSLeay::set_fd($ssl, fileno($sock)) or die "ERROR: set_fd failed";
+	
 	eval{
 	Net::SSLeay::connect($ssl) or die "ERROR: connect failed";
 	my $x509 = Net::SSLeay::get_peer_certificate($ssl);
 
- 	$logger->fatal(" - Fatal: \$x509 is NULL, gonna quit"),die 'ERROR: $x509 is NULL, gonna quit' unless $x509;
+ 	$logger->fatal(" - \$x509 is NULL, gonna quit"),die 'ERROR: $x509 is NULL, gonna quit' unless $x509;
 
-	$logger->info(" - Info: dumping subject");
+	$logger->info(" - IDumping subject");
 	my $subj_name = Net::SSLeay::X509_get_subject_name($x509);
 	my $subj_count = Net::SSLeay::X509_NAME_entry_count($subj_name);
 	$cert->{subject}->{count} = $subj_count;
 	$cert->{subject}->{oneline} = Net::SSLeay::X509_NAME_oneline($subj_name);
 	
-	$logger->info(" - Info: dumping issuer");
+	$logger->info(" - Dumping issuer");
 	my $issuer_name = Net::SSLeay::X509_get_issuer_name($x509);
 	my $issuer_count = Net::SSLeay::X509_NAME_entry_count($issuer_name);
 	$cert->{issuer}->{count} = $issuer_count;
@@ -134,10 +139,10 @@ sub get_cert_details {
 		sn   => ($nid>0) ? Net::SSLeay::OBJ_nid2sn($nid) : undef,};
 	}
 
-	$logger->info(" - Info: dumping alternative names");
+	$logger->info(" - Dumping alternative names");
 	$cert->{subject}->{altnames} = [ Net::SSLeay::X509_get_subjectAltNames($x509) ];
 
-	$logger->info(" - Info: dumping hashes/fingerprints");
+	$logger->info(" - Dumping hashes/fingerprints");
 	$cert->{hash}->{subject} = { dec=>Net::SSLeay::X509_subject_name_hash($x509), hex=>sprintf("%X",Net::SSLeay::X509_subject_name_hash($x509)) };
 	$cert->{hash}->{issuer}  = { dec=>Net::SSLeay::X509_issuer_name_hash($x509),  hex=>sprintf("%X",Net::SSLeay::X509_issuer_name_hash($x509)) };
 	$cert->{hash}->{issuer_and_serial} = { dec=>Net::SSLeay::X509_issuer_and_serial_hash($x509), hex=>sprintf("%X",Net::SSLeay::X509_issuer_and_serial_hash($x509)) };
@@ -147,15 +152,16 @@ sub get_cert_details {
 	$cert->{digest_sha1}->{pubkey} = unpack('H*', Net::SSLeay::X509_pubkey_digest($x509, $sha1_digest))."\n";
 	$cert->{digest_sha1}->{x509} = unpack('H*', Net::SSLeay::X509_digest($x509, $sha1_digest));
 
-	$logger->info(" - Info: dumping expiration");
+	$logger->info(" - Dumping expiration");
 	$cert->{expiration}->{not_before} = Net::SSLeay::P_ASN1_TIME_get_isotime(Net::SSLeay::X509_get_notBefore($x509));
 	$cert->{expiration}->{not_after}  = Net::SSLeay::P_ASN1_TIME_get_isotime(Net::SSLeay::X509_get_notAfter($x509));
-	$logger->info(" - Info: Cheking expiration date");
+
+	$logger->info(" - Cheking expiration date");
 	$cert->{expiration}->{status} = check_dates(
 		Net::SSLeay::P_ASN1_UTCTIME_put2string(Net::SSLeay::X509_get_notBefore($x509)),
 		Net::SSLeay::P_ASN1_UTCTIME_put2string(Net::SSLeay::X509_get_notAfter($x509)));
 	
-	$logger->info(" - Info: dumping serial number");
+	$logger->info(" - Dumping serial number");
 	my $ai = Net::SSLeay::X509_get_serialNumber($x509);
 
 	$cert->{serial} = {
@@ -165,7 +171,7 @@ sub get_cert_details {
 		string  => unpack('H*',Net::SSLeay::P_ASN1_STRING_get(Net::SSLeay::X509_get_serialNumber($x509))),};
 	$cert->{version} = Net::SSLeay::X509_get_version($x509);
 
-	$logger->info(" - Info: dumping extensions");
+	$logger->info(" - Dumping extensions");
 	my $ext_count = Net::SSLeay::X509_get_ext_count($x509);
 	$cert->{extensions}->{count} = $ext_count;
 	for my $i (0..$ext_count-1) {
@@ -182,23 +188,23 @@ sub get_cert_details {
 			data     => Net::SSLeay::X509V3_EXT_print($ext),};
 	}
 
-	$logger->info(" - Info: dumping CRL distribution points");
+	$logger->info(" - Dumping CRL distribution points");
 	$cert->{crl}->{distrib_point} = Net::SSLeay::P_X509_get_crl_distribution_points($x509);
 
-	$logger->info(" - Info: dumping extended key usage");
+	$logger->info(" - Dumping extended key usage");
 	$cert->{extkeyusage} = {
 		oid => Net::SSLeay::P_X509_get_ext_key_usage($x509,0),
 		nid => Net::SSLeay::P_X509_get_ext_key_usage($x509,1),
 		sn  => Net::SSLeay::P_X509_get_ext_key_usage($x509,2),
 		ln  => Net::SSLeay::P_X509_get_ext_key_usage($x509,3),};
 
-	$logger->info(" - Info: dumping key usage");
+	$logger->info(" - Dumping key usage");
 	$cert->{keyusage} = Net::SSLeay::P_X509_get_key_usage($x509);
 
-	$logger->info(" - Info: dumping netscape cert type");
+	$logger->info(" - Dumping netscape cert type");
 	$cert->{ns_cert_type} = Net::SSLeay::P_X509_get_netscape_cert_type($x509);
 
-	$logger->info(" - Info: dumping other info");
+	$logger->info(" - Dumping other info");
 	$cert->{certificate_type} = Net::SSLeay::X509_certificate_type($x509);
 	$cert->{signature_alg} = Net::SSLeay::OBJ_obj2txt(Net::SSLeay::P_X509_get_signature_alg($x509));
 	$cert->{pubkey_alg} = Net::SSLeay::OBJ_obj2txt(Net::SSLeay::P_X509_get_pubkey_alg($x509));
@@ -207,19 +213,19 @@ sub get_cert_details {
 	eval{$cert->{pubkey_id} = Net::SSLeay::EVP_PKEY_id(Net::SSLeay::X509_get_pubkey($x509))};
 	
 	
-	$logger->info(" - Info: dumping pem");
-	$pem = Net::SSLeay::PEM_get_string_X509($x509);
+	$logger->info(" - Dumping pem");
+	$cert->{pem} = Net::SSLeay::PEM_get_string_X509($x509);
 
-	$logger->info(" - Info: dumping OCSP info");
+	$logger->info(" - Dumping OCSP info and OCSP validation");
 	eval{$cert->{ocsp} = check_ocsp( $ssl, $x509 )};
 	
-	$logger->info(" - Info: Closing connection for getting certificate details.");
+	$logger->info(" - Closing connection for getting certificate details.");
 	Net::SSLeay::free($ssl);                   
 	Net::SSLeay::CTX_free($ctx);
 	close($ssl);
 	$cert->{score} = cert_score($cert);
 
-	return $pem, $cert ;
+	return $cert ;
 	}
 }
 

@@ -1,6 +1,6 @@
 =head1 NAME
 
-CheckOCSP - Module to check the certificate validity via OCSP request 
+CheckOCSP - Check the certificate validity via OCSP request 
 
 =head1 SYNOPSIS
 
@@ -11,12 +11,11 @@ CheckOCSP - Module to check the certificate validity via OCSP request
 =head1 DESCRIPTION
 
 This module check the certificate validity via OCSP request.
-the steps to do this check are : 
 
 =over 12
 
-=item create OCSP_REQUEST
-=item determine URI of OCSP responder
+=item Create OCSP_REQUEST
+=item Determine URI of OCSP responder
 =item Send stringified OCSP_REQUEST with POST to
 =item Extract OCSP_RESPONSE
 =item Check status of response
@@ -30,11 +29,11 @@ the steps to do this check are :
 =item Arguments
 
 $host		# The host name
-$port		# The host port for connection
+$port		# The host port
 
 =item Return
 
-Returns a String with certificat status. There are 3 status to return.
+Returns a String with certificat status :
 
 return "OCSP certificate status is GOOD";
 return "OCSP certificate status is REVOKED : " . $revocreason; 
@@ -50,15 +49,15 @@ Ameti Behar
 
 package CheckOCSP;
 
-use Exporter;
+use Log::Log4perl;
 use Socket;
+use Exporter;
+
+
 @ISA = qw(Exporter);
 @EXPORT = qw(check_ocsp);
 
-# --- Logging info message for debug
-
-use Log::Log4perl;
-# Initialize Logger
+# --- Initialize logging info message for debug
 my $log_conf = q(
    log4perl.rootLogger              = INFO, LOG1
    log4perl.appender.LOG1           = Log::Log4perl::Appender::File
@@ -74,33 +73,33 @@ sub check_ocsp {
 	my ( $ssl, $x509 ) = @_;
 
 	my $id = eval { Net::SSLeay::OCSP_cert2ids($ssl,$x509) };
-	$logger->fatal(" - Fatal: failed to make OCSP_CERTID: $@"),die "failed to make OCSP_CERTID: $@" if $@;
+	$logger->fatal(" - Failed to make OCSP_CERTID: $@"),die "Failed to make OCSP_CERTID: $@" if $@;
 
-	$logger->info(" - Info: create OCSP_REQUEST from id(s)");
+	$logger->info(" - Create OCSP_REQUEST from id(s)");
 	my $req = Net::SSLeay::OCSP_ids2req($id);
 	
-	$logger->info(" - Info: determine URI of OCSP responder");
+	$logger->info(" - Determine URI of OCSP responder");
 	my $uri = Net::SSLeay::P_X509_get_ocsp_uri($x509);
-	$logger->info(" - Info: Send stringified OCSP_REQUEST with POST to $uri.");
+	$logger->info(" - Send stringified OCSP_REQUEST with POST to $uri.");
 	my $ua = HTTP::Tiny->new(verify_SSL => 0);
 	$res = $ua->request( 'POST',$uri, {
 		headers => { 'Content-type' => 'application/ocsp-request' },
 		content => Net::SSLeay::i2d_OCSP_REQUEST($req)
 	});
 	
-	my $content = $res && $res->{success} && $res->{content} or $logger->fatal(" - Fatal: query failed") && die "query failed";
+	my $content = $res && $res->{success} && $res->{content} or $logger->fatal(" - Query failed") && die "Query failed";
 
-	$logger->info(" - Info: Extract OCSP_RESPONSE.");
+	$logger->info(" - Extract OCSP_RESPONSE.");
 	my $resp = eval { Net::SSLeay::d2i_OCSP_RESPONSE($content) };
 
-	$logger->info(" - Info: Check status of response.");
+	$logger->info(" - Check status of response.");
 	my $status = Net::SSLeay::OCSP_response_status($resp);
 	if ($status != Net::SSLeay::OCSP_RESPONSE_STATUS_SUCCESSFUL()){
 		return "OCSP response failed: ".
 		Net::SSLeay::OCSP_response_status_str($status);
 	}
 	 
-	$logger->info(" - Info: Extract information from OCSP_RESPONSE for each of the ids.");
+	$logger->info(" - Extract information from OCSP_RESPONSE for each of the ids.");
 	my @results = Net::SSLeay::OCSP_response_results($resp,my @ids);
 
 	
