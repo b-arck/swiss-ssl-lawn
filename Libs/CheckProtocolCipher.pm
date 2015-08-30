@@ -148,6 +148,7 @@ sub check{
 				$checkProtoCihperList->{protocol}->{$protocol}->{protocolScore} = $score;
 				$checkProtoCihperList->{protocol}->{$protocol}->{implemented} = "yes";
 			} else {
+				
 				# A cipher is being tested
 				$checkProtoCihperList->{protocol}->{$protocol}->{AcceptedCipher}->[$i] = $cipher;
 				push @$cipher_scores, $score;
@@ -156,14 +157,12 @@ sub check{
 		} else {
 			# The "DEFAULT" cipher is being tested. the protocol is not implemented
 			if ( $cipher =~ m/DEFAULT/i ) {
-				$checkProtoCihperList->{protocol}->{$protocol}->{protocolScore} = $score;
-				$checkProtoCihperList->{protocol}->{$protocol}->{implemented} = "no";
 				
-			} else {
-				# Cipher is not implemented
-				$checkProtoCihperList->{protocol}->{$protocol}->{RejectedCipher}->[$j] = $cipher;
-				$j++;
-			}
+				$checkProtoCihperList->{protocol}->{$protocol}->{protocolScore} = 0;
+				$checkProtoCihperList->{protocol}->{$protocol}->{implemented} = "no";
+				$checkProtoCihperList->{protocol}->{$protocol}->{cipherScore} = 0;
+				last;
+			} 
 		}
 		
 	} # foreach $cipher (@ciphers)

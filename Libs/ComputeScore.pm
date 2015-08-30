@@ -94,18 +94,12 @@ sub compute_final_result {
 
 	my $proto = ($audit->get_ssl)->{protocolScore};
 	my $cipher = ($audit->get_ssl)->{cipherScore};
-
-	my $content;
-	if(defined($audit->get_content())){$content = ($audit->get_content)->{score};}	
-	 
-	if (!defined($audit->get_result())){ 
-		$res =  proto_cipher_score($proto, $cipher);
-		if(defined($audit->get_content())){
-			$grade = letter_grade($res, ($audit->get_content())->{score});
-		} else {
-			$grade = letter_grade($res, 0);
-		}
-
+	$res =  proto_cipher_score($proto, $cipher);
+	
+	if(defined($audit->get_content())){
+		$grade = letter_grade($res, ($audit->get_content())->{score});
+	} else{
+		$grade = letter_grade($res, 0);
 	}
 
 	$audit->set_result($res);
@@ -116,7 +110,7 @@ sub compute_final_result {
 sub proto_cipher_score{
 	my ($proto, $cipher) = @_;
 	my $score;
-	$logger->info(" - Info: Compute Protocol and Cipher final score");
+	$logger->info(" - Compute Protocol and Cipher final score");
 	$score =(($proto * 0.3) + ($cipher * 0.7)); 
 
 	return $score;
@@ -124,7 +118,7 @@ sub proto_cipher_score{
 sub letter_grade {
 	my ($score, $contentScore) = @_;
 	my $grade;
-	$logger->info(" - Info: Assigne the survey grade");
+	$logger->info(" - Assigne the survey grade");
 	if ( $score >= 80 ) {
 		$grade = "A";
 	} elsif ( $score >= 65 ) {

@@ -67,13 +67,13 @@ sub check_port {
 		$port = "443";
 	}
 
-	my $iaddr = inet_aton($host) || $logger->fatal(" - No host: $host") && die "no host: $host";
+	my $iaddr = inet_aton($host) || $logger->fatal(" - No host: $host") && return 0;
 	my $paddr = sockaddr_in( $port, $iaddr );
 	my $proto = getprotobyname('tcp');
 	
-	socket( SOCK, PF_INET, SOCK_STREAM, $proto ) || $logger->fatal(" - Socket: $!") && die "socket: $!";
+	socket( SOCK, PF_INET, SOCK_STREAM, $proto ) || $logger->fatal(" - Socket: $!") && return 0;
 	if ( connect( SOCK, $paddr ) ) {
-		$logger->info(" - Connect to host=$host, port=$port - OK");
+		$logger->info(" - Connect to host=$host:$port - OK");
 		$logger->info(" - Close connection");
 		close(SOCK) || $logger->fatal(" - Close $!") && die "close: $!";
 		return 1;

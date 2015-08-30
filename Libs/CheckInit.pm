@@ -36,7 +36,6 @@ package CheckInit;
 
 use Log::Log4perl;
 use Exporter;
-use Socket;
 
 @ISA = qw(Exporter);
 @EXPORT = qw(check_init);
@@ -58,21 +57,7 @@ sub check_init{
 
 	my @moduleList = @$moduleListR;
 
-	$logger->info(" - Checking Script init.");
-	if(!-d "BDD",){die "Folder BDD don't exist. Can't continue\n";}
-	if(!-d "ini",){die "Folder ini don't exist. Can't contine\n";}
-	if(!-d "Output"){
-		$logger->warn(" - Folder Output don't exist. Creating foler");
-		mkdir "Output";
-	}
-	if (-d "Libs") {
-    		if (is_folder_empty("Libs")) {die "Folder Libs contain no module. Can't continue\n";}
-	}
-	else{
-		die "Folder Libs don't exist. Can't continue\n";
-	}
-	if(!-f $xmlListe, ){ die "Hosts list don't exist. Can't contiue the script\n";}
-	if(!-f $protoCipherFile, ){ die "Protocol and Cipher list don't exist. Can't contiue the script\n";}
+	check_exist_folder_file(\$xmlListe, \$protoCipherFile);
 	
 	foreach my $module (@moduleList){		
 		if (!try_load_module($module)) {die "Missing module : " . $module ."\n";}
@@ -86,6 +71,25 @@ sub check_init{
 	if(!@hosts){die "file " . $xmlListe . " existe but is empty" ;}
 	
 	return \@hosts;
+}
+
+sub check_exist_folder_file{
+	my ($xmlListe, $protoCipherFile) = @_;
+	$logger->info(" - Checking Script init.");
+	if(!-d "BDD",){die "Folder BDD don't exist. Can't continue\n";}
+	if(!-d "ini",){die "Folder ini don't exist. Can't contine\n";}
+	if(!-d "Output"){
+		$logger->warn(" - Folder Output don't exist. Creating foler");
+		mkdir "Output";
+	}
+	if (-d "Libs") {
+    		if (is_folder_empty("Libs")) {die "Folder Libs contain no module. Can't continue\n";}
+	}
+	else{
+		die "Folder Libs don't exist. Can't continue\n";
+	}
+	if(!-f $$xmlListe, ){ die "Hosts list don't exist. Can't contiue the script\n";}
+	if(!-f $$protoCipherFile, ){ die "Protocol and Cipher list don't exist. Can't contiue the script\n";}
 }
 
 sub is_folder_empty {

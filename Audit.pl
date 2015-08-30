@@ -129,6 +129,7 @@ foreach my $host (@$hosts) {
 
 	if ( check_port( \$audit->get_hostName(), \$audit->get_port() ) ) {
 		if ( check_hostname( \$audit->get_hostName(), \$audit->get_port() ) ) {
+			$audit->set_grade("Temp");				
 			$audit->set_trusted("Yes");
 			$audit = check( $audit, $xmlListe , $protoCipherFile);
 		}# if !check_hostname
@@ -144,10 +145,10 @@ foreach my $host (@$hosts) {
 	else{
 		$audit->set_grade("Z");
 	}
-	print Dumper($audit);
+
+	if($audit->get_grade() ne "Z"){$audit = compute_final_result($audit);}
 	$survey->{$i} = $audit;
 	$i++;
-	$audit = compute_final_result($audit);
 	$logger->info("----------------------------------------------------------");
 }# foreach host
 my $duration = time - $start;

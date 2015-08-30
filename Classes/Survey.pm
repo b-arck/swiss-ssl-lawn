@@ -51,7 +51,7 @@ use warnings;
 use strict;          
 use Carp;            
 
-# Certificate classe constructor
+# Survey classe constructor
 sub new {
 	my ( $classe, $ref_arguments ) = @_;
 

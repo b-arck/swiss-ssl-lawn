@@ -68,12 +68,14 @@ my $logger = Log::Log4perl->get_logger();
 sub check_content{
 	my ($host) = @_;
 	my $check = {};
-	$logger->info(" - Info: Cheking content");
+	$logger->info(" - Cheking content");
 	# Create a user agent object
-	my $agent = LWP::UserAgent->new(env_proxy => 1,keep_alive => 1, timeout => 5, ssl_opts => {
-							verify_hostname => 0,
-							SSL_verify_mode => IO::Socket::SSL::SSL_VERIFY_NONE,
-							},);
+	my $agent = LWP::UserAgent->new(env_proxy => 1,
+					keep_alive => 1,
+					timeout => 5, 
+					ssl_opts => {
+					verify_hostname => 0,
+					SSL_verify_mode => IO::Socket::SSL::SSL_VERIFY_NONE,},);
 	$agent->max_redirect(10);
 	$agent->agent("Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:39.0) Gecko/20100101 Firefox/39.0");
 	my $url = "http://$host"; 
@@ -88,6 +90,7 @@ sub check_content{
 	$check->{srv_type}=undef;
 	$check->{flash_content}=undef;
 	$scheck->{score}=undef;
+	$scheck->{status_code}=undef;
 	
 	my $i =0 ;
 	if ($response->is_success) {
@@ -97,6 +100,7 @@ sub check_content{
 			$check->{srv_type}=$response->header("Server");
 			$check->{flash_content} = check_flash_Content($response);
 		}
+		$scheck->{status_code} = $response->status_line;
 		foreach my $res (@redirects) {	
 			my $req = $res->request();
 						
@@ -136,7 +140,8 @@ sub check_content{
 		return $check;
 	}
 	 else {
-		$logger->fatal(" - Fatal: Http response code " . $response->status_line);		
+		$logger->fatal(" - Fatal: Http response code " . $response->status_line);
+		$scheck->{status_code} = $response->status_line;		
 		return $check;
 	}
 }

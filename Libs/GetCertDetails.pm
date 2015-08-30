@@ -89,7 +89,7 @@ sub get_cert_details {
 	
  	my $cert = {};
  	my $flag_rfc22536_utf8 = (XN_FLAG_RFC2253) & (~ ASN1_STRFLGS_ESC_MSB);
-	$logger->info(" - Info: Open connection for getting certificate details.");
+	$logger->info(" - Open connection for getting certificate details.");
 
 	Net::SSLeay::randomize();
 	Net::SSLeay::load_error_strings();
@@ -111,7 +111,7 @@ sub get_cert_details {
 
  	$logger->fatal(" - \$x509 is NULL, gonna quit"),die 'ERROR: $x509 is NULL, gonna quit' unless $x509;
 
-	$logger->info(" - IDumping subject");
+	$logger->info(" - Dumping subject");
 	my $subj_name = Net::SSLeay::X509_get_subject_name($x509);
 	my $subj_count = Net::SSLeay::X509_NAME_entry_count($subj_name);
 	$cert->{subject}->{count} = $subj_count;
@@ -217,6 +217,7 @@ sub get_cert_details {
 	$cert->{pem} = Net::SSLeay::PEM_get_string_X509($x509);
 
 	$logger->info(" - Dumping OCSP info and OCSP validation");
+	$cert->{ocsp} = "";
 	eval{$cert->{ocsp} = check_ocsp( $ssl, $x509 )};
 	
 	$logger->info(" - Closing connection for getting certificate details.");
