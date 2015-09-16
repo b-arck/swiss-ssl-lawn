@@ -42,7 +42,23 @@
 	<host ID="24" type="e-banking" port="443">ch.saxobank.com</host>
 	<host ID="25" type="bank" port="443">www.pictet.com</host>
 	<host ID="26" type="bank" port="443">www.snb.ch</host>
-	<host ID="27" type="test" port="443">www.bam.ch</host>
-	<host ID="28" type="test" port="443">www.info-lab.fr</host>
+	<host ID="29" type="e-commerce" port="443">www.my-store.ch</host>
+	<host ID="30" type="e-commerce" port="443">www.quelle.ch</host>
+	<host ID="31" type="e-commerce" port="443">www.anibis.ch</host>
+	<host ID="32" type="e-commerce" port="443">www.koala.ch</host>
+	<host ID="33" type="e-commerce" port="443">www.eboutic.ch</host>
+	<host ID="34" type="e-commerce" port="443">www.adjuger.ch</host>
+	<host ID="35" type="e-commerce" port="443">www.ricardo.ch</host>
+	<host ID="36" type="e-commerce" port="443">www.apple.com</host>
+	<host ID="37" type="e-commerce" port="443">www.arp.ch</host>
+	<host ID="38" type="e-gov" port="443">www.ch.ch</host>
+	<host ID="39" type="e-commerce" port="443">www.ackermann.ch</host>
+	<host ID="40" type="e-gov" port="443">www.ch-edoc-passantrag.admin.ch</host>
+	<host ID="41" type="e-gov" port="443">www.zivi.admin.ch</host>
+	<host ID="27" type="other" port="443">www.bam.ch</host>
+	<host ID="28" type="other" port="443">www.info-lab.fr</host>
 </hosts>
+
+
+
 

@@ -1,0 +1,189 @@
+[% META title = 'SSL — Swiss SSL Lawn' -%]
+<body>
+	<div class="container">
+		[% FOREACH key IN hashref.keys -%]
+		<div class="page-header">
+		  <h1>[% hashref.$key.HOSTNAME %] <small>([% hashref.$key.HOSTTYPE %])</small> [% hashref.$key.GRADE %]</h1>
+		  <h1>Note : [% hashref.$key.RESULT %]     <a href="/select/graph/[% hashref.$key.HOSTNAME %]" onclick="window.open(this.href, 'myGraph','left=10,top=10,width=600,height=400,toolbar=0,resizable=1,scrollbars=1'); return false;" >  <i class="fa fa-bar-chart fa-1x"></i></a></h1>
+		  <h1><small>IP : [% hashref.$key.IP %]</small></h1>
+		</div>
+	
+		[% IF hashref.$key.RESULT >= '80' %] [% SET prog = "progress-bar progress-bar-success"%]
+		[% ELSIF hashref.$key.RESULT >= '50' %] [% SET prog = "progress-bar progress-bar-warning"%]
+		[% ELSE %] [% SET prog = "progress-bar progress-bar-danger"%]
+		[% END %]
+		<div class="progress">
+		  <div class="[% prog %]" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: [% hashref.$key.RESULT %]%;">
+			[% hashref.$key.RESULT %]%
+		  </div>
+		</div>
+	
+		[% FOREACH ent IN hashref.$key.CERTIFICATE.subject.entries.keys.sort -%]
+		[% IF hashref.$key.CERTIFICATE.subject.entries.$ent.ln.match('countryName') %] [% SET C = hashref.$key.CERTIFICATE.subject.entries.$ent.data %] [% END %]
+		[% IF hashref.$key.CERTIFICATE.subject.entries.$ent.ln.match('countryName') %] [% SET COID = hashref.$key.CERTIFICATE.subject.entries.$ent.oid %] [% END %]
+		[% IF hashref.$key.CERTIFICATE.subject.entries.$ent.ln.match('commonName') %] [% SET CN = hashref.$key.CERTIFICATE.subject.entries.$ent.data %] [% END %]
+		[% IF hashref.$key.CERTIFICATE.subject.entries.$ent.ln.match('commonName') %] [% SET CNOID = hashref.$key.CERTIFICATE.subject.entries.$ent.oid %] [% END %]	
+		[% IF hashref.$key.CERTIFICATE.subject.entries.$ent.ln.match('organizationName') %] [% SET O = hashref.$key.CERTIFICATE.subject.entries.$ent.data %] [% END %]
+		[% IF hashref.$key.CERTIFICATE.subject.entries.$ent.ln.match('organizationName') %] [% SET OOID = hashref.$key.CERTIFICATE.subject.entries.$ent.oid %] [% END %]
+		[% IF hashref.$key.CERTIFICATE.subject.entries.$ent.ln.match('serialNumber') %] [% SET SN = hashref.$key.CERTIFICATE.subject.entries.$ent.data %] [% END %]
+		[% IF hashref.$key.CERTIFICATE.subject.entries.$ent.ln.match('localityName') %] [% SET L = hashref.$key.CERTIFICATE.subject.entries.$ent.data %] [% END %]
+		[% IF hashref.$key.CERTIFICATE.subject.entries.$ent.ln.match('stateOrProvinceName') %] [% SET ST = hashref.$key.CERTIFICATE.subject.entries.$ent.data %] [% END %]
+		[% IF hashref.$key.CERTIFICATE.subject.entries.$ent.ln.match('street') %] [% SET STR = hashref.$key.CERTIFICATE.subject.entries.$ent.data %] [% END %]
+		[% IF hashref.$key.CERTIFICATE.subject.entries.$ent.ln.match('postalCode') %] [% SET PS = hashref.$key.CERTIFICATE.subject.entries.$ent.data %] [% END %]
+		[% END -%]
+
+		<div class="jumbotron" style="color:black">
+				<div class="page-header">
+				[% IF hashref.$key.TRUSTED.match('Oui') %]
+					<h1><small><i class="fa fa-certificate"> </i> Détails du Certificat</small></h1>
+					[% ELSE %]
+					<h1><small style="color:red"><i class="fa fa-certificate" style="color:red"> </i> Détails du Certificat</small></h1>
+					[% END %]
+				</div>
+	
+				<div class="well" style="background-color:lavender; word-break: break-all;">
+				<dl class="dl-horizontal">
+					<p><dt><h4>Emis pour</h4></dt><dd></dd></p>
+					<dt>Nom commun (CN)</dt>
+					[% IF hashref.$key.TRUSTED.match('Oui') %]
+					<dd class="text-left">[% CN %] (OID : [% CNOID %])  [% ELSE %]<dd class="text-left" style="color:red">[% CN %] (Hostname missmatch)  [% END %]</dd>
+					<dt>Organisation (O)</dt>
+					<dd class="text-left">[% O %] (OID : [% OOID %])</dd>
+					<dt>Pays (C)</dt>
+					<dd class="text-left">[% C %]</dd>
+					<dt>Adresse (L) (ST)</dt>
+					<dd class="text-left">[% STR %] [% PS %] [% L %] [% ST %]</dd>
+					<dt>Numéro de série</dt>
+					<dd class="text-left">[% IF SN %] [% SN %] [% ELSE %] 0x[% hashref.$key.CERTIFICATE.serial.hex %][% END %]</dd>
+				</dl>
+			</div>
+			[% FOREACH ent IN hashref.$key.CERTIFICATE.issuer.entries.keys.sort -%]
+			[% IF hashref.$key.CERTIFICATE.issuer.entries.$ent.ln.match('countryName') %] [% SET C = hashref.$key.CERTIFICATE.issuer.entries.$ent.data %] [% END %]
+			[% IF hashref.$key.CERTIFICATE.issuer.entries.$ent.ln.match('commonName') %] [% SET CN = hashref.$key.CERTIFICATE.issuer.entries.$ent.data %] [% END %]
+			[% IF hashref.$key.CERTIFICATE.issuer.entries.$ent.ln.match('commonName') %] [% SET CNOID = hashref.$key.CERTIFICATE.issuer.entries.$ent.oid %] [% END %]
+			[% IF hashref.$key.CERTIFICATE.issuer.entries.$ent.ln.match('organizationName') %] [% SET O = hashref.$key.CERTIFICATE.issuer.entries.$ent.data %] [% END %]
+			[% IF hashref.$key.CERTIFICATE.issuer.entries.$ent.ln.match('organizationalUnitName') %] [% SET OU = hashref.$key.CERTIFICATE.issuer.entries.$ent.data %] [% END %]
+			[% IF hashref.$key.CERTIFICATE.issuer.entries.$ent.ln.match('organizationalUnitName') %] [% SET OUOID = hashref.$key.CERTIFICATE.issuer.entries.$ent.oid %] [% END %]
+			[% IF hashref.$key.CERTIFICATE.issuer.entries.$ent.ln.match('organizationName') %] [% SET OOID = hashref.$key.CERTIFICATE.issuer.entries.$ent.oid %] [% END %]
+			[% END -%]
+			<div class="well" style="word-break: break-all">
+				<dl class="dl-horizontal">
+					<p><dt><h4>Emis par</h4></dt><dd></dd></p>
+					<dt>Nom commun (CN)</dt>
+					<dd class="text-left">[% CN %] (OID : [% CNOID %])</dd>
+					<dt>Organisation (O)</dt>
+					<dd class="text-left">[% O %] (OID : [% OOID %])</dd>
+					<dt>Unité d'organisation (OU)</dt>
+					<dd class="text-left">[% OU %] (OID : [% OUOID %])</dd>
+					<dt>Pays (C)</dt>
+					<dd class="text-left">[% C %]</dd>
+				</dl>
+			</div>
+			<div class="well" style="background-color:lavender; word-break: break-all;">
+				<dl class="dl-horizontal">
+					<p><dt><h4>Période de validité</h4></dt>
+					[% IF hashref.$key.CERTIFICATE.expiration.status.match('Valid')%]<dd>
+					</dd>[% ELSE %]<dd class="text-left" style="color:red">[%hashref.$key.CERTIFICATE.expiration.status%]</dd> [% END %]</p>
+					<dt>Pas avant</dt>
+					<dd class="text-left">[% hashref.$key.CERTIFICATE.expiration.not_before %]</dd>
+					<dt>Pas après</dt>
+					<dd class="text-left">[% hashref.$key.CERTIFICATE.expiration.not_after %]</dd>
+					<dt>CRL</dt>
+					[% IF hashref.$key.CERTIFICATE.crl.match('No') or !hashref.$key.CERTIFICATE.crl %]<dd class="text-left" style="color:red">No CRL</dd> [% ELSE %]<dd class="text-left">[% hashref.$key.CERTIFICATE.crl %]</dd>[% END%]
+					<dt>Status OCSP</dt>
+					[% IF hashref.$key.CERTIFICATE.ocsp.match('No') %]<dd class="text-left" style="color:red">[% hashref.$key.CERTIFICATE.ocsp %]</dd>
+					[% ELSIF hashref.$key.CERTIFICATE.ocsp.match('GOOD') %] <dd class="text-left">[% hashref.$key.CERTIFICATE.ocsp %]</dd> [% ELSE %]<dd class="text-left" style="color:red">[% hashref.$key.CERTIFICATE.ocsp %]</dd>[% END %]
+				</dl>
+			</div>
+			<div class="well" style="word-break: break-all">
+				<dl class="dl-horizontal">
+					<p><dt><h4>Infos de la clé</h4></dt><dd></dd></p>
+					<dt>Algorithme</dt>
+					[% IF hashref.$key.CERTIFICATE.signature_alg.match('sha1') %]	      
+					<dd class="text-left" style="color:red">[% hashref.$key.CERTIFICATE.signature_alg %]</dd> 
+					[% ELSE %]
+					<dd class="text-left">[% hashref.$key.CERTIFICATE.signature_alg %]</dd>[% END %]
+					<dt>Clé publique</dt>
+					<dd class="text-left">[% hashref.$key.CERTIFICATE.digest_sha1.pubkey %]</dd>
+					<dt>Taille de la clé</dt>
+					<dd class="text-left">[% hashref.$key.CERTIFICATE.pubkey_size %] (octet) / [% hashref.$key.CERTIFICATE.pubkey_bits %] (bit)</dd>
+					<dt>Utilisation de la clé</dt>
+					<dd class="text-left">[% hashref.$key.CERTIFICATE.keyusage %]</dd>
+				</dl>
+			</div>
+			<div class="well" style="background-color:lavender; word-break: break-all;">
+				<dl class="dl-horizontal">
+					<p><dt><h4>Extensions</h4></dt><dd></dd></p>	
+					[% FOREACH ext IN hashref.$key.CERTIFICATE.extensions.entries.keys.sort %]	
+					<div class="well" style="word-break: break-all;">		
+						<dt>Critique</dt>
+						<dd class="text-left">[% IF hashref.$key.CERTIFICATE.extensions.entries.$ext.critical.match('0') %] Non [% ELSE %] Oui [% END %]</dd>
+						<dt>[%  hashref.$key.CERTIFICATE.extensions.entries.$ext.ln %]</dt>
+						[% IF hashref.$key.CERTIFICATE.extensions.entries.$ext.data.match('CA:TRUE') %]<dd class="text-left" style="color:red"> [% hashref.$key.CERTIFICATE.extensions.entries.$ext.data %] - Certificat auto-signé</dd>[% ELSE %]<dd class="text-left"> [% hashref.$key.CERTIFICATE.extensions.entries.$ext.data %]</dd>[% END %]
+					</div>
+					[% END %]
+				</dl>
+			</div>
+			<div class="well" style="word-break: break-all">
+				<dl class="dl-horizontal">
+					<p><dt><h4>Empreintes</h4></dt><dd></dd></p>
+					<dt>MD5</dt>
+					<dd class="text-left">[% hashref.$key.CERTIFICATE.fingerprint.md5 %]</dd>
+					<dt>SHA1</dt>
+					<dd class="text-left">[% hashref.$key.CERTIFICATE.fingerprint.sha1 %]</dd>
+				</dl>
+			</div>
+		</div>
+	
+		<div class="jumbotron" style="color:black">
+			<div class="page-header">
+				<h1><small><i class="fa fa-lock"></i> Détails des Protocoles</small></h1>
+			</div>
+				<dl class="dl-horizontal">
+				<p><dt><h4>Protocoles supportés</h4></dt><dd></dd></p>
+				[% FOREACH item IN hashref.$key.SSL.protocol.keys.sort -%]
+				[% SET protoImp = hashref.$key.SSL.protocol.$item.implemented %]
+				[% SET proto = item %]
+				[% SET col = "style=\"color:red\"" %]
+				[% SET back = "" %]
+				[% IF (proto.match('SSLv') AND protoImp.match('yes')) OR (proto.match('TLSv') AND protoImp.match('no')) %] 
+				[% SET back = "background-color:red;" %]		
+				[% END %]
+			<div class="well" style="[% back %]word-break: break-all">
+			<dt>[% IF proto.match('SSLv2') %] <i class="fa fa-unlock" [%col%]></i> 
+			[% ELSIF proto.match('SSLv3') %]<i class="fa fa-unlock-alt" [%col%]></i> 
+			[% ELSE%] <i class="fa fa-lock"></i>[% END%] [% item %]</dt>
+			<dd class="text-left">[% IF protoImp.match('yes')%] - [% ELSE %] Pas supporté[% END %]</dd>
+			<dd class="text-left">[% hashref.$key.SSL.protocol.$item.AcceptedCipher.join('</br>') %]</dd>
+			</div>
+			[% END %]
+
+			</dl>
+		</div>
+
+		<div class="jumbotron" style="color:black">
+			<div class="page-header">
+				<h1><small><i class="fa fa-file-code-o"></i> Autres</small></h1>
+			</div>		
+			<div class="well" style="word-break: break-all">
+				<dl class="dl-horizontal">
+					<p><dt><h4>Page web & HTTP Header</h4></dt><dd></dd></p>
+					<dt>Réseaux sociaux</dt>
+					<dd class="text-left">[% hashref.$key.CONTENT.ext_content.join('</br>') %]</dd>
+					<dt>Redirection HTTPs</dt>
+					<dd class="text-left">[% hashref.$key.CONTENT.hsts %]</dd>
+					<dt>HSTS</dt>
+					<dd class="text-left">[% hashref.$key.CONTENT.https_redirect %]</dd>
+					<dt>Contenu flash</dt>
+					<dd class="text-left">[% IF hashref.$key.CONTENT.flash_content.match('0') %] No [% ELSIF hashref.$key.CONTENT.flash_content.match('1') %]Yes [% END %]</dd>
+					<dt>Type de serveur</dt>
+					<dd class="text-left">[% hashref.$key.CONTENT.srv_type %]</dd>
+				</dl>	
+			</div>
+		</div>
+		[% END -%]
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>

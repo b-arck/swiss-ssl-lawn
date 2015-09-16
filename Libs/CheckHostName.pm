@@ -85,8 +85,7 @@ sub check_hostname {
 			return 0;
 		} else {
 			if($client->peer_certificate('commonName')){
-				$logger->info(" - Certificate CN: " 
-						. $client->peer_certificate('commonName') . " == Hostname: $host");
+				$logger->info(" - Certificate CN: ". $client->peer_certificate('commonName') . " == Hostname: $host");
 				
 			} else {
 				$logger->info(" - CommonName is not part of certificat for Hostname: $host");

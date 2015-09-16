@@ -96,7 +96,7 @@ sub saveToxml{
 	$logger->info(" - Info: Serialize to XML and save in a file");
 	$xml  = $dump->pl2xml( $surveyH );
 	$perl = $dump->xml2pl( $xml );
-	$dump->pl2xml( $perl, dirname(dirname abs_path $0) . '/Script/Output/' . $xmlfile );
+	$dump->pl2xml( $perl, dirname(dirname abs_path $0) . '/Script/SSL/root/Output/' . $xmlfile );
 }
 
 sub get_file_name{

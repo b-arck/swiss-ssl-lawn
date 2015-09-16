@@ -79,7 +79,7 @@ my $logger = Log::Log4perl->get_logger();
 sub get_time {
 
     my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst)=localtime(time);
-    my $nice_timestamp = sprintf ( "%02d.%02d.%04d %02d:%02d:%02d",$mday,$mon+1,$year+1900,$hour,$min,$sec);
+    my $nice_timestamp = sprintf ( "%02d.%02d.%04d",$mday,$mon+1,$year+1900);
     return $nice_timestamp;
 }
 
@@ -106,7 +106,8 @@ my $xmlListe = "BDD/hostsList.xml";
 my $protoCipherFile = "ini/ProtoCipher.ini";
 my @moduleList =("HTTP::Tiny","Getopt::Long","XML::LibXML","XML::Dumper","XML::Simple",
 		"Data::Dumper","IO::Socket::SSL","Socket","Net::SSLeay","Config::IniFiles",
-		"Time::gmtime","Time::ParseDate","Log::Log4perl","LWP::UserAgent","HTTP::Response");
+		"Time::gmtime","Time::ParseDate","Log::Log4perl","LWP::UserAgent","HTTP::Response",
+		"File::stat");
 my $survey = {};
 my $hosts;
 my $start = time;
@@ -130,23 +131,34 @@ foreach my $host (@$hosts) {
 	if ( check_port( \$audit->get_hostName(), \$audit->get_port() ) ) {
 		if ( check_hostname( \$audit->get_hostName(), \$audit->get_port() ) ) {
 			$audit->set_grade("Temp");				
-			$audit->set_trusted("Yes");
+			$audit->set_trusted("Oui");
 			$audit = check( $audit, $xmlListe , $protoCipherFile);
+			$audit = compute_final_result($audit);
 		}# if !check_hostname
 		else{
 			# If host name don't match give F result
-			$audit->set_trusted("No");
+			$audit->set_trusted("Hostname missmatch");
 			# Check protocol and cipher
 			$audit = check( $audit, $xmlListe, $protoCipherFile );
+			$audit = compute_final_result($audit);
 			$audit->set_grade("F");
+			if(!defined($audit->get_cert())){
+				$audit->set_grade("Z");
+				my $cert = {};
+				$cert->{pubkey_bits} = 0;
+				$audit->set_cert($cert);
+			}
 		}
 		
 	}# if check_port
 	else{
+		my $cert = {};
+		$cert->{pubkey_bits} = 0;
 		$audit->set_grade("Z");
+		$audit->set_result(0);
+		$audit->set_trusted("Non");
+		$audit->set_cert($cert);
 	}
-
-	if($audit->get_grade() ne "Z"){$audit = compute_final_result($audit);}
 	$survey->{$i} = $audit;
 	$i++;
 	$logger->info("----------------------------------------------------------");

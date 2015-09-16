@@ -1,0 +1,57 @@
+[% META title = 'SSL — Swiss SSL Lawn' -%]
+<body>
+	<div id="chart_div"></div>
+	
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+
+		// Load the Visualization API and the piechart package.
+		google.load('visualization', '1.0', {'packages':['corechart', 'bar']});
+
+		// Set a callback to run when the Google Visualization API is loaded.
+		google.setOnLoadCallback(drawChart);
+
+		// Callback that creates and populates a data table,
+		// instantiates the pie chart, passes in the data and
+		// draws it.
+		function drawChart() {
+			// Create the data table.
+			var data = new google.visualization.DataTable();
+			data.addColumn('string', '');
+			data.addColumn('number', "Note" );
+			data.addColumn({ type: 'string', role: 'style' });
+			data.addRows([
+			[% FOREACH key IN graphs.keys.sort -%]
+			[% graphs.$key %],
+			[% END -%]
+			]);
+
+			var options = {
+				'width':600,
+                       		'height':360,
+				title: '[% hname %]',
+				titleTextStyle:{color:'withe',fontSize:18},
+				isStacked:true,
+				legend: 'none',
+				
+				hAxis: {
+					title: 'Date audit',
+				},
+				vAxis: {
+					title: 'Note/100',
+					viewWindow: {
+						min: [0],
+            					max: [100]
+					}
+				}
+			};
+
+			// Instantiate and draw our chart, passing in some options.
+			var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+			chart.draw(data, options);
+		}
+	</script>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>

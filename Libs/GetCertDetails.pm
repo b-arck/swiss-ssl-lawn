@@ -88,6 +88,7 @@ sub get_cert_details {
 
 	
  	my $cert = {};
+	$cert->{pubkey_bits} = "0";
  	my $flag_rfc22536_utf8 = (XN_FLAG_RFC2253) & (~ ASN1_STRFLGS_ESC_MSB);
 	$logger->info(" - Open connection for getting certificate details.");
 
@@ -116,7 +117,22 @@ sub get_cert_details {
 	my $subj_count = Net::SSLeay::X509_NAME_entry_count($subj_name);
 	$cert->{subject}->{count} = $subj_count;
 	$cert->{subject}->{oneline} = Net::SSLeay::X509_NAME_oneline($subj_name);
-	
+	$cert->{subject}->{print_rfc2253} = Net::SSLeay::X509_NAME_print_ex($subj_name);
+	$cert->{subject}->{print_rfc2253_utf8} = Net::SSLeay::X509_NAME_print_ex($subj_name, $flag_rfc22536_utf8);
+	for my $i (0..$subj_count-1) {
+		my $entry = Net::SSLeay::X509_NAME_get_entry($subj_name, $i);
+		my $asn1_string = Net::SSLeay::X509_NAME_ENTRY_get_data($entry);
+		my $asn1_object = Net::SSLeay::X509_NAME_ENTRY_get_object($entry);
+		my $nid = Net::SSLeay::OBJ_obj2nid($asn1_object);
+        $cert->{subject}->{entries}->{$i} = {
+			oid  => Net::SSLeay::OBJ_obj2txt($asn1_object,1),
+			data => Net::SSLeay::P_ASN1_STRING_get($asn1_string),
+			nid  => ($nid>0) ? $nid : undef,
+			ln   => ($nid>0) ? Net::SSLeay::OBJ_nid2ln($nid) : undef,
+			sn   => ($nid>0) ? Net::SSLeay::OBJ_nid2sn($nid) : undef,
+			};
+	}	
+
 	$logger->info(" - Dumping issuer");
 	my $issuer_name = Net::SSLeay::X509_get_issuer_name($x509);
 	my $issuer_count = Net::SSLeay::X509_NAME_entry_count($issuer_name);
@@ -124,23 +140,21 @@ sub get_cert_details {
 	$cert->{issuer}->{oneline} = Net::SSLeay::X509_NAME_oneline($issuer_name);
 	$cert->{issuer}->{print_rfc2253} = Net::SSLeay::X509_NAME_print_ex($issuer_name);
 	$cert->{issuer}->{print_rfc2253_utf8} = Net::SSLeay::X509_NAME_print_ex($issuer_name, $flag_rfc22536_utf8);
-	$cert->{issuer}->{print_rfc2253_utf8_decoded} = Net::SSLeay::X509_NAME_print_ex($issuer_name, $flag_rfc22536_utf8, 1);
 	for my $i (0..$issuer_count-1) {
 		my $entry = Net::SSLeay::X509_NAME_get_entry($issuer_name, $i);
 		my $asn1_string = Net::SSLeay::X509_NAME_ENTRY_get_data($entry);
 		my $asn1_object = Net::SSLeay::X509_NAME_ENTRY_get_object($entry);
 		my $nid = Net::SSLeay::OBJ_obj2nid($asn1_object);
-		$cert->{issuer}->{entries}->[$i] = {
+		$cert->{issuer}->{entries}->{$i} = {
 		oid  => Net::SSLeay::OBJ_obj2txt($asn1_object,1),
 		data => Net::SSLeay::P_ASN1_STRING_get($asn1_string),
-		data_utf8_decoded => Net::SSLeay::P_ASN1_STRING_get($asn1_string, 1),
 		nid  => ($nid>0) ? $nid : undef,
 		ln   => ($nid>0) ? Net::SSLeay::OBJ_nid2ln($nid) : undef,
 		sn   => ($nid>0) ? Net::SSLeay::OBJ_nid2sn($nid) : undef,};
 	}
-
+	
 	$logger->info(" - Dumping alternative names");
-	$cert->{subject}->{altnames} = [ Net::SSLeay::X509_get_subjectAltNames($x509) ];
+	$cert->{subject}->{altnames} = {Net::SSLeay::X509_get_subjectAltNames($x509)};
 
 	$logger->info(" - Dumping hashes/fingerprints");
 	$cert->{hash}->{subject} = { dec=>Net::SSLeay::X509_subject_name_hash($x509), hex=>sprintf("%X",Net::SSLeay::X509_subject_name_hash($x509)) };
@@ -153,8 +167,8 @@ sub get_cert_details {
 	$cert->{digest_sha1}->{x509} = unpack('H*', Net::SSLeay::X509_digest($x509, $sha1_digest));
 
 	$logger->info(" - Dumping expiration");
-	$cert->{expiration}->{not_before} = Net::SSLeay::P_ASN1_TIME_get_isotime(Net::SSLeay::X509_get_notBefore($x509));
-	$cert->{expiration}->{not_after}  = Net::SSLeay::P_ASN1_TIME_get_isotime(Net::SSLeay::X509_get_notAfter($x509));
+	$cert->{expiration}->{not_before} = Net::SSLeay::P_ASN1_UTCTIME_put2string(Net::SSLeay::X509_get_notBefore($x509));
+	$cert->{expiration}->{not_after}  = Net::SSLeay::P_ASN1_UTCTIME_put2string(Net::SSLeay::X509_get_notAfter($x509));
 
 	$logger->info(" - Cheking expiration date");
 	$cert->{expiration}->{status} = check_dates(
@@ -179,7 +193,7 @@ sub get_cert_details {
 		my $asn1_string = Net::SSLeay::X509_EXTENSION_get_data($ext);
 		my $asn1_object = Net::SSLeay::X509_EXTENSION_get_object($ext);
 		my $nid = Net::SSLeay::OBJ_obj2nid($asn1_object);
-		$cert->{extensions}->{entries}->[$i] = {
+		$cert->{extensions}->{entries}->{$i} = {
 			critical => Net::SSLeay::X509_EXTENSION_get_critical($ext),
 			oid      => Net::SSLeay::OBJ_obj2txt($asn1_object,1),
 			nid      => ($nid>0) ? $nid : undef,
@@ -189,7 +203,8 @@ sub get_cert_details {
 	}
 
 	$logger->info(" - Dumping CRL distribution points");
-	$cert->{crl}->{distrib_point} = Net::SSLeay::P_X509_get_crl_distribution_points($x509);
+	$cert->{crl} = "No CRL";
+	$cert->{crl} = Net::SSLeay::P_X509_get_crl_distribution_points($x509);
 
 	$logger->info(" - Dumping extended key usage");
 	$cert->{extkeyusage} = {
@@ -217,7 +232,7 @@ sub get_cert_details {
 	$cert->{pem} = Net::SSLeay::PEM_get_string_X509($x509);
 
 	$logger->info(" - Dumping OCSP info and OCSP validation");
-	$cert->{ocsp} = "";
+	$cert->{ocsp} = "No OCSP";
 	eval{$cert->{ocsp} = check_ocsp( $ssl, $x509 )};
 	
 	$logger->info(" - Closing connection for getting certificate details.");
@@ -225,7 +240,7 @@ sub get_cert_details {
 	Net::SSLeay::CTX_free($ctx);
 	close($ssl);
 	$cert->{score} = cert_score($cert);
-
+	print $cert->{ocsp}."\n";
 	return $cert ;
 	}
 }
@@ -238,13 +253,13 @@ sub check_dates {
 	my $date_now_epoch    = time();
 
 	if ( $date_before_epoch > $date_now_epoch ) {
-		return "Certificate not yet valid";
+		return "Not yet valid";
 	} elsif ( $date_after_epoch <= $date_now_epoch ) {
-		return "Certificate expired";
+		return "Expired";
 	} elsif ( $date_after_epoch <= ( $date_now_epoch + ( 30 * 24 * 60 * 60 ) ) ){
-		return "Certificate will expire in 30 days or less";
+		return "Will expire in 30 days or less";
 	} else {
-		return "Certificate date valid";
+		return "Valid";
 	}
 }
 

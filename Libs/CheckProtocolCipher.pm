@@ -43,6 +43,7 @@ use Log::Log4perl;
 use Config::IniFiles;
 use Data::Dumper;
 use threads;
+use threads::shared;
 use Exporter;
 use ComputeScore qw(compute_score compute_final_result );
 
@@ -75,23 +76,23 @@ sub check_protocol_cipher {
 	my @protocol_scores = ();
 	my @cipher_scores   = ();
 	my (@threads);
-
+my $current :shared;
+$current = 0;
 	$logger->info(" - Checking protocol and cipher support for host : $host");
 	#print "host : $host\n";
 	foreach $protocol (@protocols) {
 		my @ciphers = $cfg->Parameters($protocol);
 		# Launch check with threads foreach Protocol
-		my $thr = threads->new(\&check, \@ciphers, $protocol, $cfg, $host, $port);
+		my $thr = threads->new(\&check, \@ciphers, $protocol, $cfg, $host, $port,$_);
 		push(@threads,$thr);
 	
 	}# foreach $protocol (@protocols)
-	
 	foreach (@threads) {
 		my $thr = $_->join();
 		$key = (keys $thr)[0];
 		$checkProtoCihperList->{protocol}->{$key} = $thr->{$key};
 		
-		if($checkProtoCihperList->{protocol}->{$key}->{implemented} eq "yes"){
+		if($checkProtoCihperList->{protocol}->{$key}->{implemented} eq "yes" or $checkProtoCihperList->{protocol}->{$key} eq "TLSv12"){
 			push @protocol_scores, $checkProtoCihperList->{protocol}->{$key}->{protocolScore};
 			push @cipher_scores, $checkProtoCihperList->{protocol}->{$key}->{cipherScore} . "\n";
 		}
@@ -105,7 +106,6 @@ sub check_protocol_cipher {
 
 sub check_connect {
 	my ( $host, $port, $ssl_version, $cipher ) = @_;
-	
 	my %server_options = (
 		SSL_version     => $ssl_version,
 		SSL_cipher_list => $cipher,
@@ -114,16 +114,17 @@ sub check_connect {
 	);
 	
 	if ( my $client = IO::Socket::SSL->new(%server_options) ) {
+		close $client;
 		return 1;    # Connection accepted
 	} else {
+		close $client;
 		return 0;    # Connection failed
 	}
-	close($client);
+	
 }
 
 sub check{
-	my ( $ciphersR, $protocol, $cfg, $host, $port ) = @_;
-	
+	my ( $ciphersR, $protocol, $cfg, $host, $port, $thr ) = @_;
 	my $checkProtoCihperList = {};
 	my @ciphers = @$ciphersR;
 	

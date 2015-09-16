@@ -78,7 +78,7 @@ sub check_exist_folder_file{
 	$logger->info(" - Checking Script init.");
 	if(!-d "BDD",){die "Folder BDD don't exist. Can't continue\n";}
 	if(!-d "ini",){die "Folder ini don't exist. Can't contine\n";}
-	if(!-d "Output"){
+	if(!-d "SSL/root/Output"){
 		$logger->warn(" - Folder Output don't exist. Creating foler");
 		mkdir "Output";
 	}

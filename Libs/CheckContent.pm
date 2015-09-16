@@ -150,11 +150,11 @@ sub check_ext_content{
 	my ($response) = @_;
 	$logger->info(" - Check if there are social link");
 	my @extCont;
-	if ($response->decoded_content =~ m/facebook.com/){push @extCont, "FB";} # or whatever
-	if ($response->decoded_content =~ m/plus.google.com/){push @extCont, "GP";}
-	if ($response->decoded_content =~ m/twitter.com/){push @extCont, "TW";}
-	if ($response->decoded_content =~ m/linkedin.com/){push @extCont, "Ln";}
-	if ($response->decoded_content =~ m/google-analytics/){push @extCont, "GA";}
+	if ($response->decoded_content =~ m/fbq('track', 'PageView')/ or $response->decoded_content =~ m/connect.facebook.net/){push @extCont, "Facebook";} # or whatever
+	if ($response->decoded_content =~ m/<script src="\/\/plus.google.com/){push @extCont, "Google+";}
+	if ($response->decoded_content =~ m/twitter-wjs/ or $response->decoded_content =~ m/<script>window.twttr/){push @extCont, "Twitter";}
+	if ($response->decoded_content =~ m/<script type="text\/javascript" src="\/\/platform.linkedin.com\/in.js/){push @extCont, "LindekIn";}
+	if ($response->decoded_content =~ m/GoogleAnalyticsObject/ or $response->decoded_content =~ m/ga('send', 'pageview')/ or $response->decoded_content =~ m/google-analytics.com\/analytics.js/){push @extCont, "GoogleAnalytics";}
 	
 	return \@extCont;
 }
