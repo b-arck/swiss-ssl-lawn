@@ -9,7 +9,7 @@
 						<nav>
 							<ul class="nav masthead-nav">
 								<li><a href="#content"><i class="fa fa-graduation-cap"></i> Résultats</a>
-								<li><a href="mailto:behar@ethack.org?subject=Nouvelle cible"><i class="fa fa-plus"></i> Nouveau</a>
+								<li><a href="mailto:behar@ethack.org?subject=Nouvelle cible&body=Je désire que le site <nom d'hôte> apparaisse dans les prochains résultats pour la/les raison(s) suivante(s) :"><i class="fa fa-plus"></i> Nouveau</a>
 							</ul>
 						</nav>
 					</div>
@@ -27,12 +27,12 @@
 		<div classe="container">
 		<ul class="nav nav-tabs nav-justified">
 			<li role="presentation" [% IF type.match('all')%] class="active" [% END %]><a href="/select/all">Liste complète</a></li>
-			[% FOREACH item IN nav %]
+			[% FOREACH item IN menu %]
 			<li role="presentation" [% IF type == item %] class="active" [% END %]><a href="/select/[%item%]">[%item%]</a></li>
 			[% END %]		
 		</ul>
 		</div>
-		<div class="table-responsive">
+		<div class="table-responsive" style="position: relative">
 		<table class="table">
 			<thead>
 				<tr>
@@ -51,13 +51,13 @@
 				<tr>
 					<td colspan=8><h3>Aucun résultats!</h3></td>
 				</tr>
-				[% END %]
+				[% ELSE %]
 				[% FOREACH key IN hashref.keys.nsort -%]
 				<tr>
-				[% IF hashref.$key.RESULT == 0 %]
-					<td colspan=8><a href="/select/ID/[%hashref.$key.ID%]">[% hashref.$key.HOSTNAME %] Pas de connexion</a></td>
-				[% ELSE %]
-					<td><a href="/select/ID/[%hashref.$key.ID%]/[%hashref.$key.HOSTNAME%]" onclick="window.open(this.href, 'mywin','left=10,top=10,width=800,height=800,toolbar=0,resizable=1,scrollbars=1'); return false;" >[% hashref.$key.HOSTNAME %]</a></td>
+					[% IF hashref.$key.RESULT == 0 %]
+					<td colspan=8>[% hashref.$key.HOSTNAME %] Pas de connexion sur le port [% hashref.$key.PORT %]</td>
+					[% ELSE %]
+					<td><a href="/select/ID/[%hashref.$key.ID%]/[%hashref.$key.HOSTNAME%]" onclick="window.open(this.href, 'mywin','left=10,top=10,width=800,height=500,toolbar=0,resizable=1,scrollbars=1'); return false;" >[% hashref.$key.HOSTNAME %]</a></td>
 					<td>[% hashref.$key.IP %]</td>
 					[% SET hsts = hashref.$key.CONTENT.hsts %]
 					<td>[% IF hsts.match('Yes') %]
@@ -93,8 +93,9 @@
 					<td><i class="fa fa-key"></i> [% hashref.$key.CERTIFICATE.pubkey_bits %]</td>
 					<td>[% hashref.$key.RESULT %]</td>
 				</tr>
-				[% END %]
+					[% END %]
 				[% END -%]
+				[% END %]
 			</tbody>
 		</table>
 	</div>

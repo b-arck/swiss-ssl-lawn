@@ -4,7 +4,7 @@
 		[% FOREACH key IN hashref.keys -%]
 		<div class="page-header">
 		  <h1>[% hashref.$key.HOSTNAME %] <small>([% hashref.$key.HOSTTYPE %])</small> [% hashref.$key.GRADE %]</h1>
-		  <h1>Note : [% hashref.$key.RESULT %]     <a href="/select/graph/[% hashref.$key.HOSTNAME %]" onclick="window.open(this.href, 'myGraph','left=10,top=10,width=600,height=400,toolbar=0,resizable=1,scrollbars=1'); return false;" >  <i class="fa fa-bar-chart fa-1x"></i></a></h1>
+		  <h1>Note : [% hashref.$key.RESULT %]     <a href="/select/graph/[% hashref.$key.HOSTNAME %]" onclick="window.open(this.href, 'myGraph','left=10,top=10,width=600,height=410,toolbar=0,resizable=1,scrollbars=1'); return false;" >  <i class="fa fa-bar-chart fa-1x"></i></a></h1>
 		  <h1><small>IP : [% hashref.$key.IP %]</small></h1>
 		</div>
 	
@@ -17,7 +17,7 @@
 			[% hashref.$key.RESULT %]%
 		  </div>
 		</div>
-	
+
 		[% FOREACH ent IN hashref.$key.CERTIFICATE.subject.entries.keys.sort -%]
 		[% IF hashref.$key.CERTIFICATE.subject.entries.$ent.ln.match('countryName') %] [% SET C = hashref.$key.CERTIFICATE.subject.entries.$ent.data %] [% END %]
 		[% IF hashref.$key.CERTIFICATE.subject.entries.$ent.ln.match('countryName') %] [% SET COID = hashref.$key.CERTIFICATE.subject.entries.$ent.oid %] [% END %]

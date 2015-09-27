@@ -57,8 +57,13 @@
 	<host ID="41" type="e-gov" port="443">www.zivi.admin.ch</host>
 	<host ID="27" type="other" port="443">www.bam.ch</host>
 	<host ID="28" type="other" port="443">www.info-lab.fr</host>
+	<host ID="42" type="bank" port="443">www.abs.ch</host>
+	<host ID="42" type="e-banking" port="443">wwwsec.abs.ch</host>
+	<host ID="43" type="bank" port="443">www.jsafrasarasin.ch</host>
+	<host ID="43" type="e-banking" port="443">ebanking-ch.jsafrasarasin.com</host>
+	<host ID="44" type="bank" port="443">www.nbadsuisse.ch</host>
+	<host ID="45" type="e-banking" port="443">www.lgt.ch</host>
+	<host ID="46" type="bank" port="443">www.bnpparibas.ch</host>
+	<host ID="46" type="e-banking" port="443">ssoforms.bnpparibas.com</host>
+	<host ID="46" type="e-banking" port="443">connexis.bnpparibas.com</host>
 </hosts>
-
-
-
-
