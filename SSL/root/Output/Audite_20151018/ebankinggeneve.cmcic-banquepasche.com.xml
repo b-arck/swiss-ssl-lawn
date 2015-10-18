@@ -1,0 +1,389 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x37904b0">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x570f0f8">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://svr-dv-crl.thawte.com/ThawteDV.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x541e6a8">
+      <item key="pubkey">1cabb3954310b6047ffecfb4ef51ec7567480322
+</item>
+      <item key="x509">14c330f5faa56032a2ae69098c954390d94662c1</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x48a0380">
+      <item key="not_after">Apr 16 23:59:59 2016 GMT</item>
+      <item key="not_before">Jan 30 00:00:00 2014 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x570e7d8">
+      <item key="count">8</item>
+      <item key="entries">
+       <hashref memory_address="0x3d8dcd8">
+        <item key="0">
+         <hashref memory_address="0x3790570">
+          <item key="critical">0</item>
+          <item key="data">DNS:ebankinggeneve.cmcic-banquepasche.com</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x37d2770">
+          <item key="critical">0</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x5706170">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://svr-dv-crl.thawte.com/ThawteDV.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x5705d98">
+          <item key="critical">0</item>
+          <item key="data">Policy: 2.16.840.1.113733.1.7.54
+  CPS: https://www.thawte.com/cps
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x5ac7e18">
+          <item key="critical">0</item>
+          <item key="data">keyid:AB:44:E4:5D:EC:83:C7:D9:C0:85:9F:F7:E1:C6:97:90:B0:8C:3F:98
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x5443310">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x3d8dc00">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x39d46b0">
+          <item key="critical">0</item>
+          <item key="data">OCSP - URI:http://ocsp.thawte.com
+CA Issuers - URI:http://svr-dv-aia.thawte.com/ThawteDV.cer
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x5ac8670">
+      <item key="1.3.6.1.5.5.7.3.2">nid</item>
+      <item key="129">130</item>
+      <item key="TLS Web Server Authentication">TLS Web Client Authentication</item>
+      <item key="clientAuth">ln</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x37c37c0">
+      <item key="md5">EA:BD:2A:BD:F4:B0:3C:E3:37:E9:8F:EB:E7:A6:31:59</item>
+      <item key="sha1">14:C3:30:F5:FA:A5:60:32:A2:AE:69:09:8C:95:43:90:D9:46:62:C1</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x5706488">
+      <item key="issuer">
+       <hashref memory_address="0x37a1bd8">
+        <item key="dec">1918908767</item>
+        <item key="hex">7260395F</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x541e588">
+        <item key="dec">543921788</item>
+        <item key="hex">206B967C</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x3cb0928">
+        <item key="dec">2826838800</item>
+        <item key="hex">A87E2310</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x37a2ad0">
+      <item key="count">4</item>
+      <item key="entries">
+       <hashref memory_address="0x3cb0760">
+        <item key="0">
+         <hashref memory_address="0x5094080">
+          <item key="data">US</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x48b9bb0">
+          <item key="data">Thawte, Inc.</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x4909de0">
+          <item key="data">Domain Validated SSL</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x57062d8">
+          <item key="data">Thawte DV SSL CA</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=US/O=Thawte, Inc./OU=Domain Validated SSL/CN=Thawte DV SSL CA</item>
+      <item key="print_rfc2253">CN=Thawte DV SSL CA,OU=Domain Validated SSL,O=Thawte\, Inc.,C=US</item>
+      <item key="print_rfc2253_utf8">CN=Thawte DV SSL CA,OU=Domain Validated SSL,O=Thawte\, Inc.,C=US</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIFEjCCA/qgAwIBAgIQB2vS4pEmXniqgebuHCjwLTANBgkqhkiG9w0BAQUFADBe
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMVGhhd3RlLCBJbmMuMR0wGwYDVQQLExRE
+b21haW4gVmFsaWRhdGVkIFNTTDEZMBcGA1UEAxMQVGhhd3RlIERWIFNTTCBDQTAe
+Fw0xNDAxMzAwMDAwMDBaFw0xNjA0MTYyMzU5NTlaMIGsMTswOQYDVQQLEzJHbyB0
+byBodHRwczovL3d3dy50aGF3dGUuY29tL3JlcG9zaXRvcnkvaW5kZXguaHRtbDEi
+MCAGA1UECxMZVGhhd3RlIFNTTDEyMyBjZXJ0aWZpY2F0ZTEZMBcGA1UECxMQRG9t
+YWluIFZhbGlkYXRlZDEuMCwGA1UEAxMlZWJhbmtpbmdnZW5ldmUuY21jaWMtYmFu
+cXVlcGFzY2hlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMUQ
+UhWEEWMHAmKwjdoGIEqBVWzZvYrY1G4j0ZhIcwAJIIRS+bpqR7wMefpdOlq60Wyf
+AQtOCGlRBvSIiZyf24/VoisBIrNWxTpwLA7L+NK1LBBOaft9UsqUrueQysV5UNyM
+lhBoh3wVYRSTnRsTXzxEJIC8txguBXcsvUAqkIDir4jhK3iZZFhYlaZqD3dxZnCK
+2hjpOLM8/mPAE6tqVZeRWNiF7zlyoUSEA3Wx+2WWEKlQj7LiSmHLQk9PJyk0IuMu
+K7yIhwW5kJ86KChtS+DPiCA6v405SIlt828vb7Ns12CPHjVPEDveBfOFN+Tyuj/u
+Up3xJLTc2mbbFHl5OUUCAwEAAaOCAXswggF3MDAGA1UdEQQpMCeCJWViYW5raW5n
+Z2VuZXZlLmNtY2ljLWJhbnF1ZXBhc2NoZS5jb20wCQYDVR0TBAIwADA6BgNVHR8E
+MzAxMC+gLaArhilodHRwOi8vc3ZyLWR2LWNybC50aGF3dGUuY29tL1RoYXd0ZURW
+LmNybDBBBgNVHSAEOjA4MDYGCmCGSAGG+EUBBzYwKDAmBggrBgEFBQcCARYaaHR0
+cHM6Ly93d3cudGhhd3RlLmNvbS9jcHMwHwYDVR0jBBgwFoAUq0TkXeyDx9nAhZ/3
+4caXkLCMP5gwDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggr
+BgEFBQcDAjBpBggrBgEFBQcBAQRdMFswIgYIKwYBBQUHMAGGFmh0dHA6Ly9vY3Nw
+LnRoYXd0ZS5jb20wNQYIKwYBBQUHMAKGKWh0dHA6Ly9zdnItZHYtYWlhLnRoYXd0
+ZS5jb20vVGhhd3RlRFYuY2VyMA0GCSqGSIb3DQEBBQUAA4IBAQAx0HcbZs+/5Xts
+d8EOiOydBcvujbxDABECRVt5B9CiQNxCO0jnpWzkcN7ceHLZmVlzNc60cOopZa2R
+zEIDqh5cOEpxi/PWBQBueX+VplPZVPOPKVClJ8eKXTcxSnOc/SZ/ke6UApOGD4os
+aUDbKmqOi6JNi62RlETqV8baarPOXQOJcOrnrhskp96edtdCGsx6vrilAFvItzab
+JG/r+0+ORkDFEjFC3mRsS2WnsVFufCFFQp1Lwk0C1BkOvvsRMsu1hhvzk2NbmL6J
+BgN7/8tcAFv/+HzQiZCLvuHd/mhGmbW/0cOYr/g+2F8C/DJMrszHmKnKzCKYCGdE
+NP3vlHdQ
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x37d6198">
+      <item key="dec">9864448990860844474694162227212644397</item>
+      <item key="hex">076BD2E291265E78AA81E6EE1C28F02D</item>
+      <item key="long">-1</item>
+      <item key="string">076bd2e291265e78aa81e6ee1c28f02d</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha1WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x37becf8">
+      <item key="altnames">
+       <hashref memory_address="0x490a410">
+        <item key="2">ebankinggeneve.cmcic-banquepasche.com</item>
+       </hashref>
+      </item>
+      <item key="count">4</item>
+      <item key="entries">
+       <hashref memory_address="0x570fad0">
+        <item key="0">
+         <hashref memory_address="0x489f8d0">
+          <item key="data">Go to https://www.thawte.com/repository/index.html</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x570ea18">
+          <item key="data">Thawte SSL123 certificate</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x5441c08">
+          <item key="data">Domain Validated</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x37a2aa0">
+          <item key="data">ebankinggeneve.cmcic-banquepasche.com</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/OU=Go to https://www.thawte.com/repository/index.html/OU=Thawte SSL123 certificate/OU=Domain Validated/CN=ebankinggeneve.cmcic-banquepasche.com</item>
+      <item key="print_rfc2253">CN=ebankinggeneve.cmcic-banquepasche.com,OU=Domain Validated,OU=Thawte SSL123 certificate,OU=Go to https://www.thawte.com/repository/index.html</item>
+      <item key="print_rfc2253_utf8">CN=ebankinggeneve.cmcic-banquepasche.com,OU=Domain Validated,OU=Thawte SSL123 certificate,OU=Go to https://www.thawte.com/repository/index.html</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x2a8fd48">
+    <item key="ext_content">
+     <arrayref memory_address="0x63771b8">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="hsts">No</item>
+    <item key="https_redirect">Yes</item>
+    <item key="score">-2</item>
+    <item key="srv_type">JRun Web Server</item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">C-</item>
+  <item key="HOSTNAME">ebankinggeneve.cmcic-banquepasche.com</item>
+  <item key="HOSTTYPE">e-banking</item>
+  <item key="ID">94</item>
+  <item key="IP">81.23.74.50</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">55</item>
+  <item key="SSL">
+   <hashref memory_address="0x37bec68">
+    <item key="cipherScore">40</item>
+    <item key="protocol">
+     <hashref memory_address="0x37d5ef8">
+      <item key="SSLv2">
+       <hashref memory_address="0x541e780">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x37d31a8">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x5c06f48">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x37a10e0">
+          <item key="0">EXP-RC4-MD5</item>
+          <item key="1">RC4-MD5</item>
+          <item key="2">RC4-SHA</item>
+          <item key="3">EXP-RC2-CBC-MD5</item>
+          <item key="4">EXP-DES-CBC-SHA</item>
+          <item key="5">DES-CBC-SHA</item>
+          <item key="6">DES-CBC3-SHA</item>
+          <item key="7">AES128-SHA</item>
+          <item key="8">AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">40</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x5ac7e48">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x6376c90">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">90</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

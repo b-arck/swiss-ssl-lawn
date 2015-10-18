@@ -1,0 +1,503 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x2d4dad8">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x2d7c0f8">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://EVIntl-crl.verisign.com/EVIntl2006.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x2ebd120">
+      <item key="pubkey">10b09c3c5ab0227a275bffc697e07c6b553bf9c9
+</item>
+      <item key="x509">8b3462730d3a543d58ecf5bc94672bfc730bc788</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x2ebc550">
+      <item key="not_after">Nov 11 23:59:59 2015 GMT</item>
+      <item key="not_before">Sep  6 00:00:00 2013 GMT</item>
+      <item key="status">Will expire in 30 days or less</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x2d2c0f8">
+      <item key="count">9</item>
+      <item key="entries">
+       <hashref memory_address="0x2eb0a88">
+        <item key="0">
+         <hashref memory_address="0x2ca8ab8">
+          <item key="critical">0</item>
+          <item key="data">DNS:www1.ubs.com, DNS:www2.ubs.com, DNS:www.ubs.com</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x2eb2070">
+          <item key="critical">0</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x2eb22f8">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x2eb2358">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication, Netscape Server Gated Crypto</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x2e78f98">
+          <item key="critical">0</item>
+          <item key="data">Policy: 2.16.840.1.113733.1.7.23.6
+  CPS: https://www.verisign.com/cps
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x2ca8830">
+          <item key="critical">0</item>
+          <item key="data">10:B0:9C:3C:5A:B0:22:7A:27:5B:FF:C6:97:E0:7C:6B:55:3B:F9:C9</item>
+          <item key="ln">X509v3 Subject Key Identifier</item>
+          <item key="nid">82</item>
+          <item key="oid">2.5.29.14</item>
+          <item key="sn">subjectKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x2eb22c8">
+          <item key="critical">0</item>
+          <item key="data">keyid:4E:43:C8:1D:76:EF:37:53:7A:4F:F2:58:6F:94:F3:38:E2:D5:BD:DF
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x2cb3650">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://EVIntl-crl.verisign.com/EVIntl2006.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x2ca8c20">
+          <item key="critical">0</item>
+          <item key="data">OCSP - URI:http://EVIntl-ocsp.verisign.com
+CA Issuers - URI:http://EVIntl-aia.verisign.com/EVIntl2006.cer
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x2ca8ff8">
+      <item key="1.3.6.1.5.5.7.3.2">2.16.840.1.113730.4.1</item>
+      <item key="130">139</item>
+      <item key="TLS Web Client Authentication">Netscape Server Gated Crypto</item>
+      <item key="clientAuth">nsSGC</item>
+      <item key="ln">TLS Web Server Authentication</item>
+      <item key="nid">129</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x2eb2490">
+      <item key="md5">09:37:8A:61:20:0E:A3:68:EA:56:D2:C8:DE:96:1B:0C</item>
+      <item key="sha1">8B:34:62:73:0D:3A:54:3D:58:EC:F5:BC:94:67:2B:FC:73:0B:C7:88</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x2d37fa0">
+      <item key="issuer">
+       <hashref memory_address="0x2d58ee0">
+        <item key="dec">2886909329</item>
+        <item key="hex">AC12BD91</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x2eb2088">
+        <item key="dec">4089053087</item>
+        <item key="hex">F3B9FF9F</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x2eb0950">
+        <item key="dec">4139578649</item>
+        <item key="hex">F6BCF519</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x2ced508">
+      <item key="count">5</item>
+      <item key="entries">
+       <hashref memory_address="0x2cd60f8">
+        <item key="0">
+         <hashref memory_address="0x2d649a0">
+          <item key="data">US</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x2ebcf58">
+          <item key="data">VeriSign, Inc.</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x2ebb928">
+          <item key="data">VeriSign Trust Network</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x2eb24d8">
+          <item key="data">Terms of use at https://www.verisign.com/rpa (c)06</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x2d3de00">
+          <item key="data">VeriSign Class 3 Extended Validation SSL SGC CA</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=US/O=VeriSign, Inc./OU=VeriSign Trust Network/OU=Terms of use at https://www.verisign.com/rpa (c)06/CN=VeriSign Class 3 Extended Validation SSL SGC CA</item>
+      <item key="print_rfc2253">CN=VeriSign Class 3 Extended Validation SSL SGC CA,OU=Terms of use at https://www.verisign.com/rpa (c)06,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US</item>
+      <item key="print_rfc2253_utf8">CN=VeriSign Class 3 Extended Validation SSL SGC CA,OU=Terms of use at https://www.verisign.com/rpa (c)06,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIF+jCCBOKgAwIBAgIQWM+HXFnHv4Vj0D+es5yhyzANBgkqhkiG9w0BAQUFADCB
+vjELMAkGA1UEBhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMR8wHQYDVQQL
+ExZWZXJpU2lnbiBUcnVzdCBOZXR3b3JrMTswOQYDVQQLEzJUZXJtcyBvZiB1c2Ug
+YXQgaHR0cHM6Ly93d3cudmVyaXNpZ24uY29tL3JwYSAoYykwNjE4MDYGA1UEAxMv
+VmVyaVNpZ24gQ2xhc3MgMyBFeHRlbmRlZCBWYWxpZGF0aW9uIFNTTCBTR0MgQ0Ew
+HhcNMTMwOTA2MDAwMDAwWhcNMTUxMTExMjM1OTU5WjCB8zETMBEGCysGAQQBgjc8
+AgEDEwJDSDEdMBsGA1UEDxMUUHJpdmF0ZSBPcmdhbml6YXRpb24xGzAZBgNVBAUT
+EkNILTI3MC4zLjAwNC42NDYtNDELMAkGA1UEBhMCQ0gxDTALBgNVBBEUBDgwMDEx
+EDAOBgNVBAgTB1p1ZXJpY2gxEDAOBgNVBAcUB1p1ZXJpY2gxGjAYBgNVBAkUEUJh
+aG5ob2ZzdHJhc3NlIDQ1MQ8wDQYDVQQKFAZVQlMgQUcxHTAbBgNVBAsUFEZDRVhU
+SUlaWnVyaWNoNjkyMDEzMRQwEgYDVQQDFAt3d3cudWJzLmNvbTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAOgJ5KuJ+s8GtAnNrYVDnh11LkceZaCDQ6vx
+ggoSjdAJbfDv4vs6pdBf+GmNfN2RrkQGn194el2YWnjdyR9Vo+8evkN1CoB+pzEM
+YM75CacF1VSwOnBqN1I5mdhkMNypq17jBlYLDwsXgXYDUcDlzuljQGfy1qTP/jMU
+uws/F7bsfPlLYhlDNd1BQPYuacaZKBWXdnCbZO5IHx5S2iYXj64ECN1/7TjVA7J+
+iaL3K5ai/jrJ4OJF2gTxKkNTMFPa4XggLKW4W6hxZfxO2pdqUNRDNMLbo/EIEJQL
+hlqLiKWKY21EQiP7xVOmc4XTQcnA5k/RyubAJV8/nQ8N2uo4x7MCAwEAAaOCAbsw
+ggG3MDIGA1UdEQQrMCmCDHd3dzEudWJzLmNvbYIMd3d3Mi51YnMuY29tggt3d3cu
+dWJzLmNvbTAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAoBgNVHSUEITAfBggr
+BgEFBQcDAQYIKwYBBQUHAwIGCWCGSAGG+EIEATBEBgNVHSAEPTA7MDkGC2CGSAGG
++EUBBxcGMCowKAYIKwYBBQUHAgEWHGh0dHBzOi8vd3d3LnZlcmlzaWduLmNvbS9j
+cHMwHQYDVR0OBBYEFBCwnDxasCJ6J1v/xpfgfGtVO/nJMB8GA1UdIwQYMBaAFE5D
+yB127zdTek/yWG+U8zji1b3fMD4GA1UdHwQ3MDUwM6AxoC+GLWh0dHA6Ly9FVklu
+dGwtY3JsLnZlcmlzaWduLmNvbS9FVkludGwyMDA2LmNybDB2BggrBgEFBQcBAQRq
+MGgwKwYIKwYBBQUHMAGGH2h0dHA6Ly9FVkludGwtb2NzcC52ZXJpc2lnbi5jb20w
+OQYIKwYBBQUHMAKGLWh0dHA6Ly9FVkludGwtYWlhLnZlcmlzaWduLmNvbS9FVklu
+dGwyMDA2LmNlcjANBgkqhkiG9w0BAQUFAAOCAQEArJrHB8KttpTOiuIG6AvmsRuT
+vQqU7DIWsyKBEu498/bhYxAjU/ogL6WNoad4MMWVhnEmflzD32OzhrDIOqmfh2A9
+CSFW5n5ov/bNZFWpxBW6D9VXrIVuK/PLfrqAzF/k5C9E1SW594noNmln3/1mxIcS
+pkSzuZNqoWbwsMrmj+Ancmz0Q2DCR7QZP3YknRjvRRGSNeKWLDOFkT1uzc+pYaT6
+NGXEHotT7pH7e0o9+1EzJoIztNbFs2MlgtoHLCrrDPSnO+VcY1AjOvRCKCJ3ne51
+e24sD+nvreZ+VDNl4LRZ7IZUJ5uRitLTuBeqw9OR43bhTY3DSjL/dN9d0dw0Ig==
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x2d312b8">
+      <item key="dec">118049614520862396967277656313425600971</item>
+      <item key="hex">58CF875C59C7BF8563D03F9EB39CA1CB</item>
+      <item key="long">-1</item>
+      <item key="string">58cf875c59c7bf8563d03f9eb39ca1cb</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha1WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x2cf2868">
+      <item key="altnames">
+       <hashref memory_address="0x2d0e428">
+        <item key="2">www.ubs.com</item>
+       </hashref>
+      </item>
+      <item key="count">11</item>
+      <item key="entries">
+       <hashref memory_address="0x2cf3240">
+        <item key="0">
+         <hashref memory_address="0x2d0ea28">
+          <item key="data">CH</item>
+          <item key="ln" defined="false"></item>
+          <item key="nid" defined="false"></item>
+          <item key="oid">1.3.6.1.4.1.311.60.2.1.3</item>
+          <item key="sn" defined="false"></item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x2d31bb8">
+          <item key="data">Private Organization</item>
+          <item key="ln">businessCategory</item>
+          <item key="nid">860</item>
+          <item key="oid">2.5.4.15</item>
+          <item key="sn">businessCategory</item>
+         </hashref>
+        </item>
+        <item key="10">
+         <hashref memory_address="0x2d6a668">
+          <item key="data">www.ubs.com</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x2d09d98">
+          <item key="data">CH-270.3.004.646-4</item>
+          <item key="ln">serialNumber</item>
+          <item key="nid">105</item>
+          <item key="oid">2.5.4.5</item>
+          <item key="sn">serialNumber</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x2d0e968">
+          <item key="data">CH</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x2d09f00">
+          <item key="data">8001</item>
+          <item key="ln">postalCode</item>
+          <item key="nid">661</item>
+          <item key="oid">2.5.4.17</item>
+          <item key="sn">postalCode</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x2d0e9c8">
+          <item key="data">Zuerich</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x2ce69b0">
+          <item key="data">Zuerich</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x2d6f140">
+          <item key="data">Bahnhofstrasse 45</item>
+          <item key="ln">streetAddress</item>
+          <item key="nid">660</item>
+          <item key="oid">2.5.4.9</item>
+          <item key="sn">street</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x2ce1108">
+          <item key="data">UBS AG</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="9">
+         <hashref memory_address="0x2d31c48">
+          <item key="data">FCEXTIIZZurich692013</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/1.3.6.1.4.1.311.60.2.1.3=CH/businessCategory=Private Organization/serialNumber=CH-270.3.004.646-4/C=CH/postalCode=8001/ST=Zuerich/L=Zuerich/street=Bahnhofstrasse 45/O=UBS AG/OU=FCEXTIIZZurich692013/CN=www.ubs.com</item>
+      <item key="print_rfc2253">CN=www.ubs.com,OU=FCEXTIIZZurich692013,O=UBS AG,street=Bahnhofstrasse 45,L=Zuerich,ST=Zuerich,postalCode=8001,C=CH,serialNumber=CH-270.3.004.646-4,businessCategory=Private Organization,1.3.6.1.4.1.311.60.2.1.3=#13024348</item>
+      <item key="print_rfc2253_utf8">CN=www.ubs.com,OU=FCEXTIIZZurich692013,O=UBS AG,street=Bahnhofstrasse 45,L=Zuerich,ST=Zuerich,postalCode=8001,C=CH,serialNumber=CH-270.3.004.646-4,businessCategory=Private Organization,1.3.6.1.4.1.311.60.2.1.3=#13024348</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x2e789e0">
+    <item key="ext_content">
+     <arrayref memory_address="0x2cb9528">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="hsts">Yes</item>
+    <item key="https_redirect">Yes</item>
+    <item key="score">1</item>
+    <item key="srv_type">Apache</item>
+   </hashref>
+  </item>
+  <item key="DATE">14.09.2015</item>
+    <item key="GRADE">C+</item>
+    <item key="HOSTNAME">www.ubs.com</item>
+    <item key="HOSTTYPE">bank</item> 
+    <item key="ID">10</item>
+    <item key="IP">193.5.110.13</item>
+    <item key="PORT">443</item>
+    <item key="RESULT">23.5</item>
+  <item key="SSL">
+   <hashref memory_address="0x2cc4148">
+    <item key="cipherScore">82.5</item>
+    <item key="protocol">
+     <hashref memory_address="0x2cc4340">
+      <item key="SSLv2">
+       <hashref memory_address="0x2cc4010">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+       <item key="SSLv3">
+         <hashref memory_address="0x462f010">
+          <item key="AcceptedCipher">
+           <arrayref memory_address="0x462f0d0">
+            <item key="0">DES-CBC3-SHA</item>
+            <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+           </arrayref>
+          </item>
+          <item key="cipherScore">20</item>
+          <item key="implemented">yes</item>
+          <item key="protocolScore">0</item>
+         </hashref>
+        </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x2ccf318">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x2cc3d40">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">80</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x2cc3f50">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x2cc4058">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">90</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x2cc3d10">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x2cc4268">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+          <item key="6">DHE-RSA-AES128-GCM-SHA256</item>
+          <item key="7">DHE-RSA-AES128-SHA256</item>
+          <item key="8">DHE-RSA-AES256-SHA256</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">75</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">100</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">95</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

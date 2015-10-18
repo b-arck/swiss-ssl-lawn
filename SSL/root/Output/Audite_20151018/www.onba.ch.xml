@@ -1,0 +1,503 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x56f6540">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x56f2fc8">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://EVIntl-crl.verisign.com/EVIntl2006.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x56f6588">
+      <item key="pubkey">9e21f0f45020e88052ea2163074f5fa57f028826
+</item>
+      <item key="x509">3700c4e7c5e4b1487d367e5d712d6f91769b87d2</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x63769a8">
+      <item key="not_after">Nov  3 23:59:59 2015 GMT</item>
+      <item key="not_before">Apr 10 00:00:00 2014 GMT</item>
+      <item key="status">Will expire in 30 days or less</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x39d48a8">
+      <item key="count">8</item>
+      <item key="entries">
+       <hashref memory_address="0x39d4320">
+        <item key="0">
+         <hashref memory_address="0x37a1350">
+          <item key="critical">0</item>
+          <item key="data">DNS:www.onba.ch</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x2bd7708">
+          <item key="critical">0</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x489d158">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x42f6fa0">
+          <item key="critical">0</item>
+          <item key="data">Policy: 2.16.840.1.113733.1.7.23.6
+  CPS: https://www.verisign.com/cps
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x48c3fb8">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://EVIntl-crl.verisign.com/EVIntl2006.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x570f758">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication, Netscape Server Gated Crypto</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x56f6018">
+          <item key="critical">0</item>
+          <item key="data">keyid:4E:43:C8:1D:76:EF:37:53:7A:4F:F2:58:6F:94:F3:38:E2:D5:BD:DF
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x5441ce0">
+          <item key="critical">0</item>
+          <item key="data">OCSP - URI:http://ocsp.verisign.com
+CA Issuers - URI:http://EVIntl-aia.verisign.com/EVIntl2006.cer
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x5442460">
+      <item key="1.3.6.1.5.5.7.3.2">2.16.840.1.113730.4.1</item>
+      <item key="130">139</item>
+      <item key="TLS Web Client Authentication">Netscape Server Gated Crypto</item>
+      <item key="clientAuth">nsSGC</item>
+      <item key="ln">TLS Web Server Authentication</item>
+      <item key="nid">129</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x42f6490">
+      <item key="md5">C1:87:2C:35:13:40:B7:EF:29:30:83:E6:11:BB:62:FF</item>
+      <item key="sha1">37:00:C4:E7:C5:E4:B1:48:7D:36:7E:5D:71:2D:6F:91:76:9B:87:D2</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x63768d0">
+      <item key="issuer">
+       <hashref memory_address="0x2a58170">
+        <item key="dec">2886909329</item>
+        <item key="hex">AC12BD91</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x5ac8478">
+        <item key="dec">1590640118</item>
+        <item key="hex">5ECF3DF6</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x2be3d68">
+        <item key="dec">3165591618</item>
+        <item key="hex">BCAF1842</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x5ac81f0">
+      <item key="count">5</item>
+      <item key="entries">
+       <hashref memory_address="0x5442508">
+        <item key="0">
+         <hashref memory_address="0x378fef8">
+          <item key="data">US</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x6ba0420">
+          <item key="data">VeriSign, Inc.</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x489cff0">
+          <item key="data">VeriSign Trust Network</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x37c3760">
+          <item key="data">Terms of use at https://www.verisign.com/rpa (c)06</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x37becb0">
+          <item key="data">VeriSign Class 3 Extended Validation SSL SGC CA</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=US/O=VeriSign, Inc./OU=VeriSign Trust Network/OU=Terms of use at https://www.verisign.com/rpa (c)06/CN=VeriSign Class 3 Extended Validation SSL SGC CA</item>
+      <item key="print_rfc2253">CN=VeriSign Class 3 Extended Validation SSL SGC CA,OU=Terms of use at https://www.verisign.com/rpa (c)06,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US</item>
+      <item key="print_rfc2253_utf8">CN=VeriSign Class 3 Extended Validation SSL SGC CA,OU=Terms of use at https://www.verisign.com/rpa (c)06,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIGHjCCBQagAwIBAgIQM2Zg+oOarEH5eENVGC3cCjANBgkqhkiG9w0BAQUFADCB
+vjELMAkGA1UEBhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMR8wHQYDVQQL
+ExZWZXJpU2lnbiBUcnVzdCBOZXR3b3JrMTswOQYDVQQLEzJUZXJtcyBvZiB1c2Ug
+YXQgaHR0cHM6Ly93d3cudmVyaXNpZ24uY29tL3JwYSAoYykwNjE4MDYGA1UEAxMv
+VmVyaVNpZ24gQ2xhc3MgMyBFeHRlbmRlZCBWYWxpZGF0aW9uIFNTTCBTR0MgQ0Ew
+HhcNMTQwNDEwMDAwMDAwWhcNMTUxMTAzMjM1OTU5WjCCAVgxEzARBgsrBgEEAYI3
+PAIBAxMCQ0gxCzAJBgNVBAYTAkNIMRMwEQYDVQQIFApTdC4gR2FsbGVuMRMwEQYD
+VQQHFApTdC4gR2FsbGVuMR0wGwYDVQQPExRQcml2YXRlIE9yZ2FuaXphdGlvbjEb
+MBkGA1UEBRMSQ0gtMzIwLjguMDAwLjMxMC01MSMwIQYDVQQKFBpTdC4gR2FsbGVy
+IEthbnRvbmFsYmFuayBBRzESMBAGA1UECxQJZS1iYW5raW5nMTIwMAYDVQQLFClU
+ZXJtcyBvZiB1c2UgYXQgd3d3LnZlcmlzaWduLmNoL3JwYSAoYykwNTEiMCAGA1UE
+CxMZQXV0aGVudGljYXRlZCBieSBWZXJpU2lnbjEnMCUGA1UECxMeTWVtYmVyLCBW
+ZXJpU2lnbiBUcnVzdCBOZXR3b3JrMRQwEgYDVQQDFAt3d3cub25iYS5jaDCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKfpdFQofhbaaLrxY41mjrFP0wvQ
+wkenLSPZriFS7hAd9DwNxoTURelpXdzSavs5899rxMAQ64pl+r5S5F1/ji9xZLUL
+PRgGt1W9z8DXky3a1L6eNUyr1/cgg0Id+hEghS5VsHf7asHmYpYKF1QVH91cQoG8
+/sLz5KpTGWqdnNZqGDEmit4gQ3nKfhZz80sz479kZuGsNz602lCGTS3/GlhKthb6
+FR4tfL42gdGhYcxyEQnLrTiqMIBWnJ17PJ9a/PQwPs3GqlRS2FerxwPVWVk0Izcn
+B9UbXJYXNMdl+1Cph0hYbq39/E88hR/BExhNsJbVC80vsgJ9S/WdPvftZJMCAwEA
+AaOCAXkwggF1MBYGA1UdEQQPMA2CC3d3dy5vbmJhLmNoMAkGA1UdEwQCMAAwDgYD
+VR0PAQH/BAQDAgWgMEQGA1UdIAQ9MDswOQYLYIZIAYb4RQEHFwYwKjAoBggrBgEF
+BQcCARYcaHR0cHM6Ly93d3cudmVyaXNpZ24uY29tL2NwczA+BgNVHR8ENzA1MDOg
+MaAvhi1odHRwOi8vRVZJbnRsLWNybC52ZXJpc2lnbi5jb20vRVZJbnRsMjAwNi5j
+cmwwKAYDVR0lBCEwHwYIKwYBBQUHAwEGCCsGAQUFBwMCBglghkgBhvhCBAEwHwYD
+VR0jBBgwFoAUTkPIHXbvN1N6T/JYb5TzOOLVvd8wbwYIKwYBBQUHAQEEYzBhMCQG
+CCsGAQUFBzABhhhodHRwOi8vb2NzcC52ZXJpc2lnbi5jb20wOQYIKwYBBQUHMAKG
+LWh0dHA6Ly9FVkludGwtYWlhLnZlcmlzaWduLmNvbS9FVkludGwyMDA2LmNlcjAN
+BgkqhkiG9w0BAQUFAAOCAQEAlmbfRdU/3LLNcamkWcJWDzBVPKTySJRGr2RwTWgZ
+Y2obGUREURMavgSgJqqnmt3SNlJzCaWr/vOc/YbT/taSUoZ8F3CXN/+Iixlnn7sl
+UXTzO1wFqLK8mrj4kxnZlzcxs9y2bI9pOl7fXjftiZmdGf/HHn7HLBRvwJ+xCWbW
+6kc45vBS/u3F42qcue/yim4tRwAUaSGJndh3R2T9j6mqUpYUZ+ssFsHyWruvcyvE
+9vr7vFRhTiDtj+mSTdqDhVWDG1H27gY5Aj9c2++PkhNUpeQRbiZHdrsKRv+T2b8d
+w07giZQTJXYQZbVHPbu6Gxw9GztKZyFofD6A5XjvPhg/UA==
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x570e1a8">
+      <item key="dec">68322209023693365389515835233344019466</item>
+      <item key="hex">336660FA839AAC41F9784355182DDC0A</item>
+      <item key="long">-1</item>
+      <item key="string">336660fa839aac41f9784355182ddc0a</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha1WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x42dbc68">
+      <item key="altnames">
+       <hashref memory_address="0x37a1ea8">
+        <item key="2">www.onba.ch</item>
+       </hashref>
+      </item>
+      <item key="count">12</item>
+      <item key="entries">
+       <hashref memory_address="0x570dd88">
+        <item key="0">
+         <hashref memory_address="0x37c3a48">
+          <item key="data">CH</item>
+          <item key="ln" defined="false"></item>
+          <item key="nid" defined="false"></item>
+          <item key="oid">1.3.6.1.4.1.311.60.2.1.3</item>
+          <item key="sn" defined="false"></item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x37a1e18">
+          <item key="data">CH</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="10">
+         <hashref memory_address="0x570f950">
+          <item key="data">Member, VeriSign Trust Network</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="11">
+         <hashref memory_address="0x48c3a90">
+          <item key="data">www.onba.ch</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x57065f0">
+          <item key="data">St. Gallen</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x2bda368">
+          <item key="data">St. Gallen</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x37a2308">
+          <item key="data">Private Organization</item>
+          <item key="ln">businessCategory</item>
+          <item key="nid">860</item>
+          <item key="oid">2.5.4.15</item>
+          <item key="sn">businessCategory</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x489ff60">
+          <item key="data">CH-320.8.000.310-5</item>
+          <item key="ln">serialNumber</item>
+          <item key="nid">105</item>
+          <item key="oid">2.5.4.5</item>
+          <item key="sn">serialNumber</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x56f2d10">
+          <item key="data">St. Galler Kantonalbank AG</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x48c4540">
+          <item key="data">e-banking</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x5705948">
+          <item key="data">Terms of use at www.verisign.ch/rpa (c)05</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="9">
+         <hashref memory_address="0x6376fd8">
+          <item key="data">Authenticated by VeriSign</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/1.3.6.1.4.1.311.60.2.1.3=CH/C=CH/ST=St. Gallen/L=St. Gallen/businessCategory=Private Organization/serialNumber=CH-320.8.000.310-5/O=St. Galler Kantonalbank AG/OU=e-banking/OU=Terms of use at www.verisign.ch/rpa (c)05/OU=Authenticated by VeriSign/OU=Member, VeriSign Trust Network/CN=www.onba.ch</item>
+      <item key="print_rfc2253">CN=www.onba.ch,OU=Member\, VeriSign Trust Network,OU=Authenticated by VeriSign,OU=Terms of use at www.verisign.ch/rpa (c)05,OU=e-banking,O=St. Galler Kantonalbank AG,serialNumber=CH-320.8.000.310-5,businessCategory=Private Organization,L=St. Gallen,ST=St. Gallen,C=CH,1.3.6.1.4.1.311.60.2.1.3=#13024348</item>
+      <item key="print_rfc2253_utf8">CN=www.onba.ch,OU=Member\, VeriSign Trust Network,OU=Authenticated by VeriSign,OU=Terms of use at www.verisign.ch/rpa (c)05,OU=e-banking,O=St. Galler Kantonalbank AG,serialNumber=CH-320.8.000.310-5,businessCategory=Private Organization,L=St. Gallen,ST=St. Gallen,C=CH,1.3.6.1.4.1.311.60.2.1.3=#13024348</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x3790678">
+    <item key="ext_content">
+     <arrayref memory_address="0x570f680">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="hsts">No</item>
+    <item key="https_redirect">Yes</item>
+    <item key="score">-1</item>
+    <item key="srv_type">Apache</item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">A-</item>
+  <item key="HOSTNAME">www.onba.ch</item>
+  <item key="HOSTTYPE">e-banking</item>
+  <item key="ID">182</item>
+  <item key="IP">213.193.104.20</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">86.25</item>
+  <item key="SSL">
+   <hashref memory_address="0x5425788">
+    <item key="cipherScore">82.5</item>
+    <item key="protocol">
+     <hashref memory_address="0x50941a0">
+      <item key="SSLv2">
+       <hashref memory_address="0x39d42c0">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x5442e78">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x42f71c8">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x42f6df0">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">80</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x5c068d0">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x42db908">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">90</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x3cb07a8">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x5c072c0">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+          <item key="6">ECDHE-RSA-AES128-GCM-SHA256</item>
+          <item key="7">ECDHE-RSA-AES256-GCM-SHA384</item>
+          <item key="8">DHE-RSA-AES128-GCM-SHA256</item>
+          <item key="9">ECDHE-RSA-AES128-SHA256</item>
+          <item key="10">ECDHE-RSA-AES128-SHA</item>
+          <item key="11">ECDHE-RSA-AES256-SHA384</item>
+          <item key="12">ECDHE-RSA-AES256-SHA</item>
+          <item key="13">DHE-RSA-AES128-SHA256</item>
+          <item key="14">DHE-RSA-AES256-SHA256</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">75</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">100</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">95</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

@@ -1,0 +1,455 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x48c4708">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x37d2830">
+    <item key="certificate_type">305</item>
+    <item key="crl">ldap://directory.swisssign.net/CN=EEFD46CAF7275E91BC5AB6E787CD0AFA550A2642%2CO=SwissSign%2CC=CH?certificateRevocationList?base?objectClass=cRLDistributionPoint</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x2a35038">
+      <item key="pubkey">476e8a01f351f9f68d607302d881b0939b77b93b
+</item>
+      <item key="x509">fb01d9f2322411e2a290442b8e14e0f9b224a57c</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x5441ed8">
+      <item key="not_after">Jan 21 13:27:24 2017 GMT</item>
+      <item key="not_before">Jan 21 13:27:24 2015 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x6376858">
+      <item key="count">8</item>
+      <item key="entries">
+       <hashref memory_address="0x56f2de8">
+        <item key="0">
+         <hashref memory_address="0x570e730">
+          <item key="critical">0</item>
+          <item key="data">DNS:e-banking.trafina.ch</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x37c3868">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x37903f0">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x48c3b50">
+          <item key="critical">0</item>
+          <item key="data">47:6E:8A:01:F3:51:F9:F6:8D:60:73:02:D8:81:B0:93:9B:77:B9:3B</item>
+          <item key="ln">X509v3 Subject Key Identifier</item>
+          <item key="nid">82</item>
+          <item key="oid">2.5.29.14</item>
+          <item key="sn">subjectKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x56f68e8">
+          <item key="critical">0</item>
+          <item key="data">keyid:EE:FD:46:CA:F7:27:5E:91:BC:5A:B6:E7:87:CD:0A:FA:55:0A:26:42
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x5c075f0">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://crl.swisssign.net/EEFD46CAF7275E91BC5AB6E787CD0AFA550A2642
+
+Full Name:
+  URI:ldap://directory.swisssign.net/CN=EEFD46CAF7275E91BC5AB6E787CD0AFA550A2642%2CO=SwissSign%2CC=CH?certificateRevocationList?base?objectClass=cRLDistributionPoint
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x37a1ba8">
+          <item key="critical">0</item>
+          <item key="data">Policy: 2.16.756.1.89.1.2.1.1
+  CPS: http://repository.swisssign.com/SwissSign-Gold-CP-CPS.pdf
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x5ac7f50">
+          <item key="critical">0</item>
+          <item key="data">CA Issuers - URI:http://swisssign.net/cgi-bin/authority/download/EEFD46CAF7275E91BC5AB6E787CD0AFA550A2642
+OCSP - URI:http://gold-ev-g2.ocsp.swisssign.net/EEFD46CAF7275E91BC5AB6E787CD0AFA550A2642
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x5ac7fb0">
+      <item key="1.3.6.1.5.5.7.3.2">nid</item>
+      <item key="129">130</item>
+      <item key="TLS Web Server Authentication">TLS Web Client Authentication</item>
+      <item key="clientAuth">ln</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x37a1518">
+      <item key="md5">C3:FD:68:5F:AA:DA:85:ED:49:4B:E0:49:80:DC:67:91</item>
+      <item key="sha1">FB:01:D9:F2:32:24:11:E2:A2:90:44:2B:8E:14:E0:F9:B2:24:A5:7C</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x37a1dd0">
+      <item key="issuer">
+       <hashref memory_address="0x54251e8">
+        <item key="dec">4251105728</item>
+        <item key="hex">FD62B9C0</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x5ac82e0">
+        <item key="dec">2135905811</item>
+        <item key="hex">7F4F5613</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x48c3f10">
+        <item key="dec">4165309944</item>
+        <item key="hex">F84595F8</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x5c07500">
+      <item key="count">3</item>
+      <item key="entries">
+       <hashref memory_address="0x37904f8">
+        <item key="0">
+         <hashref memory_address="0x2bde598">
+          <item key="data">CH</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x570db48">
+          <item key="data">SwissSign AG</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x37bec50">
+          <item key="data">SwissSign EV Gold CA 2014 - G22</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=CH/O=SwissSign AG/CN=SwissSign EV Gold CA 2014 - G22</item>
+      <item key="print_rfc2253">CN=SwissSign EV Gold CA 2014 - G22,O=SwissSign AG,C=CH</item>
+      <item key="print_rfc2253_utf8">CN=SwissSign EV Gold CA 2014 - G22,O=SwissSign AG,C=CH</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIGajCCBVKgAwIBAgIQAMdtFRKxIU8st7JS7GuzsTANBgkqhkiG9w0BAQsFADBO
+MQswCQYDVQQGEwJDSDEVMBMGA1UEChMMU3dpc3NTaWduIEFHMSgwJgYDVQQDEx9T
+d2lzc1NpZ24gRVYgR29sZCBDQSAyMDE0IC0gRzIyMB4XDTE1MDEyMTEzMjcyNFoX
+DTE3MDEyMTEzMjcyNFowgcQxCzAJBgNVBAYTAkNIMQswCQYDVQQIEwJCUzEOMAwG
+A1UEBxMFQmFzZWwxHjAcBgNVBAoTFVRyYWZpbmEgUHJpdmF0YmFuayBBRzELMAkG
+A1UECxMCSVQxHTAbBgNVBAMTFGUtYmFua2luZy50cmFmaW5hLmNoMRMwEQYLKwYB
+BAGCNzwCAQMTAkNIMR0wGwYDVQQPExRQcml2YXRlIE9yZ2FuaXphdGlvbjEYMBYG
+A1UEBRMPQ0hFLTEwNy45MTMuNjUyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB
+CgKCAQEAxnyLkUlsGlqoxfIZj8CSXM+zTXwnTxJ7yn+KnT35Q17yhUb6qC3W4Fnk
+OjaRWCgYJEhUbqXtu6KI8D+TbHWyCgamm/ayIqL19Bh4COBtlwh/KC7IJ40yqelp
+uJ/w+VvDEVKSv/LbNLlLoUzYyF7nDCsrrXkXD4J2Se6WVE75hrtpPezvC+q+nNDq
+RXmrpm+4RLvJq4sATpDRGO98DI/ntEg9MENaFULbGDpzmKTSyebQcJpX7S5RkFr+
+LMtdt2jmucIh8g+SBkegdbBAoxpRkDSr6u1ToWTkgE0T3uOX6jjv/YWWBYMObs6J
+zHPe1nnqAPI4Lxsuo/sP+jghq1EtxQIDAQABo4ICyzCCAscwHwYDVR0RBBgwFoIU
+ZS1iYW5raW5nLnRyYWZpbmEuY2gwDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQG
+CCsGAQUFBwMBBggrBgEFBQcDAjAdBgNVHQ4EFgQUR26KAfNR+faNYHMC2IGwk5t3
+uTswHwYDVR0jBBgwFoAU7v1GyvcnXpG8Wrbnh80K+lUKJkIwgf8GA1UdHwSB9zCB
+9DBHoEWgQ4ZBaHR0cDovL2NybC5zd2lzc3NpZ24ubmV0L0VFRkQ0NkNBRjcyNzVF
+OTFCQzVBQjZFNzg3Q0QwQUZBNTUwQTI2NDIwgaiggaWggaKGgZ9sZGFwOi8vZGly
+ZWN0b3J5LnN3aXNzc2lnbi5uZXQvQ049RUVGRDQ2Q0FGNzI3NUU5MUJDNUFCNkU3
+ODdDRDBBRkE1NTBBMjY0MiUyQ089U3dpc3NTaWduJTJDQz1DSD9jZXJ0aWZpY2F0
+ZVJldm9jYXRpb25MaXN0P2Jhc2U/b2JqZWN0Q2xhc3M9Y1JMRGlzdHJpYnV0aW9u
+UG9pbnQwXwYDVR0gBFgwVjBUBglghXQBWQECAQEwRzBFBggrBgEFBQcCARY5aHR0
+cDovL3JlcG9zaXRvcnkuc3dpc3NzaWduLmNvbS9Td2lzc1NpZ24tR29sZC1DUC1D
+UFMucGRmMIHRBggrBgEFBQcBAQSBxDCBwTBkBggrBgEFBQcwAoZYaHR0cDovL3N3
+aXNzc2lnbi5uZXQvY2dpLWJpbi9hdXRob3JpdHkvZG93bmxvYWQvRUVGRDQ2Q0FG
+NzI3NUU5MUJDNUFCNkU3ODdDRDBBRkE1NTBBMjY0MjBZBggrBgEFBQcwAYZNaHR0
+cDovL2dvbGQtZXYtZzIub2NzcC5zd2lzc3NpZ24ubmV0L0VFRkQ0NkNBRjcyNzVF
+OTFCQzVBQjZFNzg3Q0QwQUZBNTUwQTI2NDIwDQYJKoZIhvcNAQELBQADggEBAE+6
+MDOiglI0KEjuGz1cswYCuuAJnAd7Z5GJ3xTlpiWsWeJK+lx2+cgRJu/U1j/fO3+c
+hhjb6+k7r/kYX7R7MlzBDb47xDLmqIfIQ+sSpgGcaMCYLBECKB5zZDAvw4Dm66XA
+Z+DsLUeF+tTDI+N+4eGDdexMeum3xCmlll/ZdoTP9vRwDG+sJHF/Udmqz8C2ldC6
+s2f2iaqKzfnYKyNquFLZQUe5myhsOaosKaRNCJhkxyCvtBPRXtYNj1Yt2nwFQSeg
+lNEVgHkeRTOMRtNjxb0pUsptukjRY53qAyJ6097DQVfV8CyjFTlSDI5WTjE8HYhS
+mrhuRp/S/yzbYQpwpKc=
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x570f380">
+      <item key="dec">1035479527071508875169825734274036657</item>
+      <item key="hex">C76D1512B1214F2CB7B252EC6BB3B1</item>
+      <item key="long">-1</item>
+      <item key="string">c76d1512b1214f2cb7b252ec6bb3b1</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha256WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x39d4488">
+      <item key="altnames">
+       <hashref memory_address="0x37a17a0">
+        <item key="2">e-banking.trafina.ch</item>
+       </hashref>
+      </item>
+      <item key="count">9</item>
+      <item key="entries">
+       <hashref memory_address="0x490a2f0">
+        <item key="0">
+         <hashref memory_address="0x37a10c8">
+          <item key="data">CH</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x5ac8178">
+          <item key="data">BS</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x3790be8">
+          <item key="data">Basel</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x5c06fd8">
+          <item key="data">Trafina Privatbank AG</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x2ba16e8">
+          <item key="data">IT</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x37a2848">
+          <item key="data">e-banking.trafina.ch</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x63768e8">
+          <item key="data">CH</item>
+          <item key="ln" defined="false"></item>
+          <item key="nid" defined="false"></item>
+          <item key="oid">1.3.6.1.4.1.311.60.2.1.3</item>
+          <item key="sn" defined="false"></item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x4b17268">
+          <item key="data">Private Organization</item>
+          <item key="ln">businessCategory</item>
+          <item key="nid">860</item>
+          <item key="oid">2.5.4.15</item>
+          <item key="sn">businessCategory</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x54437f0">
+          <item key="data">CHE-107.913.652</item>
+          <item key="ln">serialNumber</item>
+          <item key="nid">105</item>
+          <item key="oid">2.5.4.5</item>
+          <item key="sn">serialNumber</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=CH/ST=BS/L=Basel/O=Trafina Privatbank AG/OU=IT/CN=e-banking.trafina.ch/1.3.6.1.4.1.311.60.2.1.3=CH/businessCategory=Private Organization/serialNumber=CHE-107.913.652</item>
+      <item key="print_rfc2253">serialNumber=CHE-107.913.652,businessCategory=Private Organization,1.3.6.1.4.1.311.60.2.1.3=#13024348,CN=e-banking.trafina.ch,OU=IT,O=Trafina Privatbank AG,L=Basel,ST=BS,C=CH</item>
+      <item key="print_rfc2253_utf8">serialNumber=CHE-107.913.652,businessCategory=Private Organization,1.3.6.1.4.1.311.60.2.1.3=#13024348,CN=e-banking.trafina.ch,OU=IT,O=Trafina Privatbank AG,L=Basel,ST=BS,C=CH</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x5443a00">
+    <item key="ext_content">
+     <arrayref memory_address="0x5c06ba0">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="hsts">No</item>
+    <item key="https_redirect">Yes</item>
+    <item key="score">-2</item>
+    <item key="srv_type">Secure Entry Server</item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">C-</item>
+  <item key="HOSTNAME">eservices.baumann-banquiers.ch</item>
+  <item key="HOSTTYPE">e-banking</item>
+  <item key="ID">99</item>
+  <item key="IP">212.203.83.108</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">60</item>
+  <item key="SSL">
+   <hashref memory_address="0x48c3aa8">
+    <item key="cipherScore">45</item>
+    <item key="protocol">
+     <hashref memory_address="0x570f608">
+      <item key="SSLv2">
+       <hashref memory_address="0x37d6000">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x37c3aa8">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x48b94c0">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x570fa88">
+          <item key="0">RC4-MD5</item>
+          <item key="1">RC4-SHA</item>
+          <item key="2">DES-CBC3-SHA</item>
+          <item key="3">AES128-SHA</item>
+          <item key="4">AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">40</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x37d36a0">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x5424f30">
+          <item key="0">RC4-MD5</item>
+          <item key="1">RC4-SHA</item>
+          <item key="2">DES-CBC3-SHA</item>
+          <item key="3">AES128-SHA</item>
+          <item key="4">AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">50</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x48c3dc0">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x37a2f20">
+          <item key="0">RC4-MD5</item>
+          <item key="1">RC4-SHA</item>
+          <item key="2">DES-CBC3-SHA</item>
+          <item key="3">AES128-SHA</item>
+          <item key="4">AES256-SHA</item>
+          <item key="5">ECDHE-RSA-AES128-GCM-SHA256</item>
+          <item key="6">ECDHE-RSA-AES256-GCM-SHA384</item>
+          <item key="7">ECDHE-RSA-AES128-SHA256</item>
+          <item key="8">ECDHE-RSA-AES128-SHA</item>
+          <item key="9">ECDHE-RSA-AES256-SHA384</item>
+          <item key="10">ECDHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">50</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">100</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">95</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

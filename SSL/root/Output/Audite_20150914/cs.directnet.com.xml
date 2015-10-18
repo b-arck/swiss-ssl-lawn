@@ -1,0 +1,476 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x2d648b0">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x2cb2978">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://sr.symcb.com/sr.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x2ce6920">
+      <item key="pubkey">bb07ba3d8f41a2311f4237c4f9b915f6919f6a0e
+</item>
+      <item key="x509">1bc293b9347c438006ab10f50fdbe240827ab6d3</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x2cdc668">
+      <item key="not_after">Jul  8 23:59:59 2017 GMT</item>
+      <item key="not_before">Jul  8 00:00:00 2015 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x2cece90">
+      <item key="count">9</item>
+      <item key="entries">
+       <hashref memory_address="0x2e78920">
+        <item key="0">
+         <hashref memory_address="0x2c9a660">
+          <item key="critical">0</item>
+          <item key="data">DNS:cs.directnet.com</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x2d5ef38">
+          <item key="critical">0</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x2d588f8">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x2ebc838">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x2cb3908">
+          <item key="critical">0</item>
+          <item key="data">Policy: 2.16.840.1.113733.1.7.23.6
+  CPS: https://d.symcb.com/cps
+  User Notice:
+    Explicit Text: https://d.symcb.com/rpa
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x2cb2ee8">
+          <item key="critical">0</item>
+          <item key="data">keyid:01:59:AB:E7:DD:3A:0B:59:A6:64:63:D6:CF:20:07:57:D5:91:E7:6A
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x2eb4818">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://sr.symcb.com/sr.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x2cf2628">
+          <item key="critical">0</item>
+          <item key="data">OCSP - URI:http://sr.symcd.com
+CA Issuers - URI:http://sr.symcb.com/sr.crt
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x2ca86f8">
+          <item key="critical">0</item>
+          <item key="data" defined="false"></item>
+          <item key="ln" defined="false"></item>
+          <item key="nid" defined="false"></item>
+          <item key="oid">1.3.6.1.4.1.11129.2.4.2</item>
+          <item key="sn" defined="false"></item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x2ca8650">
+      <item key="1.3.6.1.5.5.7.3.2">nid</item>
+      <item key="129">130</item>
+      <item key="TLS Web Server Authentication">TLS Web Client Authentication</item>
+      <item key="clientAuth">ln</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x2e072c0">
+      <item key="md5">FF:8E:57:E9:D5:37:01:77:60:57:FD:10:0E:5A:10:BD</item>
+      <item key="sha1">1B:C2:93:B9:34:7C:43:80:06:AB:10:F5:0F:DB:E2:40:82:7A:B6:D3</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x2d03ea8">
+      <item key="issuer">
+       <hashref memory_address="0x2eb4710">
+        <item key="dec">2700586046</item>
+        <item key="hex">A0F7AC3E</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x2eb4c50">
+        <item key="dec">2269822019</item>
+        <item key="hex">874ABC43</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x2eb21d8">
+        <item key="dec">3917953691</item>
+        <item key="hex">E9873A9B</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x2d093d8">
+      <item key="count">4</item>
+      <item key="entries">
+       <hashref memory_address="0x2eb4c98">
+        <item key="0">
+         <hashref memory_address="0x2e07098">
+          <item key="data">US</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x2d6f8d8">
+          <item key="data">Symantec Corporation</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x2cc3818">
+          <item key="data">Symantec Trust Network</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x2eafe28">
+          <item key="data">Symantec Class 3 EV SSL CA - G3</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=US/O=Symantec Corporation/OU=Symantec Trust Network/CN=Symantec Class 3 EV SSL CA - G3</item>
+      <item key="print_rfc2253">CN=Symantec Class 3 EV SSL CA - G3,OU=Symantec Trust Network,O=Symantec Corporation,C=US</item>
+      <item key="print_rfc2253_utf8">CN=Symantec Class 3 EV SSL CA - G3,OU=Symantec Trust Network,O=Symantec Corporation,C=US</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIH1TCCBr2gAwIBAgIQL2Z9nnAtBTqbSerMvfKWdzANBgkqhkiG9w0BAQsFADB3
+MQswCQYDVQQGEwJVUzEdMBsGA1UEChMUU3ltYW50ZWMgQ29ycG9yYXRpb24xHzAd
+BgNVBAsTFlN5bWFudGVjIFRydXN0IE5ldHdvcmsxKDAmBgNVBAMTH1N5bWFudGVj
+IENsYXNzIDMgRVYgU1NMIENBIC0gRzMwHhcNMTUwNzA4MDAwMDAwWhcNMTcwNzA4
+MjM1OTU5WjCB5TETMBEGCysGAQQBgjc8AgEDEwJDSDEdMBsGA1UEDxMUUHJpdmF0
+ZSBPcmdhbml6YXRpb24xGzAZBgNVBAUTEkNILTAyMC4zLjkwNi4wNzUtOTELMAkG
+A1UEBhMCQ0gxDTALBgNVBBEMBDgwMDExEDAOBgNVBAgMB1p1ZXJpY2gxEDAOBgNV
+BAcMB1p1ZXJpY2gxFjAUBgNVBAkMDVBhcmFkZXBsYXR6IDgxHzAdBgNVBAoMFkNy
+ZWRpdCBTdWlzc2UgR3JvdXAgQUcxGTAXBgNVBAMMEGNzLmRpcmVjdG5ldC5jb20w
+ggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCuoP/UOEiinP100fuiAMK3
+XT0uRZ/UxyHIIghC1Hhho2MOyBdUTK8pX0bAv5fXbcdiVG+85H2VnitzuFqXsVqO
+skRQQywrw9tPkZ0KvYYrB39O1RPbxrY4oi+zFat3FJAzouZzrBj0ShdP/bX2h75H
+/tbZTOIeRCG52AX1j3m7fECujNeNJVCVyI+EKo29KzNwpEO0uNPbzpSGh2jitCr9
+aWLGKifY+d7TFH0UMwwJXWeAlh5VHa6ek8X/zG69XMWFp/A9+n+tOnQ4TWIO3GLF
+tZiyTCvcTn6HnOtLD90ZfNtlVOCU3ca9vPpCnSc67Hv3vgA+J4sgrqnUh75NrDg3
+QTiw/AFJ6WYHE9cmbu8jHI3aga0ze8K+Qww8AmuNQnKoLqIMha4NcoZJ+aJKgMcL
+BOUfbFrCNVJ4D3CyZtxSJU306sSkWbSvdQ1jyg+7/vdWlzSBtuSYBsfbvVdss6sL
++JxFkP1Plx8qWGrxHmaJlOkFRNEoC6SiXhmrdCkUzHzaOuHyWqCitWGAgJl3735t
+MF8ghSMds0DMx3cORyIDgejzXbTvCyfBoZadANw9kO881P6E1aGWQ6JDBsvj5qnj
+4OMe9y7GyUjLSSOohGZZiE8xUiWbMArYjcvjA4d1XcykV88COCBJDkPzgwHflvvO
+SINegJ+H1egmHJJVfk95OQIDAQABo4IC7DCCAugwGwYDVR0RBBQwEoIQY3MuZGly
+ZWN0bmV0LmNvbTAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAU
+BggrBgEFBQcDAQYIKwYBBQUHAwIwZgYDVR0gBF8wXTBbBgtghkgBhvhFAQcXBjBM
+MCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcC
+AjAZGhdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBQBWavn3ToL
+WaZkY9bPIAdX1ZHnajArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vc3Iuc3ltY2Iu
+Y29tL3NyLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9z
+ci5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9zci5zeW1jYi5jb20vc3Iu
+Y3J0MIIBfgYKKwYBBAHWeQIEAgSCAW4EggFqAWgAdgCkuQmQtBhYFIe7E6LMZ3AK
+PDWYBPkb37jjd80OyA3cEAAAAU5uW+NtAAAEAwBHMEUCIQCkBPuRKVLCm01bre3v
+Z1f3n11HclaG8rPiHObKr0rDkgIgRpRKqPvoWjxxYpMum9t0fI1BxjkS+yariwYy
+wVsuhYEAdgBWFAaaL9fC7NP14b1Esj7HRna5vJkRXMDvlJhV1onQ3QAAAU5uW+Qc
+AAAEAwBHMEUCIQDHumODDeZCgHzkFeCUjqNc5u3is/uUoPsrT8HYDYaH/gIgMRt9
+n3B+uE2+c3kk0521Esidao16szCOFfmG57sxwRoAdgBo9pj4H2SCvjqM7rkoHUz8
+cVFdZ5PURNEKZ6y7T0/7xAAAAU5uW+NXAAAEAwBHMEUCIB1AO0XrotwZTu+dHheJ
+fETL7ve7rAi5IWYTga1t0JVoAiEAs0etyOSJaM7h5TzEgN2DLeUjqTU9hdQTWCug
+iOWsrSYwDQYJKoZIhvcNAQELBQADggEBAG72epM+3hwJOUk67bSIiFHVA7EQi2rY
+DRD1llWAk2S35tLId/2hV6DkibyqLJYQ0/7t6GYtFGPHR7qxcOH6CV6LFWK8Kx9K
+hhHtrjn9gB54zLuo/DJOWFdkLqE52lGliJ7PLqvD0NAQTrpPXjVqYNMWIs/iJ2rK
+ifjPqKYlxhmSJz2T4cXDP34bokb/THIc7/BE8xlxUmmqTGXt8kZDadHxQ4PhIzzF
+eI5fZnJvIsYTEp+vPM3ClZ1sTj5bIeMoBVbvrmUHtpVnxrf889krS2XCeA0SXGPh
+k8UHQJIUpbS+VO+teY50QH56b0CMAoXDlrII/oA2LTxngUJYlhaOH10=
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">4096</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">512</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x2eb2a30">
+      <item key="dec">63005877935428479611963985192788596343</item>
+      <item key="hex">2F667D9E702D053A9B49EACCBDF29677</item>
+      <item key="long">-1</item>
+      <item key="string">2f667d9e702d053a9b49eaccbdf29677</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha256WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x2c9a438">
+      <item key="altnames">
+       <hashref memory_address="0x2e07530">
+        <item key="2">cs.directnet.com</item>
+       </hashref>
+      </item>
+      <item key="count">10</item>
+      <item key="entries">
+       <hashref memory_address="0x2d095d0">
+        <item key="0">
+         <hashref memory_address="0x2eb0830">
+          <item key="data">CH</item>
+          <item key="ln" defined="false"></item>
+          <item key="nid" defined="false"></item>
+          <item key="oid">1.3.6.1.4.1.311.60.2.1.3</item>
+          <item key="sn" defined="false"></item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x2ebc8e0">
+          <item key="data">Private Organization</item>
+          <item key="ln">businessCategory</item>
+          <item key="nid">860</item>
+          <item key="oid">2.5.4.15</item>
+          <item key="sn">businessCategory</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x2ced3e8">
+          <item key="data">CH-020.3.906.075-9</item>
+          <item key="ln">serialNumber</item>
+          <item key="nid">105</item>
+          <item key="oid">2.5.4.5</item>
+          <item key="sn">serialNumber</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x2d53dd8">
+          <item key="data">CH</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x2c9a618">
+          <item key="data">8001</item>
+          <item key="ln">postalCode</item>
+          <item key="nid">661</item>
+          <item key="oid">2.5.4.17</item>
+          <item key="sn">postalCode</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x2e78680">
+          <item key="data">Zuerich</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x2c9a210">
+          <item key="data">Zuerich</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x2eb4e48">
+          <item key="data">Paradeplatz 8</item>
+          <item key="ln">streetAddress</item>
+          <item key="nid">660</item>
+          <item key="oid">2.5.4.9</item>
+          <item key="sn">street</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x2cecc68">
+          <item key="data">Credit Suisse Group AG</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="9">
+         <hashref memory_address="0x2ebd138">
+          <item key="data">cs.directnet.com</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/1.3.6.1.4.1.311.60.2.1.3=CH/businessCategory=Private Organization/serialNumber=CH-020.3.906.075-9/C=CH/postalCode=8001/ST=Zuerich/L=Zuerich/street=Paradeplatz 8/O=Credit Suisse Group AG/CN=cs.directnet.com</item>
+      <item key="print_rfc2253">CN=cs.directnet.com,O=Credit Suisse Group AG,street=Paradeplatz 8,L=Zuerich,ST=Zuerich,postalCode=8001,C=CH,serialNumber=CH-020.3.906.075-9,businessCategory=Private Organization,1.3.6.1.4.1.311.60.2.1.3=#13024348</item>
+      <item key="print_rfc2253_utf8">CN=cs.directnet.com,O=Credit Suisse Group AG,street=Paradeplatz 8,L=Zuerich,ST=Zuerich,postalCode=8001,C=CH,serialNumber=CH-020.3.906.075-9,businessCategory=Private Organization,1.3.6.1.4.1.311.60.2.1.3=#13024348</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x2e792e0">
+    <item key="flash_content" defined="false"></item>
+    <item key="srv_type" defined="false"></item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">A</item>
+  <item key="HOSTNAME">cs.directnet.com</item>
+  <item key="HOSTTYPE">e-banking</item>
+  <item key="ID">17</item>
+  <item key="IP">198.240.216.7</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">84.5</item>
+  <item key="SSL">
+   <hashref memory_address="0x2eb5340">
+    <item key="cipherScore">80</item>
+    <item key="protocol">
+     <hashref memory_address="0x2c8ab28">
+      <item key="SSLv2">
+       <hashref memory_address="0x2eb2f58">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x2eb4dd0">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x2cc3d88">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x2d31c18">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">AES128-SHA</item>
+          <item key="2">AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">70</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x2c9a600">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x2d0efe0">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">AES128-SHA</item>
+          <item key="2">AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">90</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x2d2c128">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x2c8a8b8">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">AES128-SHA</item>
+          <item key="2">AES256-SHA</item>
+          <item key="3">ECDHE-RSA-AES128-GCM-SHA256</item>
+          <item key="4">ECDHE-RSA-AES256-GCM-SHA384</item>
+          <item key="5">ECDHE-RSA-AES128-SHA256</item>
+          <item key="6">ECDHE-RSA-AES128-SHA</item>
+          <item key="7">ECDHE-RSA-AES256-SHA384</item>
+          <item key="8">ECDHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">90</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">100</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">95</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

@@ -1,0 +1,431 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x50465d8">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x42c7290">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://crl.godaddy.com/gdig2s2-1.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x40840f0">
+      <item key="pubkey">814e820b9429bc84eccd324895421b2ebf84c322
+</item>
+      <item key="x509">7ea500e793f2fdaab2516bd99f551824ed8f1308</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x409a760">
+      <item key="not_after">Jul  3 07:54:39 2016 GMT</item>
+      <item key="not_before">Jul 10 06:45:38 2015 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x21f14e0">
+      <item key="count">9</item>
+      <item key="entries">
+       <hashref memory_address="0x5085e58">
+        <item key="0">
+         <hashref memory_address="0x504cf30">
+          <item key="critical">1</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x4083af0">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication, 2.16.840.1.113741.1.2.3</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x504d770">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x409b480">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://crl.godaddy.com/gdig2s2-1.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x409ae50">
+          <item key="critical">0</item>
+          <item key="data">Policy: 2.16.840.1.114413.1.7.23.2
+  CPS: http://certificates.godaddy.com/repository/
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x42ce7b0">
+          <item key="critical">0</item>
+          <item key="data">OCSP - URI:http://ocsp.godaddy.com/
+CA Issuers - URI:http://certificates.godaddy.com/repository/gdig2.crt
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x42ce6c0">
+          <item key="critical">0</item>
+          <item key="data">keyid:40:C2:BD:27:8E:CC:34:83:30:A2:33:D7:FB:6C:B3:F0:B4:2C:80:CE
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x409af40">
+          <item key="critical">0</item>
+          <item key="data">DNS:*.ricardo.ch, DNS:ricardo.ch, DNS:*.ricardo.ch</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x20267c0">
+          <item key="critical">0</item>
+          <item key="data">81:4E:82:0B:94:29:BC:84:EC:CD:32:48:95:42:1B:2E:BF:84:C3:22</item>
+          <item key="ln">X509v3 Subject Key Identifier</item>
+          <item key="nid">82</item>
+          <item key="oid">2.5.29.14</item>
+          <item key="sn">subjectKeyIdentifier</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x2070630">
+      <item key="1.3.6.1.5.5.7.3.2">2.16.840.1.113741.1.2.3</item>
+      <item key="130">sn</item>
+      <item key="TLS Web Client Authentication" defined="false"></item>
+      <item key="ln">TLS Web Server Authentication</item>
+      <item key="nid">129</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="serverAuth">clientAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x409b528">
+      <item key="md5">EB:4D:69:21:A6:47:BB:45:00:BD:6D:7F:8F:81:71:6D</item>
+      <item key="sha1">7E:A5:00:E7:93:F2:FD:AA:B2:51:6B:D9:9F:55:18:24:ED:8F:13:08</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x1fd96c0">
+      <item key="issuer">
+       <hashref memory_address="0x50462c0">
+        <item key="dec">669742852</item>
+        <item key="hex">27EB7704</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x50461e8">
+        <item key="dec">141540906</item>
+        <item key="hex">86FBE2A</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x5123ff8">
+        <item key="dec">4049680749</item>
+        <item key="hex">F161396D</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x21fa228">
+      <item key="count">6</item>
+      <item key="entries">
+       <hashref memory_address="0x507ef68">
+        <item key="0">
+         <hashref memory_address="0x42ce5d0">
+          <item key="data">US</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x1fe8298">
+          <item key="data">Arizona</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x4083ce8">
+          <item key="data">Scottsdale</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x42cefa8">
+          <item key="data">GoDaddy.com, Inc.</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x42ced08">
+          <item key="data">http://certs.godaddy.com/repository/</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x5046260">
+          <item key="data">Go Daddy Secure Certificate Authority - G2</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=US/ST=Arizona/L=Scottsdale/O=GoDaddy.com, Inc./OU=http://certs.godaddy.com/repository//CN=Go Daddy Secure Certificate Authority - G2</item>
+      <item key="print_rfc2253">CN=Go Daddy Secure Certificate Authority - G2,OU=http://certs.godaddy.com/repository/,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US</item>
+      <item key="print_rfc2253_utf8">CN=Go Daddy Secure Certificate Authority - G2,OU=http://certs.godaddy.com/repository/,O=GoDaddy.com\, Inc.,L=Scottsdale,ST=Arizona,C=US</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIFRzCCBC+gAwIBAgIIDCSmRe29epEwDQYJKoZIhvcNAQELBQAwgbQxCzAJBgNV
+BAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQHEwpTY290dHNkYWxlMRow
+GAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UECxMkaHR0cDovL2NlcnRz
+LmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQDEypHbyBEYWRkeSBTZWN1
+cmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwHhcNMTUwNzEwMDY0NTM4WhcN
+MTYwNzAzMDc1NDM5WjBKMQswCQYDVQQGEwJDSDEMMAoGA1UEBxMDWnVnMRYwFAYD
+VQQKEw1yaWNhcmRvLmNoIEFHMRUwEwYDVQQDDAwqLnJpY2FyZG8uY2gwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDCzWx+g9qrEMlDN3DQam6OFVxlMMj4
+F57bZb+RdM0somGy4osD98144k/RKlqdHM2i3u7/Wskr5PEMX1n5aAHyghpPDw+A
+vSsCSBe/su4mhXqnTKk055UgYyR2L12lbFErlve45GUyB5TClrV5g9bS2kN70Cws
+lvwQnTfSi7vOMwfteppi8c+7qNXMsiV/arP7IpjoDdRhqk4nq5v1uC6QkgKu/twF
+srUNd0has4t1eiwYuxhH3pDgUKco+5xN5Vc7l3XYMfXbJFMGzG5THn+XLmR8jwLF
+3MFUq7x5uHWnaZSYEwPxVTRWatpyMasGdUwbxw07i5Nvb1sB37shEOKlAgMBAAGj
+ggHEMIIBwDAMBgNVHRMBAf8EAjAAMCkGA1UdJQQiMCAGCCsGAQUFBwMBBggrBgEF
+BQcDAgYKYIZIAYb4TQECAzAOBgNVHQ8BAf8EBAMCBaAwNQYDVR0fBC4wLDAqoCig
+JoYkaHR0cDovL2NybC5nb2RhZGR5LmNvbS9nZGlnMnMyLTEuY3JsMFMGA1UdIARM
+MEowSAYLYIZIAYb9bQEHFwIwOTA3BggrBgEFBQcCARYraHR0cDovL2NlcnRpZmlj
+YXRlcy5nb2RhZGR5LmNvbS9yZXBvc2l0b3J5LzB2BggrBgEFBQcBAQRqMGgwJAYI
+KwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmdvZGFkZHkuY29tLzBABggrBgEFBQcwAoY0
+aHR0cDovL2NlcnRpZmljYXRlcy5nb2RhZGR5LmNvbS9yZXBvc2l0b3J5L2dkaWcy
+LmNydDAfBgNVHSMEGDAWgBRAwr0njsw0gzCiM9f7bLPwtCyAzjAxBgNVHREEKjAo
+ggwqLnJpY2FyZG8uY2iCCnJpY2FyZG8uY2iCDCoucmljYXJkby5jaDAdBgNVHQ4E
+FgQUgU6CC5QpvITszTJIlUIbLr+EwyIwDQYJKoZIhvcNAQELBQADggEBAG7cvGOZ
+8hbtz+RpUlL63HGc1OqRnmzR2w8KLsqDirk+Hy8QVPu8ezJAYhnju4k1lGDh259r
+K0+Ag+02q7N/NlHk/HuSe2cqItR5kLACxgODPOE70/GTNiCmnAvMepysOs/1ExP5
+br9T1PX7hyIXd+EUczyyXOHNf8VHNNObZREh1y8vPl4rWqUDIAdTrMFNDCMXZefz
+1QPmEniTjJ5n2Gj8gt8JkkVoDh50bWqV1u4/wWbH2ugbe4+LSNhan8WUQNBbUnC/
+hXRheV/iw7wfA2nEfg7/NRRNKO69NCeZnUKrk6yfdVUbfR6TsJmhuIY9ErT76kZq
+ynNH2jnGNWPk9j0=
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x258c498">
+      <item key="dec">875007046888290961</item>
+      <item key="hex">0C24A645EDBD7A91</item>
+      <item key="long">875007046888290961</item>
+      <item key="string">0c24a645edbd7a91</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha256WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x408feb8">
+      <item key="altnames">
+       <hashref memory_address="0x42cede0">
+        <item key="2">*.ricardo.ch</item>
+       </hashref>
+      </item>
+      <item key="count">4</item>
+      <item key="entries">
+       <hashref memory_address="0x42ce660">
+        <item key="0">
+         <hashref memory_address="0x1ffdc30">
+          <item key="data">CH</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x258c558">
+          <item key="data">Zug</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x258c600">
+          <item key="data">ricardo.ch AG</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x2015350">
+          <item key="data">*.ricardo.ch</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=CH/L=Zug/O=ricardo.ch AG/CN=*.ricardo.ch</item>
+      <item key="print_rfc2253">CN=*.ricardo.ch,O=ricardo.ch AG,L=Zug,C=CH</item>
+      <item key="print_rfc2253_utf8">CN=*.ricardo.ch,O=ricardo.ch AG,L=Zug,C=CH</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x206b1e8">
+    <item key="ext_content">
+     <arrayref memory_address="0x201b098">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="hsts">No</item>
+    <item key="https_redirect">Yes</item>
+    <item key="score">0</item>
+    <item key="srv_type" defined="false"></item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">A</item>
+  <item key="HOSTNAME">www.ricardo.ch</item>
+  <item key="HOSTTYPE">e-commerce</item>
+  <item key="ID">35</item>
+  <item key="IP">91.204.83.10</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">86.25</item>
+  <item key="SSL">
+   <hashref memory_address="0x258c990">
+    <item key="cipherScore">82.5</item>
+    <item key="protocol">
+     <hashref memory_address="0x5085f00">
+      <item key="SSLv2">
+       <hashref memory_address="0x5086368">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x409aa78">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x20a34f0">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x21f9e50">
+          <item key="0">DHE-RSA-AES128-SHA</item>
+          <item key="1">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">90</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x5085eb8">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x409f710">
+          <item key="0">DHE-RSA-AES128-SHA</item>
+          <item key="1">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">90</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x2015050">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x4090428">
+          <item key="0">DHE-RSA-AES128-SHA</item>
+          <item key="1">DHE-RSA-AES256-SHA</item>
+          <item key="2">ECDHE-RSA-AES128-GCM-SHA256</item>
+          <item key="3">ECDHE-RSA-AES256-GCM-SHA384</item>
+          <item key="4">DHE-RSA-AES128-GCM-SHA256</item>
+          <item key="5">ECDHE-RSA-AES128-SHA256</item>
+          <item key="6">ECDHE-RSA-AES128-SHA</item>
+          <item key="7">ECDHE-RSA-AES256-SHA384</item>
+          <item key="8">ECDHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">75</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">100</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">95</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

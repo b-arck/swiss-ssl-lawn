@@ -24,8 +24,9 @@ The root page (/select/ID/)
 sub details :GET Path('ID/') {
     my ( $self, $c ) = @_;
 
-    $c->stash->{hashref} = $c->model('loadxml')->loadDetails($c->request->path);
-    $c->stash->{ID} = $c->model('loadxml')->getId($c->request->path);
+    my ($hashref, $id) = $c->model('loadxml')->loadDetails($c->request->path);
+    $c->stash->{ID} = $id;
+    $c->stash->{hashref} = $hashref;
     $c->stash->{template} = 'details.tt2';
     $c->forward($c->view('HTML'));
 
@@ -68,8 +69,9 @@ The root page (/select/)
 sub index :Path :Args(0) {
     my ( $self, $c ) = @_;
 
-    $c->stash->{menu} = $c->model('loadxml')->findType();
-    $c->stash->{hashref} = $c->model('loadxml')->loadAllData();
+    my ($hashref, $menu) = $c->model('loadxml')->loadAllData();
+    $c->stash->{menu} = $menu;
+    $c->stash->{hashref} = $hashref;
     $c->stash(type => 'all');
     $c->stash->{template} = 'index.tt2';
     $c->forward($c->view('HTML'));
@@ -84,8 +86,9 @@ The root page with selected type (/select/<type>)
 sub selectType :GET Path('') {
     my ( $self, $c ) = @_;
 
-    $c->stash->{menu} = $c->model('loadxml')->findType();
-    $c->stash->{hashref} = $c->model('loadxml')->loadSiteByType($c->request->path);
+    my ($hashref, $menu) = $c->model('loadxml')->loadSiteByType($c->request->path);
+    $c->stash->{menu} = $menu;
+    $c->stash->{hashref} = $hashref;
     $c->stash->{type} = $c->model('loadxml')->retTypeSelect($c->request->path);
     $c->stash->{template} = 'index.tt2';
     $c->forward($c->view('HTML'));

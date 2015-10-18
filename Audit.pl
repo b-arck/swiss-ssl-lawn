@@ -55,6 +55,7 @@ use Time::ParseDate;
 use Log::Log4perl;
 use Mozilla::CA;
 use threads;
+use Scalar::Util qw(weaken);
 
 # --- Import created module used in the script
 
@@ -97,6 +98,14 @@ sub get_time {
     return $nice_timestamp;
 }
 
+sub get_folder_name{
+	
+	my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst)=localtime(time);
+	my $nice_timestamp = sprintf ( "%04d%02d%02d", $year+1900,$mon+1,$mday,$hour,$min,$sec);
+	my $filename = "Audite_$nice_timestamp" ;
+	return $filename;	
+}
+
 # --- Check with threads
 sub check{
 	my ( $audit , $xmlListe, $iniFile ) = @_;
@@ -122,7 +131,7 @@ my @moduleList =("HTTP::Tiny","Getopt::Long","XML::LibXML","XML::Dumper","XML::S
 		"Data::Dumper","IO::Socket::SSL","Socket","Net::SSLeay","Config::IniFiles",
 		"Time::gmtime","Time::ParseDate","Log::Log4perl","LWP::UserAgent","HTTP::Response",
 		"File::stat");
-my $survey = {};
+
 my $hosts;
 my $start = time;
 
@@ -131,7 +140,11 @@ $logger->info("############## - Start Audit.pl the " . get_time() . " - ########
 # --- Script test init
 
 $hosts = check_init($xmlListe, $protoCipherFile, \@moduleList);
-my $i = 0;
+
+# --- create folder
+my $folderName = get_folder_name();
+mkdir "SSL/root/Output/$folderName";
+
 # --- Main script
 foreach my $host (@$hosts) {
 	
@@ -146,20 +159,20 @@ foreach my $host (@$hosts) {
 		if ( check_hostname( $audit ) ) {
 			$audit->set_grade("Temp");				
 			$audit->set_trusted("Oui");
-			$audit = check( $audit, $xmlListe , $protoCipherFile);
+			check( $audit, $xmlListe , $protoCipherFile);
 			$audit = compute_final_result($audit);
 		}# if !check_hostname
 		else{
 			# If host name don't match give F result
-			$audit->set_trusted("Hostname missmatch");
+			$audit->set_trusted("Non");
 			# Check protocol and cipher
-			$audit = check( $audit, $xmlListe, $protoCipherFile );
+			check( $audit, $xmlListe, $protoCipherFile );
 			$audit = compute_final_result($audit);
 			$audit->set_grade("F");
 			if(!defined($audit->get_cert())){
 				$audit->set_grade("Z");
 				my $cert = {};
-				$cert->{pubkey_bits} = 0;
+				$cert->{pubkey_bits} = 10000;
 				$audit->set_cert($cert);
 			}
 		}
@@ -167,21 +180,17 @@ foreach my $host (@$hosts) {
 	}# if check_port
 	else{
 		my $cert = {};
-		$cert->{pubkey_bits} = 0;
+		$cert->{pubkey_bits} = 10000;
 		$audit->set_grade("Z");
-		$audit->set_result(0);
+		$audit->set_result(100);
 		$audit->set_trusted("Non");
 		$audit->set_cert($cert);
 	}
-	$survey->{$i} = $audit;
-	$i++;
+	saveToxml($audit,$folderName,$audit->get_hostName());
+	undef($audit);
 	$logger->info("----------------------------------------------------------");
 }# foreach host
 my $duration = time - $start;
-saveToxml($survey);
-undef $survey;
+print "$duration secondes\n";
+
 $logger->info("############# - End of Audit.pl - Execution time : " . $duration. " s ##############\n\n");
-
-
-
-

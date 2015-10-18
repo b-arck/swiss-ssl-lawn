@@ -1,0 +1,508 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x489d020">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x3caff98">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://crl.usertrust.com/EuropeanSSLHighAssuranceServerCA2.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x37c3418">
+      <item key="pubkey">f844905c70e4bde7d8475bbba534bb0668d4fd5c
+</item>
+      <item key="x509">511e5851acf07d4ea8b6985e88c9ac01a632f0a9</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x541e7c8">
+      <item key="not_after">May 28 23:59:59 2017 GMT</item>
+      <item key="not_before">Mar  4 00:00:00 2015 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x37bef38">
+      <item key="count">9</item>
+      <item key="entries">
+       <hashref memory_address="0x5442130">
+        <item key="0">
+         <hashref memory_address="0x37c31d8">
+          <item key="critical">0</item>
+          <item key="data">keyid:61:FE:B1:BC:DB:54:7E:FF:E1:14:89:A1:7F:5D:00:EA:C6:0C:86:37
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x3790c30">
+          <item key="critical">0</item>
+          <item key="data">F8:44:90:5C:70:E4:BD:E7:D8:47:5B:BB:A5:34:BB:06:68:D4:FD:5C</item>
+          <item key="ln">X509v3 Subject Key Identifier</item>
+          <item key="nid">82</item>
+          <item key="oid">2.5.29.14</item>
+          <item key="sn">subjectKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x39d4578">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x570e6b8">
+          <item key="critical">1</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x37bee78">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x5424eb8">
+          <item key="critical">0</item>
+          <item key="data">Policy: 1.3.6.1.4.1.31082.1.1
+  CPS: https://cps.usertrust.com
+Policy: 2.23.140.1.2.2
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x37a2ec0">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://crl.usertrust.com/EuropeanSSLHighAssuranceServerCA2.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x2a18688">
+          <item key="critical">0</item>
+          <item key="data">CA Issuers - URI:http://crt.usertrust.com/EuropeanSSLHighAssuranceServerCA2.crt
+OCSP - URI:http://ocsp.usertrust.com
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x5705828">
+          <item key="critical">0</item>
+          <item key="data">DNS:*.bankhaus-jungholz.com, DNS:bankhaus-jungholz.com</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x56f5df0">
+      <item key="1.3.6.1.5.5.7.3.2">nid</item>
+      <item key="129">130</item>
+      <item key="TLS Web Server Authentication">TLS Web Client Authentication</item>
+      <item key="clientAuth">ln</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x37c39d0">
+      <item key="md5">81:AF:D8:56:25:65:4F:CE:F3:09:AD:52:00:13:08:19</item>
+      <item key="sha1">51:1E:58:51:AC:F0:7D:4E:A8:B6:98:5E:88:C9:AC:01:A6:32:F0:A9</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x5ac7938">
+      <item key="issuer">
+       <hashref memory_address="0x37d3148">
+        <item key="dec">2944008270</item>
+        <item key="hex">AF7A004E</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x29cb888">
+        <item key="dec">1007914335</item>
+        <item key="hex">3C138D5F</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x56f5ce8">
+        <item key="dec">208359321</item>
+        <item key="hex">C6B4F99</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x570e610">
+      <item key="count">5</item>
+      <item key="entries">
+       <hashref memory_address="0x37c31f0">
+        <item key="0">
+         <hashref memory_address="0x48b99a0">
+          <item key="data">DE</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x541eb10">
+          <item key="data">Baden-Württemberg</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x37a0f90">
+          <item key="data">Durmersheim</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x6376900">
+          <item key="data">EUNETIC GmbH</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x5706230">
+          <item key="data">EuropeanSSL High Assurance Server CA 2</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=DE/ST=Baden-W\xC3\xBCrttemberg/L=Durmersheim/O=EUNETIC GmbH/CN=EuropeanSSL High Assurance Server CA 2</item>
+      <item key="print_rfc2253">CN=EuropeanSSL High Assurance Server CA 2,O=EUNETIC GmbH,L=Durmersheim,ST=Baden-W\C3\BCrttemberg,C=DE</item>
+      <item key="print_rfc2253_utf8">CN=EuropeanSSL High Assurance Server CA 2,O=EUNETIC GmbH,L=Durmersheim,ST=Baden-Württemberg,C=DE</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIF6DCCBNCgAwIBAgIRANBRfVMblkHBQI4WpwamQjQwDQYJKoZIhvcNAQELBQAw
+gYgxCzAJBgNVBAYTAkRFMRswGQYDVQQIDBJCYWRlbi1Xw7xydHRlbWJlcmcxFDAS
+BgNVBAcTC0R1cm1lcnNoZWltMRUwEwYDVQQKEwxFVU5FVElDIEdtYkgxLzAtBgNV
+BAMTJkV1cm9wZWFuU1NMIEhpZ2ggQXNzdXJhbmNlIFNlcnZlciBDQSAyMB4XDTE1
+MDMwNDAwMDAwMFoXDTE3MDUyODIzNTk1OVowgfQxCzAJBgNVBAYTAkFUMQ0wCwYD
+VQQREwQ2NjAwMRAwDgYDVQQIEwdBdXN0cmlhMQ8wDQYDVQQHEwZSZXV0dGUxFTAT
+BgNVBAkTDFVudGVybWFya3QgMzEwMC4GA1UEChMnUmFpZmZlaXNlbmJhbmsgUmV1
+dHRlIHJlZ2lzdHJpZXJ0ZSBHbWJoMSEwHwYDVQQLExhQcm92aWRlZCBieSBFVU5F
+VElDIEdtYkgxJTAjBgNVBAsTHEV1cm9wZWFuU1NMIFByZW1pdW0gV2lsZGNhcmQx
+IDAeBgNVBAMUFyouYmFua2hhdXMtanVuZ2hvbHouY29tMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEA7kL3MXqr/yyAfzaBIlLpqJS/OEbOAoHYd+4R5Q3w
+Gu0Y9c1ShTW+1vGms6cPOrbhJgjWEq54VtcOr6yJlmv+6JXJBiFT6CFF1Fohsbt9
+mF0f3mNJ030EcyGbOzV09sXqelVtrnH9e/0jG0P7UxzJBc8jzKtESrEx/DyKZuRN
+o8e6rZ+3Ai8fBujNd5C6eCZbylbuHrxn/Oyi1F4kXs+QZVfAN1ddUUionyLSJuD7
+GW3wZqYl3Wc2yTFYTrNUwKz4bdT/bMfLy2RiU3xuWxxiA18syhjb/jKpgRcNHGks
+Qvh9Su4D0kBGCwwRTXCDYB99Zg1AmJnnISP+G5MB/FJaMwIDAQABo4IB3TCCAdkw
+HwYDVR0jBBgwFoAUYf6xvNtUfv/hFImhf10A6sYMhjcwHQYDVR0OBBYEFPhEkFxw
+5L3n2Edbu6U0uwZo1P1cMA4GA1UdDwEB/wQEAwIFoDAMBgNVHRMBAf8EAjAAMB0G
+A1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjBKBgNVHSAEQzBBMDUGCisGAQQB
+gfJqAQEwJzAlBggrBgEFBQcCARYZaHR0cHM6Ly9jcHMudXNlcnRydXN0LmNvbTAI
+BgZngQwBAgIwTwYDVR0fBEgwRjBEoEKgQIY+aHR0cDovL2NybC51c2VydHJ1c3Qu
+Y29tL0V1cm9wZWFuU1NMSGlnaEFzc3VyYW5jZVNlcnZlckNBMi5jcmwwgYEGCCsG
+AQUFBwEBBHUwczBKBggrBgEFBQcwAoY+aHR0cDovL2NydC51c2VydHJ1c3QuY29t
+L0V1cm9wZWFuU1NMSGlnaEFzc3VyYW5jZVNlcnZlckNBMi5jcnQwJQYIKwYBBQUH
+MAGGGWh0dHA6Ly9vY3NwLnVzZXJ0cnVzdC5jb20wOQYDVR0RBDIwMIIXKi5iYW5r
+aGF1cy1qdW5naG9sei5jb22CFWJhbmtoYXVzLWp1bmdob2x6LmNvbTANBgkqhkiG
+9w0BAQsFAAOCAQEAD8OPFISL9Bqvz5hUlM4adXT2C16j/vrU3KHl7UBej6K6Xyr2
+zi+RiLpJ+LK+z9NvV77dIBA8MfgAPibwlGj4Vc+j5msai6d1IcDE9bpyQa28/O3R
+3LlucKZoxPvADAA38eTIaK3t8Mwa2YLkk2E8bJrtHlwyPFxFQFJ4Pm5UHWB65JaK
+OteqWQNa1lJ//WPicF8oxEGOc87oshxa7PIDqVXcovCaNzhs4SPblopr7jLKvLAr
+yOe0DUTqI1oRlilQK8KKiMowUpKekoQwMusKavAqB+pNEyfWSzPCsNKgY7H8XmnJ
+xo67FdOjIWGhvQoNFQrNxPTo5cr65MpojbGbYw==
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x5c075a8">
+      <item key="dec">276902541054479512401459036767941706292</item>
+      <item key="hex">D0517D531B9641C1408E16A706A64234</item>
+      <item key="long">-1</item>
+      <item key="string">d0517d531b9641c1408e16a706a64234</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha256WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x5093900">
+      <item key="altnames">
+       <hashref memory_address="0x5093978">
+        <item key="2">bankhaus-jungholz.com</item>
+       </hashref>
+      </item>
+      <item key="count">9</item>
+      <item key="entries">
+       <hashref memory_address="0x50939f0">
+        <item key="0">
+         <hashref memory_address="0x5093a68">
+          <item key="data">AT</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x5093ab0">
+          <item key="data">6600</item>
+          <item key="ln">postalCode</item>
+          <item key="nid">661</item>
+          <item key="oid">2.5.4.17</item>
+          <item key="sn">postalCode</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x5093b70">
+          <item key="data">Austria</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x5093c30">
+          <item key="data">Reutte</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x5093cf0">
+          <item key="data">Untermarkt 3</item>
+          <item key="ln">streetAddress</item>
+          <item key="nid">660</item>
+          <item key="oid">2.5.4.9</item>
+          <item key="sn">street</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x5093db0">
+          <item key="data">Raiffeisenbank Reutte registrierte Gmbh</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x5093e70">
+          <item key="data">Provided by EUNETIC GmbH</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x5093f30">
+          <item key="data">EuropeanSSL Premium Wildcard</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x5093ff0">
+          <item key="data">*.bankhaus-jungholz.com</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=AT/postalCode=6600/ST=Austria/L=Reutte/street=Untermarkt 3/O=Raiffeisenbank Reutte registrierte Gmbh/OU=Provided by EUNETIC GmbH/OU=EuropeanSSL Premium Wildcard/CN=*.bankhaus-jungholz.com</item>
+      <item key="print_rfc2253">CN=*.bankhaus-jungholz.com,OU=EuropeanSSL Premium Wildcard,OU=Provided by EUNETIC GmbH,O=Raiffeisenbank Reutte registrierte Gmbh,street=Untermarkt 3,L=Reutte,ST=Austria,postalCode=6600,C=AT</item>
+      <item key="print_rfc2253_utf8">CN=*.bankhaus-jungholz.com,OU=EuropeanSSL Premium Wildcard,OU=Provided by EUNETIC GmbH,O=Raiffeisenbank Reutte registrierte Gmbh,street=Untermarkt 3,L=Reutte,ST=Austria,postalCode=6600,C=AT</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x56f2bc0">
+    <item key="ext_content">
+     <arrayref memory_address="0x5094170">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="hsts">No</item>
+    <item key="https_redirect">No</item>
+    <item key="score">-1</item>
+    <item key="srv_type">Apache/2.2.15 (CentOS)</item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">C-</item>
+  <item key="HOSTNAME">www.bankhaus-jungholz.ch</item>
+  <item key="HOSTTYPE">bank</item>
+  <item key="ID">84</item>
+  <item key="IP">80.123.162.112</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">63.5</item>
+  <item key="SSL">
+   <hashref memory_address="0x50942c0">
+    <item key="cipherScore">50</item>
+    <item key="protocol">
+     <hashref memory_address="0x5094350">
+      <item key="SSLv2">
+       <hashref memory_address="0x50943c8">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x5094410">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x50944a0">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x5094560">
+          <item key="0">RC4-MD5</item>
+          <item key="1">RC4-SHA</item>
+          <item key="2">DES-CBC-SHA</item>
+          <item key="3">DES-CBC3-SHA</item>
+          <item key="4">EDH-RSA-DES-CBC-SHA</item>
+          <item key="5">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="6">AES128-SHA</item>
+          <item key="7">AES256-SHA</item>
+          <item key="8">DHE-RSA-AES128-SHA</item>
+          <item key="9">DHE-RSA-AES256-SHA</item>
+          <item key="10">CAMELLIA128-SHA</item>
+          <item key="11">CAMELLIA256-SHA</item>
+          <item key="12">DHE-RSA-CAMELLIA128-SHA</item>
+          <item key="13">DHE-RSA-CAMELLIA256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">50</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x5094530">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x5094788">
+          <item key="0">RC4-MD5</item>
+          <item key="1">RC4-SHA</item>
+          <item key="2">DES-CBC-SHA</item>
+          <item key="3">DES-CBC3-SHA</item>
+          <item key="4">EDH-RSA-DES-CBC-SHA</item>
+          <item key="5">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="6">AES128-SHA</item>
+          <item key="7">AES256-SHA</item>
+          <item key="8">DHE-RSA-AES128-SHA</item>
+          <item key="9">DHE-RSA-AES256-SHA</item>
+          <item key="10">CAMELLIA128-SHA</item>
+          <item key="11">CAMELLIA256-SHA</item>
+          <item key="12">DHE-RSA-CAMELLIA128-SHA</item>
+          <item key="13">DHE-RSA-CAMELLIA256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">50</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x5094758">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x3d8da98">
+          <item key="0">RC4-MD5</item>
+          <item key="1">RC4-SHA</item>
+          <item key="2">DES-CBC-SHA</item>
+          <item key="3">DES-CBC3-SHA</item>
+          <item key="4">EDH-RSA-DES-CBC-SHA</item>
+          <item key="5">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="6">AES128-SHA</item>
+          <item key="7">AES256-SHA</item>
+          <item key="8">DHE-RSA-AES128-SHA</item>
+          <item key="9">DHE-RSA-AES256-SHA</item>
+          <item key="10">CAMELLIA128-SHA</item>
+          <item key="11">CAMELLIA256-SHA</item>
+          <item key="12">DHE-RSA-CAMELLIA128-SHA</item>
+          <item key="13">DHE-RSA-CAMELLIA256-SHA</item>
+          <item key="14">ECDHE-RSA-AES128-GCM-SHA256</item>
+          <item key="15">ECDHE-RSA-AES256-GCM-SHA384</item>
+          <item key="16">DHE-RSA-AES128-GCM-SHA256</item>
+          <item key="17">ECDHE-RSA-AES128-SHA256</item>
+          <item key="18">ECDHE-RSA-AES128-SHA</item>
+          <item key="19">ECDHE-RSA-AES256-SHA384</item>
+          <item key="20">ECDHE-RSA-AES256-SHA</item>
+          <item key="21">DHE-RSA-AES128-SHA256</item>
+          <item key="22">DHE-RSA-AES256-SHA256</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">50</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">100</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">95</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

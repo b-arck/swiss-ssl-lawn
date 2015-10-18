@@ -1,0 +1,492 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x37d5fe8">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x37bea28">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://crl.quovadisglobal.com/qvevssl1.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x489d158">
+      <item key="pubkey">f05f60036c8343d73dedf581a27537229f99dcde
+</item>
+      <item key="x509">295c5b53171d154841721be0f25099ea56250ffd</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x490a008">
+      <item key="not_after">Mar 23 12:43:00 2017 GMT</item>
+      <item key="not_before">Mar 23 12:33:49 2015 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x37d3448">
+      <item key="count">10</item>
+      <item key="entries">
+       <hashref memory_address="0x37a3250">
+        <item key="0">
+         <hashref memory_address="0x37a2500">
+          <item key="critical">0</item>
+          <item key="data">CA Issuers - URI:http://trust.quovadisglobal.com/qvevssl1.crt
+OCSP - URI:http://ev.ocsp.quovadisglobal.com
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x6377170">
+          <item key="critical">0</item>
+          <item key="data">F0:5F:60:03:6C:83:43:D7:3D:ED:F5:81:A2:75:37:22:9F:99:DC:DE</item>
+          <item key="ln">X509v3 Subject Key Identifier</item>
+          <item key="nid">82</item>
+          <item key="oid">2.5.29.14</item>
+          <item key="sn">subjectKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x57065c0">
+          <item key="critical">1</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x489fd68">
+          <item key="critical">0</item>
+          <item key="data">keyid:55:58:86:CE:BA:7C:76:4E:99:13:A9:0F:D3:6C:9F:C2:F5:D3:3C:E3
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x5705eb8">
+          <item key="critical">0</item>
+          <item key="data">Policy: 1.3.6.1.4.1.8024.0.2.100.1.2
+  CPS: http://www.quovadisglobal.com/repository
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x54424f0">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://crl.quovadisglobal.com/qvevssl1.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x570dea8">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x56f6618">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x56f2dd0">
+          <item key="critical">0</item>
+          <item key="data">DNS:inba.appkb.ch</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="9">
+         <hashref memory_address="0x570f158">
+          <item key="critical">0</item>
+          <item key="data" defined="false"></item>
+          <item key="ln" defined="false"></item>
+          <item key="nid" defined="false"></item>
+          <item key="oid">1.3.6.1.4.1.11129.2.4.2</item>
+          <item key="sn" defined="false"></item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x56f5cd0">
+      <item key="1.3.6.1.5.5.7.3.2">nid</item>
+      <item key="129">130</item>
+      <item key="TLS Web Server Authentication">TLS Web Client Authentication</item>
+      <item key="clientAuth">ln</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x570f998">
+      <item key="md5">9C:F9:AF:87:A7:4E:23:21:D6:52:31:4D:AB:42:ED:C3</item>
+      <item key="sha1">29:5C:5B:53:17:1D:15:48:41:72:1B:E0:F2:50:99:EA:56:25:0F:FD</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x570f950">
+      <item key="issuer">
+       <hashref memory_address="0x541e978">
+        <item key="dec">3010941332</item>
+        <item key="hex">B3775194</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x570f9f8">
+        <item key="dec">267294446</item>
+        <item key="hex">FEE96EE</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x37a1590">
+        <item key="dec">655421591</item>
+        <item key="hex">2710F097</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x2bd9de0">
+      <item key="count">3</item>
+      <item key="entries">
+       <hashref memory_address="0x570f638">
+        <item key="0">
+         <hashref memory_address="0x39d4578">
+          <item key="data">BM</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x4b17028">
+          <item key="data">QuoVadis Limited</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x5ac7e30">
+          <item key="data">QuoVadis EV SSL ICA G1</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=BM/O=QuoVadis Limited/CN=QuoVadis EV SSL ICA G1</item>
+      <item key="print_rfc2253">CN=QuoVadis EV SSL ICA G1,O=QuoVadis Limited,C=BM</item>
+      <item key="print_rfc2253_utf8">CN=QuoVadis EV SSL ICA G1,O=QuoVadis Limited,C=BM</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIG9zCCBd+gAwIBAgIUJNx1J4/aIMqrSW/UCMF82AtEK5kwDQYJKoZIhvcNAQEL
+BQAwSTELMAkGA1UEBhMCQk0xGTAXBgNVBAoTEFF1b1ZhZGlzIExpbWl0ZWQxHzAd
+BgNVBAMTFlF1b1ZhZGlzIEVWIFNTTCBJQ0EgRzEwHhcNMTUwMzIzMTIzMzQ5WhcN
+MTcwMzIzMTI0MzAwWjCB+DETMBEGCysGAQQBgjc8AgEDEwJDSDETMBEGCysGAQQB
+gjc8AgECDAJBSTEaMBgGCysGAQQBgjc8AgEBDAlBcHBlbnplbGwxGjAYBgNVBA8M
+EUdvdmVybm1lbnQgRW50aXR5MRswGQYDVQQFExJDSC0zMTAuOC4wMDAuMzQ3LTIx
+CzAJBgNVBAYTAkNIMQswCQYDVQQIDAJBSTESMBAGA1UEBwwJQXBwZW56ZWxsMSEw
+HwYDVQQKDBhBcHBlbnplbGxlciBLYW50b25hbGJhbmsxDjAMBgNVBAsMBUFQUEtC
+MRYwFAYDVQQDDA1pbmJhLmFwcGtiLmNoMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEAwdBC/gi5d0XYbR5h38AzQHvPMbU2KztHcqq/L3rFuSreSpQBEH4l
+apaepB4h73k5mg+MKANgPEvA9PotJ3SdCnsBm/YILUQhXQfIATF34GVBPCVZ4mNy
+CyvVPm5KYLxckqM8MOVcy/MlBRbew7BRL8ugZ3+4Px0I5yioXjwpnXs7gRJHLVds
+K9cxkjMvni5RESSh6v2scPH5siRUaBpRr9TDb8mFjMeSIu4kDErrqysOnhGoF7Bf
+F2YYrZYTL7p9GcXsBE0tn6e1UOsfkk1GIJn+yqMAIjPDqu5RqYwJOSjG3Uq5IdvB
+GiDXo9XGBr5WHbP+sZbWXqYYhJ7aTix2hwIDAQABo4IDJTCCAyEwdwYIKwYBBQUH
+AQEEazBpMDgGCCsGAQUFBzAChixodHRwOi8vdHJ1c3QucXVvdmFkaXNnbG9iYWwu
+Y29tL3F2ZXZzc2wxLmNydDAtBggrBgEFBQcwAYYhaHR0cDovL2V2Lm9jc3AucXVv
+dmFkaXNnbG9iYWwuY29tMB0GA1UdDgQWBBTwX2ADbIND1z3t9YGidTcin5nc3jAM
+BgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFFVYhs66fHZOmROpD9Nsn8L10zzjMFEG
+A1UdIARKMEgwRgYMKwYBBAG+WAACZAECMDYwNAYIKwYBBQUHAgEWKGh0dHA6Ly93
+d3cucXVvdmFkaXNnbG9iYWwuY29tL3JlcG9zaXRvcnkwOwYDVR0fBDQwMjAwoC6g
+LIYqaHR0cDovL2NybC5xdW92YWRpc2dsb2JhbC5jb20vcXZldnNzbDEuY3JsMA4G
+A1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwGAYD
+VR0RBBEwD4INaW5iYS5hcHBrYi5jaDCCAX0GCisGAQQB1nkCBAIEggFtBIIBaQFn
+AHYAaPaY+B9kgr46jO65KB1M/HFRXWeT1ETRCmesu09P+8QAAAFMRqkbmgAABAMA
+RzBFAiBmBR2bWe4bUWtefEF6ln68zaQUvXp5b/g6PTtkNoYv1gIhAL7vRbiFqZMf
+8Xqjh31sOE7nXbL1CbR7sVvtadF073d8AHUApLkJkLQYWBSHuxOizGdwCjw1mAT5
+G9+443fNDsgN3BAAAAFMRqkf6gAABAMARjBEAiArF6QKx6lV8joIHA6jvDCWjxaE
+/PCwHYM+0CBOQM8aZAIgPxuvfvfbFTHLspAPCVouiJdz7B+nbWLbtantfzgAWywA
+dgBWFAaaL9fC7NP14b1Esj7HRna5vJkRXMDvlJhV1onQ3QAAAUxGqST8AAAEAwBH
+MEUCIFCS0W6c8yLbfxQCfsdSe6sf6F8MTlykqXXo/d7XJtgjAiEArdQZwII0j0V7
+twJCiUTXLkWgxPK+E5whtCxZPXbXtMwwDQYJKoZIhvcNAQELBQADggEBAK5iLe5v
+gLkimvEg341HFWImAvmERQS5HdpruvxTLUOuQWIaq13ChpDWhKmApRiiAnH4f2G6
+lfQQRWhWZ9VvPXLpfYlKYbSw63j2bSN8U3ivGgWotOcbjYgjn2hUof+t+HHyuL18
+ld3qwsepcSdqbTXSXoD8xK7ICYnA+xebCVviyHXhyZAveB2T6jFbbqFsqJtG854g
+XEP4btFj+irBlETUiruPAdWP2i2bC+0lgcajeYcS+77STFvOGr3JESDYnj3SzDP6
+WXMiy0oQvYX2zEKZ8sP/EdA/VVBlFDh0Jlf8afY0LbeCVLG0GN7QD2lTRQ3+w/mT
+wlqz8/RMxqNXpdk=
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x6376918">
+      <item key="dec">210440037293013475035599191029977382887526509465</item>
+      <item key="hex">24DC75278FDA20CAAB496FD408C17CD80B442B99</item>
+      <item key="long">-1</item>
+      <item key="string">24dc75278fda20caab496fd408c17cd80b442b99</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha256WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x3790a08">
+      <item key="altnames">
+       <hashref memory_address="0x29cbe28">
+        <item key="2">inba.appkb.ch</item>
+       </hashref>
+      </item>
+      <item key="count">11</item>
+      <item key="entries">
+       <hashref memory_address="0x541e588">
+        <item key="0">
+         <hashref memory_address="0x541e4e0">
+          <item key="data">CH</item>
+          <item key="ln" defined="false"></item>
+          <item key="nid" defined="false"></item>
+          <item key="oid">1.3.6.1.4.1.311.60.2.1.3</item>
+          <item key="sn" defined="false"></item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x37beba8">
+          <item key="data">AI</item>
+          <item key="ln" defined="false"></item>
+          <item key="nid" defined="false"></item>
+          <item key="oid">1.3.6.1.4.1.311.60.2.1.2</item>
+          <item key="sn" defined="false"></item>
+         </hashref>
+        </item>
+        <item key="10">
+         <hashref memory_address="0x2bdc1b0">
+          <item key="data">inba.appkb.ch</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x3790ab0">
+          <item key="data">Appenzell</item>
+          <item key="ln" defined="false"></item>
+          <item key="nid" defined="false"></item>
+          <item key="oid">1.3.6.1.4.1.311.60.2.1.1</item>
+          <item key="sn" defined="false"></item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x48b9358">
+          <item key="data">Government Entity</item>
+          <item key="ln">businessCategory</item>
+          <item key="nid">860</item>
+          <item key="oid">2.5.4.15</item>
+          <item key="sn">businessCategory</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x54432c8">
+          <item key="data">CH-310.8.000.347-2</item>
+          <item key="ln">serialNumber</item>
+          <item key="nid">105</item>
+          <item key="oid">2.5.4.5</item>
+          <item key="sn">serialNumber</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x57063c8">
+          <item key="data">CH</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x48a0398">
+          <item key="data">AI</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x2be3ae0">
+          <item key="data">Appenzell</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x48c4330">
+          <item key="data">Appenzeller Kantonalbank</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="9">
+         <hashref memory_address="0x56f6390">
+          <item key="data">APPKB</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/1.3.6.1.4.1.311.60.2.1.3=CH/1.3.6.1.4.1.311.60.2.1.2=AI/1.3.6.1.4.1.311.60.2.1.1=Appenzell/businessCategory=Government Entity/serialNumber=CH-310.8.000.347-2/C=CH/ST=AI/L=Appenzell/O=Appenzeller Kantonalbank/OU=APPKB/CN=inba.appkb.ch</item>
+      <item key="print_rfc2253">CN=inba.appkb.ch,OU=APPKB,O=Appenzeller Kantonalbank,L=Appenzell,ST=AI,C=CH,serialNumber=CH-310.8.000.347-2,businessCategory=Government Entity,1.3.6.1.4.1.311.60.2.1.1=#0C09417070656E7A656C6C,1.3.6.1.4.1.311.60.2.1.2=#0C024149,1.3.6.1.4.1.311.60.2.1.3=#13024348</item>
+      <item key="print_rfc2253_utf8">CN=inba.appkb.ch,OU=APPKB,O=Appenzeller Kantonalbank,L=Appenzell,ST=AI,C=CH,serialNumber=CH-310.8.000.347-2,businessCategory=Government Entity,1.3.6.1.4.1.311.60.2.1.1=#0C09417070656E7A656C6C,1.3.6.1.4.1.311.60.2.1.2=#0C024149,1.3.6.1.4.1.311.60.2.1.3=#13024348</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x37a2968">
+    <item key="flash_content" defined="false"></item>
+    <item key="srv_type" defined="false"></item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">A</item>
+  <item key="HOSTNAME">inba.appkb.ch</item>
+  <item key="HOSTTYPE">e-banking</item>
+  <item key="ID">51</item>
+  <item key="IP">193.169.187.96</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">86.25</item>
+  <item key="SSL">
+   <hashref memory_address="0x5ac7cf8">
+    <item key="cipherScore">82.5</item>
+    <item key="protocol">
+     <hashref memory_address="0x56f3718">
+      <item key="SSLv2">
+       <hashref memory_address="0x5442ce0">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x37bf388">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x48b9700">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x3cb0118">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">80</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x5425320">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x5441b48">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">90</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x56f6258">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x37d6060">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+          <item key="6">ECDHE-RSA-AES128-GCM-SHA256</item>
+          <item key="7">ECDHE-RSA-AES256-GCM-SHA384</item>
+          <item key="8">DHE-RSA-AES128-GCM-SHA256</item>
+          <item key="9">ECDHE-RSA-AES128-SHA256</item>
+          <item key="10">ECDHE-RSA-AES128-SHA</item>
+          <item key="11">ECDHE-RSA-AES256-SHA384</item>
+          <item key="12">ECDHE-RSA-AES256-SHA</item>
+          <item key="13">DHE-RSA-AES128-SHA256</item>
+          <item key="14">DHE-RSA-AES256-SHA256</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">75</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">100</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">95</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

@@ -1,0 +1,422 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x37bf5b0">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x56f5c40">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://crl.thawte.com/ThawteEVCA2006.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x37d5808">
+      <item key="pubkey">493dfce54b3c454307995efba1ed8634d1da71c8
+</item>
+      <item key="x509">45c3e1b659e66ef44574b12c4fd2acf878b3219c</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x541e948">
+      <item key="not_after">Oct 25 23:59:59 2015 GMT</item>
+      <item key="not_before">Sep 25 00:00:00 2013 GMT</item>
+      <item key="status">Will expire in 30 days or less</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x37d5a18">
+      <item key="count">8</item>
+      <item key="entries">
+       <hashref memory_address="0x39d4d28">
+        <item key="0">
+         <hashref memory_address="0x48c46a8">
+          <item key="critical">0</item>
+          <item key="data">DNS:www.aquilabank.ch</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x5424a38">
+          <item key="critical">0</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x48b95f8">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x489cbe8">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://crl.thawte.com/ThawteEVCA2006.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x37c35f8">
+          <item key="critical">0</item>
+          <item key="data">Policy: 2.16.840.1.113733.1.7.48.1
+  CPS: https://www.thawte.com/cps
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x37c3ca0">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x5ac7f50">
+          <item key="critical">0</item>
+          <item key="data">keyid:CD:32:E2:F2:5D:25:47:02:AA:8F:79:4B:32:EE:03:99:FD:30:49:D1
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x48b9d00">
+          <item key="critical">0</item>
+          <item key="data">OCSP - URI:http://ocsp.thawte.com
+CA Issuers - URI:http://crl.thawte.com/ThawteEVCA2006.cer
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x37be800">
+      <item key="1.3.6.1.5.5.7.3.2">nid</item>
+      <item key="129">130</item>
+      <item key="TLS Web Server Authentication">TLS Web Client Authentication</item>
+      <item key="clientAuth">ln</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x5441c50">
+      <item key="md5">16:5F:E1:D0:F6:0E:DD:86:C8:FC:4C:89:1C:52:83:FD</item>
+      <item key="sha1">45:C3:E1:B6:59:E6:6E:F4:45:74:B1:2C:4F:D2:AC:F8:78:B3:21:9C</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x48ba0d8">
+      <item key="issuer">
+       <hashref memory_address="0x37c3580">
+        <item key="dec">3901881184</item>
+        <item key="hex">E891FB60</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x489cc48">
+        <item key="dec">2450118079</item>
+        <item key="hex">9209D5BF</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x489f870">
+        <item key="dec">3718260612</item>
+        <item key="hex">DDA02784</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x489d428">
+      <item key="count">4</item>
+      <item key="entries">
+       <hashref memory_address="0x490a2c0">
+        <item key="0">
+         <hashref memory_address="0x5424eb8">
+          <item key="data">US</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x37d3058">
+          <item key="data">thawte, Inc.</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x5425098">
+          <item key="data">Terms of use at https://www.thawte.com/cps (c)06</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x489d4e8">
+          <item key="data">thawte Extended Validation SSL CA</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=US/O=thawte, Inc./OU=Terms of use at https://www.thawte.com/cps (c)06/CN=thawte Extended Validation SSL CA</item>
+      <item key="print_rfc2253">CN=thawte Extended Validation SSL CA,OU=Terms of use at https://www.thawte.com/cps (c)06,O=thawte\, Inc.,C=US</item>
+      <item key="print_rfc2253_utf8">CN=thawte Extended Validation SSL CA,OU=Terms of use at https://www.thawte.com/cps (c)06,O=thawte\, Inc.,C=US</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">No OCSP</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIFTDCCBDSgAwIBAgIQOUvblhqn10brJrwQKhwEtjANBgkqhkiG9w0BAQUFADCB
+izELMAkGA1UEBhMCVVMxFTATBgNVBAoTDHRoYXd0ZSwgSW5jLjE5MDcGA1UECxMw
+VGVybXMgb2YgdXNlIGF0IGh0dHBzOi8vd3d3LnRoYXd0ZS5jb20vY3BzIChjKTA2
+MSowKAYDVQQDEyF0aGF3dGUgRXh0ZW5kZWQgVmFsaWRhdGlvbiBTU0wgQ0EwHhcN
+MTMwOTI1MDAwMDAwWhcNMTUxMDI1MjM1OTU5WjCBzTETMBEGCysGAQQBgjc8AgED
+EwJDSDEdMBsGA1UEDxMUUHJpdmF0ZSBPcmdhbml6YXRpb24xGzAZBgNVBAUTEkNI
+LTE3MC4zLjAyMi43MDItMzELMAkGA1UEBhMCQ0gxEDAOBgNVBAgUB1pVRVJJQ0gx
+EDAOBgNVBAcUB1pVRVJJQ0gxGDAWBgNVBAoUD0FxdWlsYSAmIENvLiBBRzETMBEG
+A1UECxQKT3BlcmF0aW9uczEaMBgGA1UEAxQRd3d3LmFxdWlsYWJhbmsuY2gwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCol8OlkoNgCHhC6msgI1PFqZLK
+iPR2jHIxR4kxyPmhFuzfH3OVqIVnwWtai7dImcAfIfhCb+RMUYZl29MO8tAjDvsC
+X9AcMk9qsvzUAnYKCXI4D6wO7TSOgGiLIGcDJqc16m6X+4zaVusjM6KJIAHqK6tj
+JNpKQHOafaxbfzOFZqw0V8Dp2xTTxCLDk1adyk8Z2tlvrs91RV6Pl51uhS6Yq4N4
+2+efQqRJ9dbl+gQKDa4Oe1EnjOKwxLULJmnBtRl1XNCjQnyEZT2zFv07oB1phe+A
+pccFbQqtfUpi7ZbTZ2Blwqxvf6QRFr8aYKSSgwcs6WKZkQEKuxebvdm3SHITAgMB
+AAGjggFmMIIBYjAcBgNVHREEFTATghF3d3cuYXF1aWxhYmFuay5jaDAJBgNVHRME
+AjAAMA4GA1UdDwEB/wQEAwIFoDA5BgNVHR8EMjAwMC6gLKAqhihodHRwOi8vY3Js
+LnRoYXd0ZS5jb20vVGhhd3RlRVZDQTIwMDYuY3JsMEIGA1UdIAQ7MDkwNwYLYIZI
+AYb4RQEHMAEwKDAmBggrBgEFBQcCARYaaHR0cHM6Ly93d3cudGhhd3RlLmNvbS9j
+cHMwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB8GA1UdIwQYMBaAFM0y
+4vJdJUcCqo95SzLuA5n9MEnRMGgGCCsGAQUFBwEBBFwwWjAiBggrBgEFBQcwAYYW
+aHR0cDovL29jc3AudGhhd3RlLmNvbTA0BggrBgEFBQcwAoYoaHR0cDovL2NybC50
+aGF3dGUuY29tL1RoYXd0ZUVWQ0EyMDA2LmNlcjANBgkqhkiG9w0BAQUFAAOCAQEA
+ZnEi3Vib8pfFdboC9LiQiT3tzjcv9lK+x7kGr3Lagphx6ngj8l+aWrea3fduRwTb
+qPdepzCQ58JzpTvQlarHR9y70vUa8qKprpaSVAL7n73ClNWguz687KfJb1XZoyIo
+VOfur/BQLe5jC388O1EyiVbjjopuSrILOIqbMzsOrVfMUUTSFBB3jtzKIqvtN4FL
+PCd2zyPo8zA3syiGN9iDW2KX6YHa1IM023v/PKLiZvxg4AtimroQs4saxtNA7+yK
+kGp5ExnwDLPLu/V650uNiotgWQrejK8ltPGM53ZcHKc9Y+s2qqmC/HQ2J5Rw7Bnk
+7ov5KjzCIzm4JTdiJhIOMA==
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x3790048">
+      <item key="dec">76159871764307411167371227558345180342</item>
+      <item key="hex">394BDB961AA7D746EB26BC102A1C04B6</item>
+      <item key="long">-1</item>
+      <item key="string">394bdb961aa7d746eb26bc102a1c04b6</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha1WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x4909828">
+      <item key="altnames">
+       <hashref memory_address="0x2943c78">
+        <item key="2">www.aquilabank.ch</item>
+       </hashref>
+      </item>
+      <item key="count">9</item>
+      <item key="entries">
+       <hashref memory_address="0x5425548">
+        <item key="0">
+         <hashref memory_address="0x541eeb8">
+          <item key="data">CH</item>
+          <item key="ln" defined="false"></item>
+          <item key="nid" defined="false"></item>
+          <item key="oid">1.3.6.1.4.1.311.60.2.1.3</item>
+          <item key="sn" defined="false"></item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x3cafce0">
+          <item key="data">Private Organization</item>
+          <item key="ln">businessCategory</item>
+          <item key="nid">860</item>
+          <item key="oid">2.5.4.15</item>
+          <item key="sn">businessCategory</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x2a0d508">
+          <item key="data">CH-170.3.022.702-3</item>
+          <item key="ln">serialNumber</item>
+          <item key="nid">105</item>
+          <item key="oid">2.5.4.5</item>
+          <item key="sn">serialNumber</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x5424db0">
+          <item key="data">CH</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x489d518">
+          <item key="data">ZUERICH</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x39d5088">
+          <item key="data">ZUERICH</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x5425620">
+          <item key="data">Aquila &amp; Co. AG</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x3790870">
+          <item key="data">Operations</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x541f0f8">
+          <item key="data">www.aquilabank.ch</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/1.3.6.1.4.1.311.60.2.1.3=CH/businessCategory=Private Organization/serialNumber=CH-170.3.022.702-3/C=CH/ST=ZUERICH/L=ZUERICH/O=Aquila &amp; Co. AG/OU=Operations/CN=www.aquilabank.ch</item>
+      <item key="print_rfc2253">CN=www.aquilabank.ch,OU=Operations,O=Aquila &amp; Co. AG,L=ZUERICH,ST=ZUERICH,C=CH,serialNumber=CH-170.3.022.702-3,businessCategory=Private Organization,1.3.6.1.4.1.311.60.2.1.3=#13024348</item>
+      <item key="print_rfc2253_utf8">CN=www.aquilabank.ch,OU=Operations,O=Aquila &amp; Co. AG,L=ZUERICH,ST=ZUERICH,C=CH,serialNumber=CH-170.3.022.702-3,businessCategory=Private Organization,1.3.6.1.4.1.311.60.2.1.3=#13024348</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x5441a40">
+    <item key="ext_content">
+     <arrayref memory_address="0x37d5988">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="hsts">No</item>
+    <item key="https_redirect">Yes</item>
+    <item key="score">-1</item>
+    <item key="srv_type">Apache</item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">F</item>
+  <item key="HOSTNAME">www.aquilabank.ch</item>
+  <item key="HOSTTYPE">e-banking</item>
+  <item key="ID">52</item>
+  <item key="IP">212.47.189.228</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">0</item>
+  <item key="SSL">
+   <hashref memory_address="0x5425800">
+    <item key="cipherScore">0</item>
+    <item key="protocol">
+     <hashref memory_address="0x5443850">
+      <item key="SSLv2">
+       <hashref memory_address="0x541e8d0">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x48b9970">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x378fe50">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x2a2f5d0">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x37a2488">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">0</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Non</item>
+ </hashref>
+</perldata>

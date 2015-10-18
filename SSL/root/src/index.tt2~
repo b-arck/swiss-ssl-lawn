@@ -1,0 +1,104 @@
+[% META title = 'SSL — Swiss SSL Lawn' -%]
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+	<div class="site-wrapper">
+		<div class="site-wrapper-inner">
+			<div class="cover-container">
+				<div class="masthead fix">
+					<div class="inner"> 
+						<h3 class="masthead-brand">SSL — Swiss SSL Lawn</h3>
+						<nav>
+							<ul class="nav masthead-nav">
+								<li><a href="#content"><i class="fa fa-graduation-cap"></i> Résultats</a>
+								<li><a href="mailto:behar@ethack.org?subject=Nouvelle cible&body=Je désire que le site <nom d'hôte> apparaisse dans les prochains résultats pour la/les raison(s) suivante(s) :"><i class="fa fa-plus"></i> Nouveau</a>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="inner cover">
+					<img src="../../favicon.ico"/>
+					<h1 class="cover-heading">Swiss SSL Lawn</h1>
+					<p class="lead">Un projet d'EthACK, the Swiss Privacy Basecamp	</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div classe="container-fluid">
+		<a name="content"></a>
+		<div classe="container">
+		<ul class="nav nav-tabs nav-justified">
+			<li role="presentation" [% IF type.match('all')%] class="active" [% END %]><a href="/select/all#content">Liste complète</a></li>
+			[% FOREACH item IN menu %]
+			<li role="presentation" [% IF type == item %] class="active" [% END %]><a href="/select/[%item%]#content">[%item%]</a></li>
+			[% END %]		
+		</ul>
+		</div>
+		<div class="table-responsive" style="position: relative">
+		<table class="table">
+			<thead>
+				<tr>
+					<th class="text-center">Nom <a href="/sort/name/[%type%]"><i class="fa fa-sort"></i></a></th>
+					<th class="text-center">IP</th>
+					<th class="text-center">HSTS</th>
+					<th class="text-center">OCSP</th>
+					<th class="text-center">Protocoles</th>
+					<th class="text-center">Certificat de confiance</th>
+					<th class="text-center">Taille de la clef <a href="/sort/key/[%type%]"><i class="fa fa-sort"></i></a></th>
+					<th class="text-center">Résultat <a href="/sort/result/[%type%]"><i class="fa fa-sort"></i></a></th>
+				</tr>
+			</thead>
+			<tbody>
+				[% IF hashref.size == 0 %]
+				<tr>
+					<td colspan=8><h3>Aucun résultats! [% hashref.size %]</h3></td>
+				</tr>
+				[% ELSE %]
+				[% FOREACH key IN hashref.keys.nsort -%]
+				<tr>
+					[% IF hashref.$key.GRADE.match('Z') %]
+					<td colspan=8>[% hashref.$key.HOSTNAME %] Pas de connexion sur le port [% hashref.$key.PORT %]</td>
+					[% ELSE %]
+					<td><a href="/select/ID/[%hashref.$key.ID%]/[%hashref.$key.HOSTNAME%]" onclick="window.open(this.href, 'mywin','left=10,top=10,width=800,height=500,toolbar=0,resizable=1,scrollbars=1'); return false;" >[% hashref.$key.HOSTNAME %]</a></td>
+					<td>[% hashref.$key.IP %]</td>
+					[% SET hsts = hashref.$key.CONTENT.hsts %]
+					<td>[% IF hsts.match('Yes') %]
+						<i class="fa fa-check-square-o"></i>[% ELSE%]
+						<i class="fa fa-square-o"></i>[%END%]
+					</td>
+					[% SET ocsp = hashref.$key.CERTIFICATE.ocsp %]
+					<td>[% IF ocsp.match('GOOD') %]<i class="fa fa-check-square-o"></i>[% ELSE %]
+						<i class="fa fa-square-o"></i>[% END %]
+					</td>
+					<td>
+						<ul class="list-group">
+						[% FOREACH item IN hashref.$key.SSL.protocol.keys.sort -%]
+							[% SET protoImp = hashref.$key.SSL.protocol.$item.implemented %]
+							[% SET proto = item %]
+							[% IF protoImp.match('yes')%]
+								[% IF proto.match('SSLv2') %]
+							<li class="list-group-item list-group-item-danger"> [% item %].</li>
+									[% ELSIF proto.match('SSLv3') %]
+							<li class="list-group-item list-group-item-danger"> [% item %]</li>
+									[% ELSE %]
+							<li class="list-group-item list-group-item-success"> [% item %]</li>
+									[% END %]
+							[% ELSE %]	
+								[% IF proto.match('TLSV12') %]
+							<li class="list-group-item list-group-item-danger"> [% item %]</li>
+								[% END %]
+							[% END %]
+						[% END -%]
+						</ul>
+					</td>
+					<td>[% hashref.$key.TRUSTED %]</td>
+					<td><i class="fa fa-key"></i> [% hashref.$key.CERTIFICATE.pubkey_bits %]</td>
+					<td>[% hashref.$key.RESULT %]</td>
+				</tr>
+					[% END %]
+				[% END -%]
+				[% END %]
+			</tbody>
+		</table>
+	</div>
+	<script src="/static/js/jquery.min.js"></script>
+	<script src="/static/js/bootstrap.min.js"></script>
+</body>

@@ -1,0 +1,20 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x5c06f78">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x42f6f58">
+    <item key="pubkey_bits">10000</item>
+   </hashref>
+  </item>
+  <item key="CONTENT" defined="false"></item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">Z</item>
+  <item key="HOSTNAME">www.idbs.ch</item>
+  <item key="HOSTTYPE">bank</item>
+  <item key="ID">144</item>
+  <item key="IP" defined="false"></item>
+  <item key="PORT">443</item>
+  <item key="RESULT">100</item>
+  <item key="SSL" defined="false"></item>
+  <item key="TRUSTED">Non</item>
+ </hashref>
+</perldata>

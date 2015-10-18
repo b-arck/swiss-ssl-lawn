@@ -1,0 +1,44 @@
+use Moose;
+use XML::Dumper;
+use namespace::autoclean;
+use List::MoreUtils qw(uniq);
+use CGI;
+use File::stat;
+use File::Basename qw(dirname);
+use Cwd  qw(abs_path);
+use lib dirname(dirname abs_path $0) . '/root/lib/Classes';
+use Survey;
+
+my $dump = new XML::Dumper;
+my $temps = lastBDD();
+my $dir_name = dirname(dirname abs_path $0)."/root/$temps";
+my $path = shift;
+my $xmlData = {};
+if ( not defined $dir_name ) {
+    die qq(Usage: $0 <directory>);
+}
+
+opendir(my $dir_fh, $dir_name);
+
+while ( my $file = readdir $dir_fh) {
+    if ( $file !~ /^\./ ) {
+	my $perl = $dump->xml2pl($file);
+	my $i = 0;
+	foreach my $element (values($perl)) {
+		bless $element, 'Survey';
+		$xmlData->{$i} = $element;
+		undefied($perl);
+		undefied($element);
+		$i++;
+	}
+    }
+}
+closedir $dir_fh;
+return $xmlData;
+
+sub lastBDD{
+
+	my $dir_name = dirname(dirname abs_path $0)."/root/Output";
+	my @dirs = grep {-d "/root/Output/$_" && ! /^\.{1,2}$/} readdir($dh);
+	
+}

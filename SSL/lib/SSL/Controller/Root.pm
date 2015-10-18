@@ -27,8 +27,9 @@ The root page (/)
 sub index :Path :Args(0) {
     my ( $self, $c ) = @_;
 
-    $c->stash->{menu} = $c->model('loadxml')->findType();
-    $c->stash->{hashref} = $c->model('loadxml')->loadAllData();
+    my ($hashref, $menu) = $c->model('loadxml')->loadSiteByType("select/all");
+    $c->stash->{menu} = $menu;
+    $c->stash->{hashref} = $hashref;
     $c->stash(type => 'all');
     $c->stash->{template} = 'index.tt2';
     $c->forward($c->view('HTML'));

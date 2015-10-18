@@ -26,9 +26,9 @@
 		<a name="content"></a>
 		<div classe="container">
 		<ul class="nav nav-tabs nav-justified">
-			<li role="presentation" [% IF type.match('all')%] class="active" [% END %]><a href="/select/all">Liste complète</a></li>
+			<li role="presentation" [% IF type.match('all')%] class="active" [% END %]><a href="/select/all#content">Liste complète</a></li>
 			[% FOREACH item IN menu %]
-			<li role="presentation" [% IF type == item %] class="active" [% END %]><a href="/select/[%item%]">[%item%]</a></li>
+			<li role="presentation" [% IF type == item %] class="active" [% END %]><a href="/select/[%item%]#content">[%item%]</a></li>
 			[% END %]		
 		</ul>
 		</div>
@@ -36,25 +36,25 @@
 		<table class="table">
 			<thead>
 				<tr>
-					<th class="text-center">Nom <a href="/sort/name/[%type%]"><i class="fa fa-sort"></i></a></th>
+					<th class="text-center">Nom <a href="/sort/name/[%type%]#content"><i class="fa fa-sort"></i></a></th>
 					<th class="text-center">IP</th>
 					<th class="text-center">HSTS</th>
 					<th class="text-center">OCSP</th>
 					<th class="text-center">Protocoles</th>
 					<th class="text-center">Certificat de confiance</th>
-					<th class="text-center">Taille de la clef <a href="/sort/key/[%type%]"><i class="fa fa-sort"></i></a></th>
-					<th class="text-center">Résultat <a href="/sort/result/[%type%]"><i class="fa fa-sort"></i></a></th>
+					<th class="text-center">Taille de la clef <a href="/sort/key/[%type%]#content"><i class="fa fa-sort"></i></a></th>
+					<th class="text-center">Résultat <a href="/sort/result/[%type%]#content"><i class="fa fa-sort"></i></a></th>
 				</tr>
 			</thead>
 			<tbody>
 				[% IF hashref.size == 0 %]
 				<tr>
-					<td colspan=8><h3>Aucun résultats!</h3></td>
+					<td colspan=8><h3>Aucun résultats! [% hashref.size %]</h3></td>
 				</tr>
 				[% ELSE %]
 				[% FOREACH key IN hashref.keys.nsort -%]
 				<tr>
-					[% IF hashref.$key.RESULT == 0 %]
+					[% IF hashref.$key.GRADE.match('Z') %]
 					<td colspan=8>[% hashref.$key.HOSTNAME %] Pas de connexion sur le port [% hashref.$key.PORT %]</td>
 					[% ELSE %]
 					<td><a href="/select/ID/[%hashref.$key.ID%]/[%hashref.$key.HOSTNAME%]" onclick="window.open(this.href, 'mywin','left=10,top=10,width=800,height=500,toolbar=0,resizable=1,scrollbars=1'); return false;" >[% hashref.$key.HOSTNAME %]</a></td>

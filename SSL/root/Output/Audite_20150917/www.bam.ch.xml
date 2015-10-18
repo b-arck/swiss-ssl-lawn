@@ -1,0 +1,356 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x34eca30">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x50448e0">
+    <item key="certificate_type">305</item>
+    <item key="crl">ldap://directory.swisssign.net/CN=DBBCBF821859DC69FAF8ABAA834D771D0BB08BD8%2CO=SwissSign%2CC=CH?certificateRevocationList?base?objectClass=cRLDistributionPoint</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x42c7278">
+      <item key="pubkey">a6ec20244b2badb99bf93989a058c77a8900a689
+</item>
+      <item key="x509">35a2fe44dfde7a930154f53e9a580f77cc7c066b</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x42b6df0">
+      <item key="not_after">Aug 24 10:08:01 2018 GMT</item>
+      <item key="not_before">Aug 24 10:08:01 2015 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x42ce978">
+      <item key="count">8</item>
+      <item key="entries">
+       <hashref memory_address="0x507dcc0">
+        <item key="0">
+         <hashref memory_address="0x4081478">
+          <item key="critical">0</item>
+          <item key="data">DNS:*.bernexpo.ch, DNS:bernexpo.ch</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x42b7198">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x206b350">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x501f3b0">
+          <item key="critical">0</item>
+          <item key="data">A6:EC:20:24:4B:2B:AD:B9:9B:F9:39:89:A0:58:C7:7A:89:00:A6:89</item>
+          <item key="ln">X509v3 Subject Key Identifier</item>
+          <item key="nid">82</item>
+          <item key="oid">2.5.29.14</item>
+          <item key="sn">subjectKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x40818e0">
+          <item key="critical">0</item>
+          <item key="data">keyid:DB:BC:BF:82:18:59:DC:69:FA:F8:AB:AA:83:4D:77:1D:0B:B0:8B:D8
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x5854798">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://crl.swisssign.net/DBBCBF821859DC69FAF8ABAA834D771D0BB08BD8
+
+Full Name:
+  URI:ldap://directory.swisssign.net/CN=DBBCBF821859DC69FAF8ABAA834D771D0BB08BD8%2CO=SwissSign%2CC=CH?certificateRevocationList?base?objectClass=cRLDistributionPoint
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x207cf08">
+          <item key="critical">0</item>
+          <item key="data">Policy: 2.16.756.1.89.1.3.1.6
+  CPS: http://repository.swisssign.com/SwissSign-Silver-CP-CPS.pdf
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x507c7e8">
+          <item key="critical">0</item>
+          <item key="data">CA Issuers - URI:http://swisssign.net/cgi-bin/authority/download/DBBCBF821859DC69FAF8ABAA834D771D0BB08BD8
+OCSP - URI:http://silver-server-g2.ocsp.swisssign.net/DBBCBF821859DC69FAF8ABAA834D771D0BB08BD8
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x504d338">
+      <item key="1.3.6.1.5.5.7.3.2">nid</item>
+      <item key="129">130</item>
+      <item key="TLS Web Server Authentication">TLS Web Client Authentication</item>
+      <item key="clientAuth">ln</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x258bd78">
+      <item key="md5">8F:73:3B:4F:7E:30:E2:0B:67:3A:56:78:42:CE:EB:58</item>
+      <item key="sha1">35:A2:FE:44:DF:DE:7A:93:01:54:F5:3E:9A:58:0F:77:CC:7C:06:6B</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x5086020">
+      <item key="issuer">
+       <hashref memory_address="0x258be98">
+        <item key="dec">2045258554</item>
+        <item key="hex">79E82B3A</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x258bd90">
+        <item key="dec">2188877086</item>
+        <item key="hex">82779D1E</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x505f5c8">
+        <item key="dec">2501939282</item>
+        <item key="hex">95209052</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x409f7b8">
+      <item key="count">3</item>
+      <item key="entries">
+       <hashref memory_address="0x42c76f8">
+        <item key="0">
+         <hashref memory_address="0x2002950">
+          <item key="data">CH</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x501fa88">
+          <item key="data">SwissSign AG</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x5085ee8">
+          <item key="data">SwissSign Server Silver CA 2014 - G22</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=CH/O=SwissSign AG/CN=SwissSign Server Silver CA 2014 - G22</item>
+      <item key="print_rfc2253">CN=SwissSign Server Silver CA 2014 - G22,O=SwissSign AG,C=CH</item>
+      <item key="print_rfc2253_utf8">CN=SwissSign Server Silver CA 2014 - G22,O=SwissSign AG,C=CH</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIF8TCCBNmgAwIBAgIQAKXgP8Tde5txadZlmmo4ezANBgkqhkiG9w0BAQsFADBU
+MQswCQYDVQQGEwJDSDEVMBMGA1UEChMMU3dpc3NTaWduIEFHMS4wLAYDVQQDEyVT
+d2lzc1NpZ24gU2VydmVyIFNpbHZlciBDQSAyMDE0IC0gRzIyMB4XDTE1MDgyNDEw
+MDgwMVoXDTE4MDgyNDEwMDgwMVowODEeMBwGA1UECxMVRG9tYWluIFZhbGlkYXRl
+ZCBPbmx5MRYwFAYDVQQDFA0qLmJlcm5leHBvLmNoMIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEAqyU8t1P7MKnOPqHbf3caE7BNz45GZR2W5qNJ6HMGo4Z1
+PQeeLioRSsq8oPjzbMDz6ryQuRFOQ1knsVBJVS3p/QB5aRWGspioNSRgnmEsuiCB
+kIunovx5+RWFHBMuK9gT+4932G04zaiFzYnc3jWj+kNWyw4Dxdq49KivA7A+QZh3
+aqV0vnmFlIT3wTdAGPHSTi3XL1ZRhaJRppzoUjfo2nC1I2NoUJ/PRNIzu1EoQlj7
+uACOZiDMwAVtcM11sPJCqEFyjhHk8vNOPP1hucdWmIKoRYWmJNMJ5QlWmgD/mlRN
+dtwNKFpctH1lGYJxL+puFr3GauS2ZY7RDGRrDbqQOwIDAQABo4IC2TCCAtUwJQYD
+VR0RBB4wHIINKi5iZXJuZXhwby5jaIILYmVybmV4cG8uY2gwDgYDVR0PAQH/BAQD
+AgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAdBgNVHQ4EFgQUpuwg
+JEsrrbmb+TmJoFjHeokApokwHwYDVR0jBBgwFoAU27y/ghhZ3Gn6+Kuqg013HQuw
+i9gwgf8GA1UdHwSB9zCB9DBHoEWgQ4ZBaHR0cDovL2NybC5zd2lzc3NpZ24ubmV0
+L0RCQkNCRjgyMTg1OURDNjlGQUY4QUJBQTgzNEQ3NzFEMEJCMDhCRDgwgaiggaWg
+gaKGgZ9sZGFwOi8vZGlyZWN0b3J5LnN3aXNzc2lnbi5uZXQvQ049REJCQ0JGODIx
+ODU5REM2OUZBRjhBQkFBODM0RDc3MUQwQkIwOEJEOCUyQ089U3dpc3NTaWduJTJD
+Qz1DSD9jZXJ0aWZpY2F0ZVJldm9jYXRpb25MaXN0P2Jhc2U/b2JqZWN0Q2xhc3M9
+Y1JMRGlzdHJpYnV0aW9uUG9pbnQwYQYDVR0gBFowWDBWBglghXQBWQEDAQYwSTBH
+BggrBgEFBQcCARY7aHR0cDovL3JlcG9zaXRvcnkuc3dpc3NzaWduLmNvbS9Td2lz
+c1NpZ24tU2lsdmVyLUNQLUNQUy5wZGYwgdcGCCsGAQUFBwEBBIHKMIHHMGQGCCsG
+AQUFBzAChlhodHRwOi8vc3dpc3NzaWduLm5ldC9jZ2ktYmluL2F1dGhvcml0eS9k
+b3dubG9hZC9EQkJDQkY4MjE4NTlEQzY5RkFGOEFCQUE4MzRENzcxRDBCQjA4QkQ4
+MF8GCCsGAQUFBzABhlNodHRwOi8vc2lsdmVyLXNlcnZlci1nMi5vY3NwLnN3aXNz
+c2lnbi5uZXQvREJCQ0JGODIxODU5REM2OUZBRjhBQkFBODM0RDc3MUQwQkIwOEJE
+ODANBgkqhkiG9w0BAQsFAAOCAQEAxs6jSDNhmldaPqVqQleGlDHHRsUFd91kwoJh
+5U1rLC7p4fMKzBm5Be1O+subhrslCgdnUjMFo2Y6EbWEFonhDtAa4O64LzovcXBW
+ysSM9IKMFQJxBqflODiVVI2qPrdcpRbNCcZmhzTjE9sFf93okE45sZ2ZxnjIMSII
+StZoIA+nAb3P7yFQSmFle/gjf6+bYAufWvFEvCVH/31btuAVpMPXGlXt+aRcq/1Z
+N9coyxDYqsvWa5ldnl0tAVnmX6TefSY0iqAzgqUy3XWwm5jUOfh7aHXj0rU/1tzr
+LMvGJsElL0aeYeSURq8o+zJuK7en/1s8nZ+3d+EH2gkg9aQEbQ==
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x409ac70">
+      <item key="dec">861277293710521181149254111598360699</item>
+      <item key="hex">A5E03FC4DD7B9B7169D6659A6A387B</item>
+      <item key="long">-1</item>
+      <item key="string">a5e03fc4dd7b9b7169d6659a6a387b</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha256WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x409a6a0">
+      <item key="altnames">
+       <hashref memory_address="0x409ab80">
+        <item key="2">bernexpo.ch</item>
+       </hashref>
+      </item>
+      <item key="count">2</item>
+      <item key="entries">
+       <hashref memory_address="0x258bca0">
+        <item key="0">
+         <hashref memory_address="0x50462d8">
+          <item key="data">Domain Validated Only</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x409a730">
+          <item key="data">*.bernexpo.ch</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/OU=Domain Validated Only/CN=*.bernexpo.ch</item>
+      <item key="print_rfc2253">CN=*.bernexpo.ch,OU=Domain Validated Only</item>
+      <item key="print_rfc2253_utf8">CN=*.bernexpo.ch,OU=Domain Validated Only</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x409af70">
+    <item key="ext_content">
+     <arrayref memory_address="0x201fda8">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="hsts">No</item>
+    <item key="https_redirect">No</item>
+    <item key="score">-1</item>
+    <item key="srv_type">Microsoft-IIS/7.5</item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">F-</item>
+  <item key="HOSTNAME">www.bam.ch</item>
+  <item key="HOSTTYPE">other</item>
+  <item key="ID">27</item>
+  <item key="IP">81.18.25.227</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">0</item>
+  <item key="SSL">
+   <hashref memory_address="0x1fd9288">
+    <item key="cipherScore">0</item>
+    <item key="protocol">
+     <hashref memory_address="0x21f1588">
+      <item key="SSLv2">
+       <hashref memory_address="0x4083b38">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x5045330">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x4084798">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x258c330">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x409aad8">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">0</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

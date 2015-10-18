@@ -1,0 +1,482 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x4b17148">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x5424b88">
+    <item key="certificate_type">305</item>
+    <item key="crl">ldap://ldap.sbca.telesec.de/CN=Shared%20Business%20CA%204,OU=T-Systems%20Trust%20Center,O=T-Systems%20International%20GmbH,C=DE?CertificateRevocationList</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x570f968">
+      <item key="pubkey">3dd2f74789332aed3e1deef46fadef162dc73ea7
+</item>
+      <item key="x509">60ba8252fb28fce146b55b435bbab232ab169b53</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x541e690">
+      <item key="not_after">Jul 20 23:59:59 2018 GMT</item>
+      <item key="not_before">Jul 20 11:30:38 2015 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x570fa10">
+      <item key="count">9</item>
+      <item key="entries">
+       <hashref memory_address="0x5441e30">
+        <item key="0">
+         <hashref memory_address="0x5442388">
+          <item key="critical">0</item>
+          <item key="data">keyid:AB:FF:6F:D1:12:6F:57:CA:D2:D8:D8:C1:BE:F6:13:34:22:74:81:33
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x48a0458">
+          <item key="critical">0</item>
+          <item key="data">3D:D2:F7:47:89:33:2A:ED:3E:1D:EE:F4:6F:AD:EF:16:2D:C7:3E:A7</item>
+          <item key="ln">X509v3 Subject Key Identifier</item>
+          <item key="nid">82</item>
+          <item key="oid">2.5.29.14</item>
+          <item key="sn">subjectKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x37d2b90">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x37d27e8">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Client Authentication, TLS Web Server Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x37be848">
+          <item key="critical">0</item>
+          <item key="data">Policy: 1.3.6.1.4.1.7879.13.25
+  CPS: http://sbca.telesec.de/download/cps.pdf
+Policy: 2.23.140.1.2.2
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x37c3730">
+          <item key="critical">0</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x37c3760">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://crl.sbca.telesec.de/rl/Shared_Business_CA_4.crl
+
+Full Name:
+  URI:ldap://ldap.sbca.telesec.de/CN=Shared%20Business%20CA%204,OU=T-Systems%20Trust%20Center,O=T-Systems%20International%20GmbH,C=DE?CertificateRevocationList
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x5442ba8">
+          <item key="critical">0</item>
+          <item key="data">OCSP - URI:http://ocsp03.sbca.telesec.de/ocspr
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x6377068">
+          <item key="critical">0</item>
+          <item key="data">DNS:www.arp.ch</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x6376e10">
+      <item key="1.3.6.1.5.5.7.3.1">nid</item>
+      <item key="130">129</item>
+      <item key="TLS Web Client Authentication">TLS Web Server Authentication</item>
+      <item key="oid">1.3.6.1.5.5.7.3.2</item>
+      <item key="serverAuth">ln</item>
+      <item key="sn">clientAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x48b9568">
+      <item key="md5">CE:10:F3:69:2B:8D:59:53:60:6C:4F:B1:A3:C8:51:A3</item>
+      <item key="sha1">60:BA:82:52:FB:28:FC:E1:46:B5:5B:43:5B:BA:B2:32:AB:16:9B:53</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x48c4420">
+      <item key="issuer">
+       <hashref memory_address="0x37bf550">
+        <item key="dec">1006264941</item>
+        <item key="hex">3BFA626D</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x48b94d8">
+        <item key="dec">1794372761</item>
+        <item key="hex">6AF3F499</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x5425398">
+        <item key="dec">1196287448</item>
+        <item key="hex">474DE5D8</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x489ce40">
+      <item key="count">8</item>
+      <item key="entries">
+       <hashref memory_address="0x489cb28">
+        <item key="0">
+         <hashref memory_address="0x37bf1d8">
+          <item key="data">DE</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x37d2e00">
+          <item key="data">T-Systems International GmbH</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x2bd8278">
+          <item key="data">T-Systems Trust Center</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x5443688">
+          <item key="data">Nordrhein Westfalen</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x5442268">
+          <item key="data">57250</item>
+          <item key="ln">postalCode</item>
+          <item key="nid">661</item>
+          <item key="oid">2.5.4.17</item>
+          <item key="sn">postalCode</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x48c43d8">
+          <item key="data">Netphen</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x48c4258">
+          <item key="data">Untere Industriestr. 20</item>
+          <item key="ln">streetAddress</item>
+          <item key="nid">660</item>
+          <item key="oid">2.5.4.9</item>
+          <item key="sn">street</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x541ee10">
+          <item key="data">Shared Business CA 4</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=DE/O=T-Systems International GmbH/OU=T-Systems Trust Center/ST=Nordrhein Westfalen/postalCode=57250/L=Netphen/street=Untere Industriestr. 20/CN=Shared Business CA 4</item>
+      <item key="print_rfc2253">CN=Shared Business CA 4,street=Untere Industriestr. 20,L=Netphen,postalCode=57250,ST=Nordrhein Westfalen,OU=T-Systems Trust Center,O=T-Systems International GmbH,C=DE</item>
+      <item key="print_rfc2253_utf8">CN=Shared Business CA 4,street=Untere Industriestr. 20,L=Netphen,postalCode=57250,ST=Nordrhein Westfalen,OU=T-Systems Trust Center,O=T-Systems International GmbH,C=DE</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIF4TCCBMmgAwIBAgIIHSqfKFQHHKMwDQYJKoZIhvcNAQELBQAwgdYxCzAJBgNV
+BAYTAkRFMSUwIwYDVQQKExxULVN5c3RlbXMgSW50ZXJuYXRpb25hbCBHbWJIMR8w
+HQYDVQQLExZULVN5c3RlbXMgVHJ1c3QgQ2VudGVyMRwwGgYDVQQIExNOb3Jkcmhl
+aW4gV2VzdGZhbGVuMQ4wDAYDVQQREwU1NzI1MDEQMA4GA1UEBxMHTmV0cGhlbjEg
+MB4GA1UECRMXVW50ZXJlIEluZHVzdHJpZXN0ci4gMjAxHTAbBgNVBAMTFFNoYXJl
+ZCBCdXNpbmVzcyBDQSA0MB4XDTE1MDcyMDExMzAzOFoXDTE4MDcyMDIzNTk1OVow
+ZjELMAkGA1UEBhMCREUxEzARBgNVBAoTCkJlY2h0bGUgQUcxEzARBgNVBAsTCmJl
+Y2h0bGUuZGUxCzAJBgNVBAsTAklUMQswCQYDVQQLEwJJVDETMBEGA1UEAxMKd3d3
+LmFycC5jaDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALHw2CmDevKg
+/Dnvu44RpKl+AcUy/Cx+bka726mFythN1oLLnBNV/0xXwrGqxoS/J7O4NCn+c/ka
+8XyNiXh/vOhFzRGD97J4I0tFKWKKoUs6aDk9Q1bYqD9CEzxjyIBOkD90iuQ+71Qm
+aVaEhaDyOAjRyncB/LMBTL0QJgBuM1d+MN6+Uqifm1TybHG2D2wgFqLS7km+GFQg
+9JntUTkVKv8K3/6vfD9KLQ875d/96PDjUcK1cMn7/9ejQUE63goLL6Me+TUngr47
+5bamhwgSe7M4xP1wQ/tpoLeO4dmNKh4HqOwuRG0gqq0O3h6FV+uTPaOLwLDWI1HW
+0vpZiPnEctcCAwEAAaOCAiAwggIcMB8GA1UdIwQYMBaAFKv/b9ESb1fK0tjYwb72
+EzQidIEzMB0GA1UdDgQWBBQ90vdHiTMq7T4d7vRvre8WLcc+pzAOBgNVHQ8BAf8E
+BAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMFcGA1UdIARQME4w
+QgYJKwYBBAG9Rw0ZMDUwMwYIKwYBBQUHAgEWJ2h0dHA6Ly9zYmNhLnRlbGVzZWMu
+ZGUvZG93bmxvYWQvY3BzLnBkZjAIBgZngQwBAgIwCQYDVR0TBAIwADCB7gYDVR0f
+BIHmMIHjMDygOqA4hjZodHRwOi8vY3JsLnNiY2EudGVsZXNlYy5kZS9ybC9TaGFy
+ZWRfQnVzaW5lc3NfQ0FfNC5jcmwwgaKggZ+ggZyGgZlsZGFwOi8vbGRhcC5zYmNh
+LnRlbGVzZWMuZGUvQ049U2hhcmVkJTIwQnVzaW5lc3MlMjBDQSUyMDQsT1U9VC1T
+eXN0ZW1zJTIwVHJ1c3QlMjBDZW50ZXIsTz1ULVN5c3RlbXMlMjBJbnRlcm5hdGlv
+bmFsJTIwR21iSCxDPURFP0NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QwPwYIKwYB
+BQUHAQEEMzAxMC8GCCsGAQUFBzABhiNodHRwOi8vb2NzcDAzLnNiY2EudGVsZXNl
+Yy5kZS9vY3NwcjAVBgNVHREEDjAMggp3d3cuYXJwLmNoMA0GCSqGSIb3DQEBCwUA
+A4IBAQBt+8DizotnZ4MUKD4DXFxQF8GxhU0Rc+w1OONzHQnVQgUn4YkLiBgzVbfv
+TT0oX7jB59+cC8xBBi/7fJefvPNxELw6YJTgGeFjRgDKyqNwS9QbcpOnEJDjZB+L
+4yHuS8PLkqjU9CiEOvJCQZX76gT0RPR733AKNrITONHfOh5n8wP4UFtSeVHRoAKn
+TKb5lpa+6jEfsokk4wI9bsvP6nG+rZ022iO3XJMBTV0kyaBE2UQRAwnnj3rU+DP2
+WZBeWhZOqXFdnlpnmjRhih3xBHa2QuZMpanIlKSUDj8udyKLRLx6EbbhKcO55+5h
+K1TrvbV2PcpA0QrOXLJHNA1I5KpI
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x48b9a90">
+      <item key="dec">2101667171679018147</item>
+      <item key="hex">1D2A9F2854071CA3</item>
+      <item key="long">2101667171679018147</item>
+      <item key="string">1d2a9f2854071ca3</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha256WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x48b9c40">
+      <item key="altnames">
+       <hashref memory_address="0x39d4e00">
+        <item key="2">www.arp.ch</item>
+       </hashref>
+      </item>
+      <item key="count">6</item>
+      <item key="entries">
+       <hashref memory_address="0x48ba240">
+        <item key="0">
+         <hashref memory_address="0x48b9bf8">
+          <item key="data">DE</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x4909a08">
+          <item key="data">Bechtle AG</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x4909960">
+          <item key="data">bechtle.de</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x48b9ca0">
+          <item key="data">IT</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x29d9de8">
+          <item key="data">IT</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x29cbc30">
+          <item key="data">www.arp.ch</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=DE/O=Bechtle AG/OU=bechtle.de/OU=IT/OU=IT/CN=www.arp.ch</item>
+      <item key="print_rfc2253">CN=www.arp.ch,OU=IT,OU=IT,OU=bechtle.de,O=Bechtle AG,C=DE</item>
+      <item key="print_rfc2253_utf8">CN=www.arp.ch,OU=IT,OU=IT,OU=bechtle.de,O=Bechtle AG,C=DE</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x489cee8">
+    <item key="ext_content">
+     <arrayref memory_address="0x29f6530">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="score">0</item>
+    <item key="srv_type" defined="false"></item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">A</item>
+  <item key="HOSTNAME">www.arp.ch</item>
+  <item key="HOSTTYPE">e-commerce</item>
+  <item key="ID">37</item>
+  <item key="IP">178.249.83.148</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">86.25</item>
+  <item key="SSL">
+   <hashref memory_address="0x29fc6c8">
+    <item key="cipherScore">82.5</item>
+    <item key="protocol">
+     <hashref memory_address="0x49097b0">
+      <item key="SSLv2">
+       <hashref memory_address="0x29f5c90">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x37d3178">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x6377158">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x39d4950">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">80</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x39d4b18">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x37d2e30">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">90</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x37bf448">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x37d5cd0">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+          <item key="6">ECDHE-RSA-AES128-GCM-SHA256</item>
+          <item key="7">ECDHE-RSA-AES256-GCM-SHA384</item>
+          <item key="8">DHE-RSA-AES128-GCM-SHA256</item>
+          <item key="9">ECDHE-RSA-AES128-SHA256</item>
+          <item key="10">ECDHE-RSA-AES128-SHA</item>
+          <item key="11">ECDHE-RSA-AES256-SHA384</item>
+          <item key="12">ECDHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">75</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">100</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">95</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

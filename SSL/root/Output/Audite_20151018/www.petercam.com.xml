@@ -1,0 +1,425 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x37a3088">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x541ebe8">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://crl4.digicert.com/ssca-sha2-g3.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x541e4b0">
+      <item key="pubkey">6c6273e0543a4a03e8bc51014ad64cb8f2b0bc48
+</item>
+      <item key="x509">caea1d4f8eb50e17a0374691f3f36f90ba180f6f</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x5441ce0">
+      <item key="not_after">Feb  8 12:00:00 2018 GMT</item>
+      <item key="not_before">Oct  7 00:00:00 2014 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x4909df8">
+      <item key="count">9</item>
+      <item key="entries">
+       <hashref memory_address="0x42f6478">
+        <item key="0">
+         <hashref memory_address="0x4b16e60">
+          <item key="critical">0</item>
+          <item key="data">keyid:0F:80:61:1C:82:31:61:D5:2F:28:E7:8D:46:38:B4:2C:E1:C6:D9:E2
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x570f9b0">
+          <item key="critical">0</item>
+          <item key="data">6C:62:73:E0:54:3A:4A:03:E8:BC:51:01:4A:D6:4C:B8:F2:B0:BC:48</item>
+          <item key="ln">X509v3 Subject Key Identifier</item>
+          <item key="nid">82</item>
+          <item key="oid">2.5.29.14</item>
+          <item key="sn">subjectKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x5441e90">
+          <item key="critical">0</item>
+          <item key="data">DNS:*.petercam.be, DNS:petercam.be</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x489d4a0">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x37d3490">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x570e070">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://crl3.digicert.com/ssca-sha2-g3.crl
+
+Full Name:
+  URI:http://crl4.digicert.com/ssca-sha2-g3.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x489fa80">
+          <item key="critical">0</item>
+          <item key="data">Policy: 2.16.840.1.114412.1.1
+  CPS: https://www.digicert.com/CPS
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x42dbe78">
+          <item key="critical">0</item>
+          <item key="data">OCSP - URI:http://ocsp.digicert.com
+CA Issuers - URI:http://cacerts.digicert.com/DigiCertSHA2SecureServerCA.crt
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x3790678">
+          <item key="critical">1</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x489ff48">
+      <item key="1.3.6.1.5.5.7.3.2">nid</item>
+      <item key="129">130</item>
+      <item key="TLS Web Server Authentication">TLS Web Client Authentication</item>
+      <item key="clientAuth">ln</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x42f71b0">
+      <item key="md5">75:A5:94:D0:8F:79:80:BE:5D:CE:83:D5:CD:FB:A7:2F</item>
+      <item key="sha1">CA:EA:1D:4F:8E:B5:0E:17:A0:37:46:91:F3:F3:6F:90:BA:18:0F:6F</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x489cd80">
+      <item key="issuer">
+       <hashref memory_address="0x48b9e68">
+        <item key="dec">2244958309</item>
+        <item key="hex">85CF5865</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x3cb0988">
+        <item key="dec">1388811930</item>
+        <item key="hex">52C7969A</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x37d2da0">
+        <item key="dec">3480280712</item>
+        <item key="hex">CF70DE88</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x37a0fc0">
+      <item key="count">3</item>
+      <item key="entries">
+       <hashref memory_address="0x378ff28">
+        <item key="0">
+         <hashref memory_address="0x48ba018">
+          <item key="data">US</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x42db890">
+          <item key="data">DigiCert Inc</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x541f380">
+          <item key="data">DigiCert SHA2 Secure Server CA</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=US/O=DigiCert Inc/CN=DigiCert SHA2 Secure Server CA</item>
+      <item key="print_rfc2253">CN=DigiCert SHA2 Secure Server CA,O=DigiCert Inc,C=US</item>
+      <item key="print_rfc2253_utf8">CN=DigiCert SHA2 Secure Server CA,O=DigiCert Inc,C=US</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIFEDCCA/igAwIBAgIQAb7gn3Du/9fkCjWhm8ccaDANBgkqhkiG9w0BAQsFADBN
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMScwJQYDVQQDEx5E
+aWdpQ2VydCBTSEEyIFNlY3VyZSBTZXJ2ZXIgQ0EwHhcNMTQxMDA3MDAwMDAwWhcN
+MTgwMjA4MTIwMDAwWjBgMQswCQYDVQQGEwJCRTEQMA4GA1UECBMHQnJ1c3NlbDER
+MA8GA1UEBxMIQnJ1c3NlbHMxFDASBgNVBAoTC1BldGVyY2FtIFNBMRYwFAYDVQQD
+DA0qLnBldGVyY2FtLmJlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+uO9A5G9loPYlPuhq+mtcpwC1OHl6Bwxf9pACEHQ/hak84JXmCsUbjl9HoHH59sAX
+X1vD4tYq/xVlPhjjeCQb3zcq8l0xVprOR9twFG/383tZND8Th0K652/mJG5E69H/
+3ohwm8Td0gAUBfPfx4S7c1D5Xp7BkFV+MCSz7nsg4KzA6aIYVsB0zOEmwHT19HuZ
+nU+ORf8FG3mn/fOUudFu1lGAwQLc93Jr7fWLtAG2pIH4Apxka0j5T2IuivoaKT/M
+UQxQFulYMSrlAYStqK6teDPn7KdCPgxFAsjF47dw4qF0hHYsJflXRykpQS1qMkwd
+6XS9m8BE89xY8ufaHDjTXQIDAQABo4IB1zCCAdMwHwYDVR0jBBgwFoAUD4BhHIIx
+YdUvKOeNRji0LOHG2eIwHQYDVR0OBBYEFGxic+BUOkoD6LxRAUrWTLjysLxIMCUG
+A1UdEQQeMByCDSoucGV0ZXJjYW0uYmWCC3BldGVyY2FtLmJlMA4GA1UdDwEB/wQE
+AwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwawYDVR0fBGQwYjAv
+oC2gK4YpaHR0cDovL2NybDMuZGlnaWNlcnQuY29tL3NzY2Etc2hhMi1nMy5jcmww
+L6AtoCuGKWh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9zc2NhLXNoYTItZzMuY3Js
+MEIGA1UdIAQ7MDkwNwYJYIZIAYb9bAEBMCowKAYIKwYBBQUHAgEWHGh0dHBzOi8v
+d3d3LmRpZ2ljZXJ0LmNvbS9DUFMwfAYIKwYBBQUHAQEEcDBuMCQGCCsGAQUFBzAB
+hhhodHRwOi8vb2NzcC5kaWdpY2VydC5jb20wRgYIKwYBBQUHMAKGOmh0dHA6Ly9j
+YWNlcnRzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydFNIQTJTZWN1cmVTZXJ2ZXJDQS5j
+cnQwDAYDVR0TAQH/BAIwADANBgkqhkiG9w0BAQsFAAOCAQEAFqlwTXk1ULa/dDfd
+YTuyR7BzsIm6+2qiQIFS+Wwv94Lcfi47hMP4ya1e1fqctGxcVVXAEyskStfeuAGR
+yMwO97tgwoGWpGVgdJFXXKHCezgrxbyxtbfIIfnOmfrTZ4pSDng2X1MXsAmAlK+a
+TOajF6cqAA/aM+HNRZzPJU0V1YAggwIZPYu2CCRuAe5Mr/FojrEhf98Vxln6jgxe
+ydcyFdFfxLUVbCFyJV8X1aaoosvQhcpfiobmgvd2yVwkQYC4Kypg24w6DgJ7rgdd
+ar7H5tkeyTqkIqiWa+F9fVMdpHFXjdOHlg9maUdCpDeuAjInnmpZ3dzlTFGN0VCV
+DUs7vg==
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x570de78">
+      <item key="dec">2320320290886844495523285127081172072</item>
+      <item key="hex">01BEE09F70EEFFD7E40A35A19BC71C68</item>
+      <item key="long">-1</item>
+      <item key="string">01bee09f70eeffd7e40a35a19bc71c68</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha256WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x541f128">
+      <item key="altnames">
+       <hashref memory_address="0x4909c60">
+        <item key="2">petercam.be</item>
+       </hashref>
+      </item>
+      <item key="count">5</item>
+      <item key="entries">
+       <hashref memory_address="0x2bd95e8">
+        <item key="0">
+         <hashref memory_address="0x37d59e8">
+          <item key="data">BE</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x37a2998">
+          <item key="data">Brussel</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x5705a38">
+          <item key="data">Brussels</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x6376810">
+          <item key="data">Petercam SA</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x570f5c0">
+          <item key="data">*.petercam.be</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=BE/ST=Brussel/L=Brussels/O=Petercam SA/CN=*.petercam.be</item>
+      <item key="print_rfc2253">CN=*.petercam.be,O=Petercam SA,L=Brussels,ST=Brussel,C=BE</item>
+      <item key="print_rfc2253_utf8">CN=*.petercam.be,O=Petercam SA,L=Brussels,ST=Brussel,C=BE</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x489fd20">
+    <item key="ext_content">
+     <arrayref memory_address="0x5441908">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="hsts">No</item>
+    <item key="https_redirect">Yes</item>
+    <item key="score">0</item>
+    <item key="srv_type">Apache</item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">C</item>
+  <item key="HOSTNAME">www.petercam.com</item>
+  <item key="HOSTTYPE">bank</item>
+  <item key="ID">164</item>
+  <item key="IP">194.6.163.75</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">60</item>
+  <item key="SSL">
+   <hashref memory_address="0x541f2c0">
+    <item key="cipherScore">45</item>
+    <item key="protocol">
+     <hashref memory_address="0x29fc2d8">
+      <item key="SSLv2">
+       <hashref memory_address="0x48c3c40">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x5093db0">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x489cc78">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x5094518">
+          <item key="0">RC4-MD5</item>
+          <item key="1">RC4-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">CAMELLIA128-SHA</item>
+          <item key="5">CAMELLIA256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">40</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x5441fc8">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x37bf400">
+          <item key="0">RC4-MD5</item>
+          <item key="1">RC4-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">CAMELLIA128-SHA</item>
+          <item key="5">CAMELLIA256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">50</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x541f338">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x5706188">
+          <item key="0">RC4-MD5</item>
+          <item key="1">RC4-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">CAMELLIA128-SHA</item>
+          <item key="5">CAMELLIA256-SHA</item>
+          <item key="6">ECDHE-RSA-AES128-GCM-SHA256</item>
+          <item key="7">ECDHE-RSA-AES256-GCM-SHA384</item>
+          <item key="8">ECDHE-RSA-AES128-SHA256</item>
+          <item key="9">ECDHE-RSA-AES128-SHA</item>
+          <item key="10">ECDHE-RSA-AES256-SHA384</item>
+          <item key="11">ECDHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">50</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">100</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">95</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

@@ -1,0 +1,465 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x37d29e0">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x490a338">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://vcssev142.crl.omniroot.com/vcssev142.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x37a23f8">
+      <item key="pubkey">710c53b95e935400d30b242be0b7e3c72d2f5c91
+</item>
+      <item key="x509">dd003daa0c63c78caf04fa34907ee026fbf46622</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x37bf250">
+      <item key="not_after">Jan 15 15:39:34 2017 GMT</item>
+      <item key="not_before">Jan 15 15:39:37 2015 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x48c3ad8">
+      <item key="count">9</item>
+      <item key="entries">
+       <hashref memory_address="0x37d3658">
+        <item key="0">
+         <hashref memory_address="0x29fc668">
+          <item key="critical">1</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x2a13118">
+          <item key="critical">0</item>
+          <item key="data">Policy: 1.3.6.1.4.1.6334.1.100.1
+  CPS: https://secure.omniroot.com/repository
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x48b9d90">
+          <item key="critical">0</item>
+          <item key="data">OCSP - URI:http://vcssev142.ocsp.omniroot.com
+CA Issuers - URI:https://cacert.omniroot.com/vcssev142.crt
+CA Issuers - URI:https://cacert.omniroot.com/vcssev142.der
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x570faa0">
+          <item key="critical">0</item>
+          <item key="data">DNS:www.cornerbanca.ch, DNS:cornerbanca.ch, DNS:www.cornerbanca.com, DNS:cornerbanca.com, DNS:www.cornerbank.ch, DNS:cornerbank.ch</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x56f5a48">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x37a2608">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x29fbcf0">
+          <item key="critical">0</item>
+          <item key="data">keyid:DB:8D:64:EB:B9:4E:99:67:DC:7D:6B:45:33:D6:EA:E6:3A:BB:9D:EC
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x48b9ce8">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://vcssev142.crl.omniroot.com/vcssev142.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x37d3250">
+          <item key="critical">0</item>
+          <item key="data">71:0C:53:B9:5E:93:54:00:D3:0B:24:2B:E0:B7:E3:C7:2D:2F:5C:91</item>
+          <item key="ln">X509v3 Subject Key Identifier</item>
+          <item key="nid">82</item>
+          <item key="oid">2.5.29.14</item>
+          <item key="sn">subjectKeyIdentifier</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x4909960">
+      <item key="1.3.6.1.5.5.7.3.2">nid</item>
+      <item key="129">130</item>
+      <item key="TLS Web Server Authentication">TLS Web Client Authentication</item>
+      <item key="clientAuth">ln</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x3d8dcc0">
+      <item key="md5">0A:B8:DF:35:D2:03:8E:C9:FA:DF:3B:9E:04:D1:36:F6</item>
+      <item key="sha1">DD:00:3D:AA:0C:63:C7:8C:AF:04:FA:34:90:7E:E0:26:FB:F4:66:22</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x2a7f3b8">
+      <item key="issuer">
+       <hashref memory_address="0x2a182c8">
+        <item key="dec">2606986207</item>
+        <item key="hex">9B6373DF</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x37bf118">
+        <item key="dec">2159316115</item>
+        <item key="hex">80B48C93</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x37c3160">
+        <item key="dec">2616362544</item>
+        <item key="hex">9BF28630</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x5442508">
+      <item key="count">5</item>
+      <item key="entries">
+       <hashref memory_address="0x39d4e90">
+        <item key="0">
+         <hashref memory_address="0x54252f0">
+          <item key="data">NL</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x37a1c50">
+          <item key="data">Amsterdam</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x37c3310">
+          <item key="data">Verizon Enterprise Solutions</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x37a2fe0">
+          <item key="data">Cybertrust</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x37be950">
+          <item key="data">Verizon Public SureServer EV SSL CA G14-SHA2</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=NL/L=Amsterdam/O=Verizon Enterprise Solutions/OU=Cybertrust/CN=Verizon Public SureServer EV SSL CA G14-SHA2</item>
+      <item key="print_rfc2253">CN=Verizon Public SureServer EV SSL CA G14-SHA2,OU=Cybertrust,O=Verizon Enterprise Solutions,L=Amsterdam,C=NL</item>
+      <item key="print_rfc2253_utf8">CN=Verizon Public SureServer EV SSL CA G14-SHA2,OU=Cybertrust,O=Verizon Enterprise Solutions,L=Amsterdam,C=NL</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIGBDCCBOygAwIBAgIURfdOuLPFvXC04ieCFpqWwW+8TBgwDQYJKoZIhvcNAQEL
+BQAwgZQxCzAJBgNVBAYTAk5MMRIwEAYDVQQHEwlBbXN0ZXJkYW0xJTAjBgNVBAoT
+HFZlcml6b24gRW50ZXJwcmlzZSBTb2x1dGlvbnMxEzARBgNVBAsTCkN5YmVydHJ1
+c3QxNTAzBgNVBAMTLFZlcml6b24gUHVibGljIFN1cmVTZXJ2ZXIgRVYgU1NMIENB
+IEcxNC1TSEEyMB4XDTE1MDExNTE1MzkzN1oXDTE3MDExNTE1MzkzNFowgaQxGzAZ
+BgNVBA8TElYxLjQsIENsYXVzZSA4LjUuMjETMBEGCysGAQQBgjc8AgEDEwJDSDEb
+MBkGA1UEBRMSQ0gtNTE0LjMuMDAwLjI2My04MQswCQYDVQQGEwJDSDEPMA0GA1UE
+BxMGTHVnYW5vMRgwFgYDVQQKEw9Db3JuZXIgQmFuY2EgU0ExGzAZBgNVBAMTEnd3
+dy5jb3JuZXJiYW5jYS5jaDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+AMkdJJ4bqPXpuzD1Ulln6daYsDY4pU0wNVKmSdPXEsPkWS3B75xboviPDV+ngfqU
+qDSRXeQVKu7kRYcCDjtSOcsjqYo1ot0OY1MdSXVUvQIX/0f7A0xqZZnCYy6ihLSE
+aRgbr0qMODyT9omC/5yB6Zfy5aCFc40K1NinGnIheV6Vzqo4Kfx4YGNqLoZYCPjh
+i2kAlUkfwJdlEI+8cx8xxJ6JGr82QvtBKDZlincbWI7RLQ0V+txvvokyJtT8Dt6A
+pnbYafav8Rn3a7NEhtDt4ReS0ma58MHxAkxnDAtM8z8BNqdtRl4OTR1Y0ADCoBb/
+AsQyC2zyQoepLcsAiYFcujUCAwEAAaOCAjowggI2MAwGA1UdEwEB/wQCMAAwTQYD
+VR0gBEYwRDBCBgorBgEEAbE+AWQBMDQwMgYIKwYBBQUHAgEWJmh0dHBzOi8vc2Vj
+dXJlLm9tbmlyb290LmNvbS9yZXBvc2l0b3J5MIGuBggrBgEFBQcBAQSBoTCBnjAu
+BggrBgEFBQcwAYYiaHR0cDovL3Zjc3NldjE0Mi5vY3NwLm9tbmlyb290LmNvbTA1
+BggrBgEFBQcwAoYpaHR0cHM6Ly9jYWNlcnQub21uaXJvb3QuY29tL3Zjc3NldjE0
+Mi5jcnQwNQYIKwYBBQUHMAKGKWh0dHBzOi8vY2FjZXJ0Lm9tbmlyb290LmNvbS92
+Y3NzZXYxNDIuZGVyMHUGA1UdEQRuMGyCEnd3dy5jb3JuZXJiYW5jYS5jaIIOY29y
+bmVyYmFuY2EuY2iCE3d3dy5jb3JuZXJiYW5jYS5jb22CD2Nvcm5lcmJhbmNhLmNv
+bYIRd3d3LmNvcm5lcmJhbmsuY2iCDWNvcm5lcmJhbmsuY2gwDgYDVR0PAQH/BAQD
+AgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAfBgNVHSMEGDAWgBTb
+jWTruU6ZZ9x9a0Uz1urmOrud7DBABgNVHR8EOTA3MDWgM6Axhi9odHRwOi8vdmNz
+c2V2MTQyLmNybC5vbW5pcm9vdC5jb20vdmNzc2V2MTQyLmNybDAdBgNVHQ4EFgQU
+cQxTuV6TVADTCyQr4Lfjxy0vXJEwDQYJKoZIhvcNAQELBQADggEBAJgoNoTFUFcc
+kh4Ktq8J9ZTRyHhgalKJOGg48UCmZngabtAh5bdN1KR4Ov6BHRlormnRYwNlLavQ
+mQKxSudE65piReKjUh0quTmMSRREVdaya0tu51mGfbu87wIYQSj2ub8eYkDwt29o
+qZIR5bnkEofR5yg2vx6KPm9p2EnLnKnK1DDowDIgxz6JVn3EsKoQG8JUtupNmTDw
+lDApjeL68zJs/4zsIDrgodFuzPGm1vvNJOVwOgAFqM99PC5s2vwdn7pJauBUatAa
+SexN81YIdTKfWzgE7PYqsN8SyLccW3ZSAX6w5QAZJbJKMJFVCIyakKxVuikQ+n++
+zs+yopqGUaI=
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x3cb09d0">
+      <item key="dec">399435504860098717871543263537485036036210576408</item>
+      <item key="hex">45F74EB8B3C5BD70B4E22782169A96C16FBC4C18</item>
+      <item key="long">-1</item>
+      <item key="string">45f74eb8b3c5bd70b4e22782169a96c16fbc4c18</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha256WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x54255d8">
+      <item key="altnames">
+       <hashref memory_address="0x5ac8580">
+        <item key="2">cornerbank.ch</item>
+       </hashref>
+      </item>
+      <item key="count">7</item>
+      <item key="entries">
+       <hashref memory_address="0x42f6700">
+        <item key="0">
+         <hashref memory_address="0x5442490">
+          <item key="data">V1.4, Clause 8.5.2</item>
+          <item key="ln">businessCategory</item>
+          <item key="nid">860</item>
+          <item key="oid">2.5.4.15</item>
+          <item key="sn">businessCategory</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x37d2d10">
+          <item key="data">CH</item>
+          <item key="ln" defined="false"></item>
+          <item key="nid" defined="false"></item>
+          <item key="oid">1.3.6.1.4.1.311.60.2.1.3</item>
+          <item key="sn" defined="false"></item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x37901c8">
+          <item key="data">CH-514.3.000.263-8</item>
+          <item key="ln">serialNumber</item>
+          <item key="nid">105</item>
+          <item key="oid">2.5.4.5</item>
+          <item key="sn">serialNumber</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x48b95f8">
+          <item key="data">CH</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x6ba04b0">
+          <item key="data">Lugano</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x541ec78">
+          <item key="data">Corner Banca SA</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x2be3d20">
+          <item key="data">www.cornerbanca.ch</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/businessCategory=V1.4, Clause 8.5.2/1.3.6.1.4.1.311.60.2.1.3=CH/serialNumber=CH-514.3.000.263-8/C=CH/L=Lugano/O=Corner Banca SA/CN=www.cornerbanca.ch</item>
+      <item key="print_rfc2253">CN=www.cornerbanca.ch,O=Corner Banca SA,L=Lugano,C=CH,serialNumber=CH-514.3.000.263-8,1.3.6.1.4.1.311.60.2.1.3=#13024348,businessCategory=V1.4\, Clause 8.5.2</item>
+      <item key="print_rfc2253_utf8">CN=www.cornerbanca.ch,O=Corner Banca SA,L=Lugano,C=CH,serialNumber=CH-514.3.000.263-8,1.3.6.1.4.1.311.60.2.1.3=#13024348,businessCategory=V1.4\, Clause 8.5.2</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x37d2e90">
+    <item key="ext_content">
+     <arrayref memory_address="0x42f6e08">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="hsts">No</item>
+    <item key="https_redirect">No</item>
+    <item key="score">-1</item>
+    <item key="srv_type">Apache</item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">A-</item>
+  <item key="HOSTNAME">www.cornerbanca.com</item>
+  <item key="HOSTTYPE">bank</item>
+  <item key="ID">121</item>
+  <item key="IP">194.11.207.60</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">86.25</item>
+  <item key="SSL">
+   <hashref memory_address="0x3cafae8">
+    <item key="cipherScore">82.5</item>
+    <item key="protocol">
+     <hashref memory_address="0x37c3af0">
+      <item key="SSLv2">
+       <hashref memory_address="0x42f6640">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x5442298">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x42f6df0">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x42f68f8">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">80</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x37d5aa8">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x29eabc0">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">90</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x3790258">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x48b9fb8">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+          <item key="6">ECDHE-RSA-AES128-GCM-SHA256</item>
+          <item key="7">ECDHE-RSA-AES256-GCM-SHA384</item>
+          <item key="8">DHE-RSA-AES128-GCM-SHA256</item>
+          <item key="9">ECDHE-RSA-AES128-SHA256</item>
+          <item key="10">ECDHE-RSA-AES128-SHA</item>
+          <item key="11">ECDHE-RSA-AES256-SHA384</item>
+          <item key="12">ECDHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">75</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">100</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">95</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

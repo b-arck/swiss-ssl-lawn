@@ -1,0 +1,418 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x570ea60">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x56f3118">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://crl.starfieldtech.com/sfig2s1-15.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x3cb0658">
+      <item key="pubkey">9ffbb798ecc6ffa61afeddd10fbd07d4a2001190
+</item>
+      <item key="x509">c2a6c2c3eaa7a375af392b1ef32f96223ef16510</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x2bdc348">
+      <item key="not_after">Aug 26 16:27:38 2016 GMT</item>
+      <item key="not_before">Aug 26 16:27:38 2015 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x490a1d0">
+      <item key="count">9</item>
+      <item key="entries">
+       <hashref memory_address="0x56f5c70">
+        <item key="0">
+         <hashref memory_address="0x37d2ed8">
+          <item key="critical">1</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x541e8a0">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x56f3688">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x37a1380">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://crl.starfieldtech.com/sfig2s1-15.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x50942d8">
+          <item key="critical">0</item>
+          <item key="data">Policy: 2.16.840.1.114414.1.7.23.1
+  CPS: http://certificates.starfieldtech.com/repository/
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x37a2aa0">
+          <item key="critical">0</item>
+          <item key="data">OCSP - URI:http://ocsp.starfieldtech.com/
+CA Issuers - URI:http://certificates.starfieldtech.com/repository/sfig2.crt
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x3cb0310">
+          <item key="critical">0</item>
+          <item key="data">keyid:25:45:81:68:50:26:38:3D:3B:2D:2C:BE:CD:6A:D9:B6:3D:B3:66:63
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x54256f8">
+          <item key="critical">0</item>
+          <item key="data">DNS:www.ca-financements.ch, DNS:ca-financements.ch</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x42f6fe8">
+          <item key="critical">0</item>
+          <item key="data">9F:FB:B7:98:EC:C6:FF:A6:1A:FE:DD:D1:0F:BD:07:D4:A2:00:11:90</item>
+          <item key="ln">X509v3 Subject Key Identifier</item>
+          <item key="nid">82</item>
+          <item key="oid">2.5.29.14</item>
+          <item key="sn">subjectKeyIdentifier</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x489d6f8">
+      <item key="1.3.6.1.5.5.7.3.2">nid</item>
+      <item key="129">130</item>
+      <item key="TLS Web Server Authentication">TLS Web Client Authentication</item>
+      <item key="clientAuth">ln</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x37bed28">
+      <item key="md5">E9:BC:43:D5:14:0A:FF:02:90:61:16:97:1C:0F:58:F0</item>
+      <item key="sha1">C2:A6:C2:C3:EA:A7:A3:75:AF:39:2B:1E:F3:2F:96:22:3E:F1:65:10</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x5706770">
+      <item key="issuer">
+       <hashref memory_address="0x37bf148">
+        <item key="dec">3447161317</item>
+        <item key="hex">CD7781E5</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x48a02c0">
+        <item key="dec">1990224447</item>
+        <item key="hex">76A06A3F</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x570dc08">
+        <item key="dec">3809482993</item>
+        <item key="hex">E31018F1</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x56f2f80">
+      <item key="count">6</item>
+      <item key="entries">
+       <hashref memory_address="0x5c06b70">
+        <item key="0">
+         <hashref memory_address="0x541eb70">
+          <item key="data">US</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x5093a98">
+          <item key="data">Arizona</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x5093ca8">
+          <item key="data">Scottsdale</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x5442d70">
+          <item key="data">Starfield Technologies, Inc.</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x42f6be0">
+          <item key="data">http://certs.starfieldtech.com/repository/</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x489d0b0">
+          <item key="data">Starfield Secure Certificate Authority - G2</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=US/ST=Arizona/L=Scottsdale/O=Starfield Technologies, Inc./OU=http://certs.starfieldtech.com/repository//CN=Starfield Secure Certificate Authority - G2</item>
+      <item key="print_rfc2253">CN=Starfield Secure Certificate Authority - G2,OU=http://certs.starfieldtech.com/repository/,O=Starfield Technologies\, Inc.,L=Scottsdale,ST=Arizona,C=US</item>
+      <item key="print_rfc2253_utf8">CN=Starfield Secure Certificate Authority - G2,OU=http://certs.starfieldtech.com/repository/,O=Starfield Technologies\, Inc.,L=Scottsdale,ST=Arizona,C=US</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIFZjCCBE6gAwIBAgIJAKCVHhYcSs8GMA0GCSqGSIb3DQEBCwUAMIHGMQswCQYD
+VQQGEwJVUzEQMA4GA1UECBMHQXJpem9uYTETMBEGA1UEBxMKU2NvdHRzZGFsZTEl
+MCMGA1UEChMcU3RhcmZpZWxkIFRlY2hub2xvZ2llcywgSW5jLjEzMDEGA1UECxMq
+aHR0cDovL2NlcnRzLnN0YXJmaWVsZHRlY2guY29tL3JlcG9zaXRvcnkvMTQwMgYD
+VQQDEytTdGFyZmllbGQgU2VjdXJlIENlcnRpZmljYXRlIEF1dGhvcml0eSAtIEcy
+MB4XDTE1MDgyNjE2MjczOFoXDTE2MDgyNjE2MjczOFowRDEhMB8GA1UECxMYRG9t
+YWluIENvbnRyb2wgVmFsaWRhdGVkMR8wHQYDVQQDExZ3d3cuY2EtZmluYW5jZW1l
+bnRzLmNoMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8ciKw3BaMYB9
+hVB9gj7g+GF1LMNE5xN6vnbxlR+aaLa7lrOTFsNcecBfJ7Ak89Suc/2wPymGD5Oz
+3QyY9OMaDih4NkDlp2l30Y1bhgh4a9P79hYhtwLrzxgI7ZtfIcc3aswp0dRrCOcX
+4dO7GkvYBjvEZKWQfv8s6UhnpSEmYSCud+o+JRrG5+MD8cw1WvBIGfn01fvAnFc9
+yA39pWKkEE0gVU+SrXKY0YFBuTL5WpeyH+7zPcS7/xIi8Ggtq3CSojvoXQTnGkVh
+ENnMgbo/rnWw/zMUCQ0QEHAmzsCo72u31y/WXxt+laFWO9wTml1bdT+fQ2nT1OS8
+k2t/A2MDTQIDAQABo4IB1jCCAdIwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggr
+BgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH/BAQDAgWgMDwGA1UdHwQ1MDMwMaAv
+oC2GK2h0dHA6Ly9jcmwuc3RhcmZpZWxkdGVjaC5jb20vc2ZpZzJzMS0xNS5jcmww
+WQYDVR0gBFIwUDBOBgtghkgBhv1uAQcXATA/MD0GCCsGAQUFBwIBFjFodHRwOi8v
+Y2VydGlmaWNhdGVzLnN0YXJmaWVsZHRlY2guY29tL3JlcG9zaXRvcnkvMIGCBggr
+BgEFBQcBAQR2MHQwKgYIKwYBBQUHMAGGHmh0dHA6Ly9vY3NwLnN0YXJmaWVsZHRl
+Y2guY29tLzBGBggrBgEFBQcwAoY6aHR0cDovL2NlcnRpZmljYXRlcy5zdGFyZmll
+bGR0ZWNoLmNvbS9yZXBvc2l0b3J5L3NmaWcyLmNydDAfBgNVHSMEGDAWgBQlRYFo
+UCY4PTstLL7Natm2PbNmYzA1BgNVHREELjAsghZ3d3cuY2EtZmluYW5jZW1lbnRz
+LmNoghJjYS1maW5hbmNlbWVudHMuY2gwHQYDVR0OBBYEFJ/7t5jsxv+mGv7d0Q+9
+B9SiABGQMA0GCSqGSIb3DQEBCwUAA4IBAQAaFtUAXLAbLV83MOLBk6swWM5Zzy6M
+ahbSUvemtUU29eTtptyddioLByVccku9SYOjf+m8tNRmAu0RAODRrru8YLoKS2qz
+u9zI9BkzwJmFCfXX6Mu2bZyPYwK6Na+qVsxEURlIOKGZXW98CQ06nfLCm/dXOngF
+40A/TR6xvFljwwQUbgzN5YsQR1twkISzv5MiYVrKf+BIakS9AJElHy/Ys5pVwhb9
+KYL+0FbF0mY6nd+keiKscA738FPOKJa/8mwH8PuTxxRC0E6fvAoC4bw4om5IfDiK
+98qz8kOmGjFmc81SKVovocXcJLYF2VgwoYW7EFuGYOMeNXgKNM3CF25c
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x37d62a0">
+      <item key="dec">11571187897911136006</item>
+      <item key="hex">A0951E161C4ACF06</item>
+      <item key="long">-6875556175798415610</item>
+      <item key="string">a0951e161c4acf06</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha256WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x37d27e8">
+      <item key="altnames">
+       <hashref memory_address="0x39d4e18">
+        <item key="2">ca-financements.ch</item>
+       </hashref>
+      </item>
+      <item key="count">2</item>
+      <item key="entries">
+       <hashref memory_address="0x39d48a8">
+        <item key="0">
+         <hashref memory_address="0x39d4428">
+          <item key="data">Domain Control Validated</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x3d8e1b8">
+          <item key="data">www.ca-financements.ch</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/OU=Domain Control Validated/CN=www.ca-financements.ch</item>
+      <item key="print_rfc2253">CN=www.ca-financements.ch,OU=Domain Control Validated</item>
+      <item key="print_rfc2253_utf8">CN=www.ca-financements.ch,OU=Domain Control Validated</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x37a1068">
+    <item key="ext_content">
+     <arrayref memory_address="0x37beab8">
+      <item key="0">GoogleAnalytics</item>
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="hsts">No</item>
+    <item key="https_redirect">No</item>
+    <item key="score">-2</item>
+    <item key="srv_type" defined="false"></item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">A-</item>
+  <item key="HOSTNAME">www.ca-financements.ch</item>
+  <item key="HOSTTYPE">bank</item>
+  <item key="ID">124</item>
+  <item key="IP">80.80.233.117</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">86.25</item>
+  <item key="SSL">
+   <hashref memory_address="0x5c06c00">
+    <item key="cipherScore">82.5</item>
+    <item key="protocol">
+     <hashref memory_address="0x5442fe0">
+      <item key="SSLv2">
+       <hashref memory_address="0x5443a78">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x54417e8">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x54258d8">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x42dbab8">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">DHE-RSA-AES128-SHA</item>
+          <item key="2">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">90</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x541ed08">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x54433a0">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">DHE-RSA-AES128-SHA</item>
+          <item key="2">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">90</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x56f60a8">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x37bf580">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">DHE-RSA-AES128-SHA</item>
+          <item key="2">DHE-RSA-AES256-SHA</item>
+          <item key="3">ECDHE-RSA-AES128-GCM-SHA256</item>
+          <item key="4">ECDHE-RSA-AES256-GCM-SHA384</item>
+          <item key="5">DHE-RSA-AES128-GCM-SHA256</item>
+          <item key="6">ECDHE-RSA-AES128-SHA256</item>
+          <item key="7">ECDHE-RSA-AES128-SHA</item>
+          <item key="8">ECDHE-RSA-AES256-SHA384</item>
+          <item key="9">ECDHE-RSA-AES256-SHA</item>
+          <item key="10">DHE-RSA-AES128-SHA256</item>
+          <item key="11">DHE-RSA-AES256-SHA256</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">75</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">100</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">95</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

@@ -1,0 +1,517 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x6376d98">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x489fa08">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://crl4.digicert.com/sha2-ev-server-g1.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x5094248">
+      <item key="pubkey">1837007761891781f67fd72aa2b43bb20176e373
+</item>
+      <item key="x509">fbac0250f0469ed87960c6ab33824936c369f80f</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x54249c0">
+      <item key="not_after">Dec  6 12:00:00 2017 GMT</item>
+      <item key="not_before">Sep 25 00:00:00 2015 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x48a0788">
+      <item key="count">10</item>
+      <item key="entries">
+       <hashref memory_address="0x42f6af0">
+        <item key="0">
+         <hashref memory_address="0x37a3070">
+          <item key="critical">0</item>
+          <item key="data">keyid:3D:D3:50:A5:D6:A0:AD:EE:F3:4A:60:0A:65:D3:21:D4:F8:F8:D6:0F
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x37d2bd8">
+          <item key="critical">0</item>
+          <item key="data">18:37:00:77:61:89:17:81:F6:7F:D7:2A:A2:B4:3B:B2:01:76:E3:73</item>
+          <item key="ln">X509v3 Subject Key Identifier</item>
+          <item key="nid">82</item>
+          <item key="oid">2.5.29.14</item>
+          <item key="sn">subjectKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x5441a10">
+          <item key="critical">0</item>
+          <item key="data">DNS:www.mirabaud.com, DNS:www.mirabaud-am.com, DNS:research.mirabaud.com, DNS:mirabaud-am.com, DNS:mirabaud.com</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x5706158">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x37a1578">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x37d2f68">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://crl3.digicert.com/sha2-ev-server-g1.crl
+
+Full Name:
+  URI:http://crl4.digicert.com/sha2-ev-server-g1.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x5441ea8">
+          <item key="critical">0</item>
+          <item key="data">Policy: 2.16.840.1.114412.2.1
+  CPS: https://www.digicert.com/CPS
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x5c07590">
+          <item key="critical">0</item>
+          <item key="data">OCSP - URI:http://ocsp.digicert.com
+CA Issuers - URI:http://cacerts.digicert.com/DigiCertSHA2ExtendedValidationServerCA.crt
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x37a3040">
+          <item key="critical">1</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="9">
+         <hashref memory_address="0x42dba28">
+          <item key="critical">0</item>
+          <item key="data" defined="false"></item>
+          <item key="ln" defined="false"></item>
+          <item key="nid" defined="false"></item>
+          <item key="oid">1.3.6.1.4.1.11129.2.4.2</item>
+          <item key="sn" defined="false"></item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x56f5988">
+      <item key="1.3.6.1.5.5.7.3.2">nid</item>
+      <item key="129">130</item>
+      <item key="TLS Web Server Authentication">TLS Web Client Authentication</item>
+      <item key="clientAuth">ln</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x5443a78">
+      <item key="md5">A6:54:6C:79:33:D5:8B:47:DE:DC:97:2C:5F:E5:98:7D</item>
+      <item key="sha1">FB:AC:02:50:F0:46:9E:D8:79:60:C6:AB:33:82:49:36:C3:69:F8:0F</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x3790a20">
+      <item key="issuer">
+       <hashref memory_address="0x5706050">
+        <item key="dec">1170206659</item>
+        <item key="hex">45BFEFC3</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x56f6168">
+        <item key="dec">4268175508</item>
+        <item key="hex">FE673094</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x3d8d930">
+        <item key="dec">3644479868</item>
+        <item key="hex">D93A597C</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x5c06ea0">
+      <item key="count">4</item>
+      <item key="entries">
+       <hashref memory_address="0x570fd40">
+        <item key="0">
+         <hashref memory_address="0x489fd80">
+          <item key="data">US</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x378fee0">
+          <item key="data">DigiCert Inc</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x56f5eb0">
+          <item key="data">www.digicert.com</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x570e718">
+          <item key="data">DigiCert SHA2 Extended Validation Server CA</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert SHA2 Extended Validation Server CA</item>
+      <item key="print_rfc2253">CN=DigiCert SHA2 Extended Validation Server CA,OU=www.digicert.com,O=DigiCert Inc,C=US</item>
+      <item key="print_rfc2253_utf8">CN=DigiCert SHA2 Extended Validation Server CA,OU=www.digicert.com,O=DigiCert Inc,C=US</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIHmzCCBoOgAwIBAgIQBrrER5OpWL4ECOBqe0OFqjANBgkqhkiG9w0BAQsFADB1
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3
+d3cuZGlnaWNlcnQuY29tMTQwMgYDVQQDEytEaWdpQ2VydCBTSEEyIEV4dGVuZGVk
+IFZhbGlkYXRpb24gU2VydmVyIENBMB4XDTE1MDkyNTAwMDAwMFoXDTE3MTIwNjEy
+MDAwMFowgegxHTAbBgNVBA8MFFByaXZhdGUgT3JnYW5pemF0aW9uMRMwEQYLKwYB
+BAGCNzwCAQMTAkNIMRgwFgYDVQQFEw9DSEUtMTA1LjkyOC4yMjMxIzAhBgNVBAkT
+GkJvdWxldmFyZCBHZW9yZ2VzLUZhdm9uIDI5MQ0wCwYDVQQREwQxMjA0MQswCQYD
+VQQGEwJDSDEPMA0GA1UECBMGR2VuZXZhMQ8wDQYDVQQHEwZHZW5ldmExGjAYBgNV
+BAoMEU1pcmFiYXVkICYgQ2llIFNBMRkwFwYDVQQDExB3d3cubWlyYWJhdWQuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8utM/syfzQKGExG9gBhn
+omvBzZOsb7s09w/NWivdY5UVFwOJQ87Y+Ns+MPB6NNfB21EaqdMufTxmGsosTXT8
+pRrTlpJPFs9/UaA7D+eK71O8EGrVbrZfrD1gC0NMusOQ9LDxrUv5byAxQNaLuPYe
+sz6LGVn4wQa31It4R4ZaY/UVxwfUerhW+bDNE1tTMQU8CRFo+/zKij77yb9bJU/g
+UgmrDtgPmOnP1lgR1474hHsHSS2GnytHYRfH33ed1Jzz8sumVoefu3EmBveQZv5j
+17ZBeITy+5cp33TPQIMLd+QP6JV7VQN2AuSH79Gsmj4Y6ZXww/LxUizv6e8tOP7W
+IwIDAQABo4IDsTCCA60wHwYDVR0jBBgwFoAUPdNQpdagre7zSmAKZdMh1Pj41g8w
+HQYDVR0OBBYEFBg3AHdhiReB9n/XKqK0O7IBduNzMGYGA1UdEQRfMF2CEHd3dy5t
+aXJhYmF1ZC5jb22CE3d3dy5taXJhYmF1ZC1hbS5jb22CFXJlc2VhcmNoLm1pcmFi
+YXVkLmNvbYIPbWlyYWJhdWQtYW0uY29tggxtaXJhYmF1ZC5jb20wDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjB1BgNVHR8EbjBs
+MDSgMqAwhi5odHRwOi8vY3JsMy5kaWdpY2VydC5jb20vc2hhMi1ldi1zZXJ2ZXIt
+ZzEuY3JsMDSgMqAwhi5odHRwOi8vY3JsNC5kaWdpY2VydC5jb20vc2hhMi1ldi1z
+ZXJ2ZXItZzEuY3JsMEIGA1UdIAQ7MDkwNwYJYIZIAYb9bAIBMCowKAYIKwYBBQUH
+AgEWHGh0dHBzOi8vd3d3LmRpZ2ljZXJ0LmNvbS9DUFMwgYgGCCsGAQUFBwEBBHww
+ejAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuZGlnaWNlcnQuY29tMFIGCCsGAQUF
+BzAChkZodHRwOi8vY2FjZXJ0cy5kaWdpY2VydC5jb20vRGlnaUNlcnRTSEEyRXh0
+ZW5kZWRWYWxpZGF0aW9uU2VydmVyQ0EuY3J0MAwGA1UdEwEB/wQCMAAwggF+Bgor
+BgEEAdZ5AgQCBIIBbgSCAWoBaAB2AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3
+zQ7IDdwQAAABUASYnZUAAAQDAEcwRQIhAONcPcE96IqO1SrSX4HbA/AdqbfvOqVv
+/2/BWCheJXbWAiABSIU0ipZX8FT4hG1Roz1TFm7pFIjMCv656Qe5uYytZwB2AGj2
+mPgfZIK+OozuuSgdTPxxUV1nk9RE0QpnrLtPT/vEAAABUASYnZ4AAAQDAEcwRQIg
+SOF1ugzYugJgMTD/Jtxvq0Cz6ViU50igfUV2F4ugtfYCIQDyJhFiqI0sPNZRn6P4
+fP1QOsQqxlTKAryLoshOWu8n/wB2AFYUBpov18Ls0/XhvUSyPsdGdrm8mRFcwO+U
+mFXWidDdAAABUASYnmEAAAQDAEcwRQIgd8mfMc+rOanylnQsYivFa9kpLuBjly9p
+jWkUoGPo20QCIQCepRNF7pdn9HdY/U5jp0HCPHStUDIdqw4osryVoy3XmzANBgkq
+hkiG9w0BAQsFAAOCAQEAaTbR7h7vi0UyIFVIzmOFzaIsTX/2iQRogxHs2x0uc5LR
+m7S3UUBfDABkkAXdfdWUoPWd/dHWSIcx3ByNBmk31PmnMsVJeMcGv7hh6HN7AgCJ
+jYHqHgH3uQ7S45gfmy6WoECEccYc/Qctr/mtbNwiSfJCBtvsq6wnuPZUBURvy+5u
+/8PRASgk0Mm8Z8Kvbn/Vbj6IkB9NAjtIlHi9Y8rhWZHhKeoLsOR6P1JLj4zKJsiE
+jS1DhLjhF3xExC+pDF2qZ1pzDYHzdET8/hMc/xZezD0I30W2UltgmogdTR55urgP
+F8MzgiPjD8lSFQktRxF6wupZgjz+TYoexVBiomX+0Q==
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x54424d8">
+      <item key="dec">8945116213577851397175770372355884458</item>
+      <item key="hex">06BAC44793A958BE0408E06A7B4385AA</item>
+      <item key="long">-1</item>
+      <item key="string">06bac44793a958be0408e06a7b4385aa</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha256WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x48b9ac0">
+      <item key="altnames">
+       <hashref memory_address="0x39d4e18">
+        <item key="2">mirabaud.com</item>
+       </hashref>
+      </item>
+      <item key="count">10</item>
+      <item key="entries">
+       <hashref memory_address="0x29f5b10">
+        <item key="0">
+         <hashref memory_address="0x48b95b0">
+          <item key="data">Private Organization</item>
+          <item key="ln">businessCategory</item>
+          <item key="nid">860</item>
+          <item key="oid">2.5.4.15</item>
+          <item key="sn">businessCategory</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x56f2ec0">
+          <item key="data">CH</item>
+          <item key="ln" defined="false"></item>
+          <item key="nid" defined="false"></item>
+          <item key="oid">1.3.6.1.4.1.311.60.2.1.3</item>
+          <item key="sn" defined="false"></item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x5424d68">
+          <item key="data">CHE-105.928.223</item>
+          <item key="ln">serialNumber</item>
+          <item key="nid">105</item>
+          <item key="oid">2.5.4.5</item>
+          <item key="sn">serialNumber</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x42f6928">
+          <item key="data">Boulevard Georges-Favon 29</item>
+          <item key="ln">streetAddress</item>
+          <item key="nid">660</item>
+          <item key="oid">2.5.4.9</item>
+          <item key="sn">street</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x570fed8">
+          <item key="data">1204</item>
+          <item key="ln">postalCode</item>
+          <item key="nid">661</item>
+          <item key="oid">2.5.4.17</item>
+          <item key="sn">postalCode</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x37d3430">
+          <item key="data">CH</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x5441608">
+          <item key="data">Geneva</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x56f3190">
+          <item key="data">Geneva</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x2a58098">
+          <item key="data">Mirabaud &amp; Cie SA</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="9">
+         <hashref memory_address="0x37a1770">
+          <item key="data">www.mirabaud.com</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/businessCategory=Private Organization/1.3.6.1.4.1.311.60.2.1.3=CH/serialNumber=CHE-105.928.223/street=Boulevard Georges-Favon 29/postalCode=1204/C=CH/ST=Geneva/L=Geneva/O=Mirabaud &amp; Cie SA/CN=www.mirabaud.com</item>
+      <item key="print_rfc2253">CN=www.mirabaud.com,O=Mirabaud &amp; Cie SA,L=Geneva,ST=Geneva,C=CH,postalCode=1204,street=Boulevard Georges-Favon 29,serialNumber=CHE-105.928.223,1.3.6.1.4.1.311.60.2.1.3=#13024348,businessCategory=Private Organization</item>
+      <item key="print_rfc2253_utf8">CN=www.mirabaud.com,O=Mirabaud &amp; Cie SA,L=Geneva,ST=Geneva,C=CH,postalCode=1204,street=Boulevard Georges-Favon 29,serialNumber=CHE-105.928.223,1.3.6.1.4.1.311.60.2.1.3=#13024348,businessCategory=Private Organization</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x489d728">
+    <item key="ext_content">
+     <arrayref memory_address="0x5ac7de8">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="hsts">Yes</item>
+    <item key="https_redirect">Yes</item>
+    <item key="score">1</item>
+    <item key="srv_type">Apache</item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">A+</item>
+  <item key="HOSTNAME">www.mirabaud.com</item>
+  <item key="HOSTTYPE">bank</item>
+  <item key="ID">155</item>
+  <item key="IP">31.171.247.18</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">86.25</item>
+  <item key="SSL">
+   <hashref memory_address="0x5094698">
+    <item key="cipherScore">82.5</item>
+    <item key="protocol">
+     <hashref memory_address="0x39d4668">
+      <item key="SSLv2">
+       <hashref memory_address="0x37c2f50">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x48a0620">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x3cb04c0">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x5c06870">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+          <item key="6">CAMELLIA128-SHA</item>
+          <item key="7">CAMELLIA256-SHA</item>
+          <item key="8">DHE-RSA-CAMELLIA128-SHA</item>
+          <item key="9">DHE-RSA-CAMELLIA256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">80</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x570fcc8">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x5441d70">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+          <item key="6">CAMELLIA128-SHA</item>
+          <item key="7">CAMELLIA256-SHA</item>
+          <item key="8">DHE-RSA-CAMELLIA128-SHA</item>
+          <item key="9">DHE-RSA-CAMELLIA256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">90</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x6376a80">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x570e1f0">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+          <item key="6">CAMELLIA128-SHA</item>
+          <item key="7">CAMELLIA256-SHA</item>
+          <item key="8">DHE-RSA-CAMELLIA128-SHA</item>
+          <item key="9">DHE-RSA-CAMELLIA256-SHA</item>
+          <item key="10">ECDHE-RSA-AES128-GCM-SHA256</item>
+          <item key="11">ECDHE-RSA-AES256-GCM-SHA384</item>
+          <item key="12">DHE-RSA-AES128-GCM-SHA256</item>
+          <item key="13">ECDHE-RSA-AES128-SHA256</item>
+          <item key="14">ECDHE-RSA-AES128-SHA</item>
+          <item key="15">ECDHE-RSA-AES256-SHA384</item>
+          <item key="16">ECDHE-RSA-AES256-SHA</item>
+          <item key="17">DHE-RSA-AES128-SHA256</item>
+          <item key="18">DHE-RSA-AES256-SHA256</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">75</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">100</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">95</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

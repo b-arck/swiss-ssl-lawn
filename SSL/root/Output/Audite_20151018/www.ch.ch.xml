@@ -1,0 +1,446 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x541f1a0">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x489f8a0">
+    <item key="certificate_type">305</item>
+    <item key="crl">ldap://www.pki.admin.ch:389/cn=Swiss%20Government%20SSL%20CA%2001,ou=Certification%20Authorities,ou=Services,o=Admin,c=CH</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x570fab8">
+      <item key="pubkey">48f0c57bbba217269df12067076ad5bb13dfe00d
+</item>
+      <item key="x509">6dca32808789183c3a72de4992df27c8308dee0e</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x54415a8">
+      <item key="not_after">Sep 21 15:22:27 2017 GMT</item>
+      <item key="not_before">Sep 22 15:22:27 2014 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x6377578">
+      <item key="count">9</item>
+      <item key="entries">
+       <hashref memory_address="0x5442ef0">
+        <item key="0">
+         <hashref memory_address="0x5443238">
+          <item key="critical">0</item>
+          <item key="data">keyid:FC:35:5E:58:1D:F8:52:E0:2B:E8:AC:AB:B9:82:AD:15:11:D6:E6:CD
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x5425188">
+          <item key="critical">0</item>
+          <item key="data">48:F0:C5:7B:BB:A2:17:26:9D:F1:20:67:07:6A:D5:BB:13:DF:E0:0D</item>
+          <item key="ln">X509v3 Subject Key Identifier</item>
+          <item key="nid">82</item>
+          <item key="oid">2.5.29.14</item>
+          <item key="sn">subjectKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x37be6f8">
+          <item key="critical">1</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x37d33a0">
+          <item key="critical">0</item>
+          <item key="data">Policy: 2.16.756.1.17.3.22.26
+  CPS: http://www.pki.admin.ch/cps/CPS_2_16_756_1_17_3_21_1.pdf
+  User Notice:
+    Explicit Text: The purpose of this certificate is solely intended for SSL web server authentication.
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x54254d0">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://www.pki.admin.ch/crl/SSLCA01.crl
+
+Full Name:
+  URI:ldap://www.pki.admin.ch:389/cn=Swiss%20Government%20SSL%20CA%2001,ou=Certification%20Authorities,ou=Services,o=Admin,c=CH
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x37a1248">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x5443178">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x37befb0">
+          <item key="critical">0</item>
+          <item key="data">DNS:www.ch.ch</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x5443070">
+          <item key="critical">0</item>
+          <item key="data">CA Issuers - URI:http://www.pki.admin.ch/aia/SSLCA01.crt
+OCSP - URI:http://www.pki.admin.ch/aia/ocsp
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x5705e88">
+      <item key="ln">TLS Web Server Authentication</item>
+      <item key="nid">129</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x48c4000">
+      <item key="md5">9C:4C:3B:CC:6F:AA:74:08:EE:D5:AF:4A:DC:DB:A8:6A</item>
+      <item key="sha1">6D:CA:32:80:87:89:18:3C:3A:72:DE:49:92:DF:27:C8:30:8D:EE:0E</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x5705900">
+      <item key="issuer">
+       <hashref memory_address="0x37d3490">
+        <item key="dec">2159774676</item>
+        <item key="hex">80BB8BD4</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x489d440">
+        <item key="dec">1890602258</item>
+        <item key="hex">70B04D12</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x37bf070">
+        <item key="dec">1457733232</item>
+        <item key="hex">56E33E70</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x37bef98">
+      <item key="count">5</item>
+      <item key="entries">
+       <hashref memory_address="0x5705ca8">
+        <item key="0">
+         <hashref memory_address="0x5442c38">
+          <item key="data">CH</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x5441cf8">
+          <item key="data">Swiss Government PKI</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x56f3808">
+          <item key="data">Services</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x39d42a8">
+          <item key="data">Certification Authorities</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x37d2fb0">
+          <item key="data">Swiss Government SSL CA 01</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=CH/O=Swiss Government PKI/OU=Services/OU=Certification Authorities/CN=Swiss Government SSL CA 01</item>
+      <item key="print_rfc2253">CN=Swiss Government SSL CA 01,OU=Certification Authorities,OU=Services,O=Swiss Government PKI,C=CH</item>
+      <item key="print_rfc2253_utf8">CN=Swiss Government SSL CA 01,OU=Certification Authorities,OU=Services,O=Swiss Government PKI,C=CH</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIG/DCCBOSgAwIBAgIQE7v+NXlQzykRluyKiakI3TANBgkqhkiG9w0BAQsFADCB
+iDELMAkGA1UEBhMCQ0gxHTAbBgNVBAoTFFN3aXNzIEdvdmVybm1lbnQgUEtJMREw
+DwYDVQQLEwhTZXJ2aWNlczEiMCAGA1UECxMZQ2VydGlmaWNhdGlvbiBBdXRob3Jp
+dGllczEjMCEGA1UEAxMaU3dpc3MgR292ZXJubWVudCBTU0wgQ0EgMDEwHhcNMTQw
+OTIyMTUyMjI3WhcNMTcwOTIxMTUyMjI3WjBgMQswCQYDVQQGEwJDSDEdMBsGA1UE
+CgwUU3dpc3MgR292ZXJubWVudCBQS0kxEDAOBgNVBAsMB1NlcnZlcnMxDDAKBgNV
+BAsMA1NTTDESMBAGA1UEAwwJd3d3LmNoLmNoMIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEAzf2P/UKqw8qEZMACK7klHiZLk6SArLX4+q4zr/XW+lSuVN5n
+1aEMS3rVuGQnywWLVfJxa/h6ySMJkp/02lZbTyl2V3j4+2ngYa7rJC3SZ0M5sGA7
+OWUBggTa6cIvhrokgzol03m5YTuJ8gJVoBijc+IbnIuSqjRdusj3Bs4Yu3V6ez6J
+PQJQoFBsKmUuZcjD/MI03iqE9uO2zwy/ZzlO3znMUKDxFnCD2HJAJ3BxSAsDroRP
+avhvRWyeSbpPmLuP2ePZeHZJN9GHFBvBzONwncG/IDja9cwvYwTD3ZK9z1wsb8/a
+xSxxunD0e5bQTKNHvJ+KVEsCcYm2zmPwvRJ81QIDAQABo4IChzCCAoMwHwYDVR0j
+BBgwFoAU/DVeWB34UuAr6KyruYKtFRHW5s0wHQYDVR0OBBYEFEjwxXu7ohcmnfEg
+Zwdq1bsT3+ANMAwGA1UdEwEB/wQCMAAwgcYGA1UdIASBvjCBuzCBuAYIYIV0ARED
+FhowgaswRAYIKwYBBQUHAgEWOGh0dHA6Ly93d3cucGtpLmFkbWluLmNoL2Nwcy9D
+UFNfMl8xNl83NTZfMV8xN18zXzIxXzEucGRmMGMGCCsGAQUFBwICMFcaVVRoZSBw
+dXJwb3NlIG9mIHRoaXMgY2VydGlmaWNhdGUgaXMgc29sZWx5IGludGVuZGVkIGZv
+ciBTU0wgd2ViIHNlcnZlciBhdXRoZW50aWNhdGlvbi4wgbsGA1UdHwSBszCBsDAt
+oCugKYYnaHR0cDovL3d3dy5wa2kuYWRtaW4uY2gvY3JsL1NTTENBMDEuY3JsMH+g
+faB7hnlsZGFwOi8vd3d3LnBraS5hZG1pbi5jaDozODkvY249U3dpc3MlMjBHb3Zl
+cm5tZW50JTIwU1NMJTIwQ0ElMjAwMSxvdT1DZXJ0aWZpY2F0aW9uJTIwQXV0aG9y
+aXRpZXMsb3U9U2VydmljZXMsbz1BZG1pbixjPUNIMA4GA1UdDwEB/wQEAwIFoDAT
+BgNVHSUEDDAKBggrBgEFBQcDATAUBgNVHREEDTALggl3d3cuY2guY2gwcQYIKwYB
+BQUHAQEEZTBjMDMGCCsGAQUFBzAChidodHRwOi8vd3d3LnBraS5hZG1pbi5jaC9h
+aWEvU1NMQ0EwMS5jcnQwLAYIKwYBBQUHMAGGIGh0dHA6Ly93d3cucGtpLmFkbWlu
+LmNoL2FpYS9vY3NwMA0GCSqGSIb3DQEBCwUAA4ICAQC5meGVuMW3K+8C6QlD4wcj
+iv4T91udUtxwUh2IgJH4OMI0b1Hw/+nhOAk/k4LU9cBI9/uW1yAIfIT4eEE0gtS8
+oQUynjZDgGlL1KuQ3G76ut40XdhBgRbwlhao44Y9iT3GkuMMhDdD8FeqXCLi7YE7
+1i9f8qnEtkD1eZKjdXkss6qPiuvqtMr5Do7CYp8h0N6zPls1ZZxUjs10LhsyK0by
+cETx8wD65i78QAKvWDtqwiavY6JMVMcKg7pDjmQMnTKT3R8u9V+EUBUPNc9S/Gfv
+xj2J4bZPGo3CERYRgKsUuXQyBKzoUIxUq9F4xywqQNeq5w4u6yk/RaW1EjgNHUtV
+WKqiSXk5AU+dPv8L/vwT4F/dpiQa9gryQ+2V7fCD8HJpMX0U/7aO2XTvAh5q+N+y
+RfEtgEKwC2umQf9WYq0CaRKW/LYGKwiNEizmwvkwHCPVEzz9anxdKoHmCQXIHzn/
+SjPmRm/rjhYqUUJe7Q+Ofrkrrzq9D51/6BSECitTFHff59ow8TVvbQOE3GAqvRCz
+TWVYaU+TQ8k/CI9CEFUw6SHZWXtDmnHmYKdkgexEqgRyej+DdvQdz1Q6/KoAqa2o
+/8vj89mBfjluCvp/v4Vmc4i6yEwtukStwoVIxJL1UygWHH1nxeYI1aGG/mEVV8eA
+QRmPMRUMs/zAbxH5tq3HSA==
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x37be6e0">
+      <item key="dec">26231447401136733673402957131783145693</item>
+      <item key="hex">13BBFE357950CF291196EC8A89A908DD</item>
+      <item key="long">-1</item>
+      <item key="string">13bbfe357950cf291196ec8a89a908dd</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha256WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x37beba8">
+      <item key="altnames">
+       <hashref memory_address="0x489d0e0">
+        <item key="2">www.ch.ch</item>
+       </hashref>
+      </item>
+      <item key="count">5</item>
+      <item key="entries">
+       <hashref memory_address="0x5442d58">
+        <item key="0">
+         <hashref memory_address="0x56f30b8">
+          <item key="data">CH</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x37beb48">
+          <item key="data">Swiss Government PKI</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x37bee78">
+          <item key="data">Servers</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x56f3148">
+          <item key="data">SSL</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x56f3418">
+          <item key="data">www.ch.ch</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=CH/O=Swiss Government PKI/OU=Servers/OU=SSL/CN=www.ch.ch</item>
+      <item key="print_rfc2253">CN=www.ch.ch,OU=SSL,OU=Servers,O=Swiss Government PKI,C=CH</item>
+      <item key="print_rfc2253_utf8">CN=www.ch.ch,OU=SSL,OU=Servers,O=Swiss Government PKI,C=CH</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x48c3a90">
+    <item key="flash_content" defined="false"></item>
+    <item key="srv_type" defined="false"></item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">A</item>
+  <item key="HOSTNAME">www.ch.ch</item>
+  <item key="HOSTTYPE">e-gov</item>
+  <item key="ID">38</item>
+  <item key="IP">178.209.53.76</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">86.25</item>
+  <item key="SSL">
+   <hashref memory_address="0x541f230">
+    <item key="cipherScore">82.5</item>
+    <item key="protocol">
+     <hashref memory_address="0x56f2da0">
+      <item key="SSLv2">
+       <hashref memory_address="0x37c3a60">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x5442b90">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x56f35f8">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x2bd9648">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">AES128-SHA</item>
+          <item key="2">AES256-SHA</item>
+          <item key="3">DHE-RSA-AES128-SHA</item>
+          <item key="4">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">80</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x56f2d10">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x489d680">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">AES128-SHA</item>
+          <item key="2">AES256-SHA</item>
+          <item key="3">DHE-RSA-AES128-SHA</item>
+          <item key="4">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">90</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x37beec0">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x37a1488">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">AES128-SHA</item>
+          <item key="2">AES256-SHA</item>
+          <item key="3">DHE-RSA-AES128-SHA</item>
+          <item key="4">DHE-RSA-AES256-SHA</item>
+          <item key="5">ECDHE-RSA-AES128-GCM-SHA256</item>
+          <item key="6">ECDHE-RSA-AES256-GCM-SHA384</item>
+          <item key="7">DHE-RSA-AES128-GCM-SHA256</item>
+          <item key="8">ECDHE-RSA-AES128-SHA256</item>
+          <item key="9">ECDHE-RSA-AES128-SHA</item>
+          <item key="10">ECDHE-RSA-AES256-SHA384</item>
+          <item key="11">ECDHE-RSA-AES256-SHA</item>
+          <item key="12">DHE-RSA-AES128-SHA256</item>
+          <item key="13">DHE-RSA-AES256-SHA256</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">75</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">100</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">95</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

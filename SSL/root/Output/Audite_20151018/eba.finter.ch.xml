@@ -1,0 +1,444 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x42f6e50">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x37c3778">
+    <item key="certificate_type">305</item>
+    <item key="crl">ldap://directory.swisssign.net/CN=E7F1E7FD2E53AD11E5811A57A4738F127D98C8AE%2CO=SwissSign%2CC=CH?certificateRevocationList?base?objectClass=cRLDistributionPoint</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x56f2d40">
+      <item key="pubkey">dd23d1f4637b65c37e9d499597c7f12c8267b058
+</item>
+      <item key="x509">b7d6742a41f6649435696244d2a3fc52d0cf5209</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x39d43f8">
+      <item key="not_after">Mar 13 10:17:28 2018 GMT</item>
+      <item key="not_before">Mar 13 10:17:28 2015 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x3790b70">
+      <item key="count">8</item>
+      <item key="entries">
+       <hashref memory_address="0x42db500">
+        <item key="0">
+         <hashref memory_address="0x5424ed0">
+          <item key="critical">0</item>
+          <item key="data">email:info@finter.ch, DNS:*.finter.ch, DNS:finter.ch</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x541f0f8">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x3790948">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x5ac7b60">
+          <item key="critical">0</item>
+          <item key="data">DD:23:D1:F4:63:7B:65:C3:7E:9D:49:95:97:C7:F1:2C:82:67:B0:58</item>
+          <item key="ln">X509v3 Subject Key Identifier</item>
+          <item key="nid">82</item>
+          <item key="oid">2.5.29.14</item>
+          <item key="sn">subjectKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x570db78">
+          <item key="critical">0</item>
+          <item key="data">keyid:E7:F1:E7:FD:2E:53:AD:11:E5:81:1A:57:A4:73:8F:12:7D:98:C8:AE
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x56f5ef8">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://crl.swisssign.net/E7F1E7FD2E53AD11E5811A57A4738F127D98C8AE
+
+Full Name:
+  URI:ldap://directory.swisssign.net/CN=E7F1E7FD2E53AD11E5811A57A4738F127D98C8AE%2CO=SwissSign%2CC=CH?certificateRevocationList?base?objectClass=cRLDistributionPoint
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x5c06d20">
+          <item key="critical">0</item>
+          <item key="data">Policy: 2.16.756.1.89.1.2.1.6
+  CPS: http://repository.swisssign.com/SwissSign-Gold-CP-CPS.pdf
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x37a1728">
+          <item key="critical">0</item>
+          <item key="data">CA Issuers - URI:http://swisssign.net/cgi-bin/authority/download/E7F1E7FD2E53AD11E5811A57A4738F127D98C8AE
+OCSP - URI:http://gold-server-g2.ocsp.swisssign.net/E7F1E7FD2E53AD11E5811A57A4738F127D98C8AE
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x48a0710">
+      <item key="1.3.6.1.5.5.7.3.2">nid</item>
+      <item key="129">130</item>
+      <item key="TLS Web Server Authentication">TLS Web Client Authentication</item>
+      <item key="clientAuth">ln</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x2bd8110">
+      <item key="md5">FA:9A:7C:99:84:E5:9F:66:70:C7:C6:5A:93:B2:23:EF</item>
+      <item key="sha1">B7:D6:74:2A:41:F6:64:94:35:69:62:44:D2:A3:FC:52:D0:CF:52:09</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x489d020">
+      <item key="issuer">
+       <hashref memory_address="0x489d1d0">
+        <item key="dec">2047814800</item>
+        <item key="hex">7A0F2C90</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x42db4a0">
+        <item key="dec">313773578</item>
+        <item key="hex">12B3CE0A</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x37d60a8">
+        <item key="dec">132828350</item>
+        <item key="hex">7EACCBE</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x490a4b8">
+      <item key="count">3</item>
+      <item key="entries">
+       <hashref memory_address="0x48c46f0">
+        <item key="0">
+         <hashref memory_address="0x490a710">
+          <item key="data">CH</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x3790bb8">
+          <item key="data">SwissSign AG</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x5ac7f20">
+          <item key="data">SwissSign Server Gold CA 2014 - G22</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=CH/O=SwissSign AG/CN=SwissSign Server Gold CA 2014 - G22</item>
+      <item key="print_rfc2253">CN=SwissSign Server Gold CA 2014 - G22,O=SwissSign AG,C=CH</item>
+      <item key="print_rfc2253_utf8">CN=SwissSign Server Gold CA 2014 - G22,O=SwissSign AG,C=CH</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIGZDCCBUygAwIBAgIPDThDThPPo9pF0OAaxsx9MA0GCSqGSIb3DQEBCwUAMFIx
+CzAJBgNVBAYTAkNIMRUwEwYDVQQKEwxTd2lzc1NpZ24gQUcxLDAqBgNVBAMTI1N3
+aXNzU2lnbiBTZXJ2ZXIgR29sZCBDQSAyMDE0IC0gRzIyMB4XDTE1MDMxMzEwMTcy
+OFoXDTE4MDMxMzEwMTcyOFowgaUxCzAJBgNVBAYTAkNIMQ8wDQYDVQQIEwZadXJp
+Y2gxDzANBgNVBAcTBlp1cmljaDEfMB0GA1UEChMWRmludGVyIEJhbmsgWnVyaWNo
+IEx0ZDEeMBwGA1UECxMVQ2VydGlmaWNhdGUgQXV0aG9yaXR5MRQwEgYDVQQDFAsq
+LmZpbnRlci5jaDEdMBsGCSqGSIb3DQEJARYOaW5mb0BmaW50ZXIuY2gwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC2Ob9hC4K4QbnYDLq+lFfGGx4c4D2Q
+bOWPV2emcPFXmcHi0F5tOtqsb5/hQx8K45YKKdfYUTXCXcQewqdOF3tVhcOm9ZT8
+gMwjqh9Mfg7U6U+a7cfcZYqTaLd5qUsCwd6iQrDHI0tKkQe9t7oP5yman5xhCfIM
+JvVIfr2qowGVV1HADI2p+gGrU3hlBb/sWtb6JhJL4k2o8vRFA7Bnhcu0NYl1SXvG
+xV8kdBqkt3yyTTKu9+193JHcnAoOYuwL9VqsQy/dOZ2hC2HCLTlHYruTupZYSIHs
+Xkc5gStBbSNopJMYuT0sVAFJdVQQXwHxlEBAsobyC0xYDpbY6Y85TtWvAgMBAAGj
+ggLhMIIC3TAxBgNVHREEKjAogQ5pbmZvQGZpbnRlci5jaIILKi5maW50ZXIuY2iC
+CWZpbnRlci5jaDAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEG
+CCsGAQUFBwMCMB0GA1UdDgQWBBTdI9H0Y3tlw36dSZWXx/EsgmewWDAfBgNVHSME
+GDAWgBTn8ef9LlOtEeWBGlekc48SfZjIrjCB/wYDVR0fBIH3MIH0MEegRaBDhkFo
+dHRwOi8vY3JsLnN3aXNzc2lnbi5uZXQvRTdGMUU3RkQyRTUzQUQxMUU1ODExQTU3
+QTQ3MzhGMTI3RDk4QzhBRTCBqKCBpaCBooaBn2xkYXA6Ly9kaXJlY3Rvcnkuc3dp
+c3NzaWduLm5ldC9DTj1FN0YxRTdGRDJFNTNBRDExRTU4MTFBNTdBNDczOEYxMjdE
+OThDOEFFJTJDTz1Td2lzc1NpZ24lMkNDPUNIP2NlcnRpZmljYXRlUmV2b2NhdGlv
+bkxpc3Q/YmFzZT9vYmplY3RDbGFzcz1jUkxEaXN0cmlidXRpb25Qb2ludDBfBgNV
+HSAEWDBWMFQGCWCFdAFZAQIBBjBHMEUGCCsGAQUFBwIBFjlodHRwOi8vcmVwb3Np
+dG9yeS5zd2lzc3NpZ24uY29tL1N3aXNzU2lnbi1Hb2xkLUNQLUNQUy5wZGYwgdUG
+CCsGAQUFBwEBBIHIMIHFMGQGCCsGAQUFBzAChlhodHRwOi8vc3dpc3NzaWduLm5l
+dC9jZ2ktYmluL2F1dGhvcml0eS9kb3dubG9hZC9FN0YxRTdGRDJFNTNBRDExRTU4
+MTFBNTdBNDczOEYxMjdEOThDOEFFMF0GCCsGAQUFBzABhlFodHRwOi8vZ29sZC1z
+ZXJ2ZXItZzIub2NzcC5zd2lzc3NpZ24ubmV0L0U3RjFFN0ZEMkU1M0FEMTFFNTgx
+MUE1N0E0NzM4RjEyN0Q5OEM4QUUwDQYJKoZIhvcNAQELBQADggEBAMxFizLTUlvZ
+n07NW49tCxBw/uJqsbtnGoMnkfY7jDNk+Bj0hq3XxFdNIY8TRDzysD7GOaCL9fnJ
+srIWIOSmsP4jnDcficonFU2PrgP1kdagKfZZ6ZZqXEvUSH9tmr3s+yNxWKodJwt0
+sZ6jpsDuf1pvB2ZsVGTwtRmhidet4foIvkbZysuGczRDOhGeRVu/NZgNpgP0+g+M
+P3ID13xgh8TrSY3rxuYRh6ztO+KBcDUUCoaUXqIXWx2dzIR59b46XVKSN1Lzq9kc
+ds+3JsD2VD/nQOasWvpGrB+wCYj3lDTk+TC/peFgxFvp1dNhP69ZSAuDkkJgBysx
+Esr8/ToLjgo=
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x37a25c0">
+      <item key="dec">68641006549426617472294546466851965</item>
+      <item key="hex">0D38434E13CFA3DA45D0E01AC6CC7D</item>
+      <item key="long">-1</item>
+      <item key="string">0d38434e13cfa3da45d0e01ac6cc7d</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha256WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x5093f90">
+      <item key="altnames">
+       <hashref memory_address="0x5c07128">
+        <item key="1">info@finter.ch</item>
+        <item key="2">finter.ch</item>
+       </hashref>
+      </item>
+      <item key="count">7</item>
+      <item key="entries">
+       <hashref memory_address="0x541ef60">
+        <item key="0">
+         <hashref memory_address="0x37a2740">
+          <item key="data">CH</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x5424bb8">
+          <item key="data">Zurich</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x570dbd8">
+          <item key="data">Zurich</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x37c39b8">
+          <item key="data">Finter Bank Zurich Ltd</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x5425458">
+          <item key="data">Certificate Authority</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x541f308">
+          <item key="data">*.finter.ch</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x5425680">
+          <item key="data">info@finter.ch</item>
+          <item key="ln">emailAddress</item>
+          <item key="nid">48</item>
+          <item key="oid">1.2.840.113549.1.9.1</item>
+          <item key="sn">emailAddress</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=CH/ST=Zurich/L=Zurich/O=Finter Bank Zurich Ltd/OU=Certificate Authority/CN=*.finter.ch/emailAddress=info@finter.ch</item>
+      <item key="print_rfc2253">emailAddress=info@finter.ch,CN=*.finter.ch,OU=Certificate Authority,O=Finter Bank Zurich Ltd,L=Zurich,ST=Zurich,C=CH</item>
+      <item key="print_rfc2253_utf8">emailAddress=info@finter.ch,CN=*.finter.ch,OU=Certificate Authority,O=Finter Bank Zurich Ltd,L=Zurich,ST=Zurich,C=CH</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x42f6898">
+    <item key="ext_content">
+     <arrayref memory_address="0x5441e60">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="hsts">No</item>
+    <item key="https_redirect">Yes</item>
+    <item key="score">-1</item>
+    <item key="srv_type">Apache</item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">A-</item>
+  <item key="HOSTNAME">eba.finter.ch</item>
+  <item key="HOSTTYPE">e-banking</item>
+  <item key="ID">138</item>
+  <item key="IP">195.65.11.233</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">86.25</item>
+  <item key="SSL">
+   <hashref memory_address="0x54417b8">
+    <item key="cipherScore">82.5</item>
+    <item key="protocol">
+     <hashref memory_address="0x5093a98">
+      <item key="SSLv2">
+       <hashref memory_address="0x5705c30">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x37c2e18">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x489ced0">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x489f810">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">80</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x29f0378">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x490a668">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">90</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x39d45f0">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x5094728">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+          <item key="6">ECDHE-RSA-AES128-GCM-SHA256</item>
+          <item key="7">ECDHE-RSA-AES256-GCM-SHA384</item>
+          <item key="8">DHE-RSA-AES128-GCM-SHA256</item>
+          <item key="9">ECDHE-RSA-AES128-SHA256</item>
+          <item key="10">ECDHE-RSA-AES128-SHA</item>
+          <item key="11">ECDHE-RSA-AES256-SHA384</item>
+          <item key="12">ECDHE-RSA-AES256-SHA</item>
+          <item key="13">DHE-RSA-AES128-SHA256</item>
+          <item key="14">DHE-RSA-AES256-SHA256</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">75</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">100</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">95</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

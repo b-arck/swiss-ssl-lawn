@@ -1,0 +1,74 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x37c3af0">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x48a0098">
+    <item key="pubkey_bits">10000</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x48a0560">
+    <item key="ext_content">
+     <arrayref memory_address="0x37c3a60">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="score">0</item>
+    <item key="srv_type" defined="false"></item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">Z</item>
+  <item key="HOSTNAME">www.leumi.ch</item>
+  <item key="HOSTTYPE">bank</item>
+  <item key="ID">23</item>
+  <item key="IP">212.29.245.35</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">0</item>
+  <item key="SSL">
+   <hashref memory_address="0x37c3670">
+    <item key="cipherScore">0</item>
+    <item key="protocol">
+     <hashref memory_address="0x37c3268">
+      <item key="SSLv2">
+       <hashref memory_address="0x37c3388">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x37c3478">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x489d2d8">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x48b9e20">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x489d638">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">0</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Non</item>
+ </hashref>
+</perldata>

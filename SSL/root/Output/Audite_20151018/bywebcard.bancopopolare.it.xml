@@ -1,0 +1,478 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x37a2c98">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x3790450">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://su.symcb.com/su.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x570e190">
+      <item key="pubkey">e85ceae9052a25ddb86227585d6a4e4aa688393a
+</item>
+      <item key="x509">f97eead25bcb12c9cc1d5e6b3919ca9cb1a347a7</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x2a0d4f0">
+      <item key="not_after">Feb 23 23:59:59 2016 GMT</item>
+      <item key="not_before">Feb 18 00:00:00 2015 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x3cafb48">
+      <item key="count">9</item>
+      <item key="entries">
+       <hashref memory_address="0x5441878">
+        <item key="0">
+         <hashref memory_address="0x48ba120">
+          <item key="critical">0</item>
+          <item key="data">DNS:bywebcard.bancopopolare.it</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x4909d38">
+          <item key="critical">0</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x29f0930">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x56f3868">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication, Netscape Server Gated Crypto</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x48b9970">
+          <item key="critical">0</item>
+          <item key="data">Policy: 2.16.840.1.113733.1.7.23.6
+  CPS: https://d.symcb.com/cps
+  User Notice:
+    Explicit Text: https://d.symcb.com/rpa
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x48b9d18">
+          <item key="critical">0</item>
+          <item key="data">keyid:46:4F:C1:E0:88:DA:7D:D3:78:9B:C8:6E:59:2F:B0:E4:F7:1D:90:E2
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x490a140">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://su.symcb.com/su.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x3790a80">
+          <item key="critical">0</item>
+          <item key="data">OCSP - URI:http://su.symcd.com
+CA Issuers - URI:http://su.symcb.com/su.crt
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x48a02d8">
+          <item key="critical">0</item>
+          <item key="data" defined="false"></item>
+          <item key="ln" defined="false"></item>
+          <item key="nid" defined="false"></item>
+          <item key="oid">1.3.6.1.4.1.11129.2.4.2</item>
+          <item key="sn" defined="false"></item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x570e568">
+      <item key="1.3.6.1.5.5.7.3.2">2.16.840.1.113730.4.1</item>
+      <item key="130">139</item>
+      <item key="TLS Web Client Authentication">Netscape Server Gated Crypto</item>
+      <item key="clientAuth">nsSGC</item>
+      <item key="ln">TLS Web Server Authentication</item>
+      <item key="nid">129</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x48b9a90">
+      <item key="md5">D6:F6:F2:34:46:D8:13:D4:CA:41:20:69:F1:FE:8C:6E</item>
+      <item key="sha1">F9:7E:EA:D2:5B:CB:12:C9:CC:1D:5E:6B:39:19:CA:9C:B1:A3:47:A7</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x37a1038">
+      <item key="issuer">
+       <hashref memory_address="0x37a2c68">
+        <item key="dec">3021182347</item>
+        <item key="hex">B413958B</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x37d2f68">
+        <item key="dec">1310932363</item>
+        <item key="hex">4E233D8B</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x3790780">
+        <item key="dec">335692959</item>
+        <item key="hex">1402449F</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x570f128">
+      <item key="count">4</item>
+      <item key="entries">
+       <hashref memory_address="0x2bd7ed0">
+        <item key="0">
+         <hashref memory_address="0x5441d88">
+          <item key="data">US</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x5442238">
+          <item key="data">Symantec Corporation</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x63769c0">
+          <item key="data">Symantec Trust Network</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x3790ab0">
+          <item key="data">Symantec Class 3 EV SSL SGC CA - G2</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=US/O=Symantec Corporation/OU=Symantec Trust Network/CN=Symantec Class 3 EV SSL SGC CA - G2</item>
+      <item key="print_rfc2253">CN=Symantec Class 3 EV SSL SGC CA - G2,OU=Symantec Trust Network,O=Symantec Corporation,C=US</item>
+      <item key="print_rfc2253_utf8">CN=Symantec Class 3 EV SSL SGC CA - G2,OU=Symantec Trust Network,O=Symantec Corporation,C=US</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIGqDCCBZCgAwIBAgIQeJXC5umSI34j29ERZq9PpDANBgkqhkiG9w0BAQUFADB7
+MQswCQYDVQQGEwJVUzEdMBsGA1UEChMUU3ltYW50ZWMgQ29ycG9yYXRpb24xHzAd
+BgNVBAsTFlN5bWFudGVjIFRydXN0IE5ldHdvcmsxLDAqBgNVBAMTI1N5bWFudGVj
+IENsYXNzIDMgRVYgU1NMIFNHQyBDQSAtIEcyMB4XDTE1MDIxODAwMDAwMFoXDTE2
+MDIyMzIzNTk1OVowggEXMRMwEQYLKwYBBAGCNzwCAQMTAklUMR0wGwYDVQQPExRQ
+cml2YXRlIE9yZ2FuaXphdGlvbjEUMBIGA1UEBRMLMDI5ODk3MTAyMzcxCzAJBgNV
+BAYTAklUMQ4wDAYDVQQRFAUzNzEzNTEPMA0GA1UECBMGVkVST05BMQ8wDQYDVQQH
+FAZWRVJPTkExFTATBgNVBAkUDFZJQSBNRVVDQ0kgNTEtMCsGA1UEChQkU09DSUVU
+QScgR0VTVElPTkUgU0VSVklaSSBCUCBTLkMuUC5BMSEwHwYDVQQLFBhESVJFWklP
+TkUgT1JHQU5JWlpBWklPTkUxIzAhBgNVBAMUGmJ5d2ViY2FyZC5iYW5jb3BvcG9s
+YXJlLml0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvV1+OC/mZNHG
+LmU0kUCpkLTPvWBvJQV5GhGfM/MFIH+zFqh1bR6Th7vhpEkjIkkDuPh6YkhJNik2
+aCEHjkpxgF+QneOnIUYJeepKXYkhe14SaZJyFy1tdzB1mOiAcbumT3KCI2PWazNL
+q+IKVD5jHV2iRm6dxgfUMg3TpIzdlL+diJYZq/Ci8GzyGJXPrsqFTXnSvPwKMeYe
+ga50fn0GvtXInLhe16opa/wAAJ/+KK6BeGTXfkQ2DSEo0RwYiJiRrV+9pRnKt/Kg
+VozGLHgE+J7505FhhrwTLSBhTaGMxGhzXYVVtlTEn/S8JD/xs0RDUC2QJLeQrFSA
+bHwC+JrrSQIDAQABo4ICiDCCAoQwJQYDVR0RBB4wHIIaYnl3ZWJjYXJkLmJhbmNv
+cG9wb2xhcmUuaXQwCQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCBaAwKAYDVR0lBCEw
+HwYIKwYBBQUHAwEGCCsGAQUFBwMCBglghkgBhvhCBAEwZgYDVR0gBF8wXTBbBgtg
+hkgBhvhFAQcXBjBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2Nw
+czAlBggrBgEFBQcCAjAZGhdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSME
+GDAWgBRGT8HgiNp903ibyG5ZL7Dk9x2Q4jArBgNVHR8EJDAiMCCgHqAchhpodHRw
+Oi8vc3Uuc3ltY2IuY29tL3N1LmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUH
+MAGGE2h0dHA6Ly9zdS5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9zdS5z
+eW1jYi5jb20vc3UuY3J0MIIBBQYKKwYBBAHWeQIEAgSB9gSB8wDxAHcApLkJkLQY
+WBSHuxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFLnQIP3AAABAMASDBGAiEAysC3
+EaVskIkDmzfdp4stC8z3/SIIomNlS7vfF19DFSoCIQCz2D2UpjuMp3s7F+gt1hGU
+8H/gFgqzh6OdAJdE2qEC1wB2AFYUBpov18Ls0/XhvUSyPsdGdrm8mRFcwO+UmFXW
+idDdAAABS50CEioAAAQDAEcwRQIgabalo1JzQXclNukDso2OX/8P2xPft23Bhf5b
+wVA91GUCIQDqNBTQifK9ejIzwTpq+LSGPfOWuwqBSlrKuS1HzFkQpzANBgkqhkiG
+9w0BAQUFAAOCAQEAH9QSO/040Eje3YAC0QBkufEBBtknOPLGU5FD1/c0mg5OmyT4
+DovtobsC2Vg+MXwpNk40+Q9GNI+md5GxoeRfNl2BRkpZyFtHq/zDYWby29bSjpyo
+O+zqCcJNk31VgqtRisfArSOelIJcTJHhtwePzKQHGi86gE2E7srwBCZH2iOoJPCu
+zJL8/lFvoyvB0tC7OAGLQqgHMPb6bSKuV2ahiOs0fZBhhHdQTvF8tKclLuxdnS3t
+shiocNF9VsPv8au8SWUr2ap+h6wmTd7ZhTRF37Z0Fgl3foRqkfKUsWJxjUK9RXf5
+3VbX81HgWR67shwU2/4WMrfw1PoO9n+a73Uofw==
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x4b17100">
+      <item key="dec">160284964808338758837705462749814804388</item>
+      <item key="hex">7895C2E6E992237E23DBD11166AF4FA4</item>
+      <item key="long">-1</item>
+      <item key="string">7895c2e6e992237e23dbd11166af4fa4</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha1WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x570db48">
+      <item key="altnames">
+       <hashref memory_address="0x2a18208">
+        <item key="2">bywebcard.bancopopolare.it</item>
+       </hashref>
+      </item>
+      <item key="count">11</item>
+      <item key="entries">
+       <hashref memory_address="0x570f398">
+        <item key="0">
+         <hashref memory_address="0x489fd80">
+          <item key="data">IT</item>
+          <item key="ln" defined="false"></item>
+          <item key="nid" defined="false"></item>
+          <item key="oid">1.3.6.1.4.1.311.60.2.1.3</item>
+          <item key="sn" defined="false"></item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x37c2d58">
+          <item key="data">Private Organization</item>
+          <item key="ln">businessCategory</item>
+          <item key="nid">860</item>
+          <item key="oid">2.5.4.15</item>
+          <item key="sn">businessCategory</item>
+         </hashref>
+        </item>
+        <item key="10">
+         <hashref memory_address="0x39d4128">
+          <item key="data">bywebcard.bancopopolare.it</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x39d4cc8">
+          <item key="data">02989710237</item>
+          <item key="ln">serialNumber</item>
+          <item key="nid">105</item>
+          <item key="oid">2.5.4.5</item>
+          <item key="sn">serialNumber</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x37a2dd0">
+          <item key="data">IT</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x48c3d90">
+          <item key="data">37135</item>
+          <item key="ln">postalCode</item>
+          <item key="nid">661</item>
+          <item key="oid">2.5.4.17</item>
+          <item key="sn">postalCode</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x489d488">
+          <item key="data">VERONA</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x5443208">
+          <item key="data">VERONA</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x6376d68">
+          <item key="data">VIA MEUCCI 5</item>
+          <item key="ln">streetAddress</item>
+          <item key="nid">660</item>
+          <item key="oid">2.5.4.9</item>
+          <item key="sn">street</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x48b9658">
+          <item key="data">SOCIETA&apos; GESTIONE SERVIZI BP S.C.P.A</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="9">
+         <hashref memory_address="0x54434a8">
+          <item key="data">DIREZIONE ORGANIZZAZIONE</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/1.3.6.1.4.1.311.60.2.1.3=IT/businessCategory=Private Organization/serialNumber=02989710237/C=IT/postalCode=37135/ST=VERONA/L=VERONA/street=VIA MEUCCI 5/O=SOCIETA&apos; GESTIONE SERVIZI BP S.C.P.A/OU=DIREZIONE ORGANIZZAZIONE/CN=bywebcard.bancopopolare.it</item>
+      <item key="print_rfc2253">CN=bywebcard.bancopopolare.it,OU=DIREZIONE ORGANIZZAZIONE,O=SOCIETA&apos; GESTIONE SERVIZI BP S.C.P.A,street=VIA MEUCCI 5,L=VERONA,ST=VERONA,postalCode=37135,C=IT,serialNumber=02989710237,businessCategory=Private Organization,1.3.6.1.4.1.311.60.2.1.3=#13024954</item>
+      <item key="print_rfc2253_utf8">CN=bywebcard.bancopopolare.it,OU=DIREZIONE ORGANIZZAZIONE,O=SOCIETA&apos; GESTIONE SERVIZI BP S.C.P.A,street=VIA MEUCCI 5,L=VERONA,ST=VERONA,postalCode=37135,C=IT,serialNumber=02989710237,businessCategory=Private Organization,1.3.6.1.4.1.311.60.2.1.3=#13024954</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x56f37a8">
+    <item key="flash_content" defined="false"></item>
+    <item key="srv_type" defined="false"></item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">E</item>
+  <item key="HOSTNAME">bywebcard.bancopopolare.it</item>
+  <item key="HOSTTYPE">e-banking</item>
+  <item key="ID">62</item>
+  <item key="IP">62.97.1.41</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">34.5</item>
+  <item key="SSL">
+   <hashref memory_address="0x541e558">
+    <item key="cipherScore">30</item>
+    <item key="protocol">
+     <hashref memory_address="0x5705bd0">
+      <item key="SSLv2">
+       <hashref memory_address="0x56f5cd0">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x489cde0">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x570fc08">
+          <item key="0">RC4-MD5</item>
+          <item key="1">RC4-SHA</item>
+          <item key="2">DES-CBC3-SHA</item>
+          <item key="3">EDH-RSA-DES-CBC3-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">10</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x5ac7980">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x4b17160">
+          <item key="0">RC4-MD5</item>
+          <item key="1">RC4-SHA</item>
+          <item key="2">DES-CBC3-SHA</item>
+          <item key="3">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="4">AES128-SHA</item>
+          <item key="5">AES256-SHA</item>
+          <item key="6">DHE-RSA-AES128-SHA</item>
+          <item key="7">DHE-RSA-AES256-SHA</item>
+          <item key="8">CAMELLIA128-SHA</item>
+          <item key="9">CAMELLIA256-SHA</item>
+          <item key="10">DHE-RSA-CAMELLIA128-SHA</item>
+          <item key="11">DHE-RSA-CAMELLIA256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">50</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x56f60c0">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x570e880">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">45</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

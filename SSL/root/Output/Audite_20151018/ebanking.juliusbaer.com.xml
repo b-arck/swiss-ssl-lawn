@@ -1,0 +1,495 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x39d4dd0">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x56f3a48">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://sb.symcb.com/sb.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x56f62e8">
+      <item key="pubkey">0e02a4a39f8325c8cd2ac7205ef14c0dcebbbb06
+</item>
+      <item key="x509">ad2a6b65b2f0b1e1219b4eb1c4da4ba295f05239</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x54434c0">
+      <item key="not_after">Nov 26 23:59:59 2015 GMT</item>
+      <item key="not_before">Apr 12 00:00:00 2014 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x2a13118">
+      <item key="count">8</item>
+      <item key="entries">
+       <hashref memory_address="0x37d5c88">
+        <item key="0">
+         <hashref memory_address="0x5ac83a0">
+          <item key="critical">0</item>
+          <item key="data">DNS:ebanking.juliusbaer.com</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x56f2fe0">
+          <item key="critical">0</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x5c068b8">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x5441740">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication, Netscape Server Gated Crypto</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x39d4440">
+          <item key="critical">0</item>
+          <item key="data">Policy: 2.16.840.1.113733.1.7.23.6
+  CPS: https://d.symcb.com/cps
+  User Notice:
+    Explicit Text: https://d.symcb.com/rpa
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x3cafd40">
+          <item key="critical">0</item>
+          <item key="data">keyid:4E:43:C8:1D:76:EF:37:53:7A:4F:F2:58:6F:94:F3:38:E2:D5:BD:DF
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x2bd7fa8">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://sb.symcb.com/sb.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x37be9b0">
+          <item key="critical">0</item>
+          <item key="data">OCSP - URI:http://sb.symcd.com
+CA Issuers - URI:http://sb.symcb.com/sb.crt
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x37c3b38">
+      <item key="1.3.6.1.5.5.7.3.2">2.16.840.1.113730.4.1</item>
+      <item key="130">139</item>
+      <item key="TLS Web Client Authentication">Netscape Server Gated Crypto</item>
+      <item key="clientAuth">nsSGC</item>
+      <item key="ln">TLS Web Server Authentication</item>
+      <item key="nid">129</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x489d110">
+      <item key="md5">16:55:45:90:3C:84:FA:DD:4D:07:C9:1A:73:4A:7E:D8</item>
+      <item key="sha1">AD:2A:6B:65:B2:F0:B1:E1:21:9B:4E:B1:C4:DA:4B:A2:95:F0:52:39</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x39d4950">
+      <item key="issuer">
+       <hashref memory_address="0x3790678">
+        <item key="dec">2886909329</item>
+        <item key="hex">AC12BD91</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x54433b8">
+        <item key="dec">2100808050</item>
+        <item key="hex">7D37C972</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x37c3820">
+        <item key="dec">518247012</item>
+        <item key="hex">1EE3D264</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x5424978">
+      <item key="count">5</item>
+      <item key="entries">
+       <hashref memory_address="0x37d5dd8">
+        <item key="0">
+         <hashref memory_address="0x489fe58">
+          <item key="data">US</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x3790948">
+          <item key="data">VeriSign, Inc.</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x37d5568">
+          <item key="data">VeriSign Trust Network</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x48b9b08">
+          <item key="data">Terms of use at https://www.verisign.com/rpa (c)06</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x5441f68">
+          <item key="data">VeriSign Class 3 Extended Validation SSL SGC CA</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=US/O=VeriSign, Inc./OU=VeriSign Trust Network/OU=Terms of use at https://www.verisign.com/rpa (c)06/CN=VeriSign Class 3 Extended Validation SSL SGC CA</item>
+      <item key="print_rfc2253">CN=VeriSign Class 3 Extended Validation SSL SGC CA,OU=Terms of use at https://www.verisign.com/rpa (c)06,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US</item>
+      <item key="print_rfc2253_utf8">CN=VeriSign Class 3 Extended Validation SSL SGC CA,OU=Terms of use at https://www.verisign.com/rpa (c)06,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIF3zCCBMegAwIBAgIQV1Ezx8uTVJfciAXGlVCoFjANBgkqhkiG9w0BAQUFADCB
+vjELMAkGA1UEBhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMR8wHQYDVQQL
+ExZWZXJpU2lnbiBUcnVzdCBOZXR3b3JrMTswOQYDVQQLEzJUZXJtcyBvZiB1c2Ug
+YXQgaHR0cHM6Ly93d3cudmVyaXNpZ24uY29tL3JwYSAoYykwNjE4MDYGA1UEAxMv
+VmVyaVNpZ24gQ2xhc3MgMyBFeHRlbmRlZCBWYWxpZGF0aW9uIFNTTCBTR0MgQ0Ew
+HhcNMTQwNDEyMDAwMDAwWhcNMTUxMTI2MjM1OTU5WjCCARYxEzARBgsrBgEEAYI3
+PAIBAxMCQ0gxHTAbBgNVBA8TFFByaXZhdGUgT3JnYW5pemF0aW9uMRswGQYDVQQF
+ExJDSC0wMjAuMy4wMzMuOTcwLTcxCzAJBgNVBAYTAkNIMQ0wCwYDVQQRFAQ4MDAx
+MRAwDgYDVQQIEwdadWVyaWNoMRAwDgYDVQQHFAdadWVyaWNoMRowGAYDVQQJFBFC
+YWhuaG9mc3RyYXNzZSAzNjEfMB0GA1UEChQWSnVsaXVzIEJhZXIgR3JvdXAgTHRk
+LjEkMCIGA1UECxQbQmFuayBKdWxpdXMgQmFlciAmIENvLiBMdGQuMSAwHgYDVQQD
+FBdlYmFua2luZy5qdWxpdXNiYWVyLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBAMQpMXYrqe/s5yoNnn6me86uXiABjNdtkmrKuA22Q9Z1lRZUspRL
+ks3Ld9immEwruaztcLRoDZ78+mAZ381EQORDST0tZfztpStWV1bxV743vlUnrQxm
+3hRQezWeX+4zciFCxgp3vb5ygMBobob9lLvJx22gQnUueRLutN6xigWiMMzDanpb
+gbMGlGe3mQ8U8NL/6F6Fqd56RNmvKYoCgDVmvZunv6Kd0OPucOhHyeyqS8mUfaW1
+P19BdWupQPP1TCX0iSRiUyaBSHlv/JSysAJwUD++w+6LZ9mW1Blbf/LSrOO3oPSR
+hejiaYNt6+l2RCkyb4HKj8Kgm3ggzG26UOUCAwEAAaOCAXwwggF4MCIGA1UdEQQb
+MBmCF2ViYW5raW5nLmp1bGl1c2JhZXIuY29tMAkGA1UdEwQCMAAwDgYDVR0PAQH/
+BAQDAgWgMCgGA1UdJQQhMB8GCCsGAQUFBwMBBggrBgEFBQcDAgYJYIZIAYb4QgQB
+MGYGA1UdIARfMF0wWwYLYIZIAYb4RQEHFwYwTDAjBggrBgEFBQcCARYXaHR0cHM6
+Ly9kLnN5bWNiLmNvbS9jcHMwJQYIKwYBBQUHAgIwGRoXaHR0cHM6Ly9kLnN5bWNi
+LmNvbS9ycGEwHwYDVR0jBBgwFoAUTkPIHXbvN1N6T/JYb5TzOOLVvd8wKwYDVR0f
+BCQwIjAgoB6gHIYaaHR0cDovL3NiLnN5bWNiLmNvbS9zYi5jcmwwVwYIKwYBBQUH
+AQEESzBJMB8GCCsGAQUFBzABhhNodHRwOi8vc2Iuc3ltY2QuY29tMCYGCCsGAQUF
+BzAChhpodHRwOi8vc2Iuc3ltY2IuY29tL3NiLmNydDANBgkqhkiG9w0BAQUFAAOC
+AQEAVyP2W7U54UFbnpvUNYNaQOHtdcYldVYnn5bcpQcSSc0P9/Vy9pKoNX2yR5y0
+YNbxq3YW+/txvevRzC9K5BmlnPG1yGRp2IKLDj5aclUUci9jffZvU1GyyBZHnkVi
+EU3+K5C/h6TSGLSFdroz/HXmt7GwNRIJ0CmZSP1PS4e0Pnv0bhK56Z5iwp4+qBHA
+7pxyCWWSDaUjXD0KyhNnyXQIVL6UzYGXYRuhhZ5IJ/LakryAHpjrYhsoCe2JPq9I
+XW0FIGUzXS0h4R42vWU5SsYiDhNReCJIusBlh7SL5UfvaJhY+O52tY25flxSJseX
+1e8HoWce0d7FBahI3sglnXkiZw==
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x5443820">
+      <item key="dec">116064461911126697123687260127914666006</item>
+      <item key="hex">575133C7CB935497DC8805C69550A816</item>
+      <item key="long">-1</item>
+      <item key="string">575133c7cb935497dc8805c69550a816</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha1WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x37d5d48">
+      <item key="altnames">
+       <hashref memory_address="0x48b9670">
+        <item key="2">ebanking.juliusbaer.com</item>
+       </hashref>
+      </item>
+      <item key="count">11</item>
+      <item key="entries">
+       <hashref memory_address="0x541ebd0">
+        <item key="0">
+         <hashref memory_address="0x2a17dd0">
+          <item key="data">CH</item>
+          <item key="ln" defined="false"></item>
+          <item key="nid" defined="false"></item>
+          <item key="oid">1.3.6.1.4.1.311.60.2.1.3</item>
+          <item key="sn" defined="false"></item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x570f1e8">
+          <item key="data">Private Organization</item>
+          <item key="ln">businessCategory</item>
+          <item key="nid">860</item>
+          <item key="oid">2.5.4.15</item>
+          <item key="sn">businessCategory</item>
+         </hashref>
+        </item>
+        <item key="10">
+         <hashref memory_address="0x37a1e48">
+          <item key="data">ebanking.juliusbaer.com</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x5c06c78">
+          <item key="data">CH-020.3.033.970-7</item>
+          <item key="ln">serialNumber</item>
+          <item key="nid">105</item>
+          <item key="oid">2.5.4.5</item>
+          <item key="sn">serialNumber</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x54439e8">
+          <item key="data">CH</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x56f5d00">
+          <item key="data">8001</item>
+          <item key="ln">postalCode</item>
+          <item key="nid">661</item>
+          <item key="oid">2.5.4.17</item>
+          <item key="sn">postalCode</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x2a07dd8">
+          <item key="data">Zuerich</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x489fab0">
+          <item key="data">Zuerich</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x56f2ec0">
+          <item key="data">Bahnhofstrasse 36</item>
+          <item key="ln">streetAddress</item>
+          <item key="nid">660</item>
+          <item key="oid">2.5.4.9</item>
+          <item key="sn">street</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x37bee48">
+          <item key="data">Julius Baer Group Ltd.</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="9">
+         <hashref memory_address="0x54418a8">
+          <item key="data">Bank Julius Baer &amp; Co. Ltd.</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/1.3.6.1.4.1.311.60.2.1.3=CH/businessCategory=Private Organization/serialNumber=CH-020.3.033.970-7/C=CH/postalCode=8001/ST=Zuerich/L=Zuerich/street=Bahnhofstrasse 36/O=Julius Baer Group Ltd./OU=Bank Julius Baer &amp; Co. Ltd./CN=ebanking.juliusbaer.com</item>
+      <item key="print_rfc2253">CN=ebanking.juliusbaer.com,OU=Bank Julius Baer &amp; Co. Ltd.,O=Julius Baer Group Ltd.,street=Bahnhofstrasse 36,L=Zuerich,ST=Zuerich,postalCode=8001,C=CH,serialNumber=CH-020.3.033.970-7,businessCategory=Private Organization,1.3.6.1.4.1.311.60.2.1.3=#13024348</item>
+      <item key="print_rfc2253_utf8">CN=ebanking.juliusbaer.com,OU=Bank Julius Baer &amp; Co. Ltd.,O=Julius Baer Group Ltd.,street=Bahnhofstrasse 36,L=Zuerich,ST=Zuerich,postalCode=8001,C=CH,serialNumber=CH-020.3.033.970-7,businessCategory=Private Organization,1.3.6.1.4.1.311.60.2.1.3=#13024348</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x37a1aa0">
+    <item key="ext_content">
+     <arrayref memory_address="0x5c06ac8">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="hsts">No</item>
+    <item key="https_redirect">No</item>
+    <item key="score">-2</item>
+    <item key="srv_type">Apache</item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">A-</item>
+  <item key="HOSTNAME">ebanking.juliusbaer.com</item>
+  <item key="HOSTTYPE">e-banking</item>
+  <item key="ID">73</item>
+  <item key="IP">159.103.207.8</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">86.25</item>
+  <item key="SSL">
+   <hashref memory_address="0x5c07080">
+    <item key="cipherScore">82.5</item>
+    <item key="protocol">
+     <hashref memory_address="0x5c07110">
+      <item key="SSLv2">
+       <hashref memory_address="0x5c07188">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x5c071d0">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x5c07260">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x5c07320">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">80</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x5c072f0">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x5c07488">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">90</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x5c07458">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x5c075f0">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+          <item key="6">ECDHE-RSA-AES128-GCM-SHA256</item>
+          <item key="7">ECDHE-RSA-AES256-GCM-SHA384</item>
+          <item key="8">DHE-RSA-AES128-GCM-SHA256</item>
+          <item key="9">ECDHE-RSA-AES128-SHA256</item>
+          <item key="10">ECDHE-RSA-AES128-SHA</item>
+          <item key="11">ECDHE-RSA-AES256-SHA384</item>
+          <item key="12">ECDHE-RSA-AES256-SHA</item>
+          <item key="13">DHE-RSA-AES128-SHA256</item>
+          <item key="14">DHE-RSA-AES256-SHA256</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">75</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">100</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">95</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

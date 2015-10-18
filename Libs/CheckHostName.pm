@@ -99,7 +99,6 @@ sub check_hostname {
 	if ( my $client = IO::Socket::SSL->new(%server_options) ) {
 		if ( !$client->verify_hostname( $host, 'http' ) ) {
 			$logger->info(" - Hostname verification failed");
-			
 			return 0;
 		} else {
 			if($client->peer_certificate('commonName')){
@@ -111,9 +110,39 @@ sub check_hostname {
 			return 1;
 		}
 	} else {
-		$logger->fatal(" - Connection refused to host $host on port $port");
 		
-		return 0;
+		if( check_SNI($host) eq 0){
+			return 1;
+		}else{
+			$logger->fatal(" - Connection refused to host $host on port $port");
+			return 0;
+		}
 	}
+}
+
+sub check_SNI{
+	my ( $host ) = @_;
+	Net::SSLeay::initialize();
+	my $sock = IO::Socket::INET->new(PeerAddr=>"$host:443") or die;
+
+	my $ctx = Net::SSLeay::CTX_tlsv1_new() or die;
+	my $ssl = Net::SSLeay::new($ctx) or die;
+	Net::SSLeay::set_tlsext_host_name($ssl, $host);
+	Net::SSLeay::set_fd($ssl, fileno($sock)) or die;
+	Net::SSLeay::CTX_set_verify($ctx, 0x02);
+	Net::SSLeay::CTX_load_verify_locations($ctx, '/etc/ssl/certs/ca-certificates.crt', '/etc/ssl/certs/');
+	my $res = Net::SSLeay::connect($ssl);
+
+	my ($resp, $server_cert, $verify, $key_size, $cipher_bits);
+	my ($issuer, $subject, $not_before, $not_after, @altnames, $key_alg, $sign_alg, $match_cn, $match_root);
+	if ($res) {
+		$res = Net::SSLeay::do_handshake($ssl);
+		if ($res) {
+			$verify = Net::SSLeay::get_verify_result($ssl);
+		}
+	}
+	Net::SSLeay::clear($ssl);
+	Net::SSLeay::free($ssl);	
+	return $verify;
 }
 1;

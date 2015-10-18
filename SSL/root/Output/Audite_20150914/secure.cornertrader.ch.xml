@@ -1,0 +1,446 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x3e4bcd0">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x5a45588">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://tf.symcb.com/tf.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x3e4bc58">
+      <item key="pubkey">4730f62d549f8ff61bc3435fffc48061ce71c0b7
+</item>
+      <item key="x509">ceb3e88fbf8e8e6723ff5812d436bfe3f8e187e1</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x5a61400">
+      <item key="not_after">Feb 19 23:59:59 2017 GMT</item>
+      <item key="not_before">Feb 20 00:00:00 2015 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x3e4bd00">
+      <item key="count">9</item>
+      <item key="entries">
+       <hashref memory_address="0x5a3e560">
+        <item key="0">
+         <hashref memory_address="0x5a3e548">
+          <item key="critical">0</item>
+          <item key="data">DNS:secure.cornertrader.ch</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x5d07478">
+          <item key="critical">0</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x5d07a78">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x5d07418">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://tf.symcb.com/tf.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x5d07ce8">
+          <item key="critical">0</item>
+          <item key="data">Policy: 2.16.840.1.113733.1.7.48.1
+  CPS: https://www.thawte.com/cps
+  User Notice:
+    Explicit Text: https://www.thawte.com/repository
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x5d07cd0">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x5d07df0">
+          <item key="critical">0</item>
+          <item key="data">keyid:3B:24:C8:31:A0:B7:5A:D0:6A:B8:D2:CA:07:74:CC:1E:24:D4:C4:DC
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x5d07e98">
+          <item key="critical">0</item>
+          <item key="data">OCSP - URI:http://tf.symcd.com
+CA Issuers - URI:http://tf.symcb.com/tf.crt
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x5d07e68">
+          <item key="critical">0</item>
+          <item key="data" defined="false"></item>
+          <item key="ln" defined="false"></item>
+          <item key="nid" defined="false"></item>
+          <item key="oid">1.3.6.1.4.1.11129.2.4.2</item>
+          <item key="sn" defined="false"></item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x5d077f0">
+      <item key="1.3.6.1.5.5.7.3.2">nid</item>
+      <item key="129">130</item>
+      <item key="TLS Web Server Authentication">TLS Web Client Authentication</item>
+      <item key="clientAuth">ln</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x5d07d48">
+      <item key="md5">1C:BB:64:AA:84:B9:4E:29:80:66:89:36:41:8E:8F:35</item>
+      <item key="sha1">CE:B3:E8:8F:BF:8E:8E:67:23:FF:58:12:D4:36:BF:E3:F8:E1:87:E1</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x5d08018">
+      <item key="issuer">
+       <hashref memory_address="0x5d24470">
+        <item key="dec">359027421</item>
+        <item key="hex">156652DD</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x5d24518">
+        <item key="dec">3286098126</item>
+        <item key="hex">C3DDE0CE</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x5d08240">
+        <item key="dec">842081277</item>
+        <item key="hex">323123FD</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x5d08120">
+      <item key="count">3</item>
+      <item key="entries">
+       <hashref memory_address="0x5ce1e88">
+        <item key="0">
+         <hashref memory_address="0x5ce2080">
+          <item key="data">US</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x5ce1f48">
+          <item key="data">thawte, Inc.</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x5ce1ee8">
+          <item key="data">thawte Extended Validation SHA256 SSL CA</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=US/O=thawte, Inc./CN=thawte Extended Validation SHA256 SSL CA</item>
+      <item key="print_rfc2253">CN=thawte Extended Validation SHA256 SSL CA,O=thawte\, Inc.,C=US</item>
+      <item key="print_rfc2253_utf8">CN=thawte Extended Validation SHA256 SSL CA,O=thawte\, Inc.,C=US</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIGmjCCBYKgAwIBAgIQTCJk8lY+JQitWBPP7hvxKTANBgkqhkiG9w0BAQsFADBX
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMdGhhd3RlLCBJbmMuMTEwLwYDVQQDEyh0
+aGF3dGUgRXh0ZW5kZWQgVmFsaWRhdGlvbiBTSEEyNTYgU1NMIENBMB4XDTE1MDIy
+MDAwMDAwMFoXDTE3MDIxOTIzNTk1OVowgbgxEzARBgsrBgEEAYI3PAIBAxMCQ0gx
+HTAbBgNVBA8TFFByaXZhdGUgT3JnYW5pemF0aW9uMRgwFgYDVQQKDA9Db3JuZXIg
+QmFuY2EgU0ExGDAWBgNVBAUTD0NIRS0xMDUuOTYyLjQwOTELMAkGA1UEBhMCQ0gx
+DzANBgNVBAgMBlRpY2lubzEPMA0GA1UEBwwGTHVnYW5vMR8wHQYDVQQDDBZzZWN1
+cmUuY29ybmVydHJhZGVyLmNoMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+AQEA27Ei07uSlFq7aEpKsSpUOmFCUzYLibDOvTFLwiNLWz8iTgKuBi5TfhU6CFLA
+lSiPqgKiiyJZCAAMAp7Qi4GEy3yQfaFJ9yOeVdydLdmUtlkQG4DVYj3fzJQ5qzle
+3WoU087OG4aLheeTkIITqU6epUySYJgJxfL2AZAb85cz10H0poh0B8XbyfSFjzon
+IixYGoCNzUgMgpwtZs0wcgNPgsvc9UM5HQ6msm/h+h0JVwuueFC9fDhcgnsNOFQM
+9i8oolGlwMaACI01j/sRK4smPvulluNW2b/k/hCTdVu+6QuLee8Bdodr0vN7Ukj2
+N3IyV/R3wFzIIxsHBQ08r8eOZQIDAQABo4IC/jCCAvowIQYDVR0RBBowGIIWc2Vj
+dXJlLmNvcm5lcnRyYWRlci5jaDAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAr
+BgNVHR8EJDAiMCCgHqAchhpodHRwOi8vdGYuc3ltY2IuY29tL3RmLmNybDBzBgNV
+HSAEbDBqMGgGC2CGSAGG+EUBBzABMFkwJgYIKwYBBQUHAgEWGmh0dHBzOi8vd3d3
+LnRoYXd0ZS5jb20vY3BzMC8GCCsGAQUFBwICMCMMIWh0dHBzOi8vd3d3LnRoYXd0
+ZS5jb20vcmVwb3NpdG9yeTAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIw
+HwYDVR0jBBgwFoAUOyTIMaC3WtBquNLKB3TMHiTUxNwwVwYIKwYBBQUHAQEESzBJ
+MB8GCCsGAQUFBzABhhNodHRwOi8vdGYuc3ltY2QuY29tMCYGCCsGAQUFBzAChhpo
+dHRwOi8vdGYuc3ltY2IuY29tL3RmLmNydDCCAX0GCisGAQQB1nkCBAIEggFtBIIB
+aQFnAHUApLkJkLQYWBSHuxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFLp5eV9gAA
+BAMARjBEAiAoXtcx3X2RSpguVblb7q37rzptboxdJG56GxOUU0OP9QIgJ8g2fDwk
+Ej1g7cwTRT1oOJvtyhOZo9K38q8viUX0YucAdgBWFAaaL9fC7NP14b1Esj7HRna5
+vJkRXMDvlJhV1onQ3QAAAUunl5fyAAAEAwBHMEUCIQDJ0vIr47OC6e3FNG8kn0YA
+z4DsnXxA/u9383IL0kbR7wIgIGzORbbiRfBesPImKMuQRhLqtDmP5NyRYrOHHs7J
+r1IAdgBo9pj4H2SCvjqM7rkoHUz8cVFdZ5PURNEKZ6y7T0/7xAAAAUunl5X2AAAE
+AwBHMEUCIB7xFa6nsd5fQlEZtpT8SDYPlSU0HMmtxE8t9LU8STRUAiEA3ujg9xLZ
+ng6oXhFL6owmEGm4hO9/II/6YASHIiEAWJ0wDQYJKoZIhvcNAQELBQADggEBADzX
+3IvaWIIn/l6tJaLkINxFOxpG7c65rukZLYG0kRyugANwgbvRU4CqAm+ubikO0f+x
+r+t6JaS9yeFAd/XNKeYKitctcXKfjuhX0jztfoO3hFoJ1f8daFm84wdEpy7iW3mf
+pvk3+WoCAxBEm7+Q88PXNsk20Io32OtW2iuh22BmDMB3olJGYjtSfVkU9tdMXcjh
+A/c6d+87qlU/RwdB0DjhCtBJWmeLzdGX/SwPdsGjopZlb108FQOc6pivZvLqB2cR
+HX2VQuosolNo9yacB+8+ckCmb2ePra7XeiPwxL7xjV1jBPYrQxUv/PK8JX/gK3fk
+0IwXe7JIwlsBVbYLrLw=
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x5d07fb8">
+      <item key="dec">101199913213710323232147822855262564649</item>
+      <item key="hex">4C2264F2563E2508AD5813CFEE1BF129</item>
+      <item key="long">-1</item>
+      <item key="string">4c2264f2563e2508ad5813cfee1bf129</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha256WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x5d07fa0">
+      <item key="altnames">
+       <hashref memory_address="0x5ce2320">
+        <item key="2">secure.cornertrader.ch</item>
+       </hashref>
+      </item>
+      <item key="count">8</item>
+      <item key="entries">
+       <hashref memory_address="0x5d081f8">
+        <item key="0">
+         <hashref memory_address="0x5ce2248">
+          <item key="data">CH</item>
+          <item key="ln" defined="false"></item>
+          <item key="nid" defined="false"></item>
+          <item key="oid">1.3.6.1.4.1.311.60.2.1.3</item>
+          <item key="sn" defined="false"></item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x5ce21e8">
+          <item key="data">Private Organization</item>
+          <item key="ln">businessCategory</item>
+          <item key="nid">860</item>
+          <item key="oid">2.5.4.15</item>
+          <item key="sn">businessCategory</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x5ce2338">
+          <item key="data">Corner Banca SA</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x5ce2470">
+          <item key="data">CHE-105.962.409</item>
+          <item key="ln">serialNumber</item>
+          <item key="nid">105</item>
+          <item key="oid">2.5.4.5</item>
+          <item key="sn">serialNumber</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x5d24b78">
+          <item key="data">CH</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x37f0a00">
+          <item key="data">Ticino</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x5ce2488">
+          <item key="data">Lugano</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x5ce2698">
+          <item key="data">secure.cornertrader.ch</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/1.3.6.1.4.1.311.60.2.1.3=CH/businessCategory=Private Organization/O=Corner Banca SA/serialNumber=CHE-105.962.409/C=CH/ST=Ticino/L=Lugano/CN=secure.cornertrader.ch</item>
+      <item key="print_rfc2253">CN=secure.cornertrader.ch,L=Lugano,ST=Ticino,C=CH,serialNumber=CHE-105.962.409,O=Corner Banca SA,businessCategory=Private Organization,1.3.6.1.4.1.311.60.2.1.3=#13024348</item>
+      <item key="print_rfc2253_utf8">CN=secure.cornertrader.ch,L=Lugano,ST=Ticino,C=CH,serialNumber=CHE-105.962.409,O=Corner Banca SA,businessCategory=Private Organization,1.3.6.1.4.1.311.60.2.1.3=#13024348</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x5ce1f60">
+    <item key="ext_content">
+     <arrayref memory_address="0x5ce2668">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="hsts">No</item>
+    <item key="https_redirect">No</item>
+    <item key="score">-2</item>
+    <item key="srv_type" defined="false"></item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">A-</item>
+  <item key="HOSTNAME">secure.cornertrader.ch</item>
+  <item key="HOSTTYPE">e-banking</item>
+  <item key="ID">22</item>
+  <item key="IP">46.19.248.197</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">84.5</item>
+  <item key="SSL">
+   <hashref memory_address="0x5ce2878">
+    <item key="cipherScore">80</item>
+    <item key="protocol">
+     <hashref memory_address="0x5ce2920">
+      <item key="SSLv2">
+       <hashref memory_address="0x5ce29b0">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x5ce29c8">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x5ce2a40">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x5ce2cb0">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">AES128-SHA</item>
+          <item key="2">AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">70</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x5ce2a28">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x5ce2c38">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">AES128-SHA</item>
+          <item key="2">AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">90</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x5ce2da0">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x5ce2bd8">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">AES128-SHA</item>
+          <item key="2">AES256-SHA</item>
+          <item key="3">ECDHE-RSA-AES128-SHA</item>
+          <item key="4">ECDHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">80</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">100</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">95</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

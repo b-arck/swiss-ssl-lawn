@@ -1,0 +1,456 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x5c07398">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x3cafdd0">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://sr.symcb.com/sr.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x6376f60">
+      <item key="pubkey">8a7c46f798d3e4501fba0a43a75b7fae7591dc58
+</item>
+      <item key="x509">ffddb677121d6fe1211dcfc246d27a4ffd619078</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x3d8e8a8">
+      <item key="not_after">Feb 14 23:59:59 2016 GMT</item>
+      <item key="not_before">Nov 14 00:00:00 2014 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x2a186b8">
+      <item key="count">8</item>
+      <item key="entries">
+       <hashref memory_address="0x570f2f0">
+        <item key="0">
+         <hashref memory_address="0x54431d8">
+          <item key="critical">0</item>
+          <item key="data">DNS:banking.slguerbetal.ch</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x489fd68">
+          <item key="critical">0</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x570df20">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x5094020">
+          <item key="critical">0</item>
+          <item key="data">Policy: 2.16.840.1.113733.1.7.23.6
+  CPS: https://d.symcb.com/cps
+  User Notice:
+    Explicit Text: https://d.symcb.com/rpa
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x42dbd58">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://sr.symcb.com/sr.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x50938e8">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x54438b0">
+          <item key="critical">0</item>
+          <item key="data">keyid:01:59:AB:E7:DD:3A:0B:59:A6:64:63:D6:CF:20:07:57:D5:91:E7:6A
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x5442298">
+          <item key="critical">0</item>
+          <item key="data">OCSP - URI:http://sr.symcd.com
+CA Issuers - URI:http://sr.symcb.com/sr.crt
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x489ceb8">
+      <item key="1.3.6.1.5.5.7.3.2">nid</item>
+      <item key="129">130</item>
+      <item key="TLS Web Server Authentication">TLS Web Client Authentication</item>
+      <item key="clientAuth">ln</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x39d44e8">
+      <item key="md5">41:F2:75:D8:ED:CE:31:F9:36:03:FC:6A:1D:8E:18:CE</item>
+      <item key="sha1">FF:DD:B6:77:12:1D:6F:E1:21:1D:CF:C2:46:D2:7A:4F:FD:61:90:78</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x5ac7d70">
+      <item key="issuer">
+       <hashref memory_address="0x42f7150">
+        <item key="dec">2700586046</item>
+        <item key="hex">A0F7AC3E</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x56f6570">
+        <item key="dec">3181108101</item>
+        <item key="hex">BD9BDB85</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x5093df8">
+        <item key="dec">186787218</item>
+        <item key="hex">B222592</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x37d5af0">
+      <item key="count">4</item>
+      <item key="entries">
+       <hashref memory_address="0x3cafcc8">
+        <item key="0">
+         <hashref memory_address="0x39d4c98">
+          <item key="data">US</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x3790a08">
+          <item key="data">Symantec Corporation</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x5442010">
+          <item key="data">Symantec Trust Network</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x54415a8">
+          <item key="data">Symantec Class 3 EV SSL CA - G3</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=US/O=Symantec Corporation/OU=Symantec Trust Network/CN=Symantec Class 3 EV SSL CA - G3</item>
+      <item key="print_rfc2253">CN=Symantec Class 3 EV SSL CA - G3,OU=Symantec Trust Network,O=Symantec Corporation,C=US</item>
+      <item key="print_rfc2253_utf8">CN=Symantec Class 3 EV SSL CA - G3,OU=Symantec Trust Network,O=Symantec Corporation,C=US</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIFXDCCBESgAwIBAgIQdf33kwcuefHJhMLnOWlA5TANBgkqhkiG9w0BAQsFADB3
+MQswCQYDVQQGEwJVUzEdMBsGA1UEChMUU3ltYW50ZWMgQ29ycG9yYXRpb24xHzAd
+BgNVBAsTFlN5bWFudGVjIFRydXN0IE5ldHdvcmsxKDAmBgNVBAMTH1N5bWFudGVj
+IENsYXNzIDMgRVYgU1NMIENBIC0gRzMwHhcNMTQxMTE0MDAwMDAwWhcNMTYwMjE0
+MjM1OTU5WjCB6DETMBEGCysGAQQBgjc8AgEDEwJDSDELMAkGA1UEBhMCQ0gxDTAL
+BgNVBAgMBEJFUk4xFjAUBgNVBAcMDU3DvGhsZXRodXJuZW4xHTAbBgNVBA8TFFBy
+aXZhdGUgT3JnYW5pemF0aW9uMRswGQYDVQQFExJDSC0wMzUuMy4wMDcuNzIyLTcx
+KDAmBgNVBAoMH1NQQVIgVU5EIExFSUhLQVNTRSBHVUVSQkVUQUwgQUcxHzAdBgNV
+BAMMFmJhbmtpbmcuc2xndWVyYmV0YWwuY2gxFjAUBgNVBAcMDU3DvGhsZXRodXJu
+ZW4wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCr/SZ0yKQ+YyBHqLLl
+bqtY4o2AjTB5brrELcepJKwi736Klt/TsQ5qaECq9f3bCw+gkBFeUGNyE3DzXnER
+8d5GdE49hnt8Q21cRPg1jaDXn+/ZJwk9m87yQBvhjxXsVveZ4EihxywUpkzJwMTI
+uFKHbuqV9ES1nSavIz47b+ehAtNz6EjnI9bWWbGaAkiGchkucFEp46IuRrieBd96
+vFSttpANplYk+7XXDP7DcdKBcYVprHYIrDoP6IOnPlQSnTxa0H2N/qdlS/r77GVg
+lN6lfw2fbqN/go3woymgGoAVjdDCejjPtDGX5zmMIabaWp8ShUByAx3yg10K+yuo
+K/qrAgMBAAGjggFwMIIBbDAhBgNVHREEGjAYghZiYW5raW5nLnNsZ3VlcmJldGFs
+LmNoMAkGA1UdEwQCMAAwDgYDVR0PAQH/BAQDAgWgMGYGA1UdIARfMF0wWwYLYIZI
+AYb4RQEHFwYwTDAjBggrBgEFBQcCARYXaHR0cHM6Ly9kLnN5bWNiLmNvbS9jcHMw
+JQYIKwYBBQUHAgIwGQwXaHR0cHM6Ly9kLnN5bWNiLmNvbS9ycGEwKwYDVR0fBCQw
+IjAgoB6gHIYaaHR0cDovL3NyLnN5bWNiLmNvbS9zci5jcmwwHQYDVR0lBBYwFAYI
+KwYBBQUHAwEGCCsGAQUFBwMCMB8GA1UdIwQYMBaAFAFZq+fdOgtZpmRj1s8gB1fV
+kedqMFcGCCsGAQUFBwEBBEswSTAfBggrBgEFBQcwAYYTaHR0cDovL3NyLnN5bWNk
+LmNvbTAmBggrBgEFBQcwAoYaaHR0cDovL3NyLnN5bWNiLmNvbS9zci5jcnQwDQYJ
+KoZIhvcNAQELBQADggEBAFOaaILSdq7+lgFslv3clhLDqgEGcunC9+Rgi7OJyuFU
+8CjOBaPg7bOguKYIpeC1st32zqA0FG0V+J3Kud/iMKYTZLqg/bDsM9AWbju3fwvV
+lJlCNrl+YL6z+RZCRtlyM68DbGHJD57LPw4WwHmQe3slobEOs3DS7hAcDs5gtmSO
+/wBtHEvts4Fw6UQ/70F4UqLp12ZPRGhGdAsj9YPyCKyWVHLXhjjlXO+eTfSfz63A
+Dt0P1is7nobyr+gsOgV1INU4EeU510Q1b/R7rAJHMhNMiRiXnh5Ax0UUP2CdF7tT
+9pHdanRCRYIZxISLXmnRxFIZvZ6VY+VYnlw3Eg9CsHc=
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x541ecd8">
+      <item key="dec">156838348015979041602198365657209848037</item>
+      <item key="hex">75FDF793072E79F1C984C2E7396940E5</item>
+      <item key="long">-1</item>
+      <item key="string">75fdf793072e79f1c984c2e7396940e5</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha256WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x37c3ce8">
+      <item key="altnames">
+       <hashref memory_address="0x37d2ba8">
+        <item key="2">banking.slguerbetal.ch</item>
+       </hashref>
+      </item>
+      <item key="count">9</item>
+      <item key="entries">
+       <hashref memory_address="0x37a1458">
+        <item key="0">
+         <hashref memory_address="0x541ea08">
+          <item key="data">CH</item>
+          <item key="ln" defined="false"></item>
+          <item key="nid" defined="false"></item>
+          <item key="oid">1.3.6.1.4.1.311.60.2.1.3</item>
+          <item key="sn" defined="false"></item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x37a1b30">
+          <item key="data">CH</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x29d9410">
+          <item key="data">BERN</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x5c07278">
+          <item key="data">Mühlethurnen</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x570e6a0">
+          <item key="data">Private Organization</item>
+          <item key="ln">businessCategory</item>
+          <item key="nid">860</item>
+          <item key="oid">2.5.4.15</item>
+          <item key="sn">businessCategory</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x37a30e8">
+          <item key="data">CH-035.3.007.722-7</item>
+          <item key="ln">serialNumber</item>
+          <item key="nid">105</item>
+          <item key="oid">2.5.4.5</item>
+          <item key="sn">serialNumber</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x63765e8">
+          <item key="data">SPAR UND LEIHKASSE GUERBETAL AG</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x3cb0100">
+          <item key="data">banking.slguerbetal.ch</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x2bd7fa8">
+          <item key="data">Mühlethurnen</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/1.3.6.1.4.1.311.60.2.1.3=CH/C=CH/ST=BERN/L=M\xC3\xBChlethurnen/businessCategory=Private Organization/serialNumber=CH-035.3.007.722-7/O=SPAR UND LEIHKASSE GUERBETAL AG/CN=banking.slguerbetal.ch/L=M\xC3\xBChlethurnen</item>
+      <item key="print_rfc2253">L=M\C3\BChlethurnen,CN=banking.slguerbetal.ch,O=SPAR UND LEIHKASSE GUERBETAL AG,serialNumber=CH-035.3.007.722-7,businessCategory=Private Organization,L=M\C3\BChlethurnen,ST=BERN,C=CH,1.3.6.1.4.1.311.60.2.1.3=#13024348</item>
+      <item key="print_rfc2253_utf8">L=Mühlethurnen,CN=banking.slguerbetal.ch,O=SPAR UND LEIHKASSE GUERBETAL AG,serialNumber=CH-035.3.007.722-7,businessCategory=Private Organization,L=Mühlethurnen,ST=BERN,C=CH,1.3.6.1.4.1.311.60.2.1.3=#13024348</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x570f608">
+    <item key="flash_content" defined="false"></item>
+    <item key="srv_type" defined="false"></item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">A</item>
+  <item key="HOSTNAME">banking.slguerbetal.ch</item>
+  <item key="HOSTTYPE">e-banking</item>
+  <item key="ID">178</item>
+  <item key="IP">159.29.66.19</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">86.25</item>
+  <item key="SSL">
+   <hashref memory_address="0x2a7f118">
+    <item key="cipherScore">82.5</item>
+    <item key="protocol">
+     <hashref memory_address="0x37bedd0">
+      <item key="SSLv2">
+       <hashref memory_address="0x570db90">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x37d2e30">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x5443610">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x5706008">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">80</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x3d8e5c0">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x489fb40">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">90</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x42f6f58">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x5706530">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">DHE-RSA-AES128-SHA</item>
+          <item key="5">DHE-RSA-AES256-SHA</item>
+          <item key="6">ECDHE-RSA-AES128-GCM-SHA256</item>
+          <item key="7">ECDHE-RSA-AES256-GCM-SHA384</item>
+          <item key="8">DHE-RSA-AES128-GCM-SHA256</item>
+          <item key="9">ECDHE-RSA-AES128-SHA256</item>
+          <item key="10">ECDHE-RSA-AES128-SHA</item>
+          <item key="11">ECDHE-RSA-AES256-SHA384</item>
+          <item key="12">ECDHE-RSA-AES256-SHA</item>
+          <item key="13">DHE-RSA-AES128-SHA256</item>
+          <item key="14">DHE-RSA-AES256-SHA256</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">75</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">100</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">95</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

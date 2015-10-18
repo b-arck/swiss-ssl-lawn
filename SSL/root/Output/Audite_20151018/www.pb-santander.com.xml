@@ -1,0 +1,438 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x48c3d60">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x37d2ea8">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://crl.entrust.net/level1k.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x570fc50">
+      <item key="pubkey">48bd8d0e58bb60a321b475909ada48846672e9e4
+</item>
+      <item key="x509">30e49037f32cbb41c18648510a5442a7e7ea09f8</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x37d32c8">
+      <item key="not_after">Apr 24 19:22:03 2016 GMT</item>
+      <item key="not_before">Mar  3 15:13:09 2015 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x5ac7c08">
+      <item key="count">9</item>
+      <item key="entries">
+       <hashref memory_address="0x37d5760">
+        <item key="0">
+         <hashref memory_address="0x5442f50">
+          <item key="critical">0</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x3790348">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x570f338">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://crl.entrust.net/level1k.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x37d6300">
+          <item key="critical">0</item>
+          <item key="data">Policy: 2.16.840.1.114028.10.1.5
+  CPS: http://www.entrust.net/rpa
+Policy: 2.23.140.1.2.2
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x37d27e8">
+          <item key="critical">0</item>
+          <item key="data">OCSP - URI:http://ocsp.entrust.net
+CA Issuers - URI:http://aia.entrust.net/l1k-chain256.cer
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x48c43a8">
+          <item key="critical">0</item>
+          <item key="data">DNS:pb-santander.com, DNS:*.pb-santander.com</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x56f3328">
+          <item key="critical">0</item>
+          <item key="data">keyid:82:A2:70:74:DD:BC:53:3F:CF:7B:D4:F7:CD:7F:A7:60:C6:0A:4C:BF
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x570f980">
+          <item key="critical">0</item>
+          <item key="data">48:BD:8D:0E:58:BB:60:A3:21:B4:75:90:9A:DA:48:84:66:72:E9:E4</item>
+          <item key="ln">X509v3 Subject Key Identifier</item>
+          <item key="nid">82</item>
+          <item key="oid">2.5.29.14</item>
+          <item key="sn">subjectKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x489d9e0">
+          <item key="critical">0</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x37bece0">
+      <item key="1.3.6.1.5.5.7.3.2">nid</item>
+      <item key="129">130</item>
+      <item key="TLS Web Server Authentication">TLS Web Client Authentication</item>
+      <item key="clientAuth">ln</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x37a10e0">
+      <item key="md5">99:16:21:CA:F1:80:5B:1D:35:C4:02:DA:38:43:4C:29</item>
+      <item key="sha1">30:E4:90:37:F3:2C:BB:41:C1:86:48:51:0A:54:42:A7:E7:EA:09:F8</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x5443178">
+      <item key="issuer">
+       <hashref memory_address="0x5ac7bc0">
+        <item key="dec">674617109</item>
+        <item key="hex">2835D715</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x37bf1a8">
+        <item key="dec">564337536</item>
+        <item key="hex">21A31B80</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x57060f8">
+        <item key="dec">4090380104</item>
+        <item key="hex">F3CE3F48</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x37d5ee0">
+      <item key="count">5</item>
+      <item key="entries">
+       <hashref memory_address="0x48b9370">
+        <item key="0">
+         <hashref memory_address="0x37be8f0">
+          <item key="data">US</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x570f368">
+          <item key="data">Entrust, Inc.</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x37a3088">
+          <item key="data">See www.entrust.net/legal-terms</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x37904f8">
+          <item key="data">(c) 2012 Entrust, Inc. - for authorized use only</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x489ff30">
+          <item key="data">Entrust Certification Authority - L1K</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=US/O=Entrust, Inc./OU=See www.entrust.net/legal-terms/OU=(c) 2012 Entrust, Inc. - for authorized use only/CN=Entrust Certification Authority - L1K</item>
+      <item key="print_rfc2253">CN=Entrust Certification Authority - L1K,OU=(c) 2012 Entrust\, Inc. - for authorized use only,OU=See www.entrust.net/legal-terms,O=Entrust\, Inc.,C=US</item>
+      <item key="print_rfc2253_utf8">CN=Entrust Certification Authority - L1K,OU=(c) 2012 Entrust\, Inc. - for authorized use only,OU=See www.entrust.net/legal-terms,O=Entrust\, Inc.,C=US</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIFVzCCBD+gAwIBAgIEUNNwFDANBgkqhkiG9w0BAQsFADCBujELMAkGA1UEBhMC
+VVMxFjAUBgNVBAoTDUVudHJ1c3QsIEluYy4xKDAmBgNVBAsTH1NlZSB3d3cuZW50
+cnVzdC5uZXQvbGVnYWwtdGVybXMxOTA3BgNVBAsTMChjKSAyMDEyIEVudHJ1c3Qs
+IEluYy4gLSBmb3IgYXV0aG9yaXplZCB1c2Ugb25seTEuMCwGA1UEAxMlRW50cnVz
+dCBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eSAtIEwxSzAeFw0xNTAzMDMxNTEzMDla
+Fw0xNjA0MjQxOTIyMDNaMIGDMQswCQYDVQQGEwJFUzESMBAGA1UECBMJU2FudGFu
+ZGVyMRIwEAYDVQQHEwlTYW50YW5kZXIxGDAWBgNVBAoTD0dSVVBPIFNBTlRBTkRF
+UjEVMBMGA1UECxMMRElWSVNJT04gQlBJMRswGQYDVQQDFBIqLnBiLXNhbnRhbmRl
+ci5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCnalUPU+XB1j0e
++ECySp5oxT13TffiJy7XSKbgwQsCROaV+mDmuZKLXD/IBHRGgv6WGxNLkdk9TFCE
+fquOhIX3HhJaQjNKwTRq9jWOVoWFIIIMsMWmUKDgReRTlFN2kfL9Hz6klOd42pxF
+vejXRf8T6kjyPhl/wSlebv/Aa9R9gEo2v1gFyyATfGlOu+8f+Ey/zA0ZCBy2gl44
+IZ9IffJXqTsfR7VGL+p68DG9EvqY6MvMQpZzqMdy5nxhqTK5jz+Hqij9u3HZf8Bf
+ytAsHiKvjXyb+EohWQ8Mvf7DOEK3G+jIGCb3yBDNPS/Up+KmGAfAwlJBJsILZItF
+aGLSJQKDAgMBAAGjggGYMIIBlDALBgNVHQ8EBAMCBaAwHQYDVR0lBBYwFAYIKwYB
+BQUHAwEGCCsGAQUFBwMCMDMGA1UdHwQsMCowKKAmoCSGImh0dHA6Ly9jcmwuZW50
+cnVzdC5uZXQvbGV2ZWwxay5jcmwwSwYDVR0gBEQwQjA2BgpghkgBhvpsCgEFMCgw
+JgYIKwYBBQUHAgEWGmh0dHA6Ly93d3cuZW50cnVzdC5uZXQvcnBhMAgGBmeBDAEC
+AjBoBggrBgEFBQcBAQRcMFowIwYIKwYBBQUHMAGGF2h0dHA6Ly9vY3NwLmVudHJ1
+c3QubmV0MDMGCCsGAQUFBzAChidodHRwOi8vYWlhLmVudHJ1c3QubmV0L2wxay1j
+aGFpbjI1Ni5jZXIwLwYDVR0RBCgwJoIQcGItc2FudGFuZGVyLmNvbYISKi5wYi1z
+YW50YW5kZXIuY29tMB8GA1UdIwQYMBaAFIKicHTdvFM/z3vU981/p2DGCky/MB0G
+A1UdDgQWBBRIvY0OWLtgoyG0dZCa2kiEZnLp5DAJBgNVHRMEAjAAMA0GCSqGSIb3
+DQEBCwUAA4IBAQBGa3VLGmWYT6gWc/iMMYY5BZci5mQfjRWA76nY+zMr2+nqmJA9
+P6C7It9MhJgtPxW7lK3mhMq7xxStT8Ydyq5NLSV43AE9ZxzhpL0fKOkJsocOz89z
+lp+rcjTqmTy2PA/WXqw1j0o94ZgclZCYW5aPMtYcLNmQo2+fG72m08A6siO5xbf7
+1xF9n0uJ2vVQKQ3IMTk18gv/+hcmz7mAEgpRs4tQUai4b7zLcG0N4ezc7WCnee84
+A8UM7f5/1h2BMl+k2w9wgqxOttN2mlUjvKFHdg+OziAsR8+HmfP2stCKqy7uDTcd
+BcPzsQbYg4C7/qkh7dULRR45uoL3A8wz4FOv
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x489d068">
+      <item key="dec">1356034068</item>
+      <item key="hex">50D37014</item>
+      <item key="long">1356034068</item>
+      <item key="string">50d37014</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha256WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x37c3118">
+      <item key="altnames">
+       <hashref memory_address="0x541e540">
+        <item key="2">*.pb-santander.com</item>
+       </hashref>
+      </item>
+      <item key="count">6</item>
+      <item key="entries">
+       <hashref memory_address="0x570f8f0">
+        <item key="0">
+         <hashref memory_address="0x541ec90">
+          <item key="data">ES</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x5706368">
+          <item key="data">Santander</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x570fbf0">
+          <item key="data">Santander</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x570dce0">
+          <item key="data">GRUPO SANTANDER</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x5441860">
+          <item key="data">DIVISION BPI</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x570f470">
+          <item key="data">*.pb-santander.com</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=ES/ST=Santander/L=Santander/O=GRUPO SANTANDER/OU=DIVISION BPI/CN=*.pb-santander.com</item>
+      <item key="print_rfc2253">CN=*.pb-santander.com,OU=DIVISION BPI,O=GRUPO SANTANDER,L=Santander,ST=Santander,C=ES</item>
+      <item key="print_rfc2253_utf8">CN=*.pb-santander.com,OU=DIVISION BPI,O=GRUPO SANTANDER,L=Santander,ST=Santander,C=ES</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x54415f0">
+    <item key="ext_content">
+     <arrayref memory_address="0x48c4420">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="hsts">No</item>
+    <item key="https_redirect">Yes</item>
+    <item key="score">0</item>
+    <item key="srv_type">BigIP</item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">A</item>
+  <item key="HOSTNAME">www.pb-santander.com</item>
+  <item key="HOSTTYPE">bank</item>
+  <item key="ID">66</item>
+  <item key="IP">66.231.254.181</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">84.5</item>
+  <item key="SSL">
+   <hashref memory_address="0x48a0350">
+    <item key="cipherScore">80</item>
+    <item key="protocol">
+     <hashref memory_address="0x4b17010">
+      <item key="SSLv2">
+       <hashref memory_address="0x37c3388">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x56f3340">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x37d2788">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x37a17e8">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">AES128-SHA</item>
+          <item key="2">AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">70</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x48a00f8">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x5706338">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">AES128-SHA</item>
+          <item key="2">AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">90</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x29f0378">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x2be40b0">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">AES128-SHA</item>
+          <item key="2">AES256-SHA</item>
+          <item key="3">ECDHE-RSA-AES128-SHA</item>
+          <item key="4">ECDHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">80</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">100</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">95</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

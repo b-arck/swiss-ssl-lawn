@@ -1,0 +1,381 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x5c07128">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x4909dc8">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://crl.globalsign.com/gs/gsdomainvalg2.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x42db2a8">
+      <item key="pubkey">0372e3560a9ebeceec454e20ae558dbb66232ce2
+</item>
+      <item key="x509">f92bfaa1ff594ec24ad3083a9a50e8c2c3e08dc0</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x570ff38">
+      <item key="not_after">Mar 13 14:50:51 2016 GMT</item>
+      <item key="not_before">Jan 22 09:04:49 2015 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x5c07530">
+      <item key="count">9</item>
+      <item key="entries">
+       <hashref memory_address="0x37d33a0">
+        <item key="0">
+         <hashref memory_address="0x48ba030">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x42dbae8">
+          <item key="critical">0</item>
+          <item key="data">Policy: 2.23.140.1.2.1
+  CPS: https://www.globalsign.com/repository/
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x37a0f48">
+          <item key="critical">0</item>
+          <item key="data">DNS:secure.kbl-spb.com</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x37bee30">
+          <item key="critical">0</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x42f7078">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x49099f0">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://crl.globalsign.com/gs/gsdomainvalg2.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x54431a8">
+          <item key="critical">0</item>
+          <item key="data">CA Issuers - URI:http://secure.globalsign.com/cacert/gsdomainvalg2.crt
+OCSP - URI:http://ocsp2.globalsign.com/gsdomainvalg2
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x37d58c8">
+          <item key="critical">0</item>
+          <item key="data">03:72:E3:56:0A:9E:BE:CE:EC:45:4E:20:AE:55:8D:BB:66:23:2C:E2</item>
+          <item key="ln">X509v3 Subject Key Identifier</item>
+          <item key="nid">82</item>
+          <item key="oid">2.5.29.14</item>
+          <item key="sn">subjectKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x2a0da18">
+          <item key="critical">0</item>
+          <item key="data">keyid:96:AD:FA:B0:5B:B9:83:64:2A:76:C2:1C:8A:69:DA:42:DC:FE:FD:28
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x37d29c8">
+      <item key="1.3.6.1.5.5.7.3.2">nid</item>
+      <item key="129">130</item>
+      <item key="TLS Web Server Authentication">TLS Web Client Authentication</item>
+      <item key="clientAuth">ln</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x42db0e0">
+      <item key="md5">66:0B:33:82:03:3C:88:98:F3:91:1F:9C:78:93:D6:3D</item>
+      <item key="sha1">F9:2B:FA:A1:FF:59:4E:C2:4A:D3:08:3A:9A:50:E8:C2:C3:E0:8D:C0</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x48b9418">
+      <item key="issuer">
+       <hashref memory_address="0x139e6d0">
+        <item key="dec">717353658</item>
+        <item key="hex">2AC1F2BA</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x6376b58">
+        <item key="dec">3902977499</item>
+        <item key="hex">E8A2B5DB</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x37c3760">
+        <item key="dec">3276410314</item>
+        <item key="hex">C34A0DCA</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x5441da0">
+      <item key="count">3</item>
+      <item key="entries">
+       <hashref memory_address="0x489d9e0">
+        <item key="0">
+         <hashref memory_address="0x29efeb0">
+          <item key="data">BE</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x56f3118">
+          <item key="data">GlobalSign nv-sa</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x37a1b30">
+          <item key="data">GlobalSign Domain Validation CA - G2</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=BE/O=GlobalSign nv-sa/CN=GlobalSign Domain Validation CA - G2</item>
+      <item key="print_rfc2253">CN=GlobalSign Domain Validation CA - G2,O=GlobalSign nv-sa,C=BE</item>
+      <item key="print_rfc2253_utf8">CN=GlobalSign Domain Validation CA - G2,O=GlobalSign nv-sa,C=BE</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIE2TCCA8GgAwIBAgISESE/Rc/yHKzRmM6zCgYqrl0MMA0GCSqGSIb3DQEBBQUA
+MFcxCzAJBgNVBAYTAkJFMRkwFwYDVQQKExBHbG9iYWxTaWduIG52LXNhMS0wKwYD
+VQQDEyRHbG9iYWxTaWduIERvbWFpbiBWYWxpZGF0aW9uIENBIC0gRzIwHhcNMTUw
+MTIyMDkwNDQ5WhcNMTYwMzEzMTQ1MDUxWjBAMSEwHwYDVQQLExhEb21haW4gQ29u
+dHJvbCBWYWxpZGF0ZWQxGzAZBgNVBAMTEnNlY3VyZS5rYmwtc3BiLmNvbTCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKWEut0XjgFEsLb77A/7SteFCfiz
+JOTRU6vrl4+xIP3vFIh7MPmE7IQL0H0sZlT6owvaJMeChjXG+chxGAFXBJtWIMkY
+XjoGkIYKPJRGR2aVgB4EsePsCIk3lP8u5tl7sRhEyUWoyWNBlY0IukXYmi/bxzh3
+T5MidcS2UPty2mDsSxp0gEissFYoMfg//jW81S48sg50HF7+LSiT5b+ESWAYIYFK
+FKPVqPrqRcI+a/INTkhrc9OxgBcE7iEvWVMl1sX1U19D54XTlAj1kBJWngqeqzaw
+1/45d4NnbHMCvdmIcEbiY4ddv/F/VHLidbgR+6BnkdtwRy+chb+U7PTRbtkCAwEA
+AaOCAbQwggGwMA4GA1UdDwEB/wQEAwIFoDBJBgNVHSAEQjBAMD4GBmeBDAECATA0
+MDIGCCsGAQUFBwIBFiZodHRwczovL3d3dy5nbG9iYWxzaWduLmNvbS9yZXBvc2l0
+b3J5LzAdBgNVHREEFjAUghJzZWN1cmUua2JsLXNwYi5jb20wCQYDVR0TBAIwADAd
+BgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwPwYDVR0fBDgwNjA0oDKgMIYu
+aHR0cDovL2NybC5nbG9iYWxzaWduLmNvbS9ncy9nc2RvbWFpbnZhbGcyLmNybDCB
+iAYIKwYBBQUHAQEEfDB6MEEGCCsGAQUFBzAChjVodHRwOi8vc2VjdXJlLmdsb2Jh
+bHNpZ24uY29tL2NhY2VydC9nc2RvbWFpbnZhbGcyLmNydDA1BggrBgEFBQcwAYYp
+aHR0cDovL29jc3AyLmdsb2JhbHNpZ24uY29tL2dzZG9tYWludmFsZzIwHQYDVR0O
+BBYEFANy41YKnr7O7EVOIK5VjbtmIyziMB8GA1UdIwQYMBaAFJat+rBbuYNkKnbC
+HIpp2kLc/v0oMA0GCSqGSIb3DQEBBQUAA4IBAQCU1Q+LQU22mzxGmwoEu35l+MCq
+BObeveVBqDAqEyZP3B2SdZDadTq9be09l0AmdJ+WMfMLXj8/TFLt0JcQPtY91GFP
+Yzz0li8MWzlIsDiKDrkYRQCIHqrI1tYPagGUiBkGYnPsQSz306SRv6IRIzAB+9C8
+FVOzfgrR4obgPHoh6+ZMHWhYPGlYsDyil6tmG89bcRa7avpiLKCA9tLilzIvYQvP
+g2ISDfIqQ2TOSp0CCV2mEW6V9HDCdwhp5kCTOs6JyUaBCMtTQSqv5mNAICmo/Txl
+PvbvnSqjO7dANJibYsyh0sTJBY/qTRCeGzdnO9W8H6wuHuLbtbZ/upe7Fh6/
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x570f8c0">
+      <item key="dec">1492222282798173728679654075148582928669964</item>
+      <item key="hex">11213F45CFF21CACD198CEB30A062AAE5D0C</item>
+      <item key="long">-1</item>
+      <item key="string">11213f45cff21cacd198ceb30a062aae5d0c</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha1WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x48c4318">
+      <item key="altnames">
+       <hashref memory_address="0x6ba0468">
+        <item key="2">secure.kbl-spb.com</item>
+       </hashref>
+      </item>
+      <item key="count">2</item>
+      <item key="entries">
+       <hashref memory_address="0x5ac79f8">
+        <item key="0">
+         <hashref memory_address="0x489fe40">
+          <item key="data">Domain Control Validated</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x570dbc0">
+          <item key="data">secure.kbl-spb.com</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/OU=Domain Control Validated/CN=secure.kbl-spb.com</item>
+      <item key="print_rfc2253">CN=secure.kbl-spb.com,OU=Domain Control Validated</item>
+      <item key="print_rfc2253_utf8">CN=secure.kbl-spb.com,OU=Domain Control Validated</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x5c073c8">
+    <item key="ext_content">
+     <arrayref memory_address="0x541e558">
+      <item key="0">Twitter</item>
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="hsts">No</item>
+    <item key="https_redirect">No</item>
+    <item key="score">-1</item>
+    <item key="srv_type" defined="false"></item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">A-</item>
+  <item key="HOSTNAME">secure.kbl-spb.com</item>
+  <item key="HOSTTYPE">e-banking</item>
+  <item key="ID">148</item>
+  <item key="IP">212.190.148.52</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">84.5</item>
+  <item key="SSL">
+   <hashref memory_address="0x489d6e0">
+    <item key="cipherScore">80</item>
+    <item key="protocol">
+     <hashref memory_address="0x48b9370">
+      <item key="SSLv2">
+       <hashref memory_address="0x37c3c70">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x541ea98">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x56f31a8">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x2ba1d18">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">AES128-SHA</item>
+          <item key="2">AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">70</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x37d2ce0">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x37907f8">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">AES128-SHA</item>
+          <item key="2">AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">90</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x5c06fc0">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x3790798">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">AES128-SHA</item>
+          <item key="2">AES256-SHA</item>
+          <item key="3">ECDHE-RSA-AES128-SHA</item>
+          <item key="4">ECDHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">80</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">100</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">95</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

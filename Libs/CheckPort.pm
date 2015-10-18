@@ -76,7 +76,7 @@ sub check_port {
 	my ( $audit ) = @_;
 	my $host = $audit->get_hostName();
 	my $port = $audit->get_port;
-	print "$host : $port \n";
+	print "$host : $port -";
 	$logger->info(" - Checking port $port on host $host.");	
 		
 	if ( !$port or $port =~ /\D/ ) {
@@ -94,9 +94,11 @@ sub check_port {
 		$logger->info(" - Connect to host=$host:$port - OK");
 		$logger->info(" - Close connection");
 		close(SOCK) || $logger->fatal(" - Close $!") && die "close: $!";
+		print " OK\n";
 		return 1;
 	} else {
 		$logger->fatal(" - Connection refused to host $host on port $port");
+		print " No OK\n";
 		return 0;
 	}
 }

@@ -20,8 +20,9 @@ This 3 controler sort the list by name, key or result.
 sub sortName :GET Path('name/') {
     my ( $self, $c ) = @_;
 
-    $c->stash->{menu} = $c->model('loadxml')->findType();
-    $c->stash->{hashref} = $c->model('loadxml')->loadSortedType($c->request->path);
+    my ($hashref, $menu) = $c->model('loadxml')->loadSortedType($c->request->path);
+    $c->stash->{menu} = $menu;
+    $c->stash->{hashref} = $hashref;
     $c->stash->{type} = $c->model('loadxml')->retType($c->request->path);
     $c->stash->{template} = 'index.tt2';
     $c->forward($c->view('HTML'));
@@ -31,8 +32,9 @@ sub sortName :GET Path('name/') {
 sub sortKey :GET Path('key/') {
     my ( $self, $c ) = @_;
 
-    $c->stash->{menu} = $c->model('loadxml')->findType();
-    $c->stash->{hashref} = $c->model('loadxml')->loadSortedType($c->request->path);
+    my ($hashref, $menu) = $c->model('loadxml')->loadSortedType($c->request->path);
+    $c->stash->{menu} = $menu;
+    $c->stash->{hashref} = $hashref;
     $c->stash->{type} = $c->model('loadxml')->retType($c->request->path);
     $c->stash->{template} = 'index.tt2';
     $c->forward($c->view('HTML'));
@@ -42,8 +44,9 @@ sub sortKey :GET Path('key/') {
 sub sortResult :GET Path('result/') {
     my ( $self, $c ) = @_;
 
-    $c->stash->{menu} = $c->model('loadxml')->findType();
-    $c->stash->{hashref} = $c->model('loadxml')->loadSortedType($c->request->path);
+    my ($hashref, $menu) = $c->model('loadxml')->loadSortedType($c->request->path);
+    $c->stash->{menu} = $menu;
+    $c->stash->{hashref} = $hashref;
     $c->stash->{type} = $c->model('loadxml')->retType($c->request->path);
     $c->stash->{template} = 'index.tt2';
     $c->forward($c->view('HTML'));

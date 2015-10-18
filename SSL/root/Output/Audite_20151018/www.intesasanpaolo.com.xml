@@ -1,0 +1,445 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x37d5b08">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x56f2d88">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://crl.omniroot.com/ctevocsp.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x37a2620">
+      <item key="pubkey">d8e57c38ec1a4540cfdf0e6fecb586cfaf05db08
+</item>
+      <item key="x509">d60804132c4491ffab64a6c0643c6410d50cad47</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x48ba108">
+      <item key="not_after">Dec 16 14:33:11 2015 GMT</item>
+      <item key="not_before">Dec 20 15:13:11 2013 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x54256f8">
+      <item key="count">9</item>
+      <item key="entries">
+       <hashref memory_address="0x2a95ae0">
+        <item key="0">
+         <hashref memory_address="0x4909960">
+          <item key="critical">0</item>
+          <item key="data">keyid:F3:94:A8:66:A6:7A:14:86:8A:84:E0:F5:1C:DB:F9:0B:14:D0:54:05
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x5706338">
+          <item key="critical">0</item>
+          <item key="data">OCSP - URI:http://ee-ocsp.omniroot.com/evssl/
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x489d428">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://crl.omniroot.com/ctevocsp.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x37d5910">
+          <item key="critical">0</item>
+          <item key="data">D8:E5:7C:38:EC:1A:45:40:CF:DF:0E:6F:EC:B5:86:CF:AF:05:DB:08</item>
+          <item key="ln">X509v3 Subject Key Identifier</item>
+          <item key="nid">82</item>
+          <item key="oid">2.5.29.14</item>
+          <item key="sn">subjectKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x6376f18">
+          <item key="critical">1</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x2a582f0">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x570f800">
+          <item key="critical">0</item>
+          <item key="data">Policy: 1.3.6.1.4.1.6334.1.100.1
+  CPS: http://cybertrust.omniroot.com/repository
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x37bf028">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x5425680">
+          <item key="critical">0</item>
+          <item key="data">DNS:www.intesasanpaolo.com</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x48c3ad8">
+      <item key="1.3.6.1.5.5.7.3.2">nid</item>
+      <item key="129">130</item>
+      <item key="TLS Web Server Authentication">TLS Web Client Authentication</item>
+      <item key="clientAuth">ln</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x3d8e740">
+      <item key="md5">CB:B7:90:0B:69:67:EC:F9:B5:5B:D8:D7:82:2B:9E:E8</item>
+      <item key="sha1">D6:08:04:13:2C:44:91:FF:AB:64:A6:C0:64:3C:64:10:D5:0C:AD:47</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x5706710">
+      <item key="issuer">
+       <hashref memory_address="0x541f320">
+        <item key="dec">4207414025</item>
+        <item key="hex">FAC80B09</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x2be6138">
+        <item key="dec">1517313118</item>
+        <item key="hex">5A705C5E</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x48b9328">
+        <item key="dec">1750761182</item>
+        <item key="hex">685A7EDE</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x37a1590">
+      <item key="count">2</item>
+      <item key="entries">
+       <hashref memory_address="0x48c40c0">
+        <item key="0">
+         <hashref memory_address="0x39d5058">
+          <item key="data">Verizon Cybertrust Security</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x3d8e620">
+          <item key="data">Cybertrust SureServer EV OCSP CA</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/O=Verizon Cybertrust Security/CN=Cybertrust SureServer EV OCSP CA</item>
+      <item key="print_rfc2253">CN=Cybertrust SureServer EV OCSP CA,O=Verizon Cybertrust Security</item>
+      <item key="print_rfc2253_utf8">CN=Cybertrust SureServer EV OCSP CA,O=Verizon Cybertrust Security</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIFNjCCBB6gAwIBAgIOAQAAAAABQxCOd0eJdigwDQYJKoZIhvcNAQEFBQAwUTEk
+MCIGA1UEChMbVmVyaXpvbiBDeWJlcnRydXN0IFNlY3VyaXR5MSkwJwYDVQQDEyBD
+eWJlcnRydXN0IFN1cmVTZXJ2ZXIgRVYgT0NTUCBDQTAeFw0xMzEyMjAxNTEzMTFa
+Fw0xNTEyMTYxNDMzMTFaMIHtMQswCQYDVQQGEwJJVDELMAkGA1UECBMCVE8xDzAN
+BgNVBAcTBlRvcmlubzEdMBsGA1UECRMUUGlhenphIFNhbiBDYXJsbyAxNTYxEzAR
+BgsrBgEEAYI3PAIBAxMCSVQxFzAVBgsrBgEEAYI3PAIBAhMGVG9yaW5vMR8wHQYD
+VQQKExZJbnRlc2EgU2FucGFvbG8gUy5wLmEuMRswGQYDVQQPExJWMS40LCBDbGF1
+c2UgOC41LjIxFDASBgNVBAUTCzAwNzk5OTYwMTU4MR8wHQYDVQQDExZ3d3cuaW50
+ZXNhc2FucGFvbG8uY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+t4CG0xLf0/OC7clNk7N387DmHalPG7A3pdpF2uBrqYBjRI34VHdCJG6iL8moj0FQ
+wzOoVx7sir5ngBXhyvVeRHOxaQDXtemKBcLI/3ayM/SovFaxT5ymRoprfXA1il5D
+0dJCJQ8e+VIc7IKaxTIYcr596SoJ4cDfr7dn1WwEgcAi5c11MP5mroL31LBWddoP
++VL+7gmBg71+5NbS/aZcBD82sVjXaxjfsCZ3phvDKitbvvWlyvXhX4j4rASkSSrb
+8HvHuVsehEAp9uBznR4J9+4B0BwIYNj65bfVRK9UeLC5xcUHeXvADKzOgJLXAW69
+jpZrjh9gi0SD/DtUOI9OlQIDAQABo4IBbTCCAWkwHwYDVR0jBBgwFoAU85SoZqZ6
+FIaKhOD1HNv5CxTQVAUwPgYIKwYBBQUHAQEEMjAwMC4GCCsGAQUFBzABhiJodHRw
+Oi8vZWUtb2NzcC5vbW5pcm9vdC5jb20vZXZzc2wvMDUGA1UdHwQuMCwwKqAooCaG
+JGh0dHA6Ly9jcmwub21uaXJvb3QuY29tL2N0ZXZvY3NwLmNybDAdBgNVHQ4EFgQU
+2OV8OOwaRUDP3w5v7LWGz68F2wgwDAYDVR0TAQH/BAIwADAOBgNVHQ8BAf8EBAMC
+BaAwUAYDVR0gBEkwRzBFBgorBgEEAbE+AWQBMDcwNQYIKwYBBQUHAgEWKWh0dHA6
+Ly9jeWJlcnRydXN0Lm9tbmlyb290LmNvbS9yZXBvc2l0b3J5MB0GA1UdJQQWMBQG
+CCsGAQUFBwMBBggrBgEFBQcDAjAhBgNVHREEGjAYghZ3d3cuaW50ZXNhc2FucGFv
+bG8uY29tMA0GCSqGSIb3DQEBBQUAA4IBAQCMx2Nz+qoTB63XtcUajAdyB4L3Ns74
+a6AVG+XukGKUAkE9Yz0Qokl3+Ul/ZBoznj5yea5C5NAdhHgOh/mwlccmKiPH3W/5
+cMdqfeaO8GKNbn/x6Sa0azV3Fd8qSAlEvFlM4PPX1oYDy0d/BXfo2UdiVHLP+i9c
+Gfee6wsDrsNogFpg9l6A1pMFvHaO7R+9mhot7aqAHguhVtv2dOOXbXTx61OHo2a8
+lJ48HALGKVM9rae1WfFhdl6Y9n9C9kB7/TCWZZvwaFoZvUzTkS6a6OL2JGG/7zYf
+ap2gRW649yVY7ZaWhJpKPlWJZhpb+rduEJ0c4C/wHHQ54CjDzgVl6hKp
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x54438c8">
+      <item key="dec">20282409603674949687064081823272</item>
+      <item key="hex">01000000000143108E7747897628</item>
+      <item key="long">-1</item>
+      <item key="string">01000000000143108e7747897628</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha1WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x570db60">
+      <item key="altnames">
+       <hashref memory_address="0x5441758">
+        <item key="2">www.intesasanpaolo.com</item>
+       </hashref>
+      </item>
+      <item key="count">10</item>
+      <item key="entries">
+       <hashref memory_address="0x2a01618">
+        <item key="0">
+         <hashref memory_address="0x5706758">
+          <item key="data">IT</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x42f64f0">
+          <item key="data">TO</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x48b99d0">
+          <item key="data">Torino</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x5705fa8">
+          <item key="data">Piazza San Carlo 156</item>
+          <item key="ln">streetAddress</item>
+          <item key="nid">660</item>
+          <item key="oid">2.5.4.9</item>
+          <item key="sn">street</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x5c07638">
+          <item key="data">IT</item>
+          <item key="ln" defined="false"></item>
+          <item key="nid" defined="false"></item>
+          <item key="oid">1.3.6.1.4.1.311.60.2.1.3</item>
+          <item key="sn" defined="false"></item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x37a1e60">
+          <item key="data">Torino</item>
+          <item key="ln" defined="false"></item>
+          <item key="nid" defined="false"></item>
+          <item key="oid">1.3.6.1.4.1.311.60.2.1.2</item>
+          <item key="sn" defined="false"></item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x570f230">
+          <item key="data">Intesa Sanpaolo S.p.a.</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x42f6790">
+          <item key="data">V1.4, Clause 8.5.2</item>
+          <item key="ln">businessCategory</item>
+          <item key="nid">860</item>
+          <item key="oid">2.5.4.15</item>
+          <item key="sn">businessCategory</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x42f6400">
+          <item key="data">00799960158</item>
+          <item key="ln">serialNumber</item>
+          <item key="nid">105</item>
+          <item key="oid">2.5.4.5</item>
+          <item key="sn">serialNumber</item>
+         </hashref>
+        </item>
+        <item key="9">
+         <hashref memory_address="0x489fa50">
+          <item key="data">www.intesasanpaolo.com</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=IT/ST=TO/L=Torino/street=Piazza San Carlo 156/1.3.6.1.4.1.311.60.2.1.3=IT/1.3.6.1.4.1.311.60.2.1.2=Torino/O=Intesa Sanpaolo S.p.a./businessCategory=V1.4, Clause 8.5.2/serialNumber=00799960158/CN=www.intesasanpaolo.com</item>
+      <item key="print_rfc2253">CN=www.intesasanpaolo.com,serialNumber=00799960158,businessCategory=V1.4\, Clause 8.5.2,O=Intesa Sanpaolo S.p.a.,1.3.6.1.4.1.311.60.2.1.2=#1306546F72696E6F,1.3.6.1.4.1.311.60.2.1.3=#13024954,street=Piazza San Carlo 156,L=Torino,ST=TO,C=IT</item>
+      <item key="print_rfc2253_utf8">CN=www.intesasanpaolo.com,serialNumber=00799960158,businessCategory=V1.4\, Clause 8.5.2,O=Intesa Sanpaolo S.p.a.,1.3.6.1.4.1.311.60.2.1.2=#1306546F72696E6F,1.3.6.1.4.1.311.60.2.1.3=#13024954,street=Piazza San Carlo 156,L=Torino,ST=TO,C=IT</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x570f068">
+    <item key="ext_content">
+     <arrayref memory_address="0x570dff8">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="score">0</item>
+    <item key="srv_type" defined="false"></item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">C</item>
+  <item key="HOSTNAME">www.intesasanpaolo.com</item>
+  <item key="HOSTTYPE">bank</item>
+  <item key="ID">145</item>
+  <item key="IP">193.203.234.216</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">60</item>
+  <item key="SSL">
+   <hashref memory_address="0x37a1c08">
+    <item key="cipherScore">45</item>
+    <item key="protocol">
+     <hashref memory_address="0x6376db0">
+      <item key="SSLv2">
+       <hashref memory_address="0x489cde0">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x57063b0">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x489d638">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x5443568">
+          <item key="0">RC4-SHA</item>
+          <item key="1">DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">40</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x48a0290">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x48a0368">
+          <item key="0">RC4-SHA</item>
+          <item key="1">DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">50</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x570fcf8">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x37d3370">
+          <item key="0">RC4-SHA</item>
+          <item key="1">DES-CBC3-SHA</item>
+          <item key="2">AES128-SHA</item>
+          <item key="3">AES256-SHA</item>
+          <item key="4">ECDHE-RSA-AES128-SHA</item>
+          <item key="5">ECDHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">40</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">100</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">95</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

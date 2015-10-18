@@ -1,0 +1,354 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x2cbec78">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x37f07c0">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://crl2.alphassl.com/gs/gsalphag2.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x5d565a8">
+      <item key="pubkey">34ccf297c03e8061948c4a18626d6a0b189628c5
+</item>
+      <item key="x509">6242478c1d7e56017c47d620531c07eadb2e9028</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x4f23b40">
+      <item key="not_after">Oct  2 14:19:36 2016 GMT</item>
+      <item key="not_before">Oct  2 14:19:36 2013 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x4f235e8">
+      <item key="count">9</item>
+      <item key="entries">
+       <hashref memory_address="0x4f230f0">
+        <item key="0">
+         <hashref memory_address="0x5a5cf48">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x4f233f0">
+          <item key="critical">0</item>
+          <item key="data">Policy: 2.23.140.1.2.1
+  CPS: https://www.globalsign.com/repository/
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x5ce2b00">
+          <item key="critical">0</item>
+          <item key="data">DNS:ssl6.ovh.net</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x5ce2a28">
+          <item key="critical">0</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x4f233a8">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x2d6fcc8">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://crl2.alphassl.com/gs/gsalphag2.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x2ebb2c8">
+          <item key="critical">0</item>
+          <item key="data">CA Issuers - URI:http://secure2.alphassl.com/cacert/gsalphag2.crt
+OCSP - URI:http://ocsp2.globalsign.com/gsalphag2
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x5cf4c10">
+          <item key="critical">0</item>
+          <item key="data">34:CC:F2:97:C0:3E:80:61:94:8C:4A:18:62:6D:6A:0B:18:96:28:C5</item>
+          <item key="ln">X509v3 Subject Key Identifier</item>
+          <item key="nid">82</item>
+          <item key="oid">2.5.29.14</item>
+          <item key="sn">subjectKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x5ce2dd0">
+          <item key="critical">0</item>
+          <item key="data">keyid:14:EA:19:55:F0:0E:0D:32:C6:1F:74:33:B7:8E:66:1A:4C:12:31:1E
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x5d563c8">
+      <item key="1.3.6.1.5.5.7.3.2">nid</item>
+      <item key="129">130</item>
+      <item key="TLS Web Server Authentication">TLS Web Client Authentication</item>
+      <item key="clientAuth">ln</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x5a5ce58">
+      <item key="md5">21:55:F0:D0:4D:9B:39:D6:4D:05:D4:0E:92:ED:0C:4E</item>
+      <item key="sha1">62:42:47:8C:1D:7E:56:01:7C:47:D6:20:53:1C:07:EA:DB:2E:90:28</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x5a61040">
+      <item key="issuer">
+       <hashref memory_address="0x5a5cd80">
+        <item key="dec">2952856680</item>
+        <item key="hex">B0010468</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x5d0aa10">
+        <item key="dec">611022746</item>
+        <item key="hex">246B779A</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x5de41f8">
+        <item key="dec">3697941460</item>
+        <item key="hex">DC6A1BD4</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x5a5ce70">
+      <item key="count">2</item>
+      <item key="entries">
+       <hashref memory_address="0x5a60b18">
+        <item key="0">
+         <hashref memory_address="0x5cf4b50">
+          <item key="data">AlphaSSL</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x5a606f8">
+          <item key="data">AlphaSSL CA - G2</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/O=AlphaSSL/CN=AlphaSSL CA - G2</item>
+      <item key="print_rfc2253">CN=AlphaSSL CA - G2,O=AlphaSSL</item>
+      <item key="print_rfc2253_utf8">CN=AlphaSSL CA - G2,O=AlphaSSL</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIEojCCA4qgAwIBAgISESGrLI4DFuHLcq91hQm/xwTpMA0GCSqGSIb3DQEBBQUA
+MC4xETAPBgNVBAoTCEFscGhhU1NMMRkwFwYDVQQDExBBbHBoYVNTTCBDQSAtIEcy
+MB4XDTEzMTAwMjE0MTkzNloXDTE2MTAwMjE0MTkzNlowRzELMAkGA1UEBhMCRlIx
+ITAfBgNVBAsTGERvbWFpbiBDb250cm9sIFZhbGlkYXRlZDEVMBMGA1UEAxMMc3Ns
+Ni5vdmgubmV0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA51RQsSW4
+aAsBvJXB+aYDaoo7UEqM7213EvjFANplGXKVfPLu/kGT1hmzpNgNCk9rDyFoJkdr
+693s7btpKW1x4ZZtls27LzSSO0vnv+W3OXk4+SrI0jYERxaAq82xi0zU/BRcTHNm
+OvY2D31eI6N2iuK6R5dmNvPegOWvRDVtN817EM5E+RskYBRmK5qTs0T71hDAmm7g
+hv2tEmOQWKW6kvMQV4mC52ht26624RZgHQXL9lYAqVV6PE0IW42ru99gG92B3/p/
+LRmx2k2t7bneRexPZJT8/Xvx0sC1Q0b6ziBt7OQsfsdb7wdOEHJQsHLOUO9IsWAw
+xUN8Z5fTS9LfPwIDAQABo4IBnzCCAZswDgYDVR0PAQH/BAQDAgWgMEkGA1UdIARC
+MEAwPgYGZ4EMAQIBMDQwMgYIKwYBBQUHAgEWJmh0dHBzOi8vd3d3Lmdsb2JhbHNp
+Z24uY29tL3JlcG9zaXRvcnkvMBcGA1UdEQQQMA6CDHNzbDYub3ZoLm5ldDAJBgNV
+HRMEAjAAMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjA6BgNVHR8EMzAx
+MC+gLaArhilodHRwOi8vY3JsMi5hbHBoYXNzbC5jb20vZ3MvZ3NhbHBoYWcyLmNy
+bDB/BggrBgEFBQcBAQRzMHEwPAYIKwYBBQUHMAKGMGh0dHA6Ly9zZWN1cmUyLmFs
+cGhhc3NsLmNvbS9jYWNlcnQvZ3NhbHBoYWcyLmNydDAxBggrBgEFBQcwAYYlaHR0
+cDovL29jc3AyLmdsb2JhbHNpZ24uY29tL2dzYWxwaGFnMjAdBgNVHQ4EFgQUNMzy
+l8A+gGGUjEoYYm1qCxiWKMUwHwYDVR0jBBgwFoAUFOoZVfAODTLGH3Qzt45mGkwS
+MR4wDQYJKoZIhvcNAQEFBQADggEBAI1Jd5XOZKiYBVFdzKE7hsvmkzG4g4zCmDSi
+7yj/vjYBiCHYjrjyn04CIudPQ7cljuoggkyCuvcO3TxTu8A+e71mI4wQBZpYGFYk
+52ZQPnus7gG1ltGarrahl9/QZyByMGfaVGOEcHqnffe4N3APvxokr8JPNQw9c+wQ
+p8lM8J4ru7nGUVMvBupo9jMWuO9GyCEeIo5V7ztV7uP7CARDHB9GHqla/gxaFJLD
+91fvJb5GJ3hoReendgvUovC1gZu/JjAk5JhX5WVfP8UW2/WwBVJuh9r11jv5fmhs
+ONJVdAhVgiDiFIgHuaKCJz+YzUZM6LKwqSmcCTJJKLSVzipPIws=
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x54300b0">
+      <item key="dec">1492365708277003088278941304038563298870505</item>
+      <item key="hex">1121AB2C8E0316E1CB72AF758509BFC704E9</item>
+      <item key="long">-1</item>
+      <item key="string">1121ab2c8e0316e1cb72af758509bfc704e9</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha1WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x5ce2d10">
+      <item key="altnames">
+       <hashref memory_address="0x5a60ae8">
+        <item key="2">ssl6.ovh.net</item>
+       </hashref>
+      </item>
+      <item key="count">3</item>
+      <item key="entries">
+       <hashref memory_address="0x5cf44d8">
+        <item key="0">
+         <hashref memory_address="0x5de4cc0">
+          <item key="data">FR</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x5a609c8">
+          <item key="data">Domain Control Validated</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x5de4c60">
+          <item key="data">ssl6.ovh.net</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=FR/OU=Domain Control Validated/CN=ssl6.ovh.net</item>
+      <item key="print_rfc2253">CN=ssl6.ovh.net,OU=Domain Control Validated,C=FR</item>
+      <item key="print_rfc2253_utf8">CN=ssl6.ovh.net,OU=Domain Control Validated,C=FR</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x5a60bd8">
+    <item key="ext_content">
+     <arrayref memory_address="0x5d56818">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="score">0</item>
+    <item key="srv_type">Apache</item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">F</item>
+  <item key="HOSTNAME">www.adjuger.ch</item>
+  <item key="HOSTTYPE">e-commerce</item>
+  <item key="ID">34</item>
+  <item key="IP">213.186.33.17</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">0</item>
+  <item key="SSL">
+   <hashref memory_address="0x5de4ea0">
+    <item key="cipherScore">0</item>
+    <item key="protocol">
+     <hashref memory_address="0x5de4ac8">
+      <item key="SSLv2">
+       <hashref memory_address="0x5430ab8">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x5cf4ca0">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x5de4c78">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x5d07dd8">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x2d0e7d0">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">0</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

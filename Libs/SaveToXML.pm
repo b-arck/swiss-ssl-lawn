@@ -50,26 +50,16 @@ my $log_conf = q(
 Log::Log4perl::init(\$log_conf);
 my $logger = Log::Log4perl->get_logger();
 
-my $xmlfile = get_file_name();
-
 
 sub saveToxml{
-	my ($surveyH ) = @_;
+	my ($surveyH,$folderName,$xmlfile) = @_;
 
 	$dump = new XML::Dumper;
 	
 	$logger->info(" - Info: Serialize to XML and save in a file");
 	$xml  = $dump->pl2xml( $surveyH );
 	$perl = $dump->xml2pl( $xml );
-	$dump->pl2xml( $perl, dirname(dirname abs_path $0) . '/Script/SSL/root/Output/' . $xmlfile );
-}
-
-sub get_file_name{
-	
-	my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst)=localtime(time);
-	my $nice_timestamp = sprintf ( "%02d%02d%04d_%02d%02d%02d", $mday,$mon+1,$year+1900,$hour,$min,$sec);
-	my $filename = "Audite_$nice_timestamp.xml" ;
-	return $filename;	
+	$dump->pl2xml( $perl, dirname(dirname abs_path $0) . "/Script/SSL/root/Output/$folderName/" . $xmlfile.".xml" );
 }
 
 

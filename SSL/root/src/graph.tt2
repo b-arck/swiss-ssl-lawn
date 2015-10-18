@@ -21,7 +21,7 @@
 			data.addColumn('number', "Note" );
 			data.addColumn({ type: 'string', role: 'style' });
 			data.addRows([
-			[% FOREACH key IN graphs.keys.sort -%]
+			[% FOREACH key IN graphs.keys.nsort -%]
 			[% graphs.$key %],
 			[% END -%]
 			]);

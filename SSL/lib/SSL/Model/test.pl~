@@ -1,0 +1,65 @@
+use Moose;
+use XML::Dumper;
+use namespace::autoclean;
+use List::MoreUtils qw(uniq);
+use CGI;
+use File::stat;
+use File::Basename qw(dirname);
+use Cwd  qw(abs_path);
+use lib dirname(dirname abs_path $0) . '/root/lib/Classes';
+use Survey;
+
+my $dump = new XML::Dumper;
+	
+my $dir_name = dirname(dirname abs_path $0)."/root/".lastBDD();
+my $path = shift;
+my $xmlData = {};
+if ( not defined $dir_name ) {
+    die qq(Usage: $0 <directory>);
+}
+
+opendir(my $dir_fh, $dir_name);
+
+while ( my $file = readdir $dir_fh) {
+    if ( $file !~ /^\./ ) {
+	my $perl = $dump->xml2pl($file);
+	my $i = 0;
+	foreach my $element (values($perl)) {
+		bless $element, 'Survey';
+		$xmlData->{$i} = $element;
+		undefied($perl);
+		undefied($element);
+		$i++;
+	}
+    }
+}
+closedir $dir_fh;
+return $xmlData;
+
+sub lastBDD{
+
+	my $dir_name = dirname(dirname abs_path $0)."/root";
+	my $path = shift;
+	if ( not defined $dir_name ) {
+	    die qq(Usage: $0 <directory>);
+	}
+
+	opendir(my $dir_fh, $dir_name);
+
+	my @dir_list;
+	while ( my $dir = readdir $dir_fh) {
+	    if ( $dir !~ /^\./ ) {
+		push @dir_list, "$dir_name/$dir"
+	    }
+	}
+	closedir $dir_fh;
+
+	for my $dir (sort {
+		my $a_stat = stat($a);
+		my $b_stat = stat($b);
+		$a_stat->ctime <=> $b_stat->ctime;
+	    }  @dir_list ) {
+		$path = $dir;
+	}
+	return $path;
+}

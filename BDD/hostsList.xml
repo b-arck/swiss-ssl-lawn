@@ -29,25 +29,22 @@
 	<host ID="17" type="e-banking" port="443">cs.directnet.com</host>
 	<host ID="18" type="bank" port="443">www.swissquote.ch</host>
 	<host ID="18" type="e-banking" port="443">trade.swissquote.ch</host>
-	<host ID="19" type="bank" port="443">www.lombardodier.com</host>
 	<host ID="19" type="e-banking" port="443">private.lombardodier.com</host>
-	<host ID="20" type="bank" port="443">www.bankaudi.ch</host>
+	<host ID="20" type="bank" port="443">www.bankaudipb.ch</host>
 	<host ID="20" type="e-banking" port="443">apbonline.bankaudipb.com</host>
 	<host ID="21" type="bank" port="443">www.bkb.ch</host>
 	<host ID="21" type="e-banking" port="443">ebanking.bkb.ch</host>
 	<host ID="22" type="bank" port="443">www.cornertrader.ch</host>
 	<host ID="22" type="e-banking" port="443">secure.cornertrader.ch</host>
-	<host ID="23" type="bank" port="443">www.leumi.ch</host>
 	<host ID="23" type="e-banking" port="443">e-banking.leumi.ch</host>
-	<host ID="24" type="e-banking" port="443">ch.saxobank.com</host>
+	<host ID="24" type="bank" port="443">www.saxobank.com</host>
+	<host ID="24" type="e-banking" port="443">webtrader.saxobank.ch</host>
 	<host ID="25" type="bank" port="443">www.pictet.com</host>
-	<host ID="26" type="bank" port="443">www.snb.ch</host>
 	<host ID="29" type="e-commerce" port="443">www.my-store.ch</host>
 	<host ID="30" type="e-commerce" port="443">www.quelle.ch</host>
 	<host ID="31" type="e-commerce" port="443">www.anibis.ch</host>
 	<host ID="32" type="e-commerce" port="443">www.koala.ch</host>
 	<host ID="33" type="e-commerce" port="443">www.eboutic.ch</host>
-	<host ID="34" type="e-commerce" port="443">www.adjuger.ch</host>
 	<host ID="35" type="e-commerce" port="443">www.ricardo.ch</host>
 	<host ID="36" type="e-commerce" port="443">www.apple.com</host>
 	<host ID="37" type="e-commerce" port="443">www.arp.ch</host>
@@ -55,15 +52,216 @@
 	<host ID="39" type="e-commerce" port="443">www.ackermann.ch</host>
 	<host ID="40" type="e-gov" port="443">www.ch-edoc-passantrag.admin.ch</host>
 	<host ID="41" type="e-gov" port="443">www.zivi.admin.ch</host>
-	<host ID="27" type="other" port="443">www.bam.ch</host>
-	<host ID="28" type="other" port="443">www.info-lab.fr</host>
 	<host ID="42" type="bank" port="443">www.abs.ch</host>
 	<host ID="42" type="e-banking" port="443">wwwsec.abs.ch</host>
-	<host ID="43" type="bank" port="443">www.jsafrasarasin.ch</host>
+	<host ID="43" type="bank" port="443">www.jsafrasarasin.com</host>
 	<host ID="43" type="e-banking" port="443">ebanking-ch.jsafrasarasin.com</host>
-	<host ID="44" type="bank" port="443">www.nbadsuisse.ch</host>
 	<host ID="45" type="e-banking" port="443">www.lgt.ch</host>
 	<host ID="46" type="bank" port="443">www.bnpparibas.ch</host>
 	<host ID="46" type="e-banking" port="443">ssoforms.bnpparibas.com</host>
 	<host ID="46" type="e-banking" port="443">connexis.bnpparibas.com</host>
+	<host ID="47" type="bank" port="443">www.aekbank.ch</host>
+	<host ID="47" type="e-banking" port="443">wwwsec.aekbank.ch</host>
+	<host ID="48" type="bank" port="443">www.akb.ch</host>
+	<host ID="48" type="e-banking" port="443">eb.akb.ch</host>
+	<host ID="49" type="e-banking" port="443">wwwsec.alpharheintalbank.ch</host>
+	<host ID="50" type="bank" port="443">www.abs.ch</host>
+	<host ID="50" type="e-banking" port="443">wwwsec.abs.ch</host>
+	<host ID="51" type="e-banking" port="443">inba.appkb.ch</host>
+	<host ID="52" type="e-banking" port="443">www.aquilabank.ch</host>
+	<host ID="53" type="e-banking" port="443">ebusiness.arabbank.ch</host>
+	<host ID="54" type="e-banking" port="443">wwwsec.bankzimmerberg.ch</host>
+	<host ID="55" type="bank" port="443">www.bbobank.ch</host>
+	<host ID="55" type="e-banking" port="443">wwwsec.bbobank.ch</host>
+	<host ID="57" type="e-banking" port="443">privat.bhf-bank.ch</host>
+	<host ID="58" type="bank" port="443">www.bnpparibas.ch</host>
+	<host ID="58" type="e-banking" port="443">ssoforms.bnpparibas.com</host>
+	<host ID="59" type="bank" port="443">www.bsibank.com</host>
+	<host ID="59" type="e-banking" port="443">www.e-connect.bsibank.com</host>
+	<host ID="60" type="bank" port="443">www.bsibank.ch</host>
+	<host ID="60" type="e-banking" port="443">www.e-connect.bsibank.com</host>
+	<host ID="61" type="bank" port="443">www.baloise.ch</host>
+	<host ID="61" type="e-banking" port="443">sobanet.baloise.ch</host>
+	<host ID="62" type="e-banking" port="443">bywebcard.bancopopolare.it</host>
+	<host ID="63" type="bank" port="443">www.bps-suisse.ch</host>
+	<host ID="63" type="e-banking" port="443">www.gobanking.ch</host>
+	<host ID="64" type="bank" port="443">www.bancasempione.ch</host>
+	<host ID="64" type="e-banking" port="443">ebanking.bancasempione.ch</host>
+	<host ID="65" type="bank" port="443">www.bancastato.ch</host>
+	<host ID="65" type="e-banking" port="443">www.inlinea.ch</host>
+	<host ID="66" type="bank" port="443">www.pb-santander.com</host>
+	<host ID="67" type="bank" port="443">www.bankbsu.ch</host>
+	<host ID="67" type="e-banking" port="443">wwwsec.bankbsu.ch</host>
+	<host ID="68" type="e-banking" port="443">wwwsec.eek.ch</host>
+	<host ID="69" type="bank" port="443">www.bankeki.ch</host>
+	<host ID="69" type="e-banking" port="443">wwwsec.eki.ch</host>
+	<host ID="70" type="bank" port="443">www.bankgantrisch.ch</host>
+	<host ID="70" type="e-banking" port="443">wwwsec.bankgantrisch.ch</host>
+	<host ID="71" type="e-banking" port="443">login.bhibank.com</host>
+	<host ID="72" type="bank" port="443">www.jsafrasarasin.ch</host>
+	<host ID="72" type="e-banking" port="443">eb1.jsafrasarasin.com</host>
+	<host ID="73" type="e-banking" port="443">ebanking.juliusbaer.com</host>
+	<host ID="74" type="e-banking" port="443">eservices.larochebanquiers.ch</host>
+	<host ID="75" type="bank" port="443">www.bankleerau.ch</host>
+	<host ID="75" type="e-banking" port="443">wwwsec.bankleerau.ch</host>
+	<host ID="76" type="bank" port="443">www.morganstanley.com</host>
+	<host ID="76" type="e-banking" port="443">www.morganstanleyclientserv.com</host>
+	<host ID="77" type="e-banking" port="443">ebanking.sparhafen.ch</host>
+	<host ID="78" type="e-banking" port="443">wwwsec.bankthalwil.ch</host>
+	<host ID="79" type="e-banking" port="443">login.vontobel.com</host>
+	<host ID="80" type="e-banking" port="443">banking.btv3banken.ch</host>
+	<host ID="81" type="e-banking" port="443">wwwsec.bankbiz.ch</host>
+	<host ID="82" type="e-banking" port="443">online.bankvonroll.ch</host>
+	<host ID="84" type="bank" port="443">www.bankhaus-jungholz.ch</host>
+	<host ID="84" type="e-banking" port="443">eb7.bankhaus-jungholz.ch</host>
+	<host ID="85" type="bank" port="443">www.bonhote.ch</host>
+	<host ID="85" type="e-banking" port="443">access.bonhote.ch</host>
+	<host ID="87" type="bank" port="443">www.bcj.ch</host>
+	<host ID="89" type="e-banking" port="443">banking.bcju.ch</host>
+	<host ID="90" type="e-banking" port="443">ebanking.banquecramer.ch</host>
+	<host ID="91" type="e-banking" port="443">services2.pbgate.net</host>
+	<host ID="92" type="bank" port="443">www.bil.com</host>
+	<host ID="92" type="e-banking" port="443">bilnet.lu.bil.com</host>
+	<host ID="93" type="bank" port="443">www.migrosbank.ch</host>
+	<host ID="94" type="e-banking" port="443">ebankinggeneve.cmcic-banquepasche.com</host>
+	<host ID="95" type="bank" port="443">www.millenniumbp.ch</host>
+	<host ID="96" type="e-banking" port="443">www.bcpconnect.com</host>
+	<host ID="97" type="bank" port="443">www.barclays.co.uk</host>
+	<host ID="97" type="e-banking" port="443">bank.barclays.co.uk</host>
+	<host ID="98" type="bank" port="443">www.blkb.ch</host>
+	<host ID="98" type="e-banking" port="443">secmail.blkb.ch</host>
+	<host ID="99" type="e-banking" port="443">eservices.baumann-banquiers.ch</host>
+	<host ID="100" type="e-banking" port="443">online.berenberg.ch</host>
+	<host ID="101" type="bank" port="443">www.bernerlandbank.ch</host>
+	<host ID="101" type="e-banking" port="443">wwwsec.bernerlandbank.ch</host>
+	<host ID="102" type="e-banking" port="443">wwwsec.sparkasse-dielsdorf.ch</host>
+	<host ID="103" type="e-banking" port="443">banking.dcbank.ch</host>
+	<host ID="105" type="e-banking" port="443">www.cimbanque.net</host>
+	<host ID="106" type="bank" port="443">www.ce-riviera.ch</host>
+	<host ID="106" type="e-banking" port="443">ihb.ce-riviera.ch</host>
+	<host ID="107" type="bank" port="443">ceanet.ch</host>
+	<host ID="107" type="e-banking" port="443">wwwsec.ceanet.ch</host>
+	<host ID="108" type="e-banking" port="443">wwwsec.cedc.ch</host>
+	<host ID="109" type="e-banking" port="443">online.cen.ch</host>
+	<host ID="110" type="bank" port="443">www.cembra.ch</host>
+	<host ID="110" type="e-banking" port="443">eservice.cembra.ch</host>
+	<host ID="111" type="bank" port="443">www.citibank.com</host>
+	<host ID="111" type="e-banking" port="443">online.citibank.com</host>
+	<host ID="112" type="bank" port="443">bsb.clientis.ch</host>
+	<host ID="112" type="e-banking" port="443">wwwsec.bsb.clientis.ch</host>
+	<host ID="113" type="bank" port="443">cke.clientis.ch</host>
+	<host ID="113" type="e-banking" port="443">wwwsec.cke.clientis.ch</host>
+	<host ID="114" type="bank" port="443">bankoberaargau.clientis.ch</host>
+	<host ID="114" type="e-banking" port="443">wwwsec.bankoberaargau.clientis.ch</host>
+	<host ID="115" type="e-banking" port="443">wwwsec.oberuzwil.clientis.ch</host>
+	<host ID="116" type="bank" port="443">bankthur.clientis.ch</host>
+	<host ID="116" type="e-banking" port="443">wwwsec.bankthur.clientis.ch</host>
+	<host ID="117" type="bank" port="443">cbt.clientis.ch</host>
+	<host ID="117" type="e-banking" port="443">wwwsec.cbt.clientis.ch</host>
+	<host ID="118" type="bank" port="443">bankimthal.clientis.ch</host>
+	<host ID="118" type="e-banking" port="443">wwwsec.bankimthal.clientis.ch</host>
+	<host ID="119" type="bank" port="443">bienebank.clientis.ch</host>
+	<host ID="119" type="e-banking" port="443">wwwsec.bienebank.clientis.ch</host>
+	<host ID="120" type="bank" port="443">cec.clientis.ch</host>
+	<host ID="120" type="e-banking" port="443">wwwsec.cec.clientis.ch</host>
+	<host ID="121" type="bank" port="443">www.cornerbanca.com</host>
+	<host ID="121" type="e-banking" port="443">login.corneronline.ch</host>
+	<host ID="123" type="e-banking" port="443">login2.pbgate.net</host>
+	<host ID="124" type="bank" port="443">www.ca-financements.ch</host>
+	<host ID="124" type="e-banking" port="443">retail.ca-financements.ch</host>
+	<host ID="125" type="bank" port="443">www.cmvsa.ch</host>
+	<host ID="125" type="e-banking" port="443">wwwsec.cmvsa.ch</host>
+	<host ID="126" type="e-banking" port="443">online.dz-privatbank.com</host>
+	<host ID="127" type="e-banking" port="443">dbib-ch.db.com</host>
+	<host ID="128" type="e-banking" port="443">ebanking1.dominickco.ch</host>
+	<host ID="129" type="bank" port="443">www.dukascopy.com</host>
+	<host ID="129" type="e-banking" port="443">ebank.dukascopy.com</host>
+	<host ID="130" type="e-banking" port="443">ebanking.efginternational.com</host>
+	<host ID="131" type="e-banking" port="443">wwwsec.ekaffoltern.ch</host>
+	<host ID="132" type="bank" port="443">www.ekr.ch</host>
+	<host ID="132" type="e-banking" port="443">wwwsec.ekr.ch</host>
+	<host ID="135" type="bank" port="443">www.vanlanschot.ch</host>
+	<host ID="135" type="e-banking" port="443">ebanking.vanlanschot.ch</host>
+	<host ID="136" type="bank" port="443">www.falconpb.com</host>
+	<host ID="136" type="e-banking" port="443">e-banking.falconpb.com</host>
+	<host ID="137" type="e-banking" port="443">www.fibi-online.co.il</host>
+	<host ID="138" type="e-banking" port="443">eba.finter.ch</host>
+	<host ID="139" type="bank" port="443">www.frankfurter-bankgesellschaft.ch</host>
+	<host ID="139" type="e-banking" port="443">eservices.frankfurter-bankgesellschaft.ch</host>
+	<host ID="140" type="bank" port="443">www.glarner-regionalbank.ch</host>
+	<host ID="140" type="e-banking" port="443">wwwsec.glarner-regionalbank.ch</host>
+	<host ID="141" type="bank" port="443">www.gsbanque.ch</host>
+	<host ID="141" type="e-banking" port="443">services2.pbgate.net</host>
+	<host ID="142" type="bank" port="443">www.glkb.ch</host>
+	<host ID="142" type="e-banking" port="443">inba-html.glkb.ch</host>
+	<host ID="143" type="bank" port="443">www.gkb.ch</host>
+	<host ID="143" type="e-banking" port="443">e-banking.gkb.ch</host>
+	<host ID="144" type="bank" port="443">www.idbs.ch</host>
+	<host ID="145" type="e-banking" port="443">ebanking.idbs.ch</host>
+	<host ID="145" type="bank" port="443">www.intesasanpaolo.com</host>
+	<host ID="146" type="bank" port="443">www.investec.com</host>
+	<host ID="146" type="e-banking" port="443">login.secure.investec.com</host>
+	<host ID="147" type="e-banking" port="443">online2.pbgate.net</host>
+	<host ID="148" type="e-banking" port="443">secure.kbl-spb.com</host>
+	<host ID="149" type="e-banking" port="443">www.lbbw-schweiz.ch</host>
+	<host ID="150" type="bank" port="443">www.leihkasse-stammheim.ch</host>
+	<host ID="150" type="e-banking" port="443">wwwsec.leihkasse-stammheim.ch</host>
+	<host ID="152" type="e-banking" port="443">wwwsec.lienhardt.ch</host>
+	<host ID="153" type="bank" port="443">www.lukb.ch</host>
+	<host ID="153" type="e-banking" port="443">inba.lukb.ch</host>
+	<host ID="154" type="e-banking" port="443">ebanking.maerki-baumann.ch</host>
+	<host ID="155" type="bank" port="443">www.mirabaud.com</host>
+	<host ID="155" type="e-banking" port="443">securech.mirabaud.com</host>
+	<host ID="157" type="e-banking" port="443">nbkonline.bh.nbk.com</host>
+	<host ID="158" type="bank" port="443">www.nab.ch</host>
+	<host ID="158" type="e-banking" port="443">nab.directnet.com</host>
+	<host ID="159" type="bank" port="443">www.neuebankag.com</host>
+	<host ID="159" type="e-banking" port="443">ebanking.neuebankag.li</host>
+	<host ID="160" type="bank" port="443">www.nkb.ch</host>
+	<host ID="160" type="e-banking" port="443">inba.nkb.ch</host>
+	<host ID="161" type="bank" port="443">www.nordea.ch</host>
+	<host ID="161" type="e-banking" port="443">secureprivateebanking.nordea.ch</host>
+	<host ID="162" type="bank" port="443">www.owkb.ch</host>
+	<host ID="162" type="e-banking" port="443">internetbank.owkb.ch</host>
+	<host ID="163" type="e-banking" port="443">ebanking.phzbank.com</host>
+	<host ID="164" type="bank" port="443">www.petercam.com</host>
+	<host ID="164" type="e-banking" port="443">my.petercam.ch</host>
+	<host ID="165" type="e-banking" port="443">ebanking.piguetgalland.ch</host>
+	<host ID="166" type="e-banking" port="443">online.pbihag.ch</host>
+	<host ID="167" type="bank" port="443">www.rbcits.com</host>
+	<host ID="168" type="bank" port="443">www.rahnbodmer.ch</host>
+	<host ID="168" type="e-banking" port="443">secure.rahnbodmer.ch</host>
+	<host ID="169" type="bank" port="443">www.rbm.ch</host>
+	<host ID="169" type="e-banking" port="443">wwwsec.rbm.ch</host>
+	<host ID="170" type="e-banking" port="443">wwwsec.regiobank.ch</host>
+	<host ID="171" type="e-banking" port="443">e-connect.reichmuthco.ch</host>
+	<host ID="173" type="bank" port="443">www.saanenbank.ch</host>
+	<host ID="173" type="e-banking" port="443">wwwsec.saanenbank.ch</host>
+	<host ID="174" type="bank" port="443">www.privatebanking.societegenerale.com</host>
+	<host ID="174" type="e-banking" port="443">particuliers.societegenerale.fr</host>
+	<host ID="175" type="bank" port="443">www.shkb.ch</host>
+	<host ID="175" type="e-banking" port="443">wwwsec.shkb.ch</host>
+	<host ID="176" type="bank" port="443">www.szkb.ch</host>
+	<host ID="176" type="e-banking" port="443">wwwsec.szkb.ch</host>
+	<host ID="177" type="bank" port="443">www.bancaria.ch</host>
+	<host ID="177" type="e-banking" port="443">www.mybancaria.ch</host>
+	<host ID="178" type="bank" port="443">www.slguerbetal.ch</host>
+	<host ID="178" type="e-banking" port="443">banking.slguerbetal.ch</host>
+	<host ID="179" type="bank" port="443">www.bankslm.ch</host>
+	<host ID="179" type="e-banking" port="443">wwwsec.bankslm.ch</host>
+	<host ID="180" type="e-banking" port="443">wwwsec.slr.ch</host>
+	<host ID="181" type="e-banking" port="443">wwwsec.slbucheggberg.ch</host>
+	<host ID="182" type="bank" port="443">www.sgkb.ch</host>
+	<host ID="182" type="e-banking" port="443">www.onba.ch</host>
+	<host ID="183" type="bank" port="443">www.triba.ch</host>
+	<host ID="183" type="e-banking" port="443">wwwsec.triba.ch</host>
+	<host ID="184" type="bank" port="443">www.ubp.com</host>
+	<host ID="184" type="e-banking" port="443">services2.pbgate.net</host>
+	<host ID="187" type="e-banking" port="443">wwwsec.vzdepotbank.ch</host>
+	<host ID="188" type="bank" port="443">www.valiant.ch</host>
+	<host ID="188" type="e-banking" port="443">wwwsec.valiant.ch</host>
+	<host ID="189" type="e-commerce" port="443">www.payot.ch</host>
+	<host ID="190" type="e-commerce" port="443">www.lehmanns.ch</host>
+	<host ID="191" type="e-commerce" port="443">www.nespresso.com</host>
+	<host ID="192" type="e-commerce" port="443">www.swisscom.ch</host>
 </hosts>

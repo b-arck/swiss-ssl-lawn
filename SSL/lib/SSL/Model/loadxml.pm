@@ -9,6 +9,7 @@ use File::Basename qw(dirname);
 use Cwd  qw(abs_path);
 use lib dirname(dirname abs_path $0) . '/root/lib/Classes';
 use Survey;
+use File::Slurp qw(read_dir);
 
 extends 'Catalyst::Model';
 
@@ -34,90 +35,133 @@ it under the same terms as Perl itself.
 
 =cut
 
-sub loadAllData {
-	my $dump = new XML::Dumper;
-	my $perl = $dump->xml2pl(lastBDD());
-	
-	my $xmlData = {};
-	my $i = 0;
-	foreach my $element (values($perl)) {
-		bless $element, 'Survey';
-		$xmlData->{$i} = $element;
-		$i++;
-	}
-	return $xmlData;
-}
-
 sub loadDetails{
 	my ($self, $args) = @_;
-
-	my $dump = new XML::Dumper;
-	my $perl = $dump->xml2pl(lastBDD());
 	
+	
+	my $mylastDir = lastBDD();
 	my $xmlData = {};
-	my $id;
-	my $site;
 	my $i = 0;
+	my $id;
 	my @fields = split('/', $args);
-	foreach my $element (values($perl)) {
-		bless $element, 'Survey';
-		if( ($element->get_id() == $fields[2]) and ($element->get_hostName() eq $fields[3]) ){
-			$xmlData->{$i} = $element;
-		}	
-		$i++;
+	my $dir_name = dirname(dirname abs_path $0)."/root/Output/$mylastDir";
+	my $path = shift;
+	if ( not defined $dir_name ) {
+	    die qq(Usage: $0 <directory>);
 	}
-	return $xmlData;
+
+	opendir(my $dir_fh, $dir_name);
+
+	while ( my $file = readdir $dir_fh) {
+	    if ( $file !~ /^\./ ) {
+		my @fname = split('/', $file);
+		my $arg = $fields[3] . ".xml";
+		if($file eq  $arg){
+			my $dump = new XML::Dumper;
+			my $perl = $dump->xml2pl("$dir_name/$file");
+	
+			bless $perl, 'Survey';
+			$xmlData->{$i} = $perl;
+			$id = $perl->get_id();
+			undef($perl);
+			$i++;
+		}
+	    }
+	}
+	closedir $dir_fh;
+
+	return $xmlData, $id;
 }
 
 sub loadSiteByType{
 	my ($self, $args) = @_;
 
-	my $dump = new XML::Dumper;
-	my $perl = $dump->xml2pl(lastBDD());
-	
+	my $mylastDir = lastBDD();
 	my $xmlData = {};
 	my $i = 0;
+	my $j = 0;
+	my @data;
+	my @listType;
+
 	my @fields = split('/', $args);
-	foreach my $element (values($perl)) {
-		bless $element, 'Survey';
+	my $dir_name = dirname(dirname abs_path $0)."/root/Output/$mylastDir";
+	my $path = shift;
+	if ( not defined $dir_name ) {
+	    die qq(Usage: $0 <directory>);
+	}
+
+	opendir(my $dir_fh, $dir_name);
+
+	while ( my $file = readdir $dir_fh) {
+	    if ( $file !~ /^\./ ) {
+		eval{my $dump = new XML::Dumper;
+		my $perl = $dump->xml2pl("$dir_name/$file");
+	
+		bless $perl, 'Survey';
 		if($fields[1] ne "all"){
 			
-			if( $element->get_hostType() eq $fields[1]){
-				$xmlData->{$i} = $element;
+			if( $perl->get_hostType() eq $fields[1]){
+				$xmlData->{$i} = $perl;
 			}	
 			$i++;
 		}
 		else{
-			$xmlData->{$i} = $element;
+			$xmlData->{$i} = $perl;
 			$i++;
 		}
+		$data[$j] = $perl->get_hostType();
+		$j++;
+		undef($perl);}
+	    }
 	}
-	return $xmlData;
+	closedir $dir_fh;
+	@listType = uniq(@data);
+	return $xmlData, \@listType;
 }
 
 sub loadSortedType{
 	my ($self, $args) = @_;
 
-	my $dump = new XML::Dumper;
-	my $perl = $dump->xml2pl(lastBDD());
-	
+	my $mylastDir = lastBDD();
 	my $xmlData = {};
 	my $Data = {};
 	my $i = 0;
+	my $j = 0;
+	my @menu;
+	my @listType;
+
 	my @fields = split('/', $args);
-	foreach my $element (values($perl)) {
-		bless $element, 'Survey';
+	my $dir_name = dirname(dirname abs_path $0)."/root/Output/$mylastDir";
+	my $path = shift;
+	if ( not defined $dir_name ) {
+	    die qq(Usage: $0 <directory>);
+	}
+
+	opendir(my $dir_fh, $dir_name);
+
+	while ( my $file = readdir $dir_fh) {
+	    if ( $file !~ /^\./ ) {
+		eval{my $dump = new XML::Dumper;
+		my $perl = $dump->xml2pl("$dir_name/$file");
+	
+		bless $perl, 'Survey';
 		if($fields[2] ne "all"){
-			if( $element->get_hostType() eq $fields[2]){
-				$xmlData->{$i} = $element;
+			
+			if( $perl->get_hostType() eq $fields[2]){
+				$xmlData->{$i} = $perl;
 			}	
 			$i++;
 		}
 		else{
-			$xmlData->{$i} = $element;
+			$xmlData->{$i} = $perl;
 			$i++;
 		}
+		$menu[$j] = $perl->get_hostType();
+		$j++;
+		undef($perl);}
+	    }
 	}
+	closedir $dir_fh;
 
 	if($fields[1] eq "name"){
 		my $j=0;
@@ -141,92 +185,62 @@ sub loadSortedType{
 			$j++
 		}
 	}
-	return $Data;
-}
+	@listType = uniq(@menu);
+	return $Data, \@listType;
 
-sub lastBDD{
-
-	my $dir_name = dirname(dirname abs_path $0)."/root/Output";
-	my $path = shift;
-	if ( not defined $dir_name ) {
-	    die qq(Usage: $0 <directory>);
-	}
-
-	opendir(my $dir_fh, $dir_name);
-
-	my @file_list;
-	while ( my $file = readdir $dir_fh) {
-	    if ( $file !~ /^\./ ) {
-		push @file_list, "$dir_name/$file"
-	    }
-	}
-	closedir $dir_fh;
-
-	for my $file (sort {
-		my $a_stat = stat($a);
-		my $b_stat = stat($b);
-		$a_stat->ctime <=> $b_stat->ctime;
-	    }  @file_list ) {
-		$path = $file;
-	}
-	return $path;
-}
-
-sub findType{
-
-	my @data;
-	my @listType;
-	my $dump = new XML::Dumper;
-	my $perl = $dump->xml2pl(lastBDD());
-	my $i=0;
-	foreach my $element (values($perl)) {
-		bless $element, 'Survey';
-		$data[$i] = $element->get_hostType();
-		$i++;
-	}
-
-	@listType = uniq(@data);
-	return \@listType;
 }
 
 sub drawChart{
 my ($self, $args) = @_;
 
-	my @fields = split('/', $args);
-	my $site=$fields[2];
 	my $data = {};
+	my $i = 0;
+	my @dir_list;
+	my $directory;
+	my @fields = split('/', $args);
+	my $site= $fields[2];
 	my $dir_name = dirname(dirname abs_path $0)."/root/Output";
-	my $path = shift;
-	if ( not defined $dir_name ) {
-	    die qq(Usage: $0 <directory>);
+
+	for my $dir (grep { -d "$dir_name/$_" } read_dir($dir_name)) {
+		push @dir_list, "$dir";
+		$i++
 	}
 
-	opendir(my $dir_fh, $dir_name);
+	foreach my $folder (@dir_list){
+		opendir(my $dir_fh, "$dir_name/$folder");
 
-	my @file_list;
-	while ( my $file = readdir $dir_fh) {
-	    if ( $file !~ /^\./ ) {
-		push @file_list, "$dir_name/$file"
-	    }
-	}
-	closedir $dir_fh;
-	my $i=0;
-	foreach my $file((sort {my $a_stat = stat($a);my $b_stat = stat($b);$a_stat->ctime <=> $b_stat->ctime;}  @file_list )){
-		my $dump = new XML::Dumper;
-		my $perl = $dump->xml2pl($file);
-		foreach my $element (values($perl)) {
-
-			if( $site eq $element->get_hostName()){
-				my $date = $element->get_date();
-				my $result = $element->get_result();
-				my $color = getColor($result);
-				$data->{$i} = "['$date', $result, 'color : $color']";
-				$i++;
-			}	
+		while ( my $file = readdir $dir_fh) {
+			if ( $file !~ /^\./ ) {
+				my @fname = split('/', $file);
+				my $arg = $fields[2] . ".xml";
+				if($file eq  $arg){
+					my $dump = new XML::Dumper;
+					my $perl = $dump->xml2pl("$dir_name/$folder/$file");
+	
+					bless $perl, 'Survey';
+					my $date = $perl->get_date();
+					my $result = $perl->get_result();
+					my $color = getColor($result);
+					$data->{$i} = "['$date', $result, 'color : $color']";
+					$i--;
+				}
+			}
 		}
+		closedir $dir_fh;
+	}
+	return $data;
+}
+
+sub lastBDD{
+
+	my @dir_list;
+	my $directory;
+	my $root = dirname(dirname abs_path $0)."/root/Output";
+	for my $dir (grep { -d "$root/$_" } read_dir($root)) {
+		push @dir_list, "$dir";
 	}
 
-	return $data;
+	return $dir_list[0];
 }
 
 sub retType{

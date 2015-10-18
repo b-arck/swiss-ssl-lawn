@@ -1,0 +1,390 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x5706488">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x3cb01c0">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://gn.symcb.com/gn.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x489d710">
+      <item key="pubkey">943bad2ab1139970c1a2bf709bfc9fd418e83912
+</item>
+      <item key="x509">8801d2a123be10574b053e78b5ebb3cf8a4f2d05</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x56f5f10">
+      <item key="not_after">Sep 22 23:59:59 2016 GMT</item>
+      <item key="not_before">Aug 24 00:00:00 2015 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x5705ac8">
+      <item key="count">8</item>
+      <item key="entries">
+       <hashref memory_address="0x39d4560">
+        <item key="0">
+         <hashref memory_address="0x4b17238">
+          <item key="critical">0</item>
+          <item key="data">DNS:*.my-store.ch, DNS:my-store.ch</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x2a9b8c8">
+          <item key="critical">0</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x490a368">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x490a038">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://gn.symcb.com/gn.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x490a668">
+          <item key="critical">0</item>
+          <item key="data">Policy: 2.23.140.1.2.2
+  CPS: https://www.geotrust.com/resources/repository/legal
+  User Notice:
+    Explicit Text: https://www.geotrust.com/resources/repository/legal
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x29f0678">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x490a410">
+          <item key="critical">0</item>
+          <item key="data">keyid:D2:6F:F7:96:F4:85:3F:72:3C:30:7D:23:DA:85:78:9B:A3:7C:5A:7C
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x39d4338">
+          <item key="critical">0</item>
+          <item key="data">OCSP - URI:http://gn.symcd.com
+CA Issuers - URI:http://gn.symcb.com/gn.crt
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x490a140">
+      <item key="1.3.6.1.5.5.7.3.2">nid</item>
+      <item key="129">130</item>
+      <item key="TLS Web Server Authentication">TLS Web Client Authentication</item>
+      <item key="clientAuth">ln</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x39d4410">
+      <item key="md5">3B:3A:AC:F6:E6:17:2B:B5:38:7C:F9:57:F9:95:FF:0C</item>
+      <item key="sha1">88:01:D2:A1:23:BE:10:57:4B:05:3E:78:B5:EB:B3:CF:8A:4F:2D:05</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x49098e8">
+      <item key="issuer">
+       <hashref memory_address="0x490a2f0">
+        <item key="dec">271650123</item>
+        <item key="hex">10310D4B</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x37a2500">
+        <item key="dec">2923972355</item>
+        <item key="hex">AE484703</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x37a2710">
+        <item key="dec">2033469038</item>
+        <item key="hex">7934466E</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x37a26e0">
+      <item key="count">3</item>
+      <item key="entries">
+       <hashref memory_address="0x490a5f0">
+        <item key="0">
+         <hashref memory_address="0x49099f0">
+          <item key="data">US</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x4909990">
+          <item key="data">GeoTrust Inc.</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x37a2788">
+          <item key="data">GeoTrust SSL CA - G3</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=US/O=GeoTrust Inc./CN=GeoTrust SSL CA - G3</item>
+      <item key="print_rfc2253">CN=GeoTrust SSL CA - G3,O=GeoTrust Inc.,C=US</item>
+      <item key="print_rfc2253_utf8">CN=GeoTrust SSL CA - G3,O=GeoTrust Inc.,C=US</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIE2TCCA8GgAwIBAgIQIUi0a3Ia5JKMqL/drqtOUjANBgkqhkiG9w0BAQsFADBE
+MQswCQYDVQQGEwJVUzEWMBQGA1UEChMNR2VvVHJ1c3QgSW5jLjEdMBsGA1UEAxMU
+R2VvVHJ1c3QgU1NMIENBIC0gRzMwHhcNMTUwODI0MDAwMDAwWhcNMTYwOTIyMjM1
+OTU5WjBdMQswCQYDVQQGEwJDSDEPMA0GA1UECBMGR2VuZXZlMQ8wDQYDVQQHFAZN
+ZXlyaW4xFDASBgNVBAoUC015LVN0b3JlIFNBMRYwFAYDVQQDFA0qLm15LXN0b3Jl
+LmNoMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAueTpr7wdZSlE15zH
+eXLqBuxryHuWs3ePqJoHxzEVRFFBIPAMX6rBzLNbhFeZbhrdZQ67M5utgqBV6kI/
+ld5nL4/Ey01zii34c5uRCASABGeud6aDZEqhK/f6dc89Vhpe9DwfSnZrf1Yuvn+X
+xYsMWfaVhwMYoOcuh2eh4/VGeEpreLgxyicgZ2PFVAn9V9EXot/+m7Zx/8JOFHs6
++22g8FtckbsEF59f2TTkdcHpb2gO4p9Zh5gD6AbNG1m88hGHq0U6pEMuu/GG7E9F
+4lBWbZ5A2MKIn5S2ZsT1yz/nxGy/7nhZHgB8c0nTZvO1Z7xTNJUSaThuZdVOGe1/
+WF20awIDAQABo4IBrDCCAagwJQYDVR0RBB4wHIINKi5teS1zdG9yZS5jaIILbXkt
+c3RvcmUuY2gwCQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCBaAwKwYDVR0fBCQwIjAg
+oB6gHIYaaHR0cDovL2duLnN5bWNiLmNvbS9nbi5jcmwwgZ0GA1UdIASBlTCBkjCB
+jwYGZ4EMAQICMIGEMD8GCCsGAQUFBwIBFjNodHRwczovL3d3dy5nZW90cnVzdC5j
+b20vcmVzb3VyY2VzL3JlcG9zaXRvcnkvbGVnYWwwQQYIKwYBBQUHAgIwNQwzaHR0
+cHM6Ly93d3cuZ2VvdHJ1c3QuY29tL3Jlc291cmNlcy9yZXBvc2l0b3J5L2xlZ2Fs
+MB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAfBgNVHSMEGDAWgBTSb/eW
+9IU/cjwwfSPahXibo3xafDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0
+dHA6Ly9nbi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9nbi5zeW1jYi5j
+b20vZ24uY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQBtJ0KCsKWWj52+ldF39BKXHyk4
+9RgQRXBuEXaJrZV52EcaY+9UprbYtd6u0ahrjD/NIeu3cwQ8TzQffwzuA3fIZkCi
++BVBD/5s6yc1NoKPKZBNIBBUSaz5XyDo7n+/Zgs+/EO07ahseWt8VIz/YI/ShpoW
+Mq9lVbRbQIf7BB4hw7DC8RSQzda0bld+Ko0mfxrDMD8ivML1KI6AHJfMqiNSQhMe
+LZwG2CBNUaQemHK3tT3uRSLsgrrDgUVRd145zd4OSRu28UQRsTlSsG+lpJWG8ZmA
+Rts1NdVgy8ep9Blx0hS8m3SuxXxnScF4inOPwTinZ2HpiZuT6fHEV/1YweY9
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x48b9fe8">
+      <item key="dec">44242028581172580315901870893496487506</item>
+      <item key="hex">2148B46B721AE4928CA8BFDDAEAB4E52</item>
+      <item key="long">-1</item>
+      <item key="string">2148b46b721ae4928ca8bfddaeab4e52</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha256WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x5424a50">
+      <item key="altnames">
+       <hashref memory_address="0x37a2338">
+        <item key="2">my-store.ch</item>
+       </hashref>
+      </item>
+      <item key="count">5</item>
+      <item key="entries">
+       <hashref memory_address="0x37a29c8">
+        <item key="0">
+         <hashref memory_address="0x37a2b90">
+          <item key="data">CH</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x48b9ec8">
+          <item key="data">Geneve</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x37a27e8">
+          <item key="data">Meyrin</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x37a2cc8">
+          <item key="data">My-Store SA</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x37a2980">
+          <item key="data">*.my-store.ch</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=CH/ST=Geneve/L=Meyrin/O=My-Store SA/CN=*.my-store.ch</item>
+      <item key="print_rfc2253">CN=*.my-store.ch,O=My-Store SA,L=Meyrin,ST=Geneve,C=CH</item>
+      <item key="print_rfc2253_utf8">CN=*.my-store.ch,O=My-Store SA,L=Meyrin,ST=Geneve,C=CH</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x37a2638">
+    <item key="ext_content">
+     <arrayref memory_address="0x37a2890">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="hsts">No</item>
+    <item key="https_redirect">No</item>
+    <item key="score">-2</item>
+    <item key="srv_type" defined="false"></item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">A-</item>
+  <item key="HOSTNAME">www.my-store.ch</item>
+  <item key="HOSTTYPE">e-commerce</item>
+  <item key="ID">29</item>
+  <item key="IP">194.165.33.35</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">80.25</item>
+  <item key="SSL">
+   <hashref memory_address="0x37a3100">
+    <item key="cipherScore">75</item>
+    <item key="protocol">
+     <hashref memory_address="0x37a2ae8">
+      <item key="SSLv2">
+       <hashref memory_address="0x37a2a28">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x37a2b18">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x37a3208">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x37a31d8">
+          <item key="0">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="1">AES128-SHA</item>
+          <item key="2">DHE-RSA-AES128-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">70</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x37a2bf0">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x37a2d70">
+          <item key="0">EDH-RSA-DES-CBC3-SHA</item>
+          <item key="1">AES128-SHA</item>
+          <item key="2">DHE-RSA-AES128-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">80</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x37a2608">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">92.5</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

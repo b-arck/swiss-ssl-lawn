@@ -1,0 +1,20 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x3e4c690">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x4c20c68">
+    <item key="pubkey_bits">0</item>
+   </hashref>
+  </item>
+  <item key="CONTENT" defined="false"></item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">Z</item>
+  <item key="HOSTNAME">www.snb.ch</item>
+  <item key="HOSTTYPE">bank</item>
+  <item key="ID">26</item>
+  <item key="IP" defined="false"></item>
+  <item key="PORT">443</item>
+  <item key="RESULT">0</item>
+  <item key="SSL" defined="false"></item>
+  <item key="TRUSTED">Non</item>
+ </hashref>
+</perldata>

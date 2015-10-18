@@ -1,0 +1,336 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x504c8d0">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x4081190">
+    <item key="certificate_type">4401</item>
+    <item key="crl" defined="false"></item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x507c5a8">
+      <item key="pubkey">5d0c75d38952725e898c22e4a5b210825315639d
+</item>
+      <item key="x509">d3bea37c404b89a5b22db7ecd52d64e910514c19</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x505f688">
+      <item key="not_after">Oct 24 00:02:19 2036 GMT</item>
+      <item key="not_before">Mar  4 00:02:19 2012 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x505f340">
+      <item key="count">3</item>
+      <item key="entries">
+       <hashref memory_address="0x258c390">
+        <item key="0">
+         <hashref memory_address="0x42cf080">
+          <item key="critical">0</item>
+          <item key="data">5D:0C:75:D3:89:52:72:5E:89:8C:22:E4:A5:B2:10:82:53:15:63:9D</item>
+          <item key="ln">X509v3 Subject Key Identifier</item>
+          <item key="nid">82</item>
+          <item key="oid">2.5.29.14</item>
+          <item key="sn">subjectKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x4084588">
+          <item key="critical">0</item>
+          <item key="data">keyid:5D:0C:75:D3:89:52:72:5E:89:8C:22:E4:A5:B2:10:82:53:15:63:9D
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x42ce6a8">
+          <item key="critical">0</item>
+          <item key="data">CA:TRUE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x5085d50">
+      <item key="oid">nid</item>
+      <item key="sn">ln</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x507ce00">
+      <item key="md5">53:E0:20:16:2F:A4:B3:17:C5:9C:45:61:14:A6:97:A9</item>
+      <item key="sha1">D3:BE:A3:7C:40:4B:89:A5:B2:2D:B7:EC:D5:2D:64:E9:10:51:4C:19</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x51235d8">
+      <item key="issuer">
+       <hashref memory_address="0x5123ce0">
+        <item key="dec">4057023905</item>
+        <item key="hex">F1D145A1</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x5086158">
+        <item key="dec">7677495</item>
+        <item key="hex">752637</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x5046bf0">
+        <item key="dec">4057023905</item>
+        <item key="hex">F1D145A1</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x5086488">
+      <item key="count">6</item>
+      <item key="entries">
+       <hashref memory_address="0x42b6c28">
+        <item key="0">
+         <hashref memory_address="0x4083910">
+          <item key="data">FR</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x34ed048">
+          <item key="data">VAL DE MARNE</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x50453f0">
+          <item key="data">CHOISY LE ROI</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x42b6ac0">
+          <item key="data">OPHOS SYSTEM</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x507c7d0">
+          <item key="data">HEBERGEMENT</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x409b330">
+          <item key="data">support@ophos.com</item>
+          <item key="ln">emailAddress</item>
+          <item key="nid">48</item>
+          <item key="oid">1.2.840.113549.1.9.1</item>
+          <item key="sn">emailAddress</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=FR/ST=VAL DE MARNE/L=CHOISY LE ROI/O=OPHOS SYSTEM/OU=HEBERGEMENT/emailAddress=support@ophos.com</item>
+      <item key="print_rfc2253">emailAddress=support@ophos.com,OU=HEBERGEMENT,O=OPHOS SYSTEM,L=CHOISY LE ROI,ST=VAL DE MARNE,C=FR</item>
+      <item key="print_rfc2253_utf8">emailAddress=support@ophos.com,OU=HEBERGEMENT,O=OPHOS SYSTEM,L=CHOISY LE ROI,ST=VAL DE MARNE,C=FR</item>
+     </hashref>
+    </item>
+    <item key="keyusage" defined="false"></item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">No OCSP</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIC5jCCAk+gAwIBAgIJALtObUqTaHnCMA0GCSqGSIb3DQEBBQUAMIGLMQswCQYD
+VQQGEwJGUjEVMBMGA1UECAwMVkFMIERFIE1BUk5FMRYwFAYDVQQHDA1DSE9JU1kg
+TEUgUk9JMRUwEwYDVQQKDAxPUEhPUyBTWVNURU0xFDASBgNVBAsMC0hFQkVSR0VN
+RU5UMSAwHgYJKoZIhvcNAQkBFhFzdXBwb3J0QG9waG9zLmNvbTAeFw0xMjAzMDQw
+MDAyMTlaFw0zNjEwMjQwMDAyMTlaMIGLMQswCQYDVQQGEwJGUjEVMBMGA1UECAwM
+VkFMIERFIE1BUk5FMRYwFAYDVQQHDA1DSE9JU1kgTEUgUk9JMRUwEwYDVQQKDAxP
+UEhPUyBTWVNURU0xFDASBgNVBAsMC0hFQkVSR0VNRU5UMSAwHgYJKoZIhvcNAQkB
+FhFzdXBwb3J0QG9waG9zLmNvbTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA
+5tOAsUe+S+96kv7bcAK1lUHS2Ocwx4VfZfVXpd2bQ9C1e27nVMNiEJAjmLFJLnRE
+6CnOsGGSo7BjU6xEzPLV569X0ixN+ToF25TIhz2Kk5xAtkL2hGuHadqChuNThyo+
+dQRHte9Kw17iSBHdFugqC3o1MNkPWSSTAfR2R1y3nccCAwEAAaNQME4wHQYDVR0O
+BBYEFF0MddOJUnJeiYwi5KWyEIJTFWOdMB8GA1UdIwQYMBaAFF0MddOJUnJeiYwi
+5KWyEIJTFWOdMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADgYEAI4qS3NRC
+Ztc2LrxC7VxIhz+4L49z7Xn+mtfKLS3RC53ll5bOksMT6ymvQVOZtpZWCx0PUiy+
+1EvBWbDdfFDbs8K15h5Zu07N6PWtvsH+OQklZSMvYMyLOw1EpiXrokeo0sH3kYye
+Y95RLNHNH1skK9vxzh645Y5fLrbkZQ7t0FE=
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">1024</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">128</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x42b7180">
+      <item key="dec">13496845300344060354</item>
+      <item key="hex">BB4E6D4A936879C2</item>
+      <item key="long">-4949898773365491262</item>
+      <item key="string">bb4e6d4a936879c2</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha1WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x1ff8918">
+      <item key="altnames">
+       <hashref memory_address="0x42b7360">
+       </hashref>
+      </item>
+      <item key="count">6</item>
+      <item key="entries">
+       <hashref memory_address="0x5085630">
+        <item key="0">
+         <hashref memory_address="0x5044d30">
+          <item key="data">FR</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x5854bb8">
+          <item key="data">VAL DE MARNE</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x4090218">
+          <item key="data">CHOISY LE ROI</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x42b7240">
+          <item key="data">OPHOS SYSTEM</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x339d9a0">
+          <item key="data">HEBERGEMENT</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x42b7390">
+          <item key="data">support@ophos.com</item>
+          <item key="ln">emailAddress</item>
+          <item key="nid">48</item>
+          <item key="oid">1.2.840.113549.1.9.1</item>
+          <item key="sn">emailAddress</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=FR/ST=VAL DE MARNE/L=CHOISY LE ROI/O=OPHOS SYSTEM/OU=HEBERGEMENT/emailAddress=support@ophos.com</item>
+      <item key="print_rfc2253">emailAddress=support@ophos.com,OU=HEBERGEMENT,O=OPHOS SYSTEM,L=CHOISY LE ROI,ST=VAL DE MARNE,C=FR</item>
+      <item key="print_rfc2253_utf8">emailAddress=support@ophos.com,OU=HEBERGEMENT,O=OPHOS SYSTEM,L=CHOISY LE ROI,ST=VAL DE MARNE,C=FR</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x5020160">
+    <item key="ext_content">
+     <arrayref memory_address="0x42b6f10">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="score">0</item>
+    <item key="srv_type">Apache/2</item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">F</item>
+  <item key="HOSTNAME">www.info-lab.fr</item>
+  <item key="HOSTTYPE">other</item>
+  <item key="ID">28</item>
+  <item key="IP">91.209.174.34</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">0</item>
+  <item key="SSL">
+   <hashref memory_address="0x501fde8">
+    <item key="cipherScore">0</item>
+    <item key="protocol">
+     <hashref memory_address="0x42b6e20">
+      <item key="SSLv2">
+       <hashref memory_address="0x5085dc8">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x1fec798">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x409f110">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x20bab28">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x42c7cb0">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">0</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Non</item>
+ </hashref>
+</perldata>

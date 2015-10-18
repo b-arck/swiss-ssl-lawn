@@ -1,0 +1,488 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x2a1df28">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x2a35770">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://EVIntl-crl.verisign.com/EVIntl2006.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x2a9b9d0">
+      <item key="pubkey">0fd56f423e27d907780dbd349c95e8ca4dc56826
+</item>
+      <item key="x509">9566cc0c7b476a4d7dffbbde7eaf766c2c2c66a0</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x2a1df10">
+      <item key="not_after">Dec  7 23:59:59 2015 GMT</item>
+      <item key="not_before">Dec  6 00:00:00 2013 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x2a1df58">
+      <item key="count">9</item>
+      <item key="entries">
+       <hashref memory_address="0x2be4800">
+        <item key="0">
+         <hashref memory_address="0x2be4860">
+          <item key="critical">0</item>
+          <item key="data">DNS:my.hsbcprivatebank.com</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x2be4788">
+          <item key="critical">0</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x2be48d8">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x2be5f70">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication, Netscape Server Gated Crypto</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x2be6048">
+          <item key="critical">0</item>
+          <item key="data">Policy: 2.16.840.1.113733.1.7.23.6
+  CPS: https://www.verisign.com/cps
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x2be5fa0">
+          <item key="critical">0</item>
+          <item key="data">0F:D5:6F:42:3E:27:D9:07:78:0D:BD:34:9C:95:E8:CA:4D:C5:68:26</item>
+          <item key="ln">X509v3 Subject Key Identifier</item>
+          <item key="nid">82</item>
+          <item key="oid">2.5.29.14</item>
+          <item key="sn">subjectKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x2be60f0">
+          <item key="critical">0</item>
+          <item key="data">keyid:4E:43:C8:1D:76:EF:37:53:7A:4F:F2:58:6F:94:F3:38:E2:D5:BD:DF
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x2be6240">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://EVIntl-crl.verisign.com/EVIntl2006.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x2bdc3f0">
+          <item key="critical">0</item>
+          <item key="data">OCSP - URI:http://EVIntl-ocsp.verisign.com
+CA Issuers - URI:http://EVIntl-aia.verisign.com/EVIntl2006.cer
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x2be46f8">
+      <item key="1.3.6.1.5.5.7.3.2">2.16.840.1.113730.4.1</item>
+      <item key="130">139</item>
+      <item key="TLS Web Client Authentication">Netscape Server Gated Crypto</item>
+      <item key="clientAuth">nsSGC</item>
+      <item key="ln">TLS Web Server Authentication</item>
+      <item key="nid">129</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x2be62a0">
+      <item key="md5">C7:04:49:BD:BB:87:8E:85:97:D1:77:35:FC:73:FB:8A</item>
+      <item key="sha1">95:66:CC:0C:7B:47:6A:4D:7D:FF:BB:DE:7E:AF:76:6C:2C:2C:66:A0</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x2be63a8">
+      <item key="issuer">
+       <hashref memory_address="0x2a186b8">
+        <item key="dec">2886909329</item>
+        <item key="hex">AC12BD91</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x2a18820">
+        <item key="dec">100340246</item>
+        <item key="hex">5FB1216</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x2a8ae48">
+        <item key="dec">3042168816</item>
+        <item key="hex">B553CFF0</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x2be63c0">
+      <item key="count">5</item>
+      <item key="entries">
+       <hashref memory_address="0x2a79c60">
+        <item key="0">
+         <hashref memory_address="0x2a96878">
+          <item key="data">US</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x2a85698">
+          <item key="data">VeriSign, Inc.</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x2a7fd48">
+          <item key="data">VeriSign Trust Network</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x2a856f8">
+          <item key="data">Terms of use at https://www.verisign.com/rpa (c)06</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x2a7f118">
+          <item key="data">VeriSign Class 3 Extended Validation SSL SGC CA</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=US/O=VeriSign, Inc./OU=VeriSign Trust Network/OU=Terms of use at https://www.verisign.com/rpa (c)06/CN=VeriSign Class 3 Extended Validation SSL SGC CA</item>
+      <item key="print_rfc2253">CN=VeriSign Class 3 Extended Validation SSL SGC CA,OU=Terms of use at https://www.verisign.com/rpa (c)06,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US</item>
+      <item key="print_rfc2253_utf8">CN=VeriSign Class 3 Extended Validation SSL SGC CA,OU=Terms of use at https://www.verisign.com/rpa (c)06,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIF5TCCBM2gAwIBAgIQQJImQx+FjKVjI7FvXduAyjANBgkqhkiG9w0BAQUFADCB
+vjELMAkGA1UEBhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMR8wHQYDVQQL
+ExZWZXJpU2lnbiBUcnVzdCBOZXR3b3JrMTswOQYDVQQLEzJUZXJtcyBvZiB1c2Ug
+YXQgaHR0cHM6Ly93d3cudmVyaXNpZ24uY29tL3JwYSAoYykwNjE4MDYGA1UEAxMv
+VmVyaVNpZ24gQ2xhc3MgMyBFeHRlbmRlZCBWYWxpZGF0aW9uIFNTTCBTR0MgQ0Ew
+HhcNMTMxMjA2MDAwMDAwWhcNMTUxMjA3MjM1OTU5WjCB7zETMBEGCysGAQQBgjc8
+AgEDEwJHQjEdMBsGA1UEDxMUUHJpdmF0ZSBPcmdhbml6YXRpb24xETAPBgNVBAUT
+CDAwNjE3OTg3MQswCQYDVQQGEwJHQjEQMA4GA1UEERQHRTE0IDVIUTEPMA0GA1UE
+CBMGTG9uZG9uMQ8wDQYDVQQHFAZMb25kb24xGDAWBgNVBAkUDzggQ2FuYWRhIFNx
+dWFyZTEaMBgGA1UEChQRSFNCQyBIb2xkaW5ncyBwbGMxDjAMBgNVBAsUBUlUT05N
+MR8wHQYDVQQDFBZteS5oc2JjcHJpdmF0ZWJhbmsuY29tMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAq6w6ZPo4AP811V7LSJ3axNyYA/kd9XFMCz9oGJUM
+Vq8bGPbdiUGS1j11D/tKa74cxS9RZ/bw9yfYUz0m4+C4IjB299n/kA27FBGeW/ok
+l9XvsVHbCD5NtcQ6vlXLVgHfjKsG8bR44GKKOEbE3D2zH7TTmQj/F7NRsHNOWFQf
+1SK0YSIVAwUJXw9XLssTUY6nNdK/vBEFrBSvwNPRLwNp+6JOP8sjdzZaXQaZC9Ms
+BFSxDWqIP+H4ScgndN2IMwQdsLjH1+J5MTZuz8ToNiImZlnGVUZKC4ydryl7yFOV
+Ej+NCBQyHkz0N6IuSW6u7mPVCSGrREo+7OnpOqRVjo18wQIDAQABo4IBqjCCAaYw
+IQYDVR0RBBowGIIWbXkuaHNiY3ByaXZhdGViYW5rLmNvbTAJBgNVHRMEAjAAMA4G
+A1UdDwEB/wQEAwIFoDAoBgNVHSUEITAfBggrBgEFBQcDAQYIKwYBBQUHAwIGCWCG
+SAGG+EIEATBEBgNVHSAEPTA7MDkGC2CGSAGG+EUBBxcGMCowKAYIKwYBBQUHAgEW
+HGh0dHBzOi8vd3d3LnZlcmlzaWduLmNvbS9jcHMwHQYDVR0OBBYEFA/Vb0I+J9kH
+eA29NJyV6MpNxWgmMB8GA1UdIwQYMBaAFE5DyB127zdTek/yWG+U8zji1b3fMD4G
+A1UdHwQ3MDUwM6AxoC+GLWh0dHA6Ly9FVkludGwtY3JsLnZlcmlzaWduLmNvbS9F
+VkludGwyMDA2LmNybDB2BggrBgEFBQcBAQRqMGgwKwYIKwYBBQUHMAGGH2h0dHA6
+Ly9FVkludGwtb2NzcC52ZXJpc2lnbi5jb20wOQYIKwYBBQUHMAKGLWh0dHA6Ly9F
+VkludGwtYWlhLnZlcmlzaWduLmNvbS9FVkludGwyMDA2LmNlcjANBgkqhkiG9w0B
+AQUFAAOCAQEAnZZZ75M/ZmqMBjcY2JUr2pj00DZulno+QWPodIR0FBWZYSfhQroY
+KMGmdXNkGqaIpu/H8sKw3DnV+WjyQHnvDUT3/oBfSLmP+A3Cz+KAHqeow6LYjWsf
+rqcIp4bGU/WcAQwPYHSieTAutZ1j8LlgFeORHPsjM+F+TcR5xQNGyBg5JT8hiig7
+kW4PlSOdMlN8hqAveh5u2KSB62etgTebhdBa+iWYXVCgsFFHYnGJZxZBF2guBcvD
+mSe7sYY7IWWEvq8daYIWiV/JUUZJ85JG8uuxFvq2/sq0P/0jEqt+10Bj1FZPWpea
+b19GHBQcsei5SPa0o4J4crXY0F61tBT7dg==
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x2a8fee0">
+      <item key="dec">85829443121188014539430398333925687498</item>
+      <item key="hex">409226431F858CA56323B16F5DDB80CA</item>
+      <item key="long">-1</item>
+      <item key="string">409226431f858ca56323b16f5ddb80ca</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha1WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x2a95cf0">
+      <item key="altnames">
+       <hashref memory_address="0x2a8ff40">
+        <item key="2">my.hsbcprivatebank.com</item>
+       </hashref>
+      </item>
+      <item key="count">11</item>
+      <item key="entries">
+       <hashref memory_address="0x2a907f8">
+        <item key="0">
+         <hashref memory_address="0x2a794f8">
+          <item key="data">GB</item>
+          <item key="ln" defined="false"></item>
+          <item key="nid" defined="false"></item>
+          <item key="oid">1.3.6.1.4.1.311.60.2.1.3</item>
+          <item key="sn" defined="false"></item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x2a8ad28">
+          <item key="data">Private Organization</item>
+          <item key="ln">businessCategory</item>
+          <item key="nid">860</item>
+          <item key="oid">2.5.4.15</item>
+          <item key="sn">businessCategory</item>
+         </hashref>
+        </item>
+        <item key="10">
+         <hashref memory_address="0x2a8fc10">
+          <item key="data">my.hsbcprivatebank.com</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x2a8b1a8">
+          <item key="data">00617987</item>
+          <item key="ln">serialNumber</item>
+          <item key="nid">105</item>
+          <item key="oid">2.5.4.5</item>
+          <item key="sn">serialNumber</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x2a8b160">
+          <item key="data">GB</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x2a8b0d0">
+          <item key="data">E14 5HQ</item>
+          <item key="ln">postalCode</item>
+          <item key="nid">661</item>
+          <item key="oid">2.5.4.17</item>
+          <item key="sn">postalCode</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x2a7fa18">
+          <item key="data">London</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x2a85cb0">
+          <item key="data">London</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x2a8b700">
+          <item key="data">8 Canada Square</item>
+          <item key="ln">streetAddress</item>
+          <item key="nid">660</item>
+          <item key="oid">2.5.4.9</item>
+          <item key="sn">street</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x2a90408">
+          <item key="data">HSBC Holdings plc</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="9">
+         <hashref memory_address="0x2a90030">
+          <item key="data">ITONM</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/1.3.6.1.4.1.311.60.2.1.3=GB/businessCategory=Private Organization/serialNumber=00617987/C=GB/postalCode=E14 5HQ/ST=London/L=London/street=8 Canada Square/O=HSBC Holdings plc/OU=ITONM/CN=my.hsbcprivatebank.com</item>
+      <item key="print_rfc2253">CN=my.hsbcprivatebank.com,OU=ITONM,O=HSBC Holdings plc,street=8 Canada Square,L=London,ST=London,postalCode=E14 5HQ,C=GB,serialNumber=00617987,businessCategory=Private Organization,1.3.6.1.4.1.311.60.2.1.3=#13024742</item>
+      <item key="print_rfc2253_utf8">CN=my.hsbcprivatebank.com,OU=ITONM,O=HSBC Holdings plc,street=8 Canada Square,L=London,ST=London,postalCode=E14 5HQ,C=GB,serialNumber=00617987,businessCategory=Private Organization,1.3.6.1.4.1.311.60.2.1.3=#13024742</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x2a85968">
+    <item key="ext_content">
+     <arrayref memory_address="0x2a95948">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="hsts">No</item>
+    <item key="https_redirect">Yes</item>
+    <item key="score">-1</item>
+    <item key="srv_type">BigIP</item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">A-</item>
+  <item key="HOSTNAME">my.hsbcprivatebank.com</item>
+  <item key="HOSTTYPE">e-banking</item>
+  <item key="ID">1</item>
+  <item key="IP">85.119.232.192</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">84.5</item>
+  <item key="SSL">
+   <hashref memory_address="0x2a79900">
+    <item key="cipherScore">80</item>
+    <item key="protocol">
+     <hashref memory_address="0x2a96668">
+      <item key="SSLv2">
+       <hashref memory_address="0x2a85638">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x2a8b748">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x2a850e0">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x2a84e10">
+          <item key="0">AES128-SHA</item>
+          <item key="1">AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">70</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x2a85ab8">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x2a90a38">
+          <item key="0">AES128-SHA</item>
+          <item key="1">AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">90</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x2a8ab30">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x2a96080">
+          <item key="0">AES128-SHA</item>
+          <item key="1">AES256-SHA</item>
+          <item key="2">ECDHE-RSA-AES128-GCM-SHA256</item>
+          <item key="3">ECDHE-RSA-AES256-GCM-SHA384</item>
+          <item key="4">ECDHE-RSA-AES128-SHA256</item>
+          <item key="5">ECDHE-RSA-AES128-SHA</item>
+          <item key="6">ECDHE-RSA-AES256-SHA384</item>
+          <item key="7">ECDHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">90</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">100</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">95</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

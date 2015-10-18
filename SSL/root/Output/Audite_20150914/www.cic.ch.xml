@@ -1,0 +1,463 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x2eb4980">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x2eb06b0">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://crl.comodoca.com/COMODORSAOrganizationValidationSecureServerCA.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x2ce7688">
+      <item key="pubkey">8290a15a9b11b4a1fa313d28d91356ff7cf99820
+</item>
+      <item key="x509">92f737a851c370d813f147e18f967cb1fc7583f9</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x2d590c0">
+      <item key="not_after">Mar 12 23:59:59 2018 GMT</item>
+      <item key="not_before">Feb  2 00:00:00 2015 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x2cbf260">
+      <item key="count">9</item>
+      <item key="entries">
+       <hashref memory_address="0x2cdc278">
+        <item key="0">
+         <hashref memory_address="0x2cd5c00">
+          <item key="critical">0</item>
+          <item key="data">keyid:9A:F3:2B:DA:CF:AD:4F:B6:2F:BB:2A:48:48:2A:12:B7:1B:42:C1:24
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x2ccfbe8">
+          <item key="critical">0</item>
+          <item key="data">82:90:A1:5A:9B:11:B4:A1:FA:31:3D:28:D9:13:56:FF:7C:F9:98:20</item>
+          <item key="ln">X509v3 Subject Key Identifier</item>
+          <item key="nid">82</item>
+          <item key="oid">2.5.29.14</item>
+          <item key="sn">subjectKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x2cc3440">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x2d54138">
+          <item key="critical">1</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x2cc9388">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x2cdbfc0">
+          <item key="critical">0</item>
+          <item key="data">Policy: 1.3.6.1.4.1.6449.1.2.1.3.4
+  CPS: https://secure.comodo.com/CPS
+Policy: 2.23.140.1.2.2
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x2cad138">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://crl.comodoca.com/COMODORSAOrganizationValidationSecureServerCA.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x2ced5c8">
+          <item key="critical">0</item>
+          <item key="data">CA Issuers - URI:http://crt.comodoca.com/COMODORSAOrganizationValidationSecureServerCA.crt
+OCSP - URI:http://ocsp.comodoca.com
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x2cdc680">
+          <item key="critical">0</item>
+          <item key="data">DNS:www.cic.ch, DNS:cic.ch</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x2cdb9a8">
+      <item key="1.3.6.1.5.5.7.3.2">nid</item>
+      <item key="129">130</item>
+      <item key="TLS Web Server Authentication">TLS Web Client Authentication</item>
+      <item key="clientAuth">ln</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x2d64e80">
+      <item key="md5">0D:36:84:AE:89:72:DD:BF:7A:51:98:BF:B7:B5:FB:9B</item>
+      <item key="sha1">92:F7:37:A8:51:C3:70:D8:13:F1:47:E1:8F:96:7C:B1:FC:75:83:F9</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x2ebb280">
+      <item key="issuer">
+       <hashref memory_address="0x2d5e668">
+        <item key="dec">3292166105</item>
+        <item key="hex">C43A77D9</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x2cc9778">
+        <item key="dec">4195877009</item>
+        <item key="hex">FA180091</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x2d58af0">
+        <item key="dec">1686064196</item>
+        <item key="hex">647F4C44</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x2d65120">
+      <item key="count">5</item>
+      <item key="entries">
+       <hashref memory_address="0x2cad930">
+        <item key="0">
+         <hashref memory_address="0x2ca85f0">
+          <item key="data">GB</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x2cb2e10">
+          <item key="data">Greater Manchester</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x2d6ae90">
+          <item key="data">Salford</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x2d59630">
+          <item key="data">COMODO CA Limited</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x2d54630">
+          <item key="data">COMODO RSA Organization Validation Secure Server CA</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=GB/ST=Greater Manchester/L=Salford/O=COMODO CA Limited/CN=COMODO RSA Organization Validation Secure Server CA</item>
+      <item key="print_rfc2253">CN=COMODO RSA Organization Validation Secure Server CA,O=COMODO CA Limited,L=Salford,ST=Greater Manchester,C=GB</item>
+      <item key="print_rfc2253_utf8">CN=COMODO RSA Organization Validation Secure Server CA,O=COMODO CA Limited,L=Salford,ST=Greater Manchester,C=GB</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIF5DCCBMygAwIBAgIRANsk+aHroSa9r5lDZdv+lAMwDQYJKoZIhvcNAQELBQAw
+gZYxCzAJBgNVBAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAO
+BgNVBAcTB1NhbGZvcmQxGjAYBgNVBAoTEUNPTU9ETyBDQSBMaW1pdGVkMTwwOgYD
+VQQDEzNDT01PRE8gUlNBIE9yZ2FuaXphdGlvbiBWYWxpZGF0aW9uIFNlY3VyZSBT
+ZXJ2ZXIgQ0EwHhcNMTUwMjAyMDAwMDAwWhcNMTgwMzEyMjM1OTU5WjCB4zELMAkG
+A1UEBhMCQ0gxDTALBgNVBBETBDQwMDExFDASBgNVBAgTC0Jhc2VsLVN0YWR0MQ4w
+DAYDVQQHEwVCYXNlbDEbMBkGA1UECRMSTWFya3RwbGF0eiAxMSAtIDEzMRwwGgYD
+VQQKExNCYW5rIENJQyBTY2h3ZWl6IEFHMRYwFAYDVQQLEw1JVCBQcm9kdWt0aW9u
+MR4wHAYDVQQLExVIb3N0ZWQgYnkgU2Vjb3JpbyBBcFMxFzAVBgNVBAsTDkluc3Rh
+bnRTU0wgUHJvMRMwEQYDVQQDEwp3d3cuY2ljLmNoMIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEAoOfY5C9pEjRIeBmjERwNI0Nz0rICfSFM8ORl1lM+UASZ
+yJNmqrJik4ENqesSo0lor98sfFUYofJhCtv1xbKKEYkYJAQ7nLwzzDQAkZPCdma9
+F4nGuFVmE3vFxcSYDEP29e1fOIFzAMpVHBRIdu8TkrfI3BsfiSvPzxUso7SCHgKg
+OUGdog4D/E+WyUIqAHZJ7q4CrdXRbKwoP06X2OjSxbrqLKvM/hQF5s0UFzeclNXK
+62lZ2E/HtQ/jiaXBMmmvANQ6y5+MSQ9fRUfWmVH5ICRsCdJpRmAdtDNspRMV5vgL
+j3F3GE+mH8U8NGiaVh7shNlkM+gFLcF9nPG28KLMmwIDAQABo4IB3DCCAdgwHwYD
+VR0jBBgwFoAUmvMr2s+tT7YvuypISCoStxtCwSQwHQYDVR0OBBYEFIKQoVqbEbSh
++jE9KNkTVv98+ZggMA4GA1UdDwEB/wQEAwIFoDAMBgNVHRMBAf8EAjAAMB0GA1Ud
+JQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjBQBgNVHSAESTBHMDsGDCsGAQQBsjEB
+AgEDBDArMCkGCCsGAQUFBwIBFh1odHRwczovL3NlY3VyZS5jb21vZG8uY29tL0NQ
+UzAIBgZngQwBAgIwWgYDVR0fBFMwUTBPoE2gS4ZJaHR0cDovL2NybC5jb21vZG9j
+YS5jb20vQ09NT0RPUlNBT3JnYW5pemF0aW9uVmFsaWRhdGlvblNlY3VyZVNlcnZl
+ckNBLmNybDCBiwYIKwYBBQUHAQEEfzB9MFUGCCsGAQUFBzAChklodHRwOi8vY3J0
+LmNvbW9kb2NhLmNvbS9DT01PRE9SU0FPcmdhbml6YXRpb25WYWxpZGF0aW9uU2Vj
+dXJlU2VydmVyQ0EuY3J0MCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5jb21vZG9j
+YS5jb20wHQYDVR0RBBYwFIIKd3d3LmNpYy5jaIIGY2ljLmNoMA0GCSqGSIb3DQEB
+CwUAA4IBAQBF4ZxxHqB3Jt+be+ICPo9K4EOOTOV2HejSo7CVyIXfrd7cp+DLE9t+
+/q/GORcBbtexidYnFWYuJr7KJKqcsOp7B9RFMUYyYurRXl6xyLbkC6TIjp2v2MUU
+9zDshI2auiMA+EcgfSjlSce3oSTKiyUXmCfrET2l4eTFUxwjEB7EAHOcAPwoOlcW
+cgvoOaAndVLGQHdoRC6jbWNar4dZQ9ydhBav+N0dgsNdyTSBtsbkAzAApU6cX6SA
+PVQg2ko6n1wXOfk/djy8WYiu3WC2+E8Vv2gYv6heSlyeVueCbo7RAHFSsfGwbb+e
+9hC6sW+DsuUgp0FDiSoLiO8Jun4bgGtN
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x2d545b8">
+      <item key="dec">291292916912453101337043003653303997443</item>
+      <item key="hex">DB24F9A1EBA126BDAF994365DBFE9403</item>
+      <item key="long">-1</item>
+      <item key="string">db24f9a1eba126bdaf994365dbfe9403</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha256WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x2cad720">
+      <item key="altnames">
+       <hashref memory_address="0x2eb2bc8">
+        <item key="2">cic.ch</item>
+       </hashref>
+      </item>
+      <item key="count">10</item>
+      <item key="entries">
+       <hashref memory_address="0x2e786c8">
+        <item key="0">
+         <hashref memory_address="0x2cb9978">
+          <item key="data">CH</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x2cb9af8">
+          <item key="data">4001</item>
+          <item key="ln">postalCode</item>
+          <item key="nid">661</item>
+          <item key="oid">2.5.4.17</item>
+          <item key="sn">postalCode</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x2d53910">
+          <item key="data">Basel-Stadt</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x2cc9610">
+          <item key="data">Basel</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x2cc9f28">
+          <item key="data">Marktplatz 11 - 13</item>
+          <item key="ln">streetAddress</item>
+          <item key="nid">660</item>
+          <item key="oid">2.5.4.9</item>
+          <item key="sn">street</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x2ca9340">
+          <item key="data">Bank CIC Schweiz AG</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x2cd5db0">
+          <item key="data">IT Produktion</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x2e78f38">
+          <item key="data">Hosted by Secorio ApS</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x2ccf6f0">
+          <item key="data">InstantSSL Pro</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="9">
+         <hashref memory_address="0x2cb2d08">
+          <item key="data">www.cic.ch</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=CH/postalCode=4001/ST=Basel-Stadt/L=Basel/street=Marktplatz 11 - 13/O=Bank CIC Schweiz AG/OU=IT Produktion/OU=Hosted by Secorio ApS/OU=InstantSSL Pro/CN=www.cic.ch</item>
+      <item key="print_rfc2253">CN=www.cic.ch,OU=InstantSSL Pro,OU=Hosted by Secorio ApS,OU=IT Produktion,O=Bank CIC Schweiz AG,street=Marktplatz 11 - 13,L=Basel,ST=Basel-Stadt,postalCode=4001,C=CH</item>
+      <item key="print_rfc2253_utf8">CN=www.cic.ch,OU=InstantSSL Pro,OU=Hosted by Secorio ApS,OU=IT Produktion,O=Bank CIC Schweiz AG,street=Marktplatz 11 - 13,L=Basel,ST=Basel-Stadt,postalCode=4001,C=CH</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x2ca8e30">
+    <item key="ext_content">
+     <arrayref memory_address="0x2e07338">
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="hsts">No</item>
+    <item key="https_redirect">Yes</item>
+    <item key="score">0</item>
+    <item key="srv_type">Apache</item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">A</item>
+  <item key="HOSTNAME">www.cic.ch</item>
+  <item key="HOSTTYPE">bank</item>
+  <item key="ID">13</item>
+  <item key="IP">194.124.151.54</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">83</item>
+  <item key="SSL">
+   <hashref memory_address="0x2cada50">
+    <item key="cipherScore">80</item>
+    <item key="protocol">
+     <hashref memory_address="0x2d6f758">
+      <item key="SSLv2">
+       <hashref memory_address="0x2cb9df8">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x2ebc670">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x2ca86c8">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x2cba1e8">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">AES128-SHA</item>
+          <item key="2">AES256-SHA</item>
+          <item key="3">DHE-RSA-AES128-SHA</item>
+          <item key="4">DHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">80</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x2cf3168">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x2d65030">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">90</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>

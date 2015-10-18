@@ -1,0 +1,442 @@
+<perldata>
+ <hashref blessed_package="Survey" memory_address="0x489ff18">
+  <item key="CERTIFICATE">
+   <hashref memory_address="0x3790c60">
+    <item key="certificate_type">305</item>
+    <item key="crl">http://vassg142.crl.omniroot.com/vassg142.crl</item>
+    <item key="digest_sha1">
+     <hashref memory_address="0x6377140">
+      <item key="pubkey">bafdb7a7e8d1a950474d57eb2af5abb452acb3ef
+</item>
+      <item key="x509">a1d427b6311222a50b96b2f02dc252e3ac2396e2</item>
+     </hashref>
+    </item>
+    <item key="expiration">
+     <hashref memory_address="0x37a2818">
+      <item key="not_after">May  6 19:10:33 2016 GMT</item>
+      <item key="not_before">May  6 19:10:34 2015 GMT</item>
+      <item key="status">Valid</item>
+     </hashref>
+    </item>
+    <item key="extensions">
+     <hashref memory_address="0x2a857e8">
+      <item key="count">9</item>
+      <item key="entries">
+       <hashref memory_address="0x37c32f8">
+        <item key="0">
+         <hashref memory_address="0x54417b8">
+          <item key="critical">1</item>
+          <item key="data">CA:FALSE</item>
+          <item key="ln">X509v3 Basic Constraints</item>
+          <item key="nid">87</item>
+          <item key="oid">2.5.29.19</item>
+          <item key="sn">basicConstraints</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x570dd58">
+          <item key="critical">0</item>
+          <item key="data">Policy: 1.3.6.1.4.1.6334.1.50
+  CPS: https://secure.omniroot.com/repository
+</item>
+          <item key="ln">X509v3 Certificate Policies</item>
+          <item key="nid">89</item>
+          <item key="oid">2.5.29.32</item>
+          <item key="sn">certificatePolicies</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x3790018">
+          <item key="critical">0</item>
+          <item key="data">OCSP - URI:http://vassg142.ocsp.omniroot.com
+CA Issuers - URI:https://cacert.a.omniroot.com/vassg142.crt
+CA Issuers - URI:https://cacert.a.omniroot.com/vassg142.der
+</item>
+          <item key="ln">Authority Information Access</item>
+          <item key="nid">177</item>
+          <item key="oid">1.3.6.1.5.5.7.1.1</item>
+          <item key="sn">authorityInfoAccess</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x37d2b18">
+          <item key="critical">0</item>
+          <item key="data">DNS:*.nespresso.com</item>
+          <item key="ln">X509v3 Subject Alternative Name</item>
+          <item key="nid">85</item>
+          <item key="oid">2.5.29.17</item>
+          <item key="sn">subjectAltName</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x5ac8298">
+          <item key="critical">1</item>
+          <item key="data">Digital Signature, Key Encipherment</item>
+          <item key="ln">X509v3 Key Usage</item>
+          <item key="nid">83</item>
+          <item key="oid">2.5.29.15</item>
+          <item key="sn">keyUsage</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x5093c48">
+          <item key="critical">0</item>
+          <item key="data">TLS Web Server Authentication, TLS Web Client Authentication</item>
+          <item key="ln">X509v3 Extended Key Usage</item>
+          <item key="nid">126</item>
+          <item key="oid">2.5.29.37</item>
+          <item key="sn">extendedKeyUsage</item>
+         </hashref>
+        </item>
+        <item key="6">
+         <hashref memory_address="0x56f66a8">
+          <item key="critical">0</item>
+          <item key="data">keyid:F8:BD:FA:AF:73:77:C6:C7:1B:F9:4B:4D:11:A7:D1:33:AF:AF:72:11
+</item>
+          <item key="ln">X509v3 Authority Key Identifier</item>
+          <item key="nid">90</item>
+          <item key="oid">2.5.29.35</item>
+          <item key="sn">authorityKeyIdentifier</item>
+         </hashref>
+        </item>
+        <item key="7">
+         <hashref memory_address="0x56f2bd8">
+          <item key="critical">0</item>
+          <item key="data">
+Full Name:
+  URI:http://vassg142.crl.omniroot.com/vassg142.crl
+</item>
+          <item key="ln">X509v3 CRL Distribution Points</item>
+          <item key="nid">103</item>
+          <item key="oid">2.5.29.31</item>
+          <item key="sn">crlDistributionPoints</item>
+         </hashref>
+        </item>
+        <item key="8">
+         <hashref memory_address="0x5ac7860">
+          <item key="critical">0</item>
+          <item key="data">BA:FD:B7:A7:E8:D1:A9:50:47:4D:57:EB:2A:F5:AB:B4:52:AC:B3:EF</item>
+          <item key="ln">X509v3 Subject Key Identifier</item>
+          <item key="nid">82</item>
+          <item key="oid">2.5.29.14</item>
+          <item key="sn">subjectKeyIdentifier</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="extkeyusage">
+     <hashref memory_address="0x489fbe8">
+      <item key="1.3.6.1.5.5.7.3.2">nid</item>
+      <item key="129">130</item>
+      <item key="TLS Web Server Authentication">TLS Web Client Authentication</item>
+      <item key="clientAuth">ln</item>
+      <item key="oid">1.3.6.1.5.5.7.3.1</item>
+      <item key="sn">serverAuth</item>
+     </hashref>
+    </item>
+    <item key="fingerprint">
+     <hashref memory_address="0x489d0c8">
+      <item key="md5">FA:76:6F:D1:E6:D3:D5:5A:01:68:9F:5A:A4:37:7A:2A</item>
+      <item key="sha1">A1:D4:27:B6:31:12:22:A5:0B:96:B2:F0:2D:C2:52:E3:AC:23:96:E2</item>
+     </hashref>
+    </item>
+    <item key="hash">
+     <hashref memory_address="0x5ac7b00">
+      <item key="issuer">
+       <hashref memory_address="0x42dbae8">
+        <item key="dec">1033369058</item>
+        <item key="hex">3D97F5E2</item>
+       </hashref>
+      </item>
+      <item key="issuer_and_serial">
+       <hashref memory_address="0x4909780">
+        <item key="dec">739970855</item>
+        <item key="hex">2C1B0F27</item>
+       </hashref>
+      </item>
+      <item key="subject">
+       <hashref memory_address="0x570dfe0">
+        <item key="dec">703018415</item>
+        <item key="hex">29E735AF</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="issuer">
+     <hashref memory_address="0x570e5e0">
+      <item key="count">5</item>
+      <item key="entries">
+       <hashref memory_address="0x570f3b0">
+        <item key="0">
+         <hashref memory_address="0x37bf160">
+          <item key="data">NL</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x541ef30">
+          <item key="data">Amsterdam</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x37d59e8">
+          <item key="data">Verizon Enterprise Solutions</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x37c3058">
+          <item key="data">Cybertrust</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x37a1ab8">
+          <item key="data">Verizon Akamai SureServer CA G14-SHA2</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=NL/L=Amsterdam/O=Verizon Enterprise Solutions/OU=Cybertrust/CN=Verizon Akamai SureServer CA G14-SHA2</item>
+      <item key="print_rfc2253">CN=Verizon Akamai SureServer CA G14-SHA2,OU=Cybertrust,O=Verizon Enterprise Solutions,L=Amsterdam,C=NL</item>
+      <item key="print_rfc2253_utf8">CN=Verizon Akamai SureServer CA G14-SHA2,OU=Cybertrust,O=Verizon Enterprise Solutions,L=Amsterdam,C=NL</item>
+     </hashref>
+    </item>
+    <item key="keyusage">keyEncipherment</item>
+    <item key="ns_cert_type" defined="false"></item>
+    <item key="ocsp">OCSP certificate status is GOOD</item>
+    <item key="pem">-----BEGIN CERTIFICATE-----
+MIIFbzCCBFegAwIBAgIUL/lT0CuAmVu/sPhgQQe7f/6HDDowDQYJKoZIhvcNAQEL
+BQAwgY0xCzAJBgNVBAYTAk5MMRIwEAYDVQQHEwlBbXN0ZXJkYW0xJTAjBgNVBAoT
+HFZlcml6b24gRW50ZXJwcmlzZSBTb2x1dGlvbnMxEzARBgNVBAsTCkN5YmVydHJ1
+c3QxLjAsBgNVBAMTJVZlcml6b24gQWthbWFpIFN1cmVTZXJ2ZXIgQ0EgRzE0LVNI
+QTIwHhcNMTUwNTA2MTkxMDM0WhcNMTYwNTA2MTkxMDMzWjB0MQswCQYDVQQGEwJD
+SDENMAsGA1UECBMEVmF1ZDERMA8GA1UEBxMITGF1c2FubmUxHDAaBgNVBAoTE05l
+c3RsZSBOZXNwcmVzc28gU0ExCzAJBgNVBAsTAklUMRgwFgYDVQQDDA8qLm5lc3By
+ZXNzby5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDgTonU6p56
+Rzym2kAi0ZEJKhtqeGPFmn1bIGQkiHt+P3Ql8hFe5XzSH8YcKKJqUHVZ20Bg29YZ
+lFV4SNxeEstI9md7SUuNV54z5N8EJ0eZqVJJDlMKt89/XMzOxuBcbDsbnqnFJOQs
+WhX0MgpLeQWHiQvc2eudO2YuYwhCcjk6inQwFb7TsvuIN8DC55SGHGtSP9S18nHS
+uXgZENvwWSH1ubp1o+PPX1Rb0rwHcj9uEtwtYxn03dupvs9gX0oVslFeUeHwO1Xw
+1j2x+sVCQrkvIWQNIIIWVlVrB5ST+KqnxUgYCkMXgGYcO0s6RtHd+3gQTmUIyjCG
+J9M6tR8LWV5TAgMBAAGjggHdMIIB2TAMBgNVHRMBAf8EAjAAMEwGA1UdIARFMEMw
+QQYJKwYBBAGxPgEyMDQwMgYIKwYBBQUHAgEWJmh0dHBzOi8vc2VjdXJlLm9tbmly
+b290LmNvbS9yZXBvc2l0b3J5MIGvBggrBgEFBQcBAQSBojCBnzAtBggrBgEFBQcw
+AYYhaHR0cDovL3Zhc3NnMTQyLm9jc3Aub21uaXJvb3QuY29tMDYGCCsGAQUFBzAC
+hipodHRwczovL2NhY2VydC5hLm9tbmlyb290LmNvbS92YXNzZzE0Mi5jcnQwNgYI
+KwYBBQUHMAKGKmh0dHBzOi8vY2FjZXJ0LmEub21uaXJvb3QuY29tL3Zhc3NnMTQy
+LmRlcjAaBgNVHREEEzARgg8qLm5lc3ByZXNzby5jb20wDgYDVR0PAQH/BAQDAgWg
+MB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAfBgNVHSMEGDAWgBT4vfqv
+c3fGxxv5S00Rp9Ezr69yETA+BgNVHR8ENzA1MDOgMaAvhi1odHRwOi8vdmFzc2cx
+NDIuY3JsLm9tbmlyb290LmNvbS92YXNzZzE0Mi5jcmwwHQYDVR0OBBYEFLr9t6fo
+0alQR01X6yr1q7RSrLPvMA0GCSqGSIb3DQEBCwUAA4IBAQAPJWkCFSGf1MmSlyy1
+U3dVCnjFyaI4GRcICgI29Y3TiPocbkDTNF4YeVpEdPspL8XS9w4ohGEyHVbZoKUH
+M3OfLa5fIWa0a9IouxP/CvSByfzWlH0BYa+C+nndOpyqTh2kwJddVs7mVa9FzuUy
+dgesoTeHdqdhE+zwPR2hl3Nc+M+F+GM/HS4BE0oeGYpQgOWlCLMUF9kQNmy9LC/v
+xN/KHl3VgUOYzVU6l+c3nLCkgSd4QXglvOLSqscHCfeCxqE1ndGj5HHDkGXjGWeq
+i6MPSAEUk9Nmkp+2Fb42wgJJJfOBucgJXuULtlULfo7erwv3+TsRt0PZLb/rEw7r
+ar2f
+-----END CERTIFICATE-----
+</item>
+    <item key="pubkey_alg">rsaEncryption</item>
+    <item key="pubkey_bits">2048</item>
+    <item key="pubkey_id">6</item>
+    <item key="pubkey_size">256</item>
+    <item key="score">100</item>
+    <item key="serial">
+     <hashref memory_address="0x56f3a90">
+      <item key="dec">273882752939443766751273794989506961442850933818</item>
+      <item key="hex">2FF953D02B80995BBFB0F8604107BB7FFE870C3A</item>
+      <item key="long">-1</item>
+      <item key="string">2ff953d02b80995bbfb0f8604107bb7ffe870c3a</item>
+     </hashref>
+    </item>
+    <item key="signature_alg">sha256WithRSAEncryption</item>
+    <item key="subject">
+     <hashref memory_address="0x42dbda0">
+      <item key="altnames">
+       <hashref memory_address="0x37a1bd8">
+        <item key="2">*.nespresso.com</item>
+       </hashref>
+      </item>
+      <item key="count">6</item>
+      <item key="entries">
+       <hashref memory_address="0x2bdc420">
+        <item key="0">
+         <hashref memory_address="0x489fa80">
+          <item key="data">CH</item>
+          <item key="ln">countryName</item>
+          <item key="nid">14</item>
+          <item key="oid">2.5.4.6</item>
+          <item key="sn">C</item>
+         </hashref>
+        </item>
+        <item key="1">
+         <hashref memory_address="0x5443178">
+          <item key="data">Vaud</item>
+          <item key="ln">stateOrProvinceName</item>
+          <item key="nid">16</item>
+          <item key="oid">2.5.4.8</item>
+          <item key="sn">ST</item>
+         </hashref>
+        </item>
+        <item key="2">
+         <hashref memory_address="0x37d5f10">
+          <item key="data">Lausanne</item>
+          <item key="ln">localityName</item>
+          <item key="nid">15</item>
+          <item key="oid">2.5.4.7</item>
+          <item key="sn">L</item>
+         </hashref>
+        </item>
+        <item key="3">
+         <hashref memory_address="0x5ac80a0">
+          <item key="data">Nestle Nespresso SA</item>
+          <item key="ln">organizationName</item>
+          <item key="nid">17</item>
+          <item key="oid">2.5.4.10</item>
+          <item key="sn">O</item>
+         </hashref>
+        </item>
+        <item key="4">
+         <hashref memory_address="0x57059d8">
+          <item key="data">IT</item>
+          <item key="ln">organizationalUnitName</item>
+          <item key="nid">18</item>
+          <item key="oid">2.5.4.11</item>
+          <item key="sn">OU</item>
+         </hashref>
+        </item>
+        <item key="5">
+         <hashref memory_address="0x2a13610">
+          <item key="data">*.nespresso.com</item>
+          <item key="ln">commonName</item>
+          <item key="nid">13</item>
+          <item key="oid">2.5.4.3</item>
+          <item key="sn">CN</item>
+         </hashref>
+        </item>
+       </hashref>
+      </item>
+      <item key="oneline">/C=CH/ST=Vaud/L=Lausanne/O=Nestle Nespresso SA/OU=IT/CN=*.nespresso.com</item>
+      <item key="print_rfc2253">CN=*.nespresso.com,OU=IT,O=Nestle Nespresso SA,L=Lausanne,ST=Vaud,C=CH</item>
+      <item key="print_rfc2253_utf8">CN=*.nespresso.com,OU=IT,O=Nestle Nespresso SA,L=Lausanne,ST=Vaud,C=CH</item>
+     </hashref>
+    </item>
+    <item key="version">2</item>
+   </hashref>
+  </item>
+  <item key="CONTENT">
+   <hashref memory_address="0x5705db0">
+    <item key="ext_content">
+     <arrayref memory_address="0x37a18f0">
+      <item key="0">Facebook</item>
+      <item key="1">Twitter</item>
+     </arrayref>
+    </item>
+    <item key="flash_content">0</item>
+    <item key="hsts">No</item>
+    <item key="https_redirect">Yes</item>
+    <item key="score">0</item>
+    <item key="srv_type">AkamaiGHost</item>
+   </hashref>
+  </item>
+  <item key="DATE">18.10.2015</item>
+  <item key="GRADE">A</item>
+  <item key="HOSTNAME">www.nespresso.com</item>
+  <item key="HOSTTYPE">e-commerce</item>
+  <item key="ID">191</item>
+  <item key="IP">184.86.80.197</item>
+  <item key="PORT">443</item>
+  <item key="RESULT">84.5</item>
+  <item key="SSL">
+   <hashref memory_address="0x37c3010">
+    <item key="cipherScore">80</item>
+    <item key="protocol">
+     <hashref memory_address="0x39d4b48">
+      <item key="SSLv2">
+       <hashref memory_address="0x570de00">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="SSLv3">
+       <hashref memory_address="0x42db6c8">
+        <item key="cipherScore">0</item>
+        <item key="implemented">no</item>
+        <item key="protocolScore">0</item>
+       </hashref>
+      </item>
+      <item key="TLSv1">
+       <hashref memory_address="0x54430a0">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x37d2ff8">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">AES128-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">70</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">90</item>
+       </hashref>
+      </item>
+      <item key="TLSv11">
+       <hashref memory_address="0x5443388">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x5706620">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">AES128-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">80</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">95</item>
+       </hashref>
+      </item>
+      <item key="TLSv12">
+       <hashref memory_address="0x37a0fd8">
+        <item key="AcceptedCipher">
+         <arrayref memory_address="0x56f5c10">
+          <item key="0">DES-CBC3-SHA</item>
+          <item key="1">AES128-SHA</item>
+          <item key="2">ECDHE-RSA-AES128-GCM-SHA256</item>
+          <item key="3">ECDHE-RSA-AES256-GCM-SHA384</item>
+          <item key="4">ECDHE-RSA-AES128-SHA256</item>
+          <item key="5">ECDHE-RSA-AES128-SHA</item>
+          <item key="6">ECDHE-RSA-AES256-SHA384</item>
+          <item key="7">ECDHE-RSA-AES256-SHA</item>
+         </arrayref>
+        </item>
+        <item key="cipherScore">90</item>
+        <item key="implemented">yes</item>
+        <item key="protocolScore">100</item>
+       </hashref>
+      </item>
+     </hashref>
+    </item>
+    <item key="protocolScore">95</item>
+   </hashref>
+  </item>
+  <item key="TRUSTED">Oui</item>
+ </hashref>
+</perldata>
